@@ -1,0 +1,6 @@
+{
+  "name": "Octis Capital",
+  "description": "Website for Octis Capital, a real estate boutique in Sao Paulo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
