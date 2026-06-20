@@ -13,9 +13,9 @@ export function Partner() {
           viewport={{ once: true }}
           className="mb-16 md:text-center"
         >
-          <span className="text-accent uppercase tracking-widest text-sm font-semibold mb-4 block">Liderança</span>
-          <h2 className="text-4xl md:text-5xl font-serif text-white">Thiago Duarte</h2>
-          <p className="text-xl text-gray-400 font-light mt-2">Sócio Diretor</p>
+          <span className="text-accent uppercase tracking-widest text-sm font-semibold mb-4 block">Nossa Experiência</span>
+          <h2 className="text-4xl md:text-5xl font-serif text-white">Conhecimento Sólido</h2>
+          <p className="text-xl text-gray-400 font-light mt-2">Trajetória e Track Record Institucional</p>
         </motion.div>
 
         <motion.div 
@@ -37,7 +37,7 @@ export function Partner() {
             
             <div className="bg-brand-900 border border-white/5 p-8 border-t-2 border-t-accent hover:bg-brand-900/80 transition-colors flex flex-col justify-center text-center">
               <div className="text-lg md:text-xl font-serif text-white mb-3 leading-relaxed">
-                BTG Pactual, Rio Bravo, XP, Telefônica, Nestlé, JW Marriott, Hilton, HSBC e Caixa
+                Rio Bravo, XP, Telefônica, Nestlé, JW Marriott, Hilton, HSBC e Caixa
               </div>
               <div className="text-gray-400 font-light mt-auto">Track Record de Clientes & Projetos</div>
             </div>

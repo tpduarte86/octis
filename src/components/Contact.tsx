@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Mail, Phone, ArrowUpRight } from 'lucide-react';
+import { MapPin, Mail, ArrowUpRight } from 'lucide-react';
 
 export function Contact() {
   return (
@@ -33,21 +33,9 @@ export function Contact() {
               </div>
               <div>
                 <h4 className="text-lg font-medium mb-1">Email</h4>
-                <a href="mailto:contato@octis.com.br" className="text-gray-400 font-light hover:text-accent transition-colors flex items-center gap-1">
+                <a href="mailto:contato@octis.com.br" className="text-white font-light hover:text-accent transition-colors flex items-center gap-1">
                   contato@octis.com.br <ArrowUpRight className="w-3 h-3" />
                 </a>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-brand-900 border border-white/10 flex items-center justify-center shrink-0">
-                <Phone className="w-5 h-5 text-accent" />
-              </div>
-              <div>
-                <h4 className="text-lg font-medium mb-1">Telefone</h4>
-                <p className="text-gray-400 font-light">
-                  +55 (11) 99541-8189
-                </p>
               </div>
             </div>
           </div>
