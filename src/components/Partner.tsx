@@ -43,7 +43,7 @@ export function Partner() {
             
             <div className="bg-brand-900 border border-white/5 p-8 border-t-2 border-t-accent hover:bg-brand-900/80 transition-colors flex flex-col justify-center text-center">
               <div className="text-lg md:text-xl font-serif text-white mb-3 leading-relaxed">
-                Rio Bravo, XP, Telefônica, Nestlé, JW Marriott, Hilton, HSBC e Caixa
+                Rio Bravo, XP, Telefônica, Nestlé, Marriott, Hilton, HSBC e Caixa
               </div>
               <div className="text-gray-400 font-light mt-auto">Track Record de Clientes & Projetos</div>
             </div>

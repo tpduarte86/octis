@@ -23,19 +23,20 @@ export function Footer() {
             <div>
               <h4 className="text-white font-medium mb-6 uppercase text-sm tracking-wider">Navegação</h4>
               <ul className="space-y-4">
-                <li><a href="#home" className="text-gray-200 hover:text-accent transition-colors text-sm">Home</a></li>
-                <li><a href="#about" className="text-gray-200 hover:text-accent transition-colors text-sm">A Boutique</a></li>
-                <li><a href="#services" className="text-gray-200 hover:text-accent transition-colors text-sm">Serviços</a></li>
-                <li><a href="#leadership" className="text-gray-200 hover:text-accent transition-colors text-sm">Liderança</a></li>
-                <li><a href="#contact" className="text-gray-200 hover:text-accent transition-colors text-sm">Contato</a></li>
+                <li><a href="#home" className="text-white hover:text-accent transition-colors text-sm">Home</a></li>
+                <li><a href="#about" className="text-white hover:text-accent transition-colors text-sm">A Boutique</a></li>
+                <li><a href="#services" className="text-white hover:text-accent transition-colors text-sm">Serviços</a></li>
+                <li><a href="#development" className="text-white hover:text-accent transition-colors text-sm">Development</a></li>
+                <li><a href="#leadership" className="text-white hover:text-accent transition-colors text-sm">Liderança</a></li>
+                <li><a href="#contact" className="text-white hover:text-accent transition-colors text-sm">Contato</a></li>
               </ul>
             </div>
             
             <div>
               <h4 className="text-white font-medium mb-6 uppercase text-sm tracking-wider">Legal</h4>
               <ul className="space-y-4">
-                <li><a href="#" className="text-gray-200 hover:text-accent transition-colors text-sm">Privacidade</a></li>
-                <li><a href="#" className="text-gray-200 hover:text-accent transition-colors text-sm">Termos de Uso</a></li>
+                <li><a href="#" className="text-white hover:text-accent transition-colors text-sm">Privacidade</a></li>
+                <li><a href="#" className="text-white hover:text-accent transition-colors text-sm">Termos de Uso</a></li>
               </ul>
             </div>
           </div>

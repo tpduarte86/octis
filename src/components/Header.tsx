@@ -18,6 +18,7 @@ export function Header() {
     { name: 'Home', href: '#home' },
     { name: 'A Boutique', href: '#about' },
     { name: 'Serviços', href: '#services' },
+    { name: 'Development', href: '#development' },
     { name: 'Liderança', href: '#leadership' },
     { name: 'Contato', href: '#contact' },
   ];
@@ -42,7 +43,7 @@ export function Header() {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-gray-200 hover:text-accent transition-colors uppercase tracking-wider"
+              className="text-sm font-medium text-white hover:text-accent transition-colors uppercase tracking-wider"
             >
               {link.name}
             </a>
@@ -73,7 +74,7 @@ export function Header() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="py-4 text-sm font-medium text-gray-200 hover:text-accent border-b border-brand-800 last:border-none uppercase tracking-wider"
+                  className="py-4 text-sm font-medium text-white hover:text-accent border-b border-brand-800 last:border-none uppercase tracking-wider"
                 >
                   {link.name}
                 </a>
