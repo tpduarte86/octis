@@ -23,6 +23,12 @@ export function Partner() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <p className="text-gray-300 font-light text-lg leading-relaxed">
+              Consolidamos nossa trajetória suportando as maiores operações e desenvolvimentos do mercado corporativo. Nossa expertise é o alicerce na entrega de valor e maximização de resultados para investidores institucionais e fundos.
+            </p>
+          </div>
+
           {/* Grid of highlight stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-brand-900 border border-white/5 p-8 border-t-2 border-t-accent hover:bg-brand-900/80 transition-colors flex flex-col justify-center items-center text-center">
