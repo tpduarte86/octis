@@ -21,7 +21,7 @@ export function Header() {
     { name: 'Imóveis', href: '#development' },
     { name: 'Experiência', href: '#leadership' },
     { name: 'Artigos', href: '#reddit' },
-    { name: 'Dúvidas', href: '#faq' },
+    { name: 'Reddit FAQ', href: '#duvidas-reddit' },
     { name: 'Contato', href: '#contact' },
   ];
 

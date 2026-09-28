@@ -47,6 +47,7 @@ export function Footer() {
               <li><a href="#development" className="hover:text-accent transition-colors font-light">Imóveis Atendidos</a></li>
               <li><a href="#leadership" className="hover:text-accent transition-colors font-light">Experiência</a></li>
               <li><a href="#reddit" className="hover:text-accent transition-colors font-light">Artigos & Conteúdo</a></li>
+              <li><a href="#duvidas-reddit" className="hover:text-accent transition-colors font-light">Comunidade Reddit</a></li>
               <li><a href="#faq" className="hover:text-accent transition-colors font-light">Dúvidas (FAQ)</a></li>
               <li><a href="#contact" className="hover:text-accent transition-colors font-light">Contato</a></li>
             </ul>

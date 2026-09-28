@@ -11,16 +11,24 @@ import { Services } from './components/Services';
 import { Development } from './components/Development';
 import { Partner } from './components/Partner';
 import { Blog } from './components/Blog';
+import { RedditCommunityQuestions } from './components/RedditCommunityQuestions';
 import { FAQ } from './components/FAQ';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
 export default function App() {
   useEffect(() => {
-    // Handle URL slug routing for /reddit or #reddit
+    // Handle URL slug routing for /reddit or #duvidas-reddit or #reddit
     const path = window.location.pathname;
     const hash = window.location.hash;
-    if (path.includes('reddit') || hash.includes('reddit')) {
+    if (path.includes('duvidas-reddit') || hash.includes('duvidas-reddit')) {
+      const el = document.getElementById('duvidas-reddit');
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
+      }
+    } else if (path.includes('reddit') || hash.includes('reddit')) {
       const el = document.getElementById('reddit');
       if (el) {
         setTimeout(() => {
@@ -40,6 +48,7 @@ export default function App() {
         <Development />
         <Partner />
         <Blog />
+        <RedditCommunityQuestions />
         <FAQ />
         <Contact />
       </main>
