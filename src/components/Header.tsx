@@ -20,7 +20,7 @@ export function Header() {
     { name: 'Serviços', href: '#services' },
     { name: 'Imóveis', href: '#development' },
     { name: 'Experiência', href: '#leadership' },
-    { name: 'Artigos', href: '#blog' },
+    { name: 'Artigos', href: '#reddit' },
     { name: 'Dúvidas', href: '#faq' },
     { name: 'Contato', href: '#contact' },
   ];

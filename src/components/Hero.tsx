@@ -27,6 +27,10 @@ export function Hero() {
           
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif text-white leading-tight mb-6 tracking-tight">
             Capital Markets <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-yellow-200 to-accent">Imobiliário</span>
+            <span className="sr-only"> — Análises e Discussões Reddit de Real Estate</span>
+            <span className="text-[10px] uppercase tracking-widest text-gray-400/50 font-sans block font-normal mt-2">
+              Insights & Discussões Reddit Brasil
+            </span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 font-light mb-10 max-w-3xl leading-relaxed">

@@ -23,7 +23,7 @@ export function Contact() {
       `Nome: ${name}\nEmpresa/Nome: ${company}\nEmail: ${email}\nTelefone: ${phone}\nInteresse Principal: ${mandateType}\n\nMensagem:\n${message}\n\n(Enviado pelo site oficial da Octis Real Estate)`
     );
     
-    window.location.href = `mailto:contato@octis.com.br?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:thiago@octis.com.br?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -48,10 +48,10 @@ export function Contact() {
               <div>
                 <h4 className="text-sm font-semibold text-white mb-1">Email Direto</h4>
                 <a 
-                  href="mailto:contato@octis.com.br" 
+                  href="mailto:thiago@octis.com.br" 
                   className="text-gray-300 font-light hover:text-accent transition-colors flex items-center gap-1.5 text-base"
                 >
-                  contato@octis.com.br <ArrowUpRight className="w-4 h-4" />
+                  thiago@octis.com.br <ArrowUpRight className="w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -84,7 +84,7 @@ export function Contact() {
           {submitted && (
             <div className="mb-6 p-4 bg-accent/10 border border-accent/30 text-accent text-sm flex items-center gap-3">
               <CheckCircle className="w-5 h-5 shrink-0" />
-              <span>Sua mensagem foi preparada. Se o seu programa de email não abrir automaticamente, escreva para <strong>contato@octis.com.br</strong>.</span>
+              <span>Sua mensagem foi preparada. Se o seu programa de email não abrir automaticamente, escreva para <strong>thiago@octis.com.br</strong>.</span>
             </div>
           )}
           

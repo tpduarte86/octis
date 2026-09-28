@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -15,6 +16,20 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
 export default function App() {
+  useEffect(() => {
+    // Handle URL slug routing for /reddit or #reddit
+    const path = window.location.pathname;
+    const hash = window.location.hash;
+    if (path.includes('reddit') || hash.includes('reddit')) {
+      const el = document.getElementById('reddit');
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
+      }
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-brand-900 text-white font-sans selection:bg-accent selection:text-brand-900">
       <Header />

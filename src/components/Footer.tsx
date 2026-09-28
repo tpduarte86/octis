@@ -30,7 +30,7 @@ export function Footer() {
               </span>
               <span className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-accent shrink-0" />
-                contato@octis.com.br
+                thiago@octis.com.br
               </span>
             </div>
           </div>
@@ -46,7 +46,7 @@ export function Footer() {
               <li><a href="#services" className="hover:text-accent transition-colors font-light">Serviços</a></li>
               <li><a href="#development" className="hover:text-accent transition-colors font-light">Imóveis Atendidos</a></li>
               <li><a href="#leadership" className="hover:text-accent transition-colors font-light">Experiência</a></li>
-              <li><a href="#blog" className="hover:text-accent transition-colors font-light">Artigos & Conteúdo</a></li>
+              <li><a href="#reddit" className="hover:text-accent transition-colors font-light">Artigos & Conteúdo</a></li>
               <li><a href="#faq" className="hover:text-accent transition-colors font-light">Dúvidas (FAQ)</a></li>
               <li><a href="#contact" className="hover:text-accent transition-colors font-light">Contato</a></li>
             </ul>

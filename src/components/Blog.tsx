@@ -273,14 +273,16 @@ export function Blog() {
     : articles.filter(a => a.category === selectedCategory);
 
   return (
-    <section id="blog" className="py-20 md:py-28 bg-brand-900 border-t border-white/5 relative">
+    <section id="reddit" data-slug="reddit" className="py-20 md:py-28 bg-brand-900 border-t border-white/5 relative">
+      <span id="blog" className="sr-only" />
+      <span id="reddit-artigos" className="sr-only" />
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Section Header */}
         <div className="text-center mb-14 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 text-accent uppercase tracking-widest text-xs font-semibold mb-3 px-3 py-1 bg-accent/10 border border-accent/20">
             <BookOpen className="w-3.5 h-3.5" />
-            <span>Artigos & Conhecimento Imobiliário</span>
+            <span>Artigos & Discussões Reddit Brasil</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4">
             Conteúdos sobre Imóveis, CRI e Capital Markets
