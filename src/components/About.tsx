@@ -1,45 +1,71 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { CheckCircle2, Landmark, Building2, Users2 } from 'lucide-react';
 
 export function About() {
   return (
-    <section id="about" className="py-24 md:py-32 bg-brand-900 text-white border-t border-white/5 relative overflow-hidden">
-      {/* Decorative element */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-64 h-64 bg-accent/5 rounded-full blur-3xl -z-10" />
-
+    <section id="about" className="py-20 md:py-28 bg-brand-900 text-white border-t border-white/5 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="text-accent uppercase tracking-widest text-sm font-semibold mb-4 block">Sobre Nós</span>
-            <h2 className="text-4xl md:text-5xl font-serif leading-tight mb-8">
-              Conhecimento profundo do mercado institucional.
+            <div className="inline-flex items-center gap-2 text-accent uppercase tracking-widest text-xs font-semibold mb-4 px-3 py-1 bg-accent/10 border border-accent/20">
+              Quem Somos
+            </div>
+            
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif leading-tight mb-6">
+              A Octis Real Estate conecta ativos imobiliários e mercado de capitais com agilidade.
             </h2>
-            <div className="space-y-6 text-gray-400 font-light text-lg leading-relaxed">
+            
+            <div className="space-y-4 text-gray-300 font-light text-base md:text-lg leading-relaxed">
               <p>
-                Localizada em São Paulo, a Octis Capital nasceu para atender uma demanda latente: a necessidade de assessoria imobiliária altamente especializada, ágil e focada em resultados precisos.
+                Com sede em São Paulo e atuação em todo o Brasil, a <strong>Octis Real Estate</strong> atua no mercado imobiliário e em Capital Markets. Assessoramos proprietários, incorporadoras e investidores na compra, venda, Sale & Leaseback e captação de recursos via CRI para desenvolvimento imobiliário e novos lançamentos.
               </p>
               <p>
-                Acreditamos que a excelência na execução é o pilar fundamental para qualquer transação bem-sucedida. Atuamos de forma minuciosa, desde a concepção do plano de negócios até o diligente fechamento da operação.
+                Trabalhamos com clareza: avaliamos o ativo com precisão, encontramos os investidores ou compradores adequados e conduzimos a transação com foco total em conclusão rápida.
               </p>
               <p>
-                Nossa independência garante alinhamento absoluto com os interesses de nossos clientes, mitigando conflitos e priorizando a construção de relacionamentos de longo prazo baseados em confiança e performance.
+                Atendemos todas as classes de ativos, dos mais simples ao padrão AAA: casas e apartamentos de todas as faixas de renda, loteamentos, galpões, prédios inteiros, salas comerciais e áreas para desenvolvimento imobiliário.
               </p>
             </div>
             
-            <div className="mt-12 grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
-               <div>
-                 <h4 className="text-3xl font-serif text-white mb-2">Rigor</h4>
-                 <p className="text-sm text-gray-400">Análises detalhadas e embasamento sólido.</p>
-               </div>
-               <div>
-                 <h4 className="text-3xl font-serif text-white mb-2">Sigilo</h4>
-                 <p className="text-sm text-gray-400">Máxima confidencialidade nas operações.</p>
-               </div>
+            {/* Direct 4 Points */}
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5 border-t border-white/10 pt-6">
+              <div className="flex gap-3 items-start">
+                <Landmark className="w-6 h-6 text-accent shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="text-base font-semibold text-white">CRI & Capital Markets</h4>
+                  <p className="text-xs text-gray-400 font-light">Recursos para incorporadoras, desenvolvimento imobiliário e obras.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-3 items-start">
+                <Building2 className="w-6 h-6 text-accent shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="text-base font-semibold text-white">Todas as Classes</h4>
+                  <p className="text-xs text-gray-400 font-light">Do imóvel mais simples ao padrão corporativo AAA.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-3 items-start">
+                <Users2 className="w-6 h-6 text-accent shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="text-base font-semibold text-white">Investidores & Fundos</h4>
+                  <p className="text-xs text-gray-400 font-light">Acesso a fundos imobiliários, securitizadoras e investidores privados.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-3 items-start">
+                <CheckCircle2 className="w-6 h-6 text-accent shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="text-base font-semibold text-white">Foco na Conclusão</h4>
+                  <p className="text-xs text-gray-400 font-light">Processo ágil, objetivo e sem burocracias desnecessárias.</p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -47,15 +73,23 @@ export function About() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative h-[600px] w-full"
+            className="relative h-[420px] md:h-[500px] w-full"
           >
-            <div className="absolute inset-0 border border-accent/30 translate-x-4 -translate-y-4" />
+            <div className="absolute inset-0 border border-accent/40 translate-x-3 -translate-y-3 pointer-events-none" />
             <img 
               src="https://images.pexels.com/photos/221047/pexels-photo-221047.jpeg?q=80&w=2000&auto=format&fit=crop" 
-              alt="Galpão logístico de alto padrão" 
-              className="absolute inset-0 w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700"
+              alt="Imóveis comerciais e residenciais atendidos pela Octis Real Estate" 
+              className="absolute inset-0 w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700 shadow-xl"
+              loading="lazy"
             />
-            <div className="absolute inset-0 bg-brand-900/30" />
+            <div className="absolute inset-0 bg-brand-900/30 pointer-events-none" />
+            
+            <div className="absolute bottom-5 left-5 right-5 bg-brand-900/95 p-5 border border-white/10">
+              <span className="text-accent text-xs font-semibold uppercase tracking-wider block mb-1">Nosso Objetivo</span>
+              <p className="text-sm text-gray-200 font-light leading-relaxed">
+                Viabilizar negócios imobiliários, desmobilizar patrimônio com liquidez e captar recursos para novos projetos com agilidade.
+              </p>
+            </div>
           </motion.div>
 
         </div>
