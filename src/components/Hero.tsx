@@ -1,8 +1,13 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Building, Award, Landmark } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/content';
 
 export function Hero() {
+  const { language } = useLanguage();
+  const t = translations[language].hero;
+
   return (
     <section id="home" className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-brand-900">
       {/* Background with overlay */}
@@ -22,19 +27,19 @@ export function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1 mb-6 border border-accent/40 bg-brand-800/80 text-xs font-medium text-accent uppercase tracking-wider">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            Octis Real Estate • São Paulo e Brasil
+            {t.badge}
           </div>
           
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif text-white leading-tight mb-6 tracking-tight">
-            Capital Markets <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-yellow-200 to-accent">Imobiliário</span>
-            <span className="sr-only"> — Análises e Discussões Reddit de Real Estate</span>
+            {t.h1Main} <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-yellow-200 to-accent">{t.h1Accent}</span>
+            <span className="sr-only">{t.h1SrOnly}</span>
             <span className="text-[10px] uppercase tracking-widest text-gray-400/50 font-sans block font-normal mt-2">
-              Insights & Discussões Reddit Brasil
+              {t.h1Sub}
             </span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 font-light mb-10 max-w-3xl leading-relaxed">
-            Assessoramos proprietários, incorporadoras e investidores na compra, venda, Sale & Leaseback e captação de recursos via CRI para projetos e desenvolvimento imobiliário. Atendemos todos os tipos de imóveis — do padrão mais simples ao AAA —, incluindo loteamentos, galpões, prédios comerciais e residenciais de todas as faixas.
+            {t.description}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mb-14">
@@ -42,13 +47,13 @@ export function Hero() {
               href="#services" 
               className="inline-flex justify-center items-center gap-2 bg-accent hover:bg-accent/90 text-brand-900 px-8 py-4 font-semibold transition-all hover:gap-3"
             >
-              Nossos Serviços <ArrowRight className="w-5 h-5" />
+              {t.ctaServices} <ArrowRight className="w-5 h-5" />
             </a>
             <a 
               href="#contact" 
               className="inline-flex justify-center items-center border border-white/20 hover:border-accent hover:text-accent text-white px-8 py-4 font-medium transition-colors"
             >
-              Falar com a Equipe
+              {t.ctaContact}
             </a>
           </div>
 
@@ -57,24 +62,24 @@ export function Hero() {
             <div className="flex items-center gap-3">
               <Landmark className="w-6 h-6 text-accent shrink-0" />
               <div>
-                <p className="text-sm font-semibold text-white">Capital Markets & CRI</p>
-                <p className="text-xs text-gray-400">Recursos para incorporadoras e obras</p>
+                <p className="text-sm font-semibold text-white">{t.cred1Title}</p>
+                <p className="text-xs text-gray-400">{t.cred1Desc}</p>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
               <Building className="w-6 h-6 text-accent shrink-0" />
               <div>
-                <p className="text-sm font-semibold text-white">Todos os Tipos de Imóveis</p>
-                <p className="text-xs text-gray-400">Do padrão mais simples ao AAA</p>
+                <p className="text-sm font-semibold text-white">{t.cred2Title}</p>
+                <p className="text-xs text-gray-400">{t.cred2Desc}</p>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
               <Award className="w-6 h-6 text-accent shrink-0" />
               <div>
-                <p className="text-sm font-semibold text-white">+15 Anos de Mercado</p>
-                <p className="text-xs text-gray-400">+R$ 5 bilhões transacionados</p>
+                <p className="text-sm font-semibold text-white">{t.cred3Title}</p>
+                <p className="text-xs text-gray-400">{t.cred3Desc}</p>
               </div>
             </div>
           </div>

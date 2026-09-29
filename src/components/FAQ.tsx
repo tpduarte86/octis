@@ -1,47 +1,13 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown, HelpCircle, ArrowRight } from 'lucide-react';
-
-interface FAQItem {
-  question: string;
-  answer: string;
-  category: string;
-}
-
-const faqs: FAQItem[] = [
-  {
-    category: 'Sobre a Octis',
-    question: 'O que faz a Octis Real Estate?',
-    answer: 'Assessoramos proprietários, incorporadoras e investidores na realização de negócios imobiliários. Conduzimos operações de compra e venda, Sale & Leaseback e emissão de CRI (Certificados de Recebíveis Imobiliários) para projetos e desenvolvimento imobiliário.'
-  },
-  {
-    category: 'CRI & Incorporadoras',
-    question: 'O que é o CRI e como funciona para incorporadoras e desenvolvimento imobiliário?',
-    answer: 'O CRI é um instrumento do mercado de capitais que capta recursos a custos competitivos e prazos longos. Para incorporadoras e loteadoras, serve para financiar o andamento de obras, implantar melhorias em loteamentos, antecipar recebíveis de vendas parceladas e levantar capital de giro com lastro imobiliário.'
-  },
-  {
-    category: 'Classes de Imóveis',
-    question: 'A Octis só trabalha com imóveis de alto padrão ou luxo?',
-    answer: 'Não. Atendemos todas as classes de ativos, dos mais simples ao padrão AAA. No segmento residencial, cobrimos desde habitação econômica e popular até empreendimentos de médio e alto padrão, além de loteamentos populares e condomínios fechados.'
-  },
-  {
-    category: 'Tipos de Ativos',
-    question: 'Quais tipos de imóveis vocês atendem?',
-    answer: 'Atendemos todos os segmentos: residenciais (casas, prédios e vilas), galpões de bairro e centros logísticos, prédios comerciais inteiros, lajes de escritório, lojas e terrenos para desenvolvimento imobiliário.'
-  },
-  {
-    category: 'Sale & Leaseback',
-    question: 'Como funciona a operação de Sale & Leaseback?',
-    answer: 'A empresa vende o imóvel próprio onde já opera para um investidor e permanece no mesmo local como locatária em contrato de longo prazo (10 a 20 anos). O capital antes imobilizado no imóvel vai para o caixa da companhia para expansão ou novos investimentos.'
-  },
-  {
-    category: 'Atuação Geográfica',
-    question: 'Onde fica a Octis Real Estate e onde vocês atuam?',
-    answer: 'Nossa sede fica em São Paulo (SP) e atuamos em todo o território nacional, assessorando transações e viabilizando CRIs em qualquer estado do Brasil.'
-  }
-];
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/content';
 
 export function FAQ() {
+  const { language } = useLanguage();
+  const t = translations[language].faq;
+
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleItem = (idx: number) => {
@@ -59,19 +25,19 @@ export function FAQ() {
         >
           <div className="inline-flex items-center gap-2 text-accent uppercase tracking-widest text-xs font-semibold mb-3 px-3 py-1 bg-accent/10 border border-accent/20">
             <HelpCircle className="w-3.5 h-3.5" />
-            <span>Perguntas Frequentes</span>
+            <span>{t.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4">
-            Dúvidas Comuns
+            {t.title}
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-base md:text-lg font-light leading-relaxed">
-            Respostas diretas sobre nossos serviços de Capital Markets, transações imobiliárias e operações de CRI.
+            {t.subtitle}
           </p>
         </motion.div>
 
         {/* FAQ Accordion List */}
         <div className="space-y-3">
-          {faqs.map((faq, index) => {
+          {t.items.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div
@@ -130,13 +96,13 @@ export function FAQ() {
         {/* Bottom Contact Callout */}
         <div className="mt-10 p-6 bg-brand-800/60 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <p className="text-sm text-gray-300 font-light">
-            Deseja avaliar uma operação para seu imóvel ou projeto imobiliário?
+            {t.calloutText}
           </p>
           <a
             href="#contact"
             className="text-xs font-semibold uppercase tracking-wider text-accent hover:text-white transition-colors shrink-0 inline-flex items-center gap-1.5"
           >
-            Fale com a nossa equipe <ArrowRight className="w-3.5 h-3.5" />
+            {t.calloutBtn} <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </div>
       </div>

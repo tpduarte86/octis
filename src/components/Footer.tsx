@@ -1,7 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Octagon, Mail, MapPin } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/content';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function Footer() {
+  const { language } = useLanguage();
+  const t = translations[language].footer;
+  const nav = translations[language].header.nav;
+
+  const footerNav = [
+    { name: nav.home, path: '/' },
+    { name: nav.about, path: '/quem-somos' },
+    { name: nav.services, path: '/servicos' },
+    { name: nav.development, path: '/imoveis' },
+    { name: nav.leadership, path: '/experiencia' },
+    { name: nav.redditArticles, path: '/reddit' },
+    { name: nav.redditFaq, path: '/duvidas-reddit' },
+    { name: nav.contact, path: '/contato' },
+  ];
+
   return (
     <footer className="bg-brand-900 border-t border-white/10 text-gray-400 py-14">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -9,7 +28,7 @@ export function Footer() {
           
           {/* Brand & Summary */}
           <div className="md:col-span-2">
-            <a href="#home" className="flex items-center gap-3 mb-4 inline-flex" aria-label="Octis Real Estate - Início">
+            <Link to="/" className="flex items-center gap-3 mb-4 inline-flex" aria-label="Octis Real Estate - Home">
               <Octagon className="w-8 h-8 text-accent" />
               <div className="flex flex-col">
                 <span className="font-serif text-xl font-semibold tracking-wide text-white leading-none">
@@ -19,52 +38,82 @@ export function Footer() {
                   Real Estate
                 </span>
               </div>
-            </a>
+            </Link>
             <p className="font-light text-sm max-w-md text-gray-300 mb-5 leading-relaxed">
-              Assessoria imobiliária para compra, venda, Sale & Leaseback e emissão de <strong>CRI (Certificados de Recebíveis Imobiliários)</strong> para incorporadoras e desenvolvimento imobiliário. Atendemos todas as classes de ativos em todo o Brasil.
+              {t.description}
             </p>
-            <div className="flex flex-col gap-2 text-xs text-gray-400">
+            <div className="flex flex-col gap-2 text-xs text-gray-400 mb-6">
               <span className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-accent shrink-0" />
-                São Paulo, SP — Atuação Nacional
+                {t.location}
               </span>
               <span className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-accent shrink-0" />
                 thiago@octis.com.br
               </span>
             </div>
+            
+            {/* Language Switcher in Footer */}
+            <div>
+              <span className="text-[11px] uppercase tracking-wider text-gray-400 block mb-2 font-medium">
+                {language === 'pt' ? 'Idioma do Site:' : 'Website Language:'}
+              </span>
+              <LanguageSwitcher />
+            </div>
           </div>
           
           {/* Nav Links */}
           <div>
             <h4 className="text-white font-medium mb-4 uppercase text-xs tracking-widest border-b border-white/10 pb-2">
-              Navegação
+              {t.navTitle}
             </h4>
             <ul className="space-y-2.5 text-sm">
-              <li><a href="#home" className="hover:text-accent transition-colors font-light">Início</a></li>
-              <li><a href="#about" className="hover:text-accent transition-colors font-light">Quem Somos</a></li>
-              <li><a href="#services" className="hover:text-accent transition-colors font-light">Serviços</a></li>
-              <li><a href="#development" className="hover:text-accent transition-colors font-light">Imóveis Atendidos</a></li>
-              <li><a href="#leadership" className="hover:text-accent transition-colors font-light">Experiência</a></li>
-              <li><a href="#reddit" className="hover:text-accent transition-colors font-light">Artigos & Conteúdo</a></li>
-              <li><a href="#duvidas-reddit" className="hover:text-accent transition-colors font-light">Comunidade Reddit</a></li>
-              <li><a href="#faq" className="hover:text-accent transition-colors font-light">Dúvidas (FAQ)</a></li>
-              <li><a href="#contact" className="hover:text-accent transition-colors font-light">Contato</a></li>
+              {footerNav.map((item) => (
+                <li key={item.path}>
+                  <Link to={item.path} className="hover:text-accent transition-colors font-light">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           
-          {/* Imóveis e Soluções */}
+          {/* Solutions Links */}
           <div>
             <h4 className="text-white font-medium mb-4 uppercase text-xs tracking-widest border-b border-white/10 pb-2">
-              Soluções
+              {t.solutionsTitle}
             </h4>
             <ul className="space-y-2.5 text-sm">
-              <li><a href="#services" className="hover:text-accent transition-colors font-light">Emissão de CRI</a></li>
-              <li><a href="#services" className="hover:text-accent transition-colors font-light">Sale & Leaseback</a></li>
-              <li><a href="#services" className="hover:text-accent transition-colors font-light">Compra e Venda de Imóveis</a></li>
-              <li><a href="#development" className="hover:text-accent transition-colors font-light">Residencial (Econômico ao Luxo)</a></li>
-              <li><a href="#development" className="hover:text-accent transition-colors font-light">Galpões de Todos os Portes</a></li>
-              <li><a href="#development" className="hover:text-accent transition-colors font-light">Loteamentos e Terrenos</a></li>
+              <li>
+                <Link to="/servicos" className="hover:text-accent transition-colors font-light">
+                  {language === 'en' ? 'CRI Debt Issuance' : 'Emissão de CRI'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/servicos" className="hover:text-accent transition-colors font-light">
+                  {language === 'en' ? 'Sale & Leaseback' : 'Sale & Leaseback'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/servicos" className="hover:text-accent transition-colors font-light">
+                  {language === 'en' ? 'Property Dispositions' : 'Compra e Venda de Imóveis'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/imoveis" className="hover:text-accent transition-colors font-light">
+                  {language === 'en' ? 'Residential (Affordable to Prime)' : 'Residencial (Econômico ao Luxo)'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/imoveis" className="hover:text-accent transition-colors font-light">
+                  {language === 'en' ? 'Warehouses & Logistics' : 'Galpões de Todos os Portes'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/imoveis" className="hover:text-accent transition-colors font-light">
+                  {language === 'en' ? 'Land & Master-Planned Subdivisions' : 'Loteamentos e Terrenos'}
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -72,8 +121,8 @@ export function Footer() {
         
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500 font-light">
-          <p>© {new Date().getFullYear()} Octis Real Estate. Todos os direitos reservados.</p>
-          <p>São Paulo — SP, Brasil.</p>
+          <p>© {new Date().getFullYear()} {t.copyright}</p>
+          <p>{t.locationDetail}</p>
         </div>
       </div>
     </footer>

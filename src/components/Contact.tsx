@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { Mail, ArrowUpRight, MapPin, Clock, CheckCircle } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/content';
 
 export function Contact() {
+  const { language } = useLanguage();
+  const t = translations[language].contact;
+
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -18,9 +23,15 @@ export function Contact() {
 
     setSubmitted(true);
 
-    const subject = encodeURIComponent(`[Contato Site] Interesse: ${mandateType || 'Geral'} - ${company || name}`);
+    const subject = encodeURIComponent(
+      language === 'en'
+        ? `[Website Inquiry] Interest: ${mandateType || 'General'} - ${company || name}`
+        : `[Contato Site] Interesse: ${mandateType || 'Geral'} - ${company || name}`
+    );
     const body = encodeURIComponent(
-      `Nome: ${name}\nEmpresa/Nome: ${company}\nEmail: ${email}\nTelefone: ${phone}\nInteresse Principal: ${mandateType}\n\nMensagem:\n${message}\n\n(Enviado pelo site oficial da Octis Real Estate)`
+      language === 'en'
+        ? `Name: ${name}\nCompany/Name: ${company}\nEmail: ${email}\nPhone: ${phone}\nPrimary Interest: ${mandateType}\n\nMessage:\n${message}\n\n(Sent via official website of Octis Real Estate)`
+        : `Nome: ${name}\nEmpresa/Nome: ${company}\nEmail: ${email}\nTelefone: ${phone}\nInteresse Principal: ${mandateType}\n\nMensagem:\n${message}\n\n(Enviado pelo site oficial da Octis Real Estate)`
     );
     
     window.location.href = `mailto:thiago@octis.com.br?subject=${subject}&body=${body}`;
@@ -33,20 +44,20 @@ export function Contact() {
         {/* Left Column: Direct Info & Location */}
         <div>
           <div className="inline-flex items-center gap-2 text-accent uppercase tracking-widest text-xs font-semibold mb-3 px-3 py-1 bg-accent/10 border border-accent/20">
-            Fale com a Gente
+            {t.badge}
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-4 leading-tight">
-            Vamos conversar sobre o seu imóvel ou projeto?
+            {t.title}
           </h2>
           <p className="text-gray-300 font-light text-base md:text-lg mb-8 leading-relaxed">
-            Seja para captação de recursos via <strong>CRI</strong> para incorporadoras e obras, venda ou compra de imóveis, ou realização de um <strong>Sale & Leaseback</strong>, nossa equipe responde com agilidade.
+            {t.subtitle}
           </p>
           
           <div className="space-y-4">
             <div className="flex items-start gap-4 p-5 bg-brand-800/40 border border-white/5">
               <Mail className="w-5 h-5 text-accent shrink-0 mt-1" />
               <div>
-                <h4 className="text-sm font-semibold text-white mb-1">Email Direto</h4>
+                <h4 className="text-sm font-semibold text-white mb-1">{t.emailLabel}</h4>
                 <a 
                   href="mailto:thiago@octis.com.br" 
                   className="text-gray-300 font-light hover:text-accent transition-colors flex items-center gap-1.5 text-base"
@@ -59,16 +70,16 @@ export function Contact() {
             <div className="flex items-start gap-4 p-5 bg-brand-800/40 border border-white/5">
               <MapPin className="w-5 h-5 text-accent shrink-0 mt-1" />
               <div>
-                <h4 className="text-sm font-semibold text-white mb-1">Sede e Abrangência</h4>
-                <p className="text-gray-300 font-light text-sm">São Paulo, SP — Atuação em todo o Brasil</p>
+                <h4 className="text-sm font-semibold text-white mb-1">{t.locationLabel}</h4>
+                <p className="text-gray-300 font-light text-sm">{t.locationVal}</p>
               </div>
             </div>
 
             <div className="flex items-start gap-4 p-5 bg-brand-800/40 border border-white/5">
               <Clock className="w-5 h-5 text-accent shrink-0 mt-1" />
               <div>
-                <h4 className="text-sm font-semibold text-white mb-1">Horário de Atendimento</h4>
-                <p className="text-gray-300 font-light text-sm">Segunda a Sexta, das 09h às 18h</p>
+                <h4 className="text-sm font-semibold text-white mb-1">{t.hoursLabel}</h4>
+                <p className="text-gray-300 font-light text-sm">{t.hoursVal}</p>
               </div>
             </div>
           </div>
@@ -76,15 +87,15 @@ export function Contact() {
 
         {/* Right Column: Form */}
         <div className="bg-brand-800/70 border border-white/10 p-7 md:p-9 shadow-xl relative">
-          <h3 className="text-2xl font-serif text-white mb-2">Envie uma Mensagem</h3>
+          <h3 className="text-2xl font-serif text-white mb-2">{t.formTitle}</h3>
           <p className="text-sm text-gray-400 font-light mb-6">
-            Preencha os campos abaixo e entraremos em contato.
+            {t.formSubtitle}
           </p>
 
           {submitted && (
             <div className="mb-6 p-4 bg-accent/10 border border-accent/30 text-accent text-sm flex items-center gap-3">
               <CheckCircle className="w-5 h-5 shrink-0" />
-              <span>Sua mensagem foi preparada. Se o seu programa de email não abrir automaticamente, escreva para <strong>thiago@octis.com.br</strong>.</span>
+              <span>{t.successNotice}</span>
             </div>
           )}
           
@@ -92,7 +103,7 @@ export function Contact() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium" htmlFor="name">
-                  Seu Nome *
+                  {t.nameLabel}
                 </label>
                 <input 
                   type="text" 
@@ -100,20 +111,20 @@ export function Contact() {
                   name="name"
                   required
                   className="w-full bg-brand-900/80 border border-white/10 px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-accent text-sm"
-                  placeholder="Nome completo"
+                  placeholder={t.namePlaceholder}
                 />
               </div>
 
               <div>
                 <label className="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium" htmlFor="company">
-                  Empresa / Incorporadora / Nome
+                  {t.companyLabel}
                 </label>
                 <input 
                   type="text" 
                   id="company"
                   name="company"
                   className="w-full bg-brand-900/80 border border-white/10 px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-accent text-sm"
-                  placeholder="Empresa, incorporadora ou proprietário"
+                  placeholder={t.companyPlaceholder}
                 />
               </div>
             </div>
@@ -121,7 +132,7 @@ export function Contact() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium" htmlFor="email">
-                  Email de Contato *
+                  {t.emailInputLabel}
                 </label>
                 <input 
                   type="email" 
@@ -129,46 +140,45 @@ export function Contact() {
                   name="email"
                   required
                   className="w-full bg-brand-900/80 border border-white/10 px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-accent text-sm"
-                  placeholder="seuemail@exemplo.com.br"
+                  placeholder={t.emailPlaceholder}
                 />
               </div>
 
               <div>
                 <label className="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium" htmlFor="phone">
-                  Telefone / WhatsApp
+                  {t.phoneLabel}
                 </label>
                 <input 
                   type="tel" 
                   id="phone"
                   name="phone"
                   className="w-full bg-brand-900/80 border border-white/10 px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-accent text-sm"
-                  placeholder="(11) 90000-0000"
+                  placeholder={t.phonePlaceholder}
                 />
               </div>
             </div>
 
             <div>
               <label className="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium" htmlFor="mandateType">
-                Qual o seu interesse principal?
+                {t.mandateLabel}
               </label>
               <select
                 id="mandateType"
                 name="mandateType"
-                defaultValue="Emissão de CRI"
+                defaultValue={t.mandates[0]?.value}
                 className="w-full bg-brand-900/80 border border-white/10 px-4 py-2.5 text-white focus:outline-none focus:border-accent text-sm"
               >
-                <option value="Emissão de CRI">Emissão de CRI (Incorporadoras / Obras / Loteamentos)</option>
-                <option value="Sale & Leaseback">Sale & Leaseback (Venda com aluguel do mesmo imóvel)</option>
-                <option value="Venda de Imóvel">Venda de Imóvel (Galpão, prédio, residencial ou terreno)</option>
-                <option value="Compra de Imóvel">Compra de Imóvel para investimento</option>
-                <option value="Desenvolvimento Imobiliário & Terrenos">Desenvolvimento Imobiliário & Terrenos</option>
-                <option value="Outro Assunto">Outro Assunto</option>
+                {t.mandates.map((m) => (
+                  <option key={m.value} value={m.value}>
+                    {m.label}
+                  </option>
+                ))}
               </select>
             </div>
 
             <div>
               <label className="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium" htmlFor="message">
-                Mensagem *
+                {t.messageLabel}
               </label>
               <textarea 
                 id="message"
@@ -176,7 +186,7 @@ export function Contact() {
                 rows={3}
                 required
                 className="w-full bg-brand-900/80 border border-white/10 px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-accent resize-none text-sm"
-                placeholder="Descreva brevemente o imóvel, projeto imobiliário ou operação desejada..."
+                placeholder={t.messagePlaceholder}
               ></textarea>
             </div>
 
@@ -184,7 +194,7 @@ export function Contact() {
               type="submit" 
               className="w-full bg-accent hover:bg-accent/90 text-brand-900 font-semibold py-3.5 uppercase tracking-wider text-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
             >
-              Enviar Mensagem
+              {t.submitBtn}
             </button>
           </form>
         </div>

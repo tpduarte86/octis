@@ -3,56 +3,63 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { LanguageProvider } from './context/LanguageContext';
+import { ScrollToTop } from './components/ScrollToTop';
 import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Services } from './components/Services';
-import { Development } from './components/Development';
-import { Partner } from './components/Partner';
-import { Blog } from './components/Blog';
-import { RedditCommunityQuestions } from './components/RedditCommunityQuestions';
-import { FAQ } from './components/FAQ';
-import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
-export default function App() {
-  useEffect(() => {
-    // Handle URL slug routing for /reddit or #duvidas-reddit or #reddit
-    const path = window.location.pathname;
-    const hash = window.location.hash;
-    if (path.includes('duvidas-reddit') || hash.includes('duvidas-reddit')) {
-      const el = document.getElementById('duvidas-reddit');
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({ behavior: 'smooth' });
-        }, 150);
-      }
-    } else if (path.includes('reddit') || hash.includes('reddit')) {
-      const el = document.getElementById('reddit');
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({ behavior: 'smooth' });
-        }, 150);
-      }
-    }
-  }, []);
+// Dedicated Pages
+import { HomePage } from './pages/HomePage';
+import { AboutPage } from './pages/AboutPage';
+import { ServicesPage } from './pages/ServicesPage';
+import { PropertiesPage } from './pages/PropertiesPage';
+import { TrackRecordPage } from './pages/TrackRecordPage';
+import { RedditArticlesPage } from './pages/RedditArticlesPage';
+import { RedditQuestionsPage } from './pages/RedditQuestionsPage';
+import { ContactPage } from './pages/ContactPage';
 
+export default function App() {
   return (
-    <div className="min-h-screen bg-brand-900 text-white font-sans selection:bg-accent selection:text-brand-900">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Development />
-        <Partner />
-        <Blog />
-        <RedditCommunityQuestions />
-        <FAQ />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <div className="min-h-screen bg-brand-900 text-white font-sans selection:bg-accent selection:text-brand-900 flex flex-col justify-between">
+          <Header />
+          <main className="flex-grow">
+            <Routes>
+              {/* Home Page */}
+              <Route path="/" element={<HomePage />} />
+
+              {/* Dedicated Institutional Pages */}
+              <Route path="/quem-somos" element={<AboutPage />} />
+              <Route path="/sobre" element={<Navigate to="/quem-somos" replace />} />
+              
+              <Route path="/servicos" element={<ServicesPage />} />
+              
+              <Route path="/imoveis" element={<PropertiesPage />} />
+              
+              <Route path="/experiencia" element={<TrackRecordPage />} />
+              <Route path="/lideranca" element={<Navigate to="/experiencia" replace />} />
+
+              {/* Reddit Community & Knowledge Hub */}
+              <Route path="/reddit" element={<RedditArticlesPage />} />
+              <Route path="/artigos" element={<Navigate to="/reddit" replace />} />
+              <Route path="/blog" element={<Navigate to="/reddit" replace />} />
+              
+              <Route path="/duvidas-reddit" element={<RedditQuestionsPage />} />
+              <Route path="/faq" element={<Navigate to="/duvidas-reddit" replace />} />
+
+              {/* Contact Page */}
+              <Route path="/contato" element={<ContactPage />} />
+
+              {/* Fallback to Home */}
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </LanguageProvider>
   );
 }
