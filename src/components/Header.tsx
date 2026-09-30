@@ -56,7 +56,7 @@ export function Header() {
           </div>
         </Link>
 
-        {/* Desktop Nav */}
+        {/* Desktop Nav Links */}
         <nav className="hidden xl:flex gap-5 items-center" aria-label="Primary navigation">
           {navLinks.map((link) => {
             const isActive = location.pathname === link.path;
@@ -74,23 +74,21 @@ export function Header() {
               </Link>
             );
           })}
-          
-          {/* Language Switcher */}
-          <LanguageSwitcher className="ml-1" />
+        </nav>
+
+        {/* Header Right Action Area: Exactly 1 LanguageSwitcher + Contact Button / Mobile Menu Toggle */}
+        <div className="flex items-center gap-3">
+          <LanguageSwitcher />
 
           <Link
             to="/contato"
-            className="ml-2 px-4 py-2 bg-accent hover:bg-accent/90 text-brand-900 text-xs font-semibold uppercase tracking-wider transition-all"
+            className="hidden sm:inline-flex px-4 py-2 bg-accent hover:bg-accent/90 text-brand-900 text-xs font-semibold uppercase tracking-wider transition-all shrink-0"
           >
             {t.contactButton}
           </Link>
-        </nav>
 
-        {/* Mobile / Tablet Toggle & Switcher */}
-        <div className="flex items-center gap-3 xl:hidden">
-          <LanguageSwitcher />
           <button
-            className="text-white p-2 focus:outline-none cursor-pointer"
+            className="xl:hidden text-white p-2 focus:outline-none cursor-pointer"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? 'Close navigation' : 'Open navigation'}
             aria-expanded={mobileMenuOpen}

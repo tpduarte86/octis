@@ -73,8 +73,8 @@ export function RedditQuestionsPage() {
           </h2>
           <p className="text-gray-300 text-sm md:text-base font-light mb-8">
             {language === 'en'
-              ? 'Send your scenario directly to Thiago Duarte and the Octis Real Estate team.'
-              : 'Envie o seu caso diretamente para Thiago Duarte e a equipe da Octis Real Estate.'}
+              ? 'Send your scenario directly to the Octis Real Estate team.'
+              : 'Envie o seu caso diretamente para a equipe da Octis Real Estate.'}
           </p>
           <Link
             to="/contato"

@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Coins, Building, HandCoins, Users, ArrowRight, Check } from 'lucide-react';
+import { Coins, Building, HandCoins, Users, ArrowRight, Check, KeyRound, FileText } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/content';
 
-const serviceIcons = [Coins, Building, HandCoins, Users];
+const serviceIcons = [Coins, KeyRound, FileText, Building, HandCoins, Users];
 
 export function Services() {
   const { language } = useLanguage();
@@ -36,7 +37,7 @@ export function Services() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {t.items.map((service, index) => {
             const Icon = serviceIcons[index % serviceIcons.length];
             return (
@@ -45,8 +46,8 @@ export function Services() {
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="p-7 md:p-9 bg-brand-800/60 border border-white/10 hover:border-accent/40 flex flex-col justify-between transition-all duration-200"
+                transition={{ delay: index * 0.08 }}
+                className="p-7 md:p-8 bg-brand-800/60 border border-white/10 hover:border-accent/40 flex flex-col justify-between transition-all duration-200"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -56,11 +57,11 @@ export function Services() {
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-serif text-white mb-3">
+                  <h3 className="text-xl md:text-2xl font-serif text-white mb-3">
                     {service.title}
                   </h3>
                   
-                  <p className="text-gray-300 font-light leading-relaxed mb-6 text-sm md:text-base">
+                  <p className="text-gray-300 font-light leading-relaxed mb-6 text-sm">
                     {service.description}
                   </p>
 
@@ -68,7 +69,7 @@ export function Services() {
                     <span className="text-xs text-accent uppercase tracking-wider font-semibold block mb-3">
                       {t.scopeLabel}
                     </span>
-                    <ul className="space-y-2 text-sm text-gray-300 font-light">
+                    <ul className="space-y-2 text-xs md:text-sm text-gray-300 font-light">
                       {service.points.map((pt) => (
                         <li key={pt} className="flex items-start gap-2.5">
                           <Check className="w-4 h-4 text-accent shrink-0 mt-0.5" />
@@ -80,12 +81,12 @@ export function Services() {
                 </div>
 
                 <div className="pt-4 border-t border-white/10">
-                  <a
-                    href="#contact"
+                  <Link
+                    to="/contato"
                     className="text-xs font-semibold uppercase tracking-wider text-accent hover:text-white transition-colors inline-flex items-center gap-1.5"
                   >
                     {t.ctaConsult} <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             );

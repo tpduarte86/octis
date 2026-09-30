@@ -137,8 +137,8 @@ export function TrackRecordPage() {
           </h2>
           <p className="text-gray-300 text-sm md:text-base font-light mb-8">
             {language === 'en'
-              ? 'Connect directly with Thiago Duarte and the Octis Real Estate advisory team.'
-              : 'Fale diretamente com Thiago Duarte e a equipe da Octis Real Estate.'}
+              ? 'Connect directly with the Octis Real Estate advisory team.'
+              : 'Fale diretamente com a equipe da Octis Real Estate.'}
           </p>
           <Link
             to="/contato"

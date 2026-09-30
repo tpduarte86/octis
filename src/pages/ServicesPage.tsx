@@ -11,10 +11,10 @@ export function ServicesPage() {
   return (
     <div className="pt-24 min-h-screen bg-brand-900 text-white">
       <SEOHead
-        titlePt="Serviços de Capital Markets e CRI Imobiliário | Octis Real Estate"
-        titleEn="Real Estate Capital Markets & Advisory Services | Octis Real Estate"
-        descriptionPt="Conheça os serviços da Octis Real Estate: Emissão de CRI para incorporadoras e obras, Venda e Compra de Imóveis, Sale & Leaseback e parcerias em todo o Brasil."
-        descriptionEn="Discover Octis Real Estate services: CRI debt issuance for developers, property acquisitions & dispositions, Sale & Leaseback, and joint-venture equity partnerships in Brazil."
+        titlePt="Serviços Imobiliários, Locação (Tenant Rep) e CRI | Octis Real Estate"
+        titleEn="Real Estate Advisory, Corporate Leasing (Tenant Rep) & CRI Debt | Octis Real Estate"
+        descriptionPt="Conheça os serviços da Octis Real Estate: Emissão de CRI para incorporadoras, locação corporativa (Tenant Rep), renegociação de contratos, Sale & Leaseback e compra e venda."
+        descriptionEn="Discover Octis Real Estate services: CRI debt issuance for developers, corporate leasing (Tenant Rep), lease contract renegotiation, Sale & Leaseback, and property brokerage in Brazil."
         path="/servicos"
       />
 
@@ -42,15 +42,15 @@ export function ServicesPage() {
               </>
             ) : (
               <>
-                Soluções em <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-yellow-200 to-accent">Mercado Imobiliário e CRI</span>
+                Soluções em <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-yellow-200 to-accent">Capital Markets, Locação & Imóveis</span>
               </>
             )}
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 font-light max-w-3xl leading-relaxed">
             {language === 'en'
-              ? 'From funding construction via Real Estate Receivables Certificates (CRI) to corporate Sale & Leaseback transactions and property dispositions, we structure and execute with speed.'
-              : 'Da captação de recursos via CRI para incorporadoras e obras à desmobilização de ativos via Sale & Leaseback e compra e venda de imóveis de todos os padrões.'}
+              ? 'From funding construction via CRI debt and corporate Sale & Leaseback to Tenant Representation leasing and contract renegotiation, we structure and execute with speed.'
+              : 'Da captação de recursos via CRI para obras e Sale & Leaseback à locação corporativa (Tenant Rep), renegociação de contratos e compra e venda de ativos.'}
           </p>
         </div>
       </section>
@@ -125,8 +125,8 @@ export function ServicesPage() {
           </h2>
           <p className="text-gray-300 text-sm md:text-base font-light mb-8">
             {language === 'en'
-              ? 'Speak directly with Thiago Duarte and the Octis Real Estate team for rapid feedback.'
-              : 'Fale diretamente com Thiago Duarte e a equipe da Octis Real Estate para um retorno rápido.'}
+              ? 'Speak directly with the Octis Real Estate team for rapid feedback.'
+              : 'Fale diretamente com a equipe da Octis Real Estate para um retorno rápido.'}
           </p>
           <Link
             to="/contato"

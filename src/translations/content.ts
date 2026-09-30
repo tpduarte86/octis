@@ -272,6 +272,28 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           ],
         },
         {
+          title: 'Locação Corporativa & Tenant Rep',
+          tag: 'Representação de Ocupantes',
+          description: 'Assessoramos empresas, multinacionais e indústrias na busca, seleção e contratação das melhores lajes corporativas, sedes comerciais e galpões logísticos.',
+          points: [
+            'Tenant Representation: assessoria exclusiva na busca e escolha do imóvel ideal',
+            'Análise de viabilidade técnica, ocupacional e custos totais de ocupação',
+            'Negociação comercial de carências, valores de aluguel e benfeitorias',
+            'Landlord Representation para proprietários que buscam inquilinos de primeira linha',
+          ],
+        },
+        {
+          title: 'Renegociação de Contratos de Locação',
+          tag: 'Revisão & Redução de Custos',
+          description: 'Defendemos os interesses de locatários e proprietários na repactuação de contratos vigentes, buscando a adequação ao valor justo de mercado e alívio financeiro.',
+          points: [
+            'Adequação do valor do aluguel ao preço real de mercado (market rent)',
+            'Renegociação de prazos contratuais, multas rescisórias e índices de reajuste (IPCA / IGP-M)',
+            'Assessoria em renovações de longo prazo e processos de revisão de locação',
+            'Readequação de metragem ocupada (expansão, devolução parcial ou sublocação)',
+          ],
+        },
+        {
           title: 'Venda e Compra de Imóveis',
           tag: 'Intermediação Institucional',
           description: 'Assessoramos proprietários e compradores na comercialização de imóveis de todos os padrões, cuidando da avaliação, prospecção de interessados qualificados e condução da negociação.',
@@ -560,7 +582,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       noResults: 'Nenhuma pergunta encontrada com o termo pesquisado.',
       clearFilters: 'Limpar filtros de busca',
       ctaTitle: 'Tem uma dúvida sobre sua obra, imóvel ou captação de recursos?',
-      ctaDesc: 'Fale diretamente com Thiago Duarte e a equipe da Octis Real Estate para uma avaliação personalizada.',
+      ctaDesc: 'Fale diretamente com a equipe da Octis Real Estate para uma avaliação personalizada.',
       ctaBtn: 'Fazer Pergunta à Octis',
       questions: [
         {
@@ -723,7 +745,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       hoursVal: 'Segunda a Sexta, das 09h às 18h',
       formTitle: 'Envie uma Mensagem',
       formSubtitle: 'Preencha os campos abaixo e entraremos em contato.',
-      successNotice: 'Sua mensagem foi preparada. Se o seu programa de email não abrir automaticamente, escreva para thiago@octis.com.br.',
+      successNotice: 'Sua mensagem foi preparada. Se o seu programa de email não abrir automaticamente, escreva para contato@octis.com.br.',
       nameLabel: 'Seu Nome *',
       namePlaceholder: 'Nome completo',
       companyLabel: 'Empresa / Incorporadora / Nome',
@@ -735,6 +757,8 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       mandateLabel: 'Qual o seu interesse principal?',
       mandates: [
         { value: 'Emissão de CRI', label: 'Emissão de CRI (Incorporadoras / Obras / Loteamentos)' },
+        { value: 'Locação Corporativa & Tenant Rep', label: 'Locação Corporativa & Tenant Rep (Escritórios / Galpões)' },
+        { value: 'Renegociação de Contrato de Locação', label: 'Renegociação de Contrato de Locação (Revisão de Aluguel)' },
         { value: 'Sale & Leaseback', label: 'Sale & Leaseback (Venda com aluguel do mesmo imóvel)' },
         { value: 'Venda de Imóvel', label: 'Venda de Imóvel (Galpão, prédio, residencial ou terreno)' },
         { value: 'Compra de Imóvel', label: 'Compra de Imóvel para investimento' },
@@ -746,7 +770,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       submitBtn: 'Enviar Mensagem',
     },
     footer: {
-      description: 'Assessoria imobiliária para compra, venda, Sale & Leaseback e emissão de CRI (Certificados de Recebíveis Imobiliários) para incorporadoras e desenvolvimento imobiliário. Atendemos todas as classes de ativos em todo o Brasil.',
+      description: 'Assessoria imobiliária para compra, venda, locação comercial e industrial (Tenant Rep), renegociação de contratos, Sale & Leaseback e emissão de CRI para incorporadoras. Atendemos todas as classes de ativos em todo o Brasil.',
       location: 'São Paulo, SP — Atuação Nacional',
       navTitle: 'Navegação',
       solutionsTitle: 'Soluções',
@@ -754,6 +778,8 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       locationDetail: 'São Paulo — SP, Brasil.',
       solutions: [
         'Emissão de CRI',
+        'Locação Corporativa & Tenant Rep',
+        'Renegociação de Contratos de Locação',
         'Sale & Leaseback',
         'Compra e Venda de Imóveis',
         'Residencial (Econômico ao Luxo)',
@@ -828,6 +854,28 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
             'Capital for master-planned communities and horizontal subdivisions',
             'Securitization of receivables from installment sales',
             'Working capital backed by real estate collateral with extended maturities',
+          ],
+        },
+        {
+          title: 'Corporate Leasing & Tenant Rep',
+          tag: 'Occupier Representation',
+          description: 'We advise corporations and industrial tenants in the search, technical evaluation, and lease negotiation of prime corporate floorplates and logistics hubs.',
+          points: [
+            'Tenant Representation: dedicated advisory for corporate site selection and leasing',
+            'Technical and financial feasibility analysis of total occupancy costs',
+            'Commercial negotiations for rent-free periods, tenant improvements, and caps',
+            'Landlord Representation for property owners seeking blue-chip corporate tenants',
+          ],
+        },
+        {
+          title: 'Lease Contract Renegotiation',
+          tag: 'Cost Optimization & Renewals',
+          description: 'We represent corporate tenants and property owners in renegotiating existing leases to reflect fair market rents and secure substantial cost savings.',
+          points: [
+            'Realigning contract rent to true fair market rent levels',
+            'Renegotiating lease tenures, early break penalties, and inflation indices (IPCA / IGP-M)',
+            'Advisory on long-term lease renewals and rent review benchmarkings',
+            'Space optimization advisory (footprint expansion, partial handback, or subletting)',
           ],
         },
         {
@@ -1119,7 +1167,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       noResults: 'No questions found matching your search query.',
       clearFilters: 'Clear search filters',
       ctaTitle: 'Have a question regarding your property, project, or capital raise?',
-      ctaDesc: 'Speak directly with Thiago Duarte and the Octis Real Estate advisory team for a dedicated assessment.',
+      ctaDesc: 'Speak directly with the Octis Real Estate advisory team for a dedicated assessment.',
       ctaBtn: 'Ask Octis a Question',
       questions: [
         {
@@ -1282,7 +1330,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       hoursVal: 'Monday to Friday, 9:00 AM – 6:00 PM BRT',
       formTitle: 'Send a Message',
       formSubtitle: 'Fill out the fields below and our team will get in touch.',
-      successNotice: 'Your inquiry has been prepared. If your email client does not open automatically, please write to thiago@octis.com.br.',
+      successNotice: 'Your inquiry has been prepared. If your email client does not open automatically, please write to contato@octis.com.br.',
       nameLabel: 'Your Name *',
       namePlaceholder: 'Full name',
       companyLabel: 'Company / Developer / Name',
@@ -1294,6 +1342,8 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       mandateLabel: 'What is your primary interest?',
       mandates: [
         { value: 'Emissão de CRI', label: 'CRI Issuance (Developers / Construction / Subdivisions)' },
+        { value: 'Locação Corporativa & Tenant Rep', label: 'Corporate Leasing & Tenant Rep (Offices / Logistics)' },
+        { value: 'Renegociação de Contrato de Locação', label: 'Lease Contract Renegotiation (Rent Review & Savings)' },
         { value: 'Sale & Leaseback', label: 'Sale & Leaseback (Sell and lease back the facility)' },
         { value: 'Venda de Imóvel', label: 'Property Disposition (Warehouse, building, land or residential)' },
         { value: 'Compra de Imóvel', label: 'Property Acquisition for investment' },
@@ -1305,7 +1355,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       submitBtn: 'Send Message',
     },
     footer: {
-      description: 'Real estate advisory for acquisitions, dispositions, Sale & Leaseback, and CRI (Real Estate Receivables Certificates) funding for developers and real estate projects across Brazil. We advise across all asset classes nationwide.',
+      description: 'Real estate advisory for acquisitions, dispositions, corporate leasing (Tenant Rep), lease renegotiations, Sale & Leaseback, and CRI funding for developers. We advise across all asset classes nationwide in Brazil.',
       location: 'São Paulo, SP — Nationwide Advisory in Brazil',
       navTitle: 'Navigation',
       solutionsTitle: 'Solutions',
@@ -1313,6 +1363,8 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       locationDetail: 'São Paulo — SP, Brazil.',
       solutions: [
         'CRI Debt Issuance',
+        'Corporate Leasing & Tenant Rep',
+        'Lease Contract Renegotiation',
         'Sale & Leaseback',
         'Acquisitions & Dispositions',
         'Residential (Affordable to Prime)',

@@ -49,7 +49,7 @@ export function Footer() {
               </span>
               <span className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-accent shrink-0" />
-                thiago@octis.com.br
+                contato@octis.com.br
               </span>
             </div>
             
@@ -87,6 +87,16 @@ export function Footer() {
               <li>
                 <Link to="/servicos" className="hover:text-accent transition-colors font-light">
                   {language === 'en' ? 'CRI Debt Issuance' : 'Emissão de CRI'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/servicos" className="hover:text-accent transition-colors font-light">
+                  {language === 'en' ? 'Corporate Leasing & Tenant Rep' : 'Locação Corporativa & Tenant Rep'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/servicos" className="hover:text-accent transition-colors font-light">
+                  {language === 'en' ? 'Lease Contract Renegotiation' : 'Renegociação de Contratos'}
                 </Link>
               </li>
               <li>

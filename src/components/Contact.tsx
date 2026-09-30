@@ -34,7 +34,7 @@ export function Contact() {
         : `Nome: ${name}\nEmpresa/Nome: ${company}\nEmail: ${email}\nTelefone: ${phone}\nInteresse Principal: ${mandateType}\n\nMensagem:\n${message}\n\n(Enviado pelo site oficial da Octis Real Estate)`
     );
     
-    window.location.href = `mailto:thiago@octis.com.br?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:contato@octis.com.br?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -59,10 +59,10 @@ export function Contact() {
               <div>
                 <h4 className="text-sm font-semibold text-white mb-1">{t.emailLabel}</h4>
                 <a 
-                  href="mailto:thiago@octis.com.br" 
+                  href="mailto:contato@octis.com.br" 
                   className="text-gray-300 font-light hover:text-accent transition-colors flex items-center gap-1.5 text-base"
                 >
-                  thiago@octis.com.br <ArrowUpRight className="w-4 h-4" />
+                  contato@octis.com.br <ArrowUpRight className="w-4 h-4" />
                 </a>
               </div>
             </div>
