@@ -11,10 +11,10 @@ export function TrackRecordPage() {
   return (
     <div className="pt-24 min-h-screen bg-brand-900 text-white">
       <SEOHead
-        titlePt="Experiência & Track Record: +R$ 5 Bi em Transações | Octis Real Estate"
-        titleEn="Track Record & Advisory Experience: R$ 5B+ Transacted | Octis Real Estate"
-        descriptionPt="Conheça a experiência de mais de 15 anos e R$ 5 bilhões transacionados da Octis Real Estate em Capital Markets e transações imobiliárias em todo o Brasil."
-        descriptionEn="Explore Octis Real Estate's track record of 15+ years and R$ 5B+ in transactions across Capital Markets, CRI debt, and commercial real estate in Brazil."
+        titlePt="Experiência & Track Record: +R$ 1 Bi em Transações | Octis Real Estate"
+        titleEn="Track Record & Advisory Experience: R$ 1B+ Transacted | Octis Real Estate"
+        descriptionPt="Conheça a experiência de mais de 15 anos e R$ 1 bilhão transacionado da Octis Real Estate em Capital Markets e transações imobiliárias em todo o Brasil."
+        descriptionEn="Explore Octis Real Estate's track record of 15+ years and R$ 1B+ in transactions across Capital Markets, CRI debt, and commercial real estate in Brazil."
         path="/experiencia"
       />
 
@@ -38,11 +38,11 @@ export function TrackRecordPage() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-white mb-6 leading-tight max-w-4xl">
             {language === 'en' ? (
               <>
-                Over 15 Years of Experience & <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-yellow-200 to-accent">R$ 5B+ in Closed Deals</span>
+                Over 15 Years of Experience & <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-yellow-200 to-accent">R$ 1B+ in Closed Deals</span>
               </>
             ) : (
               <>
-                Mais de 15 Anos de Mercado e <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-yellow-200 to-accent">+R$ 5 Bilhões Transacionados</span>
+                Mais de 15 Anos de Mercado e <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-yellow-200 to-accent">+R$ 1 Bilhão Transacionado</span>
               </>
             )}
           </h1>

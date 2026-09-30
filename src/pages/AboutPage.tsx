@@ -105,8 +105,8 @@ export function AboutPage() {
               </h3>
               <p className="text-sm text-gray-300 font-light leading-relaxed">
                 {language === 'en'
-                  ? 'Our leadership brings over 15 years of transaction experience and R$ 5B+ in closed deal volume, emphasizing speed and objective clarity.'
-                  : 'Nossa liderança soma mais de 15 anos de mercado e R$ 5 bilhões transacionados, com foco na agilidade e clareza de cada etapa.'}
+                  ? 'Our leadership brings over 15 years of transaction experience and R$ 1B+ in closed deal volume, emphasizing speed and objective clarity.'
+                  : 'Nossa liderança soma mais de 15 anos de mercado e R$ 1 bilhão transacionado, com foco na agilidade e clareza de cada etapa.'}
               </p>
             </div>
           </div>
