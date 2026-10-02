@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Services } from '../components/Services';
 import { SEOHead } from '../components/SEOHead';
 import { useLanguage } from '../context/LanguageContext';
-import { ArrowRight, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export function ServicesPage() {
   const { language } = useLanguage();
@@ -18,45 +18,7 @@ export function ServicesPage() {
         path="/servicos"
       />
 
-      {/* Page Hero Header (Clean CBRE Style) */}
-      <section className="py-16 md:py-24 bg-white border-b border-gray-200 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-          
-          {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-xs text-gray-500 mb-6 uppercase tracking-wider">
-            <Link to="/" className="hover:text-[#0a1d37] transition-colors">
-              {language === 'en' ? 'Home' : 'Início'}
-            </Link>
-            <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-[#0a1d37] font-semibold">{language === 'en' ? 'Services' : 'Serviços'}</span>
-          </nav>
-
-          <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
-            <span className="w-1.5 h-1.5 bg-[#c59b27]" />
-            {language === 'en' ? 'Our Solutions' : 'Nossas Soluções'}
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-gray-900 mb-6 leading-tight max-w-4xl font-normal">
-            {language === 'en' ? (
-              <>
-                Real Estate Solutions &amp; <span className="text-[#0a1d37] italic">Construction Funding</span>
-              </>
-            ) : (
-              <>
-                Soluções em <span className="text-[#0a1d37] italic">Imóveis, Aluguel &amp; Financiamento</span>
-              </>
-            )}
-          </h1>
-
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 font-light max-w-3xl leading-relaxed">
-            {language === 'en'
-              ? 'Buying, selling, commercial leasing, lease renegotiation, Sale & Leaseback, and construction funding via CRI. Structured negotiations with market expertise.'
-              : 'Compra, venda, locação comercial, renegociação de contratos, Sale & Leaseback e financiamento de obras via CRI com excelência e segurança jurídica.'}
-          </p>
-        </div>
-      </section>
-
-      {/* Main Services Section (Exact CBRE 3-column + Cards) */}
+      {/* Main Services Cards */}
       <Services />
 
       {/* Workflow Section */}
@@ -73,7 +35,7 @@ export function ServicesPage() {
             <p className="text-gray-600 text-sm md:text-base font-light">
               {language === 'en'
                 ? 'A straightforward path designed to eliminate delays and maximize capital certainty.'
-                : 'Um fluxo claro e direto para viabilizar sua operação no menor tempo possível.'}
+                : 'Um fluxo claro e direto para viabilizar sua operação com segurança jurídica.'}
             </p>
           </div>
 
@@ -127,8 +89,8 @@ export function ServicesPage() {
           </h2>
           <p className="text-gray-200 text-sm md:text-base font-light mb-8 max-w-xl mx-auto">
             {language === 'en'
-              ? 'Speak directly with the Octis Real Estate team for rapid feedback.'
-              : 'Fale diretamente com a equipe da Octis Real Estate para um retorno rápido.'}
+              ? 'Speak directly with the Octis Real Estate team for a consultation.'
+              : 'Fale diretamente com a equipe da Octis Real Estate para uma consulta especializada.'}
           </p>
           <Link
             to="/contato"

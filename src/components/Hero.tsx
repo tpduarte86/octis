@@ -62,57 +62,6 @@ export function Hero() {
           </div>
         </div>
 
-        {/* 4-Item Institutional Metrics Bar (Clean, Uncluttered, CBRE Style) */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-gray-200">
-          <div className="py-2">
-            <span className="text-3xl md:text-4xl font-serif text-[#0a1d37] font-normal block">
-              +R$ 1 Bi
-            </span>
-            <span className="text-xs uppercase tracking-wider text-gray-700 font-semibold mt-1 block">
-              {language === 'en' ? 'Transactions Volume' : 'Volume em Transações'}
-            </span>
-            <span className="text-xs text-gray-500 font-light mt-0.5 block">
-              {language === 'en' ? 'Closed across Brazil' : 'Concluídas em todo o Brasil'}
-            </span>
-          </div>
-
-          <div className="py-2">
-            <span className="text-3xl md:text-4xl font-serif text-[#0a1d37] font-normal block">
-              +15 Anos
-            </span>
-            <span className="text-xs uppercase tracking-wider text-gray-700 font-semibold mt-1 block">
-              {language === 'en' ? 'Market Experience' : 'Experiência de Mercado'}
-            </span>
-            <span className="text-xs text-gray-500 font-light mt-0.5 block">
-              {language === 'en' ? 'Over 15 years in commercial real estate' : 'Mais de 15 anos no mercado imobiliário'}
-            </span>
-          </div>
-
-          <div className="py-2">
-            <span className="text-3xl md:text-4xl font-serif text-[#0a1d37] font-normal block">
-              Todas
-            </span>
-            <span className="text-xs uppercase tracking-wider text-gray-700 font-semibold mt-1 block">
-              {language === 'en' ? 'Classes of Assets' : 'Classes de Ativos'}
-            </span>
-            <span className="text-xs text-gray-500 font-light mt-0.5 block">
-              {language === 'en' ? 'From entry-level to Class AAA' : 'Do padrão mais simples ao AAA'}
-            </span>
-          </div>
-
-          <div className="py-2">
-            <span className="text-3xl md:text-4xl font-serif text-[#0a1d37] font-normal block">
-              Nacional
-            </span>
-            <span className="text-xs uppercase tracking-wider text-gray-700 font-semibold mt-1 block">
-              {language === 'en' ? 'Nationwide Reach' : 'Atuação em Todo o Brasil'}
-            </span>
-            <span className="text-xs text-gray-500 font-light mt-0.5 block">
-              {language === 'en' ? 'Headquartered in São Paulo' : 'Sede em São Paulo, SP'}
-            </span>
-          </div>
-        </div>
-
       </div>
     </section>
   );
