@@ -38,71 +38,78 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-brand-900 border-t border-white/5 text-white relative">
+    <section id="contact" className="py-20 md:py-28 bg-white border-t border-gray-200 text-gray-900 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 md:gap-16 items-start">
         
         {/* Left Column: Direct Info & Location */}
         <div>
-          <div className="inline-flex items-center gap-2 text-accent uppercase tracking-widest text-xs font-semibold mb-3 px-3 py-1 bg-accent/10 border border-accent/20">
+          <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
+            <span className="w-1.5 h-1.5 bg-[#c59b27]" />
             {t.badge}
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-4 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 mb-4 font-normal leading-tight">
             {t.title}
           </h2>
-          <p className="text-gray-300 font-light text-base md:text-lg mb-8 leading-relaxed">
+          <p className="text-gray-600 font-light text-base md:text-lg mb-8 leading-relaxed">
             {t.subtitle}
           </p>
           
           <div className="space-y-4">
-            <div className="flex items-start gap-4 p-5 bg-brand-800/40 border border-white/5">
-              <Mail className="w-5 h-5 text-accent shrink-0 mt-1" />
+            <div className="flex items-start gap-4 p-6 bg-[#f8fafc] border border-gray-200">
+              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center shrink-0 mt-0.5 text-[#0a1d37]">
+                <Mail className="w-5 h-5" />
+              </div>
               <div>
-                <h4 className="text-sm font-semibold text-white mb-1">{t.emailLabel}</h4>
+                <h4 className="text-xs uppercase tracking-wider font-semibold text-gray-500 mb-1">{t.emailLabel}</h4>
                 <a 
                   href="mailto:contato@octis.com.br" 
-                  className="text-gray-300 font-light hover:text-accent transition-colors flex items-center gap-1.5 text-base"
+                  className="text-gray-900 font-medium hover:text-[#0a1d37] transition-colors flex items-center gap-1.5 text-base"
                 >
-                  contato@octis.com.br <ArrowUpRight className="w-4 h-4" />
+                  contato@octis.com.br <ArrowUpRight className="w-4 h-4 text-[#c59b27]" />
                 </a>
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-5 bg-brand-800/40 border border-white/5">
-              <MapPin className="w-5 h-5 text-accent shrink-0 mt-1" />
+            <div className="flex items-start gap-4 p-6 bg-[#f8fafc] border border-gray-200">
+              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center shrink-0 mt-0.5 text-[#0a1d37]">
+                <MapPin className="w-5 h-5" />
+              </div>
               <div>
-                <h4 className="text-sm font-semibold text-white mb-1">{t.locationLabel}</h4>
-                <p className="text-gray-300 font-light text-sm">{t.locationVal}</p>
+                <h4 className="text-xs uppercase tracking-wider font-semibold text-gray-500 mb-1">{t.locationLabel}</h4>
+                <p className="text-gray-800 font-light text-sm">{t.locationVal}</p>
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-5 bg-brand-800/40 border border-white/5">
-              <Clock className="w-5 h-5 text-accent shrink-0 mt-1" />
+            <div className="flex items-start gap-4 p-6 bg-[#f8fafc] border border-gray-200">
+              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center shrink-0 mt-0.5 text-[#0a1d37]">
+                <Clock className="w-5 h-5" />
+              </div>
               <div>
-                <h4 className="text-sm font-semibold text-white mb-1">{t.hoursLabel}</h4>
-                <p className="text-gray-300 font-light text-sm">{t.hoursVal}</p>
+                <h4 className="text-xs uppercase tracking-wider font-semibold text-gray-500 mb-1">{t.hoursLabel}</h4>
+                <p className="text-gray-800 font-light text-sm">{t.hoursVal}</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Right Column: Form */}
-        <div className="bg-brand-800/70 border border-white/10 p-7 md:p-9 shadow-xl relative">
-          <h3 className="text-2xl font-serif text-white mb-2">{t.formTitle}</h3>
-          <p className="text-sm text-gray-400 font-light mb-6">
+        {/* Right Column: Form (Clean CBRE Style) */}
+        <div className="bg-[#f8fafc] border border-gray-200 p-8 md:p-10 shadow-sm relative">
+          <h3 className="text-2xl font-serif text-gray-900 mb-2 font-normal">{t.formTitle}</h3>
+          <p className="text-sm text-gray-600 font-light mb-6">
             {t.formSubtitle}
           </p>
 
           {submitted && (
-            <div className="mb-6 p-4 bg-accent/10 border border-accent/30 text-accent text-sm flex items-center gap-3">
-              <CheckCircle className="w-5 h-5 shrink-0" />
+            <div className="mb-6 p-4 bg-amber-50/80 border border-amber-200 text-amber-950 text-sm flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-[#c59b27]" shrink-0 />
               <span>{t.successNotice}</span>
             </div>
           )}
           
-          <form className="space-y-5" onSubmit={handleSubmit}>
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium" htmlFor="name">
+                <label className="block text-xs uppercase tracking-wider text-gray-700 mb-1 font-semibold" htmlFor="name">
                   {t.nameLabel}
                 </label>
                 <input 
@@ -110,20 +117,20 @@ export function Contact() {
                   id="name"
                   name="name"
                   required
-                  className="w-full bg-brand-900/80 border border-white/10 px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-accent text-sm"
+                  className="w-full bg-white border border-gray-300 px-4 py-2.5 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#0a1d37] focus:ring-1 focus:ring-[#0a1d37] text-sm"
                   placeholder={t.namePlaceholder}
                 />
               </div>
 
               <div>
-                <label className="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium" htmlFor="company">
+                <label className="block text-xs uppercase tracking-wider text-gray-700 mb-1 font-semibold" htmlFor="company">
                   {t.companyLabel}
                 </label>
                 <input 
                   type="text" 
                   id="company"
                   name="company"
-                  className="w-full bg-brand-900/80 border border-white/10 px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-accent text-sm"
+                  className="w-full bg-white border border-gray-300 px-4 py-2.5 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#0a1d37] focus:ring-1 focus:ring-[#0a1d37] text-sm"
                   placeholder={t.companyPlaceholder}
                 />
               </div>
@@ -131,7 +138,7 @@ export function Contact() {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium" htmlFor="email">
+                <label className="block text-xs uppercase tracking-wider text-gray-700 mb-1 font-semibold" htmlFor="email">
                   {t.emailInputLabel}
                 </label>
                 <input 
@@ -139,37 +146,36 @@ export function Contact() {
                   id="email"
                   name="email"
                   required
-                  className="w-full bg-brand-900/80 border border-white/10 px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-accent text-sm"
+                  className="w-full bg-white border border-gray-300 px-4 py-2.5 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#0a1d37] focus:ring-1 focus:ring-[#0a1d37] text-sm"
                   placeholder={t.emailPlaceholder}
                 />
               </div>
 
               <div>
-                <label className="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium" htmlFor="phone">
+                <label className="block text-xs uppercase tracking-wider text-gray-700 mb-1 font-semibold" htmlFor="phone">
                   {t.phoneLabel}
                 </label>
                 <input 
                   type="tel" 
                   id="phone"
                   name="phone"
-                  className="w-full bg-brand-900/80 border border-white/10 px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-accent text-sm"
+                  className="w-full bg-white border border-gray-300 px-4 py-2.5 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#0a1d37] focus:ring-1 focus:ring-[#0a1d37] text-sm"
                   placeholder={t.phonePlaceholder}
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium" htmlFor="mandateType">
+              <label className="block text-xs uppercase tracking-wider text-gray-700 mb-1 font-semibold" htmlFor="mandateType">
                 {t.mandateLabel}
               </label>
               <select
                 id="mandateType"
                 name="mandateType"
-                defaultValue={t.mandates[0]?.value}
-                className="w-full bg-brand-900/80 border border-white/10 px-4 py-2.5 text-white focus:outline-none focus:border-accent text-sm"
+                className="w-full bg-white border border-gray-300 px-4 py-2.5 text-gray-900 focus:outline-none focus:border-[#0a1d37] focus:ring-1 focus:ring-[#0a1d37] text-sm cursor-pointer"
               >
                 {t.mandates.map((m) => (
-                  <option key={m.value} value={m.value}>
+                  <option key={m.value} value={m.value} className="bg-white text-gray-900 py-1">
                     {m.label}
                   </option>
                 ))}
@@ -177,22 +183,22 @@ export function Contact() {
             </div>
 
             <div>
-              <label className="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium" htmlFor="message">
+              <label className="block text-xs uppercase tracking-wider text-gray-700 mb-1 font-semibold" htmlFor="message">
                 {t.messageLabel}
               </label>
               <textarea 
                 id="message"
                 name="message"
-                rows={3}
+                rows={4}
                 required
-                className="w-full bg-brand-900/80 border border-white/10 px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-accent resize-none text-sm"
+                className="w-full bg-white border border-gray-300 px-4 py-2.5 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#0a1d37] focus:ring-1 focus:ring-[#0a1d37] text-sm resize-none"
                 placeholder={t.messagePlaceholder}
-              ></textarea>
+              />
             </div>
 
             <button 
-              type="submit" 
-              className="w-full bg-accent hover:bg-accent/90 text-brand-900 font-semibold py-3.5 uppercase tracking-wider text-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
+              type="submit"
+              className="w-full bg-[#0a1d37] hover:bg-[#122b4f] text-white py-3.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer"
             >
               {t.submitBtn}
             </button>

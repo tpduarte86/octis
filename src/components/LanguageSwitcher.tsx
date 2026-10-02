@@ -7,31 +7,31 @@ export function LanguageSwitcher({ className = '' }: { className?: string }) {
 
   return (
     <div
-      className={`inline-flex items-center gap-1.5 p-1 bg-brand-800/80 border border-white/10 text-xs ${className}`}
+      className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-white border border-gray-200 text-xs text-gray-700 shadow-xs hover:border-gray-300 transition-colors ${className}`}
       role="group"
       aria-label="Language selector"
     >
-      <Globe className="w-3.5 h-3.5 text-accent/80 ml-1 shrink-0" />
+      <Globe className="w-3.5 h-3.5 text-[#0a1d37] shrink-0" />
       <button
         type="button"
         onClick={() => setLanguage('pt')}
-        className={`px-2 py-0.5 rounded-none text-[11px] font-medium transition-colors cursor-pointer ${
+        className={`px-1.5 py-0.5 text-[11px] tracking-wider font-semibold transition-colors cursor-pointer ${
           language === 'pt'
-            ? 'bg-accent text-brand-900 font-semibold shadow-sm'
-            : 'text-gray-300 hover:text-white'
+            ? 'text-[#0a1d37] border-b-2 border-[#c59b27]'
+            : 'text-gray-400 hover:text-gray-700'
         }`}
         title="Versão em Português"
       >
         PT
       </button>
-      <span className="text-gray-600 text-xs">|</span>
+      <span className="text-gray-300 text-xs">|</span>
       <button
         type="button"
         onClick={() => setLanguage('en')}
-        className={`px-2 py-0.5 rounded-none text-[11px] font-medium transition-colors cursor-pointer ${
+        className={`px-1.5 py-0.5 text-[11px] tracking-wider font-semibold transition-colors cursor-pointer ${
           language === 'en'
-            ? 'bg-accent text-brand-900 font-semibold shadow-sm'
-            : 'text-gray-300 hover:text-white'
+            ? 'text-[#0a1d37] border-b-2 border-[#c59b27]'
+            : 'text-gray-400 hover:text-gray-700'
         }`}
         title="English Version"
       >

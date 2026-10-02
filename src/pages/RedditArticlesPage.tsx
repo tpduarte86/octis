@@ -9,7 +9,7 @@ export function RedditArticlesPage() {
   const { language } = useLanguage();
 
   return (
-    <div className="pt-24 min-h-screen bg-brand-900 text-white">
+    <div className="pt-20 min-h-screen bg-white text-gray-900">
       <SEOHead
         titlePt="Artigos & Discussões Reddit Brasil: CRI e Mercado Imobiliário | Octis Real Estate"
         titleEn="Articles & Reddit Real Estate Insights: CRI Debt & Capital Markets | Octis Real Estate"
@@ -18,37 +18,37 @@ export function RedditArticlesPage() {
         path="/reddit"
       />
 
-      {/* Page Hero Header */}
-      <section className="py-16 md:py-24 bg-brand-850 border-b border-white/10 relative overflow-hidden">
+      {/* Page Hero Header (Clean CBRE Style) */}
+      <section className="py-16 md:py-24 bg-white border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           
           {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-xs text-gray-400 mb-6 uppercase tracking-wider">
-            <Link to="/" className="hover:text-accent transition-colors">
+          <nav className="flex items-center gap-2 text-xs text-gray-500 mb-6 uppercase tracking-wider">
+            <Link to="/" className="hover:text-[#0a1d37] transition-colors">
               {language === 'en' ? 'Home' : 'Início'}
             </Link>
-            <ChevronRight className="w-3.5 h-3.5 text-gray-600" />
-            <span className="text-accent">{language === 'en' ? 'Articles & Insights' : 'Artigos & Análises'}</span>
+            <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
+            <span className="text-[#0a1d37] font-semibold">{language === 'en' ? 'Articles & Insights' : 'Artigos & Análises'}</span>
           </nav>
 
-          <div className="inline-flex items-center gap-2 text-accent uppercase tracking-widest text-xs font-semibold mb-4 px-3 py-1 bg-accent/10 border border-accent/20">
-            <BookOpen className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
+            <span className="w-1.5 h-1.5 bg-[#c59b27]" />
             <span>{language === 'en' ? 'Knowledge Hub & Market Intelligence' : 'Artigos & Inteligência de Mercado'}</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-white mb-6 leading-tight max-w-4xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-gray-900 mb-6 leading-tight max-w-4xl font-normal">
             {language === 'en' ? (
               <>
-                Real Estate Insights, <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-yellow-200 to-accent">CRI & Capital Markets</span>
+                Real Estate Insights, <span className="text-[#0a1d37] italic">CRI &amp; Capital Markets</span>
               </>
             ) : (
               <>
-                Artigos sobre <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-yellow-200 to-accent">Imóveis, CRI e Capital Markets</span>
+                Artigos sobre <span className="text-[#0a1d37] italic">Imóveis, CRI e Capital Markets</span>
               </>
             )}
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-300 font-light max-w-3xl leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 font-light max-w-3xl leading-relaxed">
             {language === 'en'
               ? 'Practical, accessible intelligence written for property owners, developers, and institutional investors seeking clarity on debt funding, acquisitions, and balance sheet optimization in Brazil.'
               : 'Conteúdos diretos e objetivos para proprietários, incorporadoras e investidores compreenderem como funcionam as operações de CRI, Sale & Leaseback e compra e venda no mercado brasileiro.'}
@@ -60,27 +60,27 @@ export function RedditArticlesPage() {
       <Blog />
 
       {/* Link to Community Questions */}
-      <section className="py-16 bg-brand-850 border-t border-white/10">
+      <section className="py-16 bg-[#0a1d37] text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 text-accent uppercase tracking-widest text-xs font-semibold mb-3 px-3 py-1 bg-accent/10 border border-accent/20">
-            <MessageSquare className="w-3.5 h-3.5" />
-            <span>{language === 'en' ? 'Community Questions' : 'Comunidade'}</span>
+          <div className="inline-flex items-center gap-2 text-[#c59b27] uppercase tracking-widest text-xs font-semibold mb-3">
+            <MessageSquare className="w-4 h-4" />
+            <span>{language === 'en' ? 'Community Interaction' : 'Dúvidas da Comunidade'}</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-serif text-white mb-4">
+          <h2 className="text-2xl md:text-3xl font-serif text-white mb-4 font-normal">
             {language === 'en'
-              ? 'Looking for Reddit forum discussions and expert answers?'
-              : 'Procura perguntas reais de fóruns e respostas de especialistas?'}
+              ? 'Looking for Reddit community Q&A and verified answers?'
+              : 'Procurando perguntas da comunidade com respostas verificadas?'}
           </h2>
-          <p className="text-gray-300 text-sm md:text-base font-light mb-8">
+          <p className="text-gray-200 text-sm md:text-base font-light mb-8 max-w-xl mx-auto">
             {language === 'en'
-              ? 'Visit our Reddit Community FAQ page to view verified answers across all commercial real estate categories.'
-              : 'Acesse nossa seção de Dúvidas da Comunidade Reddit com respostas detalhadas sobre todas as linhas de negócios.'}
+              ? 'Explore our interactive Reddit FAQ featuring real inquiries on real estate debt, contracts, and valuations.'
+              : 'Explore nosso FAQ estilo Reddit com dúvidas reais sobre financiamento de obras, contratos de locação e avaliação de imóveis.'}
           </p>
           <Link
             to="/duvidas-reddit"
-            className="px-8 py-4 bg-accent hover:bg-accent/90 text-brand-900 font-semibold text-xs uppercase tracking-wider inline-flex items-center gap-2"
+            className="px-8 py-3.5 bg-white text-[#0a1d37] hover:bg-gray-100 font-semibold text-xs uppercase tracking-wider inline-flex items-center gap-2 transition-colors"
           >
-            {language === 'en' ? 'View Reddit Community FAQ' : 'Ver Dúvidas da Comunidade Reddit'} <ArrowRight className="w-4 h-4" />
+            {language === 'en' ? 'Explore Reddit FAQ' : 'Ver Dúvidas Reddit'} <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>

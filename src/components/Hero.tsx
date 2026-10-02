@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'motion/react';
-import { ArrowRight, Building, Award, Landmark } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/content';
 
@@ -9,81 +9,110 @@ export function Hero() {
   const t = translations[language].hero;
 
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-brand-900">
-      {/* Background with overlay */}
-      <div 
-        className="absolute inset-0 z-0 opacity-25 bg-cover bg-center"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=2940&auto=format&fit=crop")' }}
-      />
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand-900/80 via-brand-900/90 to-brand-900" />
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="max-w-4xl"
-        >
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 mb-6 border border-accent/40 bg-brand-800/80 text-xs font-medium text-accent uppercase tracking-wider">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            {t.badge}
+    <section id="home" className="relative pt-24 pb-16 md:pt-32 md:pb-24 bg-white text-gray-900 overflow-hidden">
+      {/* Background architectural grid */}
+      <div className="absolute inset-0 bg-cbre-grid pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        
+        {/* Top Kicker Label */}
+        <div className="flex items-center gap-2 mb-4">
+          <span className="w-2 h-2 bg-[#c59b27]" />
+          <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#0a1d37]">
+            {language === 'en' ? 'Octis Real Estate • São Paulo & Brazil' : 'Octis Real Estate • São Paulo & Brasil'}
+          </span>
+        </div>
+
+        {/* Main Editorial Headline */}
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end mb-12">
+          <div className="lg:col-span-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-gray-900 font-normal leading-[1.15] tracking-tight">
+              {language === 'en' ? (
+                <>
+                  Real Estate Transactions &amp; <span className="text-[#0a1d37] italic">Construction Funding</span>
+                </>
+              ) : (
+                <>
+                  Negócios Imobiliários &amp; <span className="text-[#0a1d37] italic">Financiamento de Obras</span>
+                </>
+              )}
+            </h1>
           </div>
-          
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif text-white leading-tight mb-6 tracking-tight">
-            {t.h1Main} <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-yellow-200 to-accent">{t.h1Accent}</span>
-            <span className="sr-only">{t.h1SrOnly}</span>
-            <span className="text-[10px] uppercase tracking-widest text-gray-400/50 font-sans block font-normal mt-2">
-              {t.h1Sub}
+
+          <div className="lg:col-span-4">
+            <p className="text-gray-600 text-sm md:text-base font-light leading-relaxed mb-6">
+              {language === 'en'
+                ? 'Connecting property owners, corporations, and developers directly to qualified buyers, tenants, and institutional capital across Brazil.'
+                : 'Conectamos proprietários, empresas e incorporadoras diretamente a compradores, locatários e investidores em todo o Brasil.'}
+            </p>
+            <div className="flex items-center gap-3">
+              <a
+                href="#services"
+                className="px-6 py-3 bg-[#0a1d37] hover:bg-[#122b4f] text-white text-xs font-semibold uppercase tracking-wider transition-colors inline-flex items-center gap-2"
+              >
+                {language === 'en' ? 'Explore Services' : 'Ver Serviços'} <ChevronRight className="w-3.5 h-3.5" />
+              </a>
+              <Link
+                to="/contato"
+                className="px-6 py-3 border border-[#0a1d37] text-[#0a1d37] hover:bg-[#0a1d37] hover:text-white text-xs font-semibold uppercase tracking-wider transition-colors"
+              >
+                {language === 'en' ? 'Contact Us' : 'Falar com a Equipe'}
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* 4-Item Institutional Metrics Bar (Clean, Uncluttered, CBRE Style) */}
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-gray-200">
+          <div className="py-2">
+            <span className="text-3xl md:text-4xl font-serif text-[#0a1d37] font-normal block">
+              +R$ 1 Bi
             </span>
-          </h1>
-          
-          <p className="text-lg md:text-xl text-gray-300 font-light mb-10 max-w-3xl leading-relaxed">
-            {t.description}
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 mb-14">
-            <a 
-              href="#services" 
-              className="inline-flex justify-center items-center gap-2 bg-accent hover:bg-accent/90 text-brand-900 px-8 py-4 font-semibold transition-all hover:gap-3"
-            >
-              {t.ctaServices} <ArrowRight className="w-5 h-5" />
-            </a>
-            <a 
-              href="#contact" 
-              className="inline-flex justify-center items-center border border-white/20 hover:border-accent hover:text-accent text-white px-8 py-4 font-medium transition-colors"
-            >
-              {t.ctaContact}
-            </a>
+            <span className="text-xs uppercase tracking-wider text-gray-700 font-semibold mt-1 block">
+              {language === 'en' ? 'Transactions Volume' : 'Volume em Transações'}
+            </span>
+            <span className="text-xs text-gray-500 font-light mt-0.5 block">
+              {language === 'en' ? 'Closed across Brazil' : 'Concluídas em todo o Brasil'}
+            </span>
           </div>
 
-          {/* Credential Points */}
-          <div className="pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="flex items-center gap-3">
-              <Landmark className="w-6 h-6 text-accent shrink-0" />
-              <div>
-                <p className="text-sm font-semibold text-white">{t.cred1Title}</p>
-                <p className="text-xs text-gray-400">{t.cred1Desc}</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <Building className="w-6 h-6 text-accent shrink-0" />
-              <div>
-                <p className="text-sm font-semibold text-white">{t.cred2Title}</p>
-                <p className="text-xs text-gray-400">{t.cred2Desc}</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <Award className="w-6 h-6 text-accent shrink-0" />
-              <div>
-                <p className="text-sm font-semibold text-white">{t.cred3Title}</p>
-                <p className="text-xs text-gray-400">{t.cred3Desc}</p>
-              </div>
-            </div>
+          <div className="py-2">
+            <span className="text-3xl md:text-4xl font-serif text-[#0a1d37] font-normal block">
+              +15 Anos
+            </span>
+            <span className="text-xs uppercase tracking-wider text-gray-700 font-semibold mt-1 block">
+              {language === 'en' ? 'Market Experience' : 'Experiência de Mercado'}
+            </span>
+            <span className="text-xs text-gray-500 font-light mt-0.5 block">
+              {language === 'en' ? 'Over 15 years in commercial real estate' : 'Mais de 15 anos no mercado imobiliário'}
+            </span>
           </div>
-        </motion.div>
+
+          <div className="py-2">
+            <span className="text-3xl md:text-4xl font-serif text-[#0a1d37] font-normal block">
+              Todas
+            </span>
+            <span className="text-xs uppercase tracking-wider text-gray-700 font-semibold mt-1 block">
+              {language === 'en' ? 'Classes of Assets' : 'Classes de Ativos'}
+            </span>
+            <span className="text-xs text-gray-500 font-light mt-0.5 block">
+              {language === 'en' ? 'From entry-level to Class AAA' : 'Do padrão mais simples ao AAA'}
+            </span>
+          </div>
+
+          <div className="py-2">
+            <span className="text-3xl md:text-4xl font-serif text-[#0a1d37] font-normal block">
+              Nacional
+            </span>
+            <span className="text-xs uppercase tracking-wider text-gray-700 font-semibold mt-1 block">
+              {language === 'en' ? 'Nationwide Reach' : 'Atuação em Todo o Brasil'}
+            </span>
+            <span className="text-xs text-gray-500 font-light mt-0.5 block">
+              {language === 'en' ? 'Headquartered in São Paulo' : 'Sede em São Paulo, SP'}
+            </span>
+          </div>
+        </div>
+
       </div>
     </section>
   );

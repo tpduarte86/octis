@@ -12,7 +12,6 @@ export function Footer() {
 
   const footerNav = [
     { name: nav.home, path: '/' },
-    { name: nav.about, path: '/quem-somos' },
     { name: nav.services, path: '/servicos' },
     { name: nav.development, path: '/imoveis' },
     { name: nav.leadership, path: '/experiencia' },
@@ -22,33 +21,33 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-brand-900 border-t border-white/10 text-gray-400 py-14">
+    <footer className="bg-[#061224] border-t border-slate-800 text-gray-300 py-16">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-14">
           
           {/* Brand & Summary */}
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center gap-3 mb-4 inline-flex" aria-label="Octis Real Estate - Home">
-              <Octagon className="w-8 h-8 text-accent" />
+            <Link to="/" className="flex items-center gap-2.5 mb-5 inline-flex" aria-label="Octis Real Estate - Home">
+              <Octagon className="w-7 h-7 text-[#c59b27] stroke-[2.2]" />
               <div className="flex flex-col">
-                <span className="font-serif text-xl font-semibold tracking-wide text-white leading-none">
-                  OCTIS<span className="text-accent">.</span>
+                <span className="font-serif text-2xl font-bold tracking-tight text-white leading-none">
+                  OCTIS<span className="text-[#c59b27]">.</span>
                 </span>
-                <span className="text-[10px] uppercase tracking-widest text-gray-400 font-sans mt-0.5">
+                <span className="text-[9px] uppercase tracking-[0.25em] text-slate-400 font-sans font-semibold mt-0.5">
                   Real Estate
                 </span>
               </div>
             </Link>
-            <p className="font-light text-sm max-w-md text-gray-300 mb-5 leading-relaxed">
+            <p className="font-light text-sm max-w-md text-gray-300 mb-6 leading-relaxed">
               {t.description}
             </p>
-            <div className="flex flex-col gap-2 text-xs text-gray-400 mb-6">
+            <div className="flex flex-col gap-2.5 text-xs text-gray-300 mb-6">
               <span className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-accent shrink-0" />
+                <MapPin className="w-4 h-4 text-[#c59b27] shrink-0" />
                 {t.location}
               </span>
               <span className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-accent shrink-0" />
+                <Mail className="w-4 h-4 text-[#c59b27] shrink-0" />
                 contato@octis.com.br
               </span>
             </div>
@@ -64,13 +63,13 @@ export function Footer() {
           
           {/* Nav Links */}
           <div>
-            <h4 className="text-white font-medium mb-4 uppercase text-xs tracking-widest border-b border-white/10 pb-2">
+            <h4 className="text-white font-serif text-base mb-4 border-b border-slate-800 pb-2">
               {t.navTitle}
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2.5 text-xs sm:text-sm">
               {footerNav.map((item) => (
                 <li key={item.path}>
-                  <Link to={item.path} className="hover:text-accent transition-colors font-light">
+                  <Link to={item.path} className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
                     {item.name}
                   </Link>
                 </li>
@@ -80,47 +79,47 @@ export function Footer() {
           
           {/* Solutions Links */}
           <div>
-            <h4 className="text-white font-medium mb-4 uppercase text-xs tracking-widest border-b border-white/10 pb-2">
+            <h4 className="text-white font-serif text-base mb-4 border-b border-slate-800 pb-2">
               {t.solutionsTitle}
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
-                <Link to="/servicos" className="hover:text-accent transition-colors font-light">
+                <Link to="/servicos" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
                   {language === 'en' ? 'CRI Debt Issuance' : 'Emissão de CRI'}
                 </Link>
               </li>
               <li>
-                <Link to="/servicos" className="hover:text-accent transition-colors font-light">
+                <Link to="/servicos" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
                   {language === 'en' ? 'Corporate Leasing & Tenant Rep' : 'Locação Corporativa & Tenant Rep'}
                 </Link>
               </li>
               <li>
-                <Link to="/servicos" className="hover:text-accent transition-colors font-light">
+                <Link to="/servicos" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
                   {language === 'en' ? 'Lease Contract Renegotiation' : 'Renegociação de Contratos'}
                 </Link>
               </li>
               <li>
-                <Link to="/servicos" className="hover:text-accent transition-colors font-light">
+                <Link to="/servicos" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
                   {language === 'en' ? 'Sale & Leaseback' : 'Sale & Leaseback'}
                 </Link>
               </li>
               <li>
-                <Link to="/servicos" className="hover:text-accent transition-colors font-light">
+                <Link to="/servicos" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
                   {language === 'en' ? 'Property Dispositions' : 'Compra e Venda de Imóveis'}
                 </Link>
               </li>
               <li>
-                <Link to="/imoveis" className="hover:text-accent transition-colors font-light">
+                <Link to="/imoveis" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
                   {language === 'en' ? 'Residential (Affordable to Prime)' : 'Residencial (Econômico ao Luxo)'}
                 </Link>
               </li>
               <li>
-                <Link to="/imoveis" className="hover:text-accent transition-colors font-light">
+                <Link to="/imoveis" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
                   {language === 'en' ? 'Warehouses & Logistics' : 'Galpões de Todos os Portes'}
                 </Link>
               </li>
               <li>
-                <Link to="/imoveis" className="hover:text-accent transition-colors font-light">
+                <Link to="/imoveis" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
                   {language === 'en' ? 'Land & Master-Planned Subdivisions' : 'Loteamentos e Terrenos'}
                 </Link>
               </li>
@@ -130,7 +129,7 @@ export function Footer() {
         </div>
         
         {/* Bottom bar */}
-        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500 font-light">
+        <div className="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-400 font-light">
           <p>© {new Date().getFullYear()} {t.copyright}</p>
           <p>{t.locationDetail}</p>
         </div>
