@@ -1,6 +1,6 @@
 {
   "name": "Octis Real Estate",
-  "description": "Negócios imobiliários, compra, venda, locação comercial, Sale & Leaseback e financiamento de obras via CRI.",
+  "description": "Negócios imobiliários, renegociação de contratos de aluguel, ação revisional em escritórios e galpões, compra, venda e financiamento via CRI.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

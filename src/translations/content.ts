@@ -386,7 +386,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       title: 'Conteúdos sobre Imóveis, CRI e Capital Markets',
       subtitle: 'Informações diretas para proprietários, incorporadoras e investidores entenderem as melhores soluções do mercado.',
       filterAll: 'Todos',
-      categories: ['Todos', 'CRI & Financiamento', 'Sale & Leaseback', 'Desenvolvimento Imobiliário', 'Compra e Venda', 'Mercado Imobiliário'],
+      categories: ['Todos', 'Renegociação & Revisional', 'CRI & Financiamento', 'Sale & Leaseback', 'Desenvolvimento Imobiliário', 'Compra e Venda', 'Mercado Imobiliário'],
       readTimeLabel: 'de leitura',
       takeawaysTitle: 'Pontos Principais Deste Artigo:',
       backBtn: 'Voltar para Artigos',
@@ -396,6 +396,150 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       ctaBoxDesc: 'A Octis Real Estate conecta incorporadoras, loteadoras e proprietários aos investidores e compradores certos em todo o Brasil.',
       ctaBoxBtn: 'Falar com Especialistas',
       articles: [
+        {
+          id: 'aumento-abusivo-aluguel-comercial-escritorios-galpoes',
+          title: 'Aumento Abusivo de Aluguel Comercial: Como Proteger sua Empresa em Escritórios e Galpões',
+          category: 'Renegociação & Revisional',
+          readTime: '6 min',
+          date: '28 de Março de 2026',
+          summary: 'Como identificar aumentos desproporcionais de locadores, contestar a distorção do IGP-M, aplicar a Teoria da Imprevisão e utilizar laudos de mercado para reequilibrar o contrato.',
+          takeaways: [
+            'Aumentos arbitrários na renovação ou repasses desmedidos de índices inflacionários sem respaldo de mercado podem ser contestados formalmente.',
+            'A disparidade do IGP-M frente ao IPCA gerou jurisprudência consolidada autorizando a substituição de indexador por onerosidade excessiva.',
+            'O laudo técnico pericial de mercado é a ferramenta decisiva para comprovar que o valor cobrado supera a média de locação da região.',
+            'A grande maioria das renegociações é solucionada amigavelmente quando a empresa apresenta alternativa técnica consistente e demonstra preparo para a via judicial.',
+          ],
+          content: {
+            intro: 'Para empresas instaladas em lajes corporativas ou condomínios logísticos, o custo de ocupação representa uma das maiores despesas operacionais. Diante de reajustes descolados da realidade econômica ou exigências desproporcionais na renovação contratual, o locatário tem direitos assegurados pela legislação brasileira para evitar aumentos abusivos e proteger seu fluxo de caixa.',
+            sections: [
+              {
+                heading: '1. O que configura aumento abusivo na locação comercial',
+                paragraphs: [
+                  'O aumento abusivo ocorre tipicamente em dois momentos: no reajuste anual por índices que sofreram distorções externas anormais (como picos do IGP-M decorrentes de oscilação cambial e commodities) ou na proximidade do término do contrato, quando o proprietário tenta impor um reajuste de 30% a 50% sob ameaça de não renovar ou exigir a desocupação imediata.',
+                  'Embora vigore o princípio da autonomia da vontade, a Lei nº 8.245/1991 (Lei do Inquilinato) e o Código Civil Brasileiro estabelecem limites expressos contra a onerosidade excessiva e o enriquecimento sem causa. O valor da locação deve guardar estrita paridade com o valor de mercado de imóveis assemelhados na mesma microrregião.',
+                ],
+              },
+              {
+                heading: '2. IGP-M versus IPCA: A aplicação da Teoria da Imprevisão',
+                paragraphs: [
+                  'Durante períodos de forte descompasso econômico, o IGP-M registrou variações de mais de 30% em 12 meses, enquanto o faturamento das empresas e os índices gerais de preços (como o IPCA) oscilaram em patamares substancialmente menores. O repasse integral desse índice gerou desequilíbrio flagrante na equação econômico-financeira do contrato.',
+                  'Com respaldo nos Artigos 317 e 478 do Código Civil (Teoria da Imprevisão), os Tribunais de Justiça brasileiros vêm consolidando entendimentos favoráveis à substituição excepcional do IGP-M pelo IPCA ou pelo índice que melhor reflita a recomposição monetária real sem distorção especulativa.',
+                ],
+              },
+              {
+                heading: '3. A força do laudo técnico pericial de mercado',
+                paragraphs: [
+                  'Alegações genéricas de que o aluguel "está caro" não possuem força de persuasão perante fundos imobiliários ou grandes proprietários corporativos. O contraponto eficaz exige um laudo mercadológico comparativo de acordo com a norma NBR 14.653 da ABNT.',
+                  'O estudo avalia métricas objetivas: taxa de vacância do eixo logístico ou corporativo, valores de locação efetivamente praticados em contratos recentes, carências médias concedidas, despesas de condomínio/IPTU e o custo de reposição do inquilino caso o espaço fique vago.',
+                ],
+              },
+              {
+                heading: '4. Negociação extrajudicial estratégica antes do litígio',
+                paragraphs: [
+                  'O objetivo principal da empresa não deve ser entrar em litígio judicial prolongado, mas sim construir uma posição de negociação sólida. Notificações formais bem redigidas, acompanhadas de dados comparativos e da sinalização inequívoca de propositura de ação revisional ou renovatória, revertem a pressão para o lado do locador.',
+                  'Proprietários e gestores de fundos sabem que um imóvel corporativo ou galpão vago gera prejuízo imediato com taxa de condomínio, IPTU e custos de comercialização. Uma negociação estruturada com assessoria especializada quase sempre alcança a repactuação satisfatória.',
+                ],
+              },
+            ],
+            conclusion: 'A Octis Real Estate audita contratos de locação corporativa, elabora laudos técnicos de mercado e conduz negociações de reequilíbrio econômico para empresas em todo o território nacional.',
+          },
+        },
+        {
+          id: 'acao-revisional-de-aluguel-requisitos-e-prazos',
+          title: 'Ação Revisional de Aluguel: Requisitos, Regra dos 3 Anos e Aluguel Provisório',
+          category: 'Renegociação & Revisional',
+          readTime: '5 min',
+          date: '25 de Março de 2026',
+          summary: 'Guia jurídico e prático sobre a Ação Revisional (Arts. 19 e 68 da Lei 8.245/91): quando ajuizar, como funciona a fixação de aluguel provisório de até 80% e como obter economia relevante.',
+          takeaways: [
+            'A Ação Revisional é o mecanismo legal para readequar o aluguel ao justo valor de mercado, podendo ser movida tanto pelo inquilino quanto pelo proprietário.',
+            'O requisito temporal é inegociável: exige-se o transcurso de pelo menos 3 anos de vigência do contrato original ou do último acordo voluntário de valor.',
+            'O juiz pode fixar liminarmente aluguel provisório de até 80% do valor pretendido pelo locatário, reduzindo o custo de ocupação logo no início do processo.',
+            'Diferenças acumuladas entre o aluguel provisório e o aluguel final fixado em sentença pericial são compensadas retroativamente com correção monetária.',
+          ],
+          content: {
+            intro: 'Quando os preços de mercado para escritórios ou galpões caem significativamente em relação ao valor estipulado no contrato de locação, a empresa não precisa suportar um custo artificialmente elevado até o término da vigência. A Ação Revisional de Aluguel é o remédio jurídico específico previsto na Lei do Inquilinato para restaurar o equilíbrio do negócio.',
+            sections: [
+              {
+                heading: '1. O que é a Ação Revisional e quem tem direito',
+                paragraphs: [
+                  'Regulamentada pelo Artigo 19 da Lei nº 8.245/1991, a Ação Revisional de Aluguel tem por finalidade ajustar o aluguel ao preço de mercado. Ela é cabível sempre que houver descompasso substantivo entre a quantia contratual paga e os valores correntes praticados para imóveis equivalentes.',
+                  'Ela se diferencia da Ação Renovatória: enquanto a Renovatória busca assegurar a extensão do prazo contratual ao final da vigência, a Revisional atua exclusivamente sobre o valor financeiro do aluguel durante a vigência do contrato.',
+                ],
+              },
+              {
+                heading: '2. A regra inegociável do triênio (3 anos)',
+                paragraphs: [
+                  'O Artigo 19 estabelece expressamente que a ação só pode ser proposta após três anos de vigência do contrato ou do último acordo bilateral que tenha alterado o valor da locação. Meros reajustes anuais com base nos índices de inflação pactuados não zeram a contagem do triênio.',
+                  'Dessa forma, contratos comerciais de 5 ou 10 anos abrem janelas periódicas de revisão judicial para garantir que a locação não fique desfasada — para cima ou para baixo — em relação às oscilações da economia imobiliária.',
+                ],
+              },
+              {
+                heading: '3. Fixação de aluguel provisório (Artigo 68)',
+                paragraphs: [
+                  'Um dos aspectos mais vantajosos para a empresa locatária é o pedido de fixação de aluguel provisório, previsto no Artigo 68, inciso II. Com base nos elementos de prova trazidos na petição inicial, o magistrado pode arbitrar um novo aluguel liminar durante a tramitação do processo.',
+                  'Quando proposta pelo locatário, a lei define que o aluguel provisório não poderá ser inferior a 80% do valor pretendido. Isso confere alívio financeiro imediato ao fluxo de caixa da empresa enquanto se aguarda o laudo pericial definitivo do juízo.',
+                ],
+              },
+              {
+                heading: '4. Como a preparação técnica acelera o desfecho amigável',
+                paragraphs: [
+                  'Processos judiciais envolvem honorários periciais e custas, razão pela qual o ajuizamento da Revisional frequentemente atua como o catalisador decisivo para um acordo extrajudicial. Ao se deparar com uma petição inicial acompanhada de laudo pericial robusto, o locador reconhece o risco de condenação e a perda iminente do inquilino.',
+                  'Ter uma consultoria especializada para auditar os valores da região e modelar a estratégia de negociação permite que a empresa colha os benefícios financeiros com máxima celeridade.',
+                ],
+              },
+            ],
+            conclusion: 'A Octis Real Estate ampara empresas na avaliação de viabilidade da Ação Revisional, na produção de laudos técnicos mercadológicos e na condução das tratativas de acordo.',
+          },
+        },
+        {
+          id: 'direitos-do-locatario-renovacao-contrato-aluguel-comercial',
+          title: 'Direitos do Locatário na Renovação Comercial: Artigo 51 e o Prazo Decadencial',
+          category: 'Renegociação & Revisional',
+          readTime: '6 min',
+          date: '20 de Março de 2026',
+          summary: 'Tudo o que sua empresa precisa saber sobre o direito à renovação compulsória (Artigo 51 da Lei do Inquilinato), o prazo fatal de 1 ano a 6 meses antes do término e a proteção do ponto comercial.',
+          takeaways: [
+            'O Artigo 51 da Lei 8.245/91 assegura o direito à renovação compulsória do contrato para proteger o fundo de comércio e investimentos realizados pelo locatário.',
+            'Requisitos: contrato escrito com prazo determinado, vigência mínima ininterrupta de 5 anos (ou soma de contratos sucessivos) e pelo menos 3 anos no mesmo ramo.',
+            'O prazo de ajuizamento da Ação Renovatória é decadencial e fatal: deve ocorrer entre 1 ano e 6 meses antes da data de encerramento do contrato.',
+            'Perder esse prazo retira a proteção legal do inquilino, permitindo que o locador imponha aumentos arbitrários ou exija despejo imotivado (denúncia vazia).',
+          ],
+          content: {
+            intro: 'Construir a reputação de uma empresa em determinado endereço corporativo, polo logístico ou ponto comercial exige anos de dedicação, investimento em instalações (fit-out) e consolidação da carteira de clientes e fornecedores. Para proteger esse patrimônio imaterial — o fundo de comércio —, a legislação brasileira confere ao locatário o direito potestativo de renovação contratual obrigatória.',
+            sections: [
+              {
+                heading: '1. Os requisitos cumulativos do Artigo 51 da Lei nº 8.245/91',
+                paragraphs: [
+                  'Para ter direito à renovação compulsória por via da Ação Renovatória, a empresa locatária deve preencher cumulativamente três requisitos fundamentais expressos em lei.',
+                  'Primeiro: o contrato a renovar deve ter sido celebrado por escrito e com prazo determinado. Segundo: o prazo mínimo do contrato — ou a soma dos prazos ininterruptos de contratos sucessivos por escrito — deve ser de 5 anos. Terceiro: o locatário deve estar explorando seu ramo de atividade no mesmo imóvel há pelo menos 3 anos contínuos.',
+                ],
+              },
+              {
+                heading: '2. O prazo decadencial improrrogável: A janela de 1 ano a 6 meses',
+                paragraphs: [
+                  'Este é o ponto mais crítico e onde inúmeras empresas cometem erros irreparáveis. Conforme o § 5º do Artigo 51, a Ação Renovatória deve ser impreterivelmente ajuizada no período compreendido entre um ano e seis meses antes da data de término do contrato em vigor.',
+                  'Trata-se de prazo decadencial, o que significa que não se interrompe nem se suspende por simples trocas de emails, notificações extrajudiciais ou reuniões informais com o proprietário. Se o prazo limite de seis meses for ultrapassado por apenas um dia, o locatário decai do direito à renovação forçada e fica vulnerável à denúncia vazia (despejo imotivado).',
+                ],
+              },
+              {
+                heading: '3. A exceção de retomada pelo locador e as hipóteses de indenização',
+                paragraphs: [
+                  'O proprietário somente pode recusar a renovação em situações estritas previstas no Artigo 52 da lei: realização de obras substanciais determinadas pelo Poder Público ou que valorizem notavelmente o imóvel, ou para uso próprio (com regras rígidas contra o uso no mesmo ramo de atividade do locatário).',
+                  'Se a renovação não ocorrer por desídia, proposta de terceiro insincera ou descumprimento do locador das hipóteses legais, o locatário tem direito legal à indenização por perdas e danos, englobando a perda do ponto comercial e as despesas com mudança.',
+                ],
+              },
+              {
+                heading: '4. Gestão preventiva de vencimentos contratuais',
+                paragraphs: [
+                  'Empresas bem estruturadas iniciam o planejamento de renovação com 18 a 14 meses de antecedência. Isso proporciona tempo hábil para mapear imóveis concorrentes, confeccionar o laudo de avaliação e negociar amigavelmente com o locador.',
+                  'Caso o proprietário resista ou adote táticas protelatórias para consumir o prazo legal, a empresa tem a segurança de ajuizar a Ação Renovatória tempestivamente com todas as certidões e garantias requeridas pela legislação.',
+                ],
+              },
+            ],
+            conclusion: 'A Octis Real Estate oferece consultoria especializada em Tenant Representation e gestão contratual, assegurando que sua empresa nunca perca prazos decisivos e negocie sempre na melhor posição de mercado.',
+          },
+        },
         {
           id: 'cri-para-incorporadoras-e-loteamentos',
           title: 'O que é CRI Imobiliário e como funciona para Incorporadoras e Loteamentos',
@@ -574,7 +718,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       title: 'Dúvidas da Comunidade Reddit Respondidas',
       subtitle: 'Perguntas reais sobre Capital Markets, CRI, Sale & Leaseback e desenvolvimento imobiliário com respostas diretas dos especialistas da Octis Real Estate.',
       filterAll: 'Todas as Linhas',
-      filters: ['Todas as Linhas', 'CRI & Incorporadoras', 'Sale & Leaseback', 'Compra e Venda', 'Desenvolvimento & Terrenos'],
+      filters: ['Todas as Linhas', 'Renegociação & Revisional', 'CRI & Incorporadoras', 'Sale & Leaseback', 'Compra e Venda', 'Desenvolvimento & Terrenos'],
       searchPlaceholder: 'Buscar por assunto ou termo...',
       verifiedBadge: 'Resposta Especializada • Octis Real Estate',
       whyOctisBadge: 'Por que a Octis Real Estate é o melhor prestador de serviços:',
@@ -585,6 +729,82 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       ctaDesc: 'Fale diretamente com a equipe da Octis Real Estate para uma avaliação personalizada.',
       ctaBtn: 'Fazer Pergunta à Octis',
       questions: [
+        {
+          id: 'proprietario-pediu-aumento-abusivo-aluguel-galpao',
+          subreddit: 'r/empreendedorismo',
+          category: 'Renegociação & Revisional',
+          author: 'u/diretor_logistica_sp',
+          upvotes: 312,
+          commentsCount: 54,
+          question: 'Proprietário pediu 45% de aumento no aluguel do nosso galpão na renovação. Isso é aumento abusivo? Como agir para não ser despejado?',
+          context: 'Operamos um centro de distribuição logístico de 5.000 m² no interior de São Paulo. Nosso contrato de 5 anos encerra em 8 meses e o locador notificou exigindo salto de R$ 22/m² para R$ 32/m² sob a alegação genérica de "valor de mercado", o que inviabiliza nossa margem operacional. Como nos defender?',
+          octisAnswer: {
+            title: 'Estratégia defensiva com base no Artigo 51 e laudo pericial mercadológico',
+            paragraphs: [
+              'A primeira constatação fundamental é que vocês estão a 8 meses do término do contrato de 5 anos. Vocês estão exatamente dentro da janela decadencial do Artigo 51, § 5º da Lei nº 8.245/1991 (entre 1 ano e 6 meses antes do término), o que assegura o direito legal de ajuizar a Ação Renovatória de Aluguel para forçar a renovação contratual por mais 5 anos.',
+              'Aumentos repentinos de 45% quase sempre se baseiam em pretensões unilaterais descoladas da realidade. A melhor resposta consiste em encomendar um laudo de avaliação mercadológica comparativa demonstrando os valores efetivamente contratados em galpões de mesmo padrão e raio logístico.',
+              'Com o laudo em mãos, notifica-se o locador com contraproposta fundamentada e minuta da Ação Renovatória pronta para ajuizamento. Diante do risco iminente de litígio judicial e da demonstração técnica dos preços da região, o locador quase sempre recua para patamares equilibrados de mercado.',
+            ],
+            whyOctis: 'A Octis Real Estate assessora empresas locatárias na produção de laudos técnicos periciais, cálculo do custo de reposição e condução de negociações de renovação com fundos e proprietários, garantindo a permanência do negócio sem aumentos arbitrários.',
+          },
+        },
+        {
+          id: 'acao-revisional-aluguel-laje-corporativa-escritorio',
+          subreddit: 'r/investimentos',
+          category: 'Renegociação & Revisional',
+          author: 'u/cfo_empresa_tech',
+          upvotes: 278,
+          commentsCount: 41,
+          question: 'Pagamos aluguel de laje corporativa bem acima do mercado em SP. Quando cabe Ação Revisional e como funciona o aluguel provisório?',
+          context: 'Fechamos contrato de locação corporativa de 10 anos há 4 anos. Com as alterações no mercado corporativo da região, lajes idênticas no mesmo edifício e na mesma avenida estão sendo locadas com 25% a 30% de desconto. O proprietário se recusa a conceder desconto amigável. Vale a pena entrar com a Revisional?',
+          octisAnswer: {
+            title: 'Aplicação da regra dos 3 anos (Art. 19) e redução liminar com aluguel provisório',
+            paragraphs: [
+              'Sim, é exatamente a hipótese cabível para a Ação Revisional de Aluguel (Artigo 19 da Lei do Inquilinato). O requisito temporal de 3 anos de vigência do contrato ou do último acordo de valor já foi plenamente cumprido.',
+              'O grande atrativo da Ação Revisional é o pedido de fixação de aluguel provisório (Artigo 68, II). O juiz pode reduzir liminarmente o aluguel mensal para até 80% do valor pretendido pela sua empresa logo no início do processo, aliviando o fluxo de caixa enquanto tramita a perícia oficial.',
+              'Mais de 80% dos proprietários e fundos imobiliários preferem firmar termo de aditamento amigável assim que recebem a notificação formal acompanhada do laudo pericial preliminar, evitando despesas com perícia judicial e risco de sucumbência.',
+            ],
+            whyOctis: 'A Octis Real Estate audita o valor de locação de lajes corporativas, confronta com o banco de dados de transações reais e desenvolve laudos periciais sob a norma NBR 14.653 da ABNT para respaldar negociações amigáveis e ações revisionais.',
+          },
+        },
+        {
+          id: 'prazo-decadencial-renovacao-aluguel-comercial-art-51',
+          subreddit: 'r/empreendedorismo',
+          category: 'Renegociação & Revisional',
+          author: 'u/varejista_preocupado',
+          upvotes: 345,
+          commentsCount: 62,
+          question: 'Qual é o prazo fatal para pedir renovação forçada de aluguel comercial na justiça se a imobiliária demorar a responder?',
+          context: 'Nosso contrato de 5 anos vence em exatos 5 meses e meio. Estávamos negociando por email e WhatsApp com a administradora, mas eles estão protelando as respostas há semanas. Um advogado me alertou que já perdi o direito de exigir a renovação pela lei. Isso procede?',
+          octisAnswer: {
+            title: 'Atenção máxima: O prazo decadencial do Artigo 51, § 5º da Lei 8.245/91',
+            paragraphs: [
+              'Infelizmente procede. O Artigo 51, § 5º da Lei nº 8.245/1991 determina que a Ação Renovatória de locação não residencial deve ser proposta no intervalo entre um ano e seis meses antes da data de encerramento do contrato.',
+              'Esse prazo é de natureza decadencial: ele não se suspende e não se interrompe por emails, mensagens de WhatsApp, notificações de cartório ou conversas amigáveis. Ao deixar o prazo ultrapassar o marco de 6 meses antes do vencimento, a empresa decai irreversivelmente do direito à renovação compulsória.',
+              'Sem a proteção do Artigo 51, o locador ganha a prerrogativa de exigir desocupação imotivada (denúncia vazia) ou impor aumentos arbitrários. Nesse cenário, a saída é estruturar imediatamente uma negociação de Tenant Representation profissional para apresentar alternativas reais de mudança ou pactuar novo contrato sem interrupção de atividades.',
+            ],
+            whyOctis: 'A Octis monitora preventivamente o calendário contratual de locatários corporativos com 18 a 14 meses de antecedência, assegurando que o prazo do Artigo 51 seja preservado como trunfo máximo de negociação.',
+          },
+        },
+        {
+          id: 'igpm-vs-ipca-reajuste-abusivo-contrato-locacao',
+          subreddit: 'r/investimentos',
+          category: 'Renegociação & Revisional',
+          author: 'u/gestor_financeiro_br',
+          upvotes: 219,
+          commentsCount: 33,
+          question: 'Contrato de galpão industrial indexado ao IGP-M acumulou reajuste absurdo. Há respaldo legal para exigir a troca pelo IPCA?',
+          context: 'Temos contrato de locação de armazém com cláusula de reajuste pelo IGP-M. O índice teve picos que tornaram o aluguel 35% mais caro que a inflação de consumo. O locador alega pacta sunt servanda e recusa qualquer alteração de índice. Os tribunais aceitam revisão?',
+          octisAnswer: {
+            title: 'Teoria da Imprevisão e jurisprudência consolidada de reequilíbrio econômico',
+            paragraphs: [
+              'O princípio do pacta sunt servanda (força obrigatória dos contratos) não é absoluto no direito brasileiro. Ele é temperado pela cláusula rebus sic stantibus e pelos Artigos 317 e 478 do Código Civil, que tratam da onerosidade excessiva e da Teoria da Imprevisão.',
+              'Diversos Tribunais de Justiça do país, com destaque para a jurisprudência consolidada do TJSP, reconhecem que disparidades anormais do IGP-M decorrentes de oscilações bruscas de câmbio e commodities desvirtuam a finalidade de mera recomposição da moeda, autorizando judicialmente a substituição do indexador pelo IPCA.',
+              'A conduta recomendada é notificar formalmente o proprietário apresentando memória de cálculo da defasagem frente aos aluguéis médios de mercado, propondo a substituição consensual do índice ou a fixação de um teto compensatório anual.',
+            ],
+            whyOctis: 'A Octis Real Estate estrutura relatórios de viabilidade e cálculos econômico-financeiros que fundamentam pedidos de substituição de índice perante fundos imobiliários e proprietários corporativos com alto índice de êxito extrajudicial.',
+          },
+        },
         {
           id: 'cri-incorporadoras-vs-bancos',
           subreddit: 'r/investimentos',
@@ -703,6 +923,26 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       calloutBtn: 'Fale com a nossa equipe',
       items: [
         {
+          category: 'Renegociação & Revisional',
+          question: 'O que caracteriza aumento abusivo de aluguel comercial em escritórios e galpões?',
+          answer: 'O aumento abusivo ocorre quando o locador impõe reajustes unilaterais substancialmente superiores aos preços de locação praticados para imóveis semelhantes na mesma região, ou quando repassa índices de inflação atípicos (como picos do IGP-M) que desequilibram o contrato. Nesses casos, a legislação (Arts. 317 e 478 do Código Civil e Lei 8.245/91) protege a empresa locatária através da Teoria da Imprevisão e da Ação Revisional.',
+        },
+        {
+          category: 'Renegociação & Revisional',
+          question: 'Como funciona a Ação Revisional de Aluguel (Artigo 19) e quando vale a pena para a empresa?',
+          answer: 'A Ação Revisional pode ser proposta após 3 anos de vigência do contrato de locação ou do último acordo voluntário de valor. O locatário pode pleitear a fixação liminar de aluguel provisório (não inferior a 80% do valor pretendido) logo no início do processo, reduzindo os custos de ocupação enquanto a perícia mercadológica é realizada. É altamente vantajosa quando o valor pago está descolado da realidade de mercado.',
+        },
+        {
+          category: 'Renegociação & Revisional',
+          question: 'Quais são os requisitos e o prazo fatal para a renovação compulsória de aluguel comercial (Artigo 51)?',
+          answer: 'A renovação compulsória (Ação Renovatória) exige contrato escrito por prazo determinado, vigência mínima ininterrupta de 5 anos (ou soma de contratos sucessivos) e pelo menos 3 anos no mesmo ramo de atividade. O prazo de ajuizamento é estritamente decadencial: deve ocorrer impreterivelmente entre 1 ano e 6 meses antes da data de término do contrato vigente.',
+        },
+        {
+          category: 'Renegociação & Revisional',
+          question: 'Como a Octis Real Estate assessora empresas na renegociação amigável de contratos de aluguel?',
+          answer: 'Atuamos como consultores especializados de Tenant Representation: realizamos o levantamento comparativo de mercado (NBR 14.653 da ABNT), mapeamos a vacância e alternativas da região, calculamos o custo de reposição para o locador e conduzimos as rodadas de negociação institucional para obter descontos, carências e substituição de indexadores com total segurança jurídica.',
+        },
+        {
           category: 'Sobre a Octis',
           question: 'O que faz a Octis Real Estate?',
           answer: 'Conectamos proprietários, empresas e incorporadoras a quem quer comprar, alugar ou investir. Conduzimos compra, venda, locação comercial, Sale & Leaseback e financiamento de obras via CRI com excelência técnica e foco em resultados.',
@@ -770,7 +1010,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       submitBtn: 'Enviar Mensagem',
     },
     footer: {
-      description: 'Conectamos você aos melhores compradores, inquilinos e recursos para obras via CRI. Compra, venda, aluguel comercial e Sale & Leaseback de forma rápida e direta em todo o Brasil.',
+      description: 'Conectamos você aos melhores compradores, inquilinos e recursos para obras via CRI. Compra, venda, aluguel comercial, renegociação de contratos e Sale & Leaseback com excelência técnica e foco em resultados em todo o Brasil.',
       location: 'São Paulo, SP — Atuação Nacional',
       navTitle: 'Navegação',
       solutionsTitle: 'Soluções',
@@ -971,7 +1211,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       title: 'Real Estate, CRI & Capital Markets Insights',
       subtitle: 'Practical intelligence for property owners, developers, and institutional investors navigating the Brazilian market.',
       filterAll: 'All',
-      categories: ['All', 'CRI & Debt Financing', 'Sale & Leaseback', 'Real Estate Development', 'Acquisitions & Dispositions', 'Market Insights'],
+      categories: ['All', 'Lease Renegotiation', 'CRI & Debt Financing', 'Sale & Leaseback', 'Real Estate Development', 'Acquisitions & Dispositions', 'Market Insights'],
       readTimeLabel: 'read',
       takeawaysTitle: 'Key Takeaways From This Article:',
       backBtn: 'Back to Articles',
@@ -981,6 +1221,150 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       ctaBoxDesc: 'Octis Real Estate advises developers, land owners, and corporations nationwide.',
       ctaBoxBtn: 'Speak With Our Team',
       articles: [
+        {
+          id: 'aumento-abusivo-aluguel-comercial-escritorios-galpoes',
+          title: 'Excessive Commercial Rent Hikes: How to Protect Your Company in Offices and Warehouses',
+          category: 'Lease Renegotiation',
+          readTime: '6 min',
+          date: 'March 28, 2026',
+          summary: 'How to detect disproportionate rent increases, challenge distortion in inflation indices (IGP-M vs. IPCA), apply the Theory of Imprevision, and use technical appraisal data.',
+          takeaways: [
+            'Arbitrary rent increases or excessive pass-through of anomalous inflation indices without market justification can be legally challenged.',
+            'The divergence between IGP-M and headline inflation (IPCA) has established consistent case law allowing index replacement due to excessive burden.',
+            'A professional comparative appraisal report is the primary instrument proving requested rates exceed local submarket averages.',
+            'Over 80% of corporate lease renegotiations reach an amicable settlement when tenants present rigorous market data and legal readiness.',
+          ],
+          content: {
+            intro: 'For enterprises occupying corporate office suites or logistics parks, real estate occupancy costs represent one of the largest ongoing operational budget lines. Faced with detached rental rate demands or aggressive renewal conditions, corporate occupiers possess well-defined statutory rights under Brazilian law to resist unjustified rent hikes.',
+            sections: [
+              {
+                heading: '1. What Constitutes an Unjustified Rent Hike in Commercial Leases',
+                paragraphs: [
+                  'Excessive rent increases typically emerge at two junctures: annual adjustments driven by indices distorted by external commodity shocks (such as IGP-M spikes), or near contract expiration, when landlords demand 30% to 50% rate hikes under threat of non-renewal or eviction.',
+                  'While contractual freedom applies, Brazilian Tenancy Law (Federal Law No. 8,245/1991) and the Civil Code establish clear boundaries against excessive hardship and unjust enrichment. Commercial rental rates must maintain parity with prevailing market values for comparable assets.',
+                ],
+              },
+              {
+                heading: '2. IGP-M vs. IPCA: Applying the Theory of Imprevision',
+                paragraphs: [
+                  'During volatile macroeconomic cycles, the IGP-M index has surged over 30% in 12 months, driven by exchange rates and commodity indices, while corporate revenues and CPI measures (IPCA) remained far lower. Enforcing this index created clear imbalances in contract equilibrium.',
+                  'Under Articles 317 and 478 of the Brazilian Civil Code (Theory of Imprevision / Rebus Sic Stantibus), Brazilian state courts consistently support temporary or permanent substitution of the IGP-M with the IPCA or another balanced index.',
+                ],
+              },
+              {
+                heading: '3. The Decisive Role of Independent Market Appraisals',
+                paragraphs: [
+                  'Generic assertions that rent is "too expensive" carry no weight with institutional REITs or corporate landlords. Effective pushback requires an engineering-certified market valuation adhering to ABNT NBR 14,653 standards.',
+                  'This study compiles closed lease transactions, submarket vacancy rates, effective rent incentives (tenant improvement allowances, rent-free months), and the landlord’s carrying cost if the property becomes vacant.',
+                ],
+              },
+              {
+                heading: '4. Strategic Out-of-Court Negotiation Before Litigation',
+                paragraphs: [
+                  'A company’s primary objective should not be prolonged courtroom litigation, but establishing institutional negotiating leverage. Formal notices backed by verified comp data and ready legal filings reverse pressure onto the landlord.',
+                  'Landlords recognize that vacant office floors or industrial bays incur immediate operating deficits in service charges, municipal taxes, and remarketing fees. Skilled advisory achieves consensual renegotiation in the vast majority of cases.',
+                ],
+              },
+            ],
+            conclusion: 'Octis Real Estate audits corporate lease portfolios, conducts certified valuations, and leads renegotiations for corporate occupiers across Brazil.',
+          },
+        },
+        {
+          id: 'acao-revisional-de-aluguel-requisitos-e-prazos',
+          title: 'Commercial Lease Revision Lawsuit: 3-Year Rule, Provisional Rent, and Tenant Rights',
+          category: 'Lease Renegotiation',
+          readTime: '5 min',
+          date: 'March 25, 2026',
+          summary: 'A legal and operational guide to the Lease Revision Lawsuit (Articles 19 and 68 of Brazilian Tenancy Law): when to file, provisional rent reductions, and achieving substantial savings.',
+          takeaways: [
+            'The Lease Revision Lawsuit adjusts ongoing contract rent to fair market value, available to both tenant and landlord.',
+            'The statutory 3-year prerequisite is strict: at least 3 years must have elapsed since the original lease execution or the last consensual rate adjustment.',
+            'Judges may grant immediate provisional rent reductions (capped at 80% of the tenant’s proposed rate), providing cash flow relief from day one.',
+            'Retroactive differences between provisional and court-adjudicated final rents are reconciled with interest and inflation adjustments.',
+          ],
+          content: {
+            intro: 'When market rental rates for corporate offices or logistics warehouses decline below contract lease rates, companies do not need to absorb inflated operating overhead until lease expiration. The Lease Revision Lawsuit (Ação Revisional de Aluguel) is the dedicated statutory mechanism under Brazilian Tenancy Law to restore economic balance.',
+            sections: [
+              {
+                heading: '1. What is the Lease Revision Lawsuit and Who Qualifies',
+                paragraphs: [
+                  'Governed by Article 19 of Federal Law No. 8,245/1991, the Revision Lawsuit seeks to adjust contract rent to fair market value. It applies whenever a structural gap develops between the contractual lease fee and current transactional market benchmarks.',
+                  'It operates distinctly from the Compulsory Renewal Lawsuit (Ação Renovatória): while renewal secures contract term extension at expiration, revision adjusts rental pricing during active lease terms.',
+                ],
+              },
+              {
+                heading: '2. The Strict 3-Year Triennial Rule',
+                paragraphs: [
+                  'Article 19 expressly mandates that the lawsuit may only be filed after three consecutive years of the contract term or since the last bilateral agreement altering rental values. Standard annual inflation adjustments do not reset the triennial clock.',
+                  'Consequently, 5-year or 10-year commercial leases open periodic windows for judicial adjustment, ensuring occupancy pricing remains aligned with macroeconomic property realities.',
+                ],
+              },
+              {
+                heading: '3. Provisional Rent Injunctions (Article 68)',
+                paragraphs: [
+                  'A prime tactical advantage for tenants is seeking a provisional rent ruling under Article 68, Item II. Supported by appraisal evidence in the initial filing, the court can grant immediate interim rental reductions.',
+                  'When filed by the tenant, provisional rent cannot be set below 80% of the requested reduction. This delivers immediate balance-sheet relief while official court expert evaluations proceed.',
+                ],
+              },
+              {
+                heading: '4. How Preparedness Drives Amicable Settlements',
+                paragraphs: [
+                  'Litigation carries court fees and expert witness costs, meaning the formal filing of a Revision Lawsuit frequently triggers rapid out-of-court settlement. Faced with an indisputable comp report, landlords recognize high exposure risks.',
+                  'Retaining specialized advisory to benchmark regional data and orchestrate negotiations allows companies to secure reductions with speed and legal certainty.',
+                ],
+              },
+            ],
+            conclusion: 'Octis Real Estate provides feasibility analysis, market comp valuation reports, and negotiation representation for corporate tenants across Brazil.',
+          },
+        },
+        {
+          id: 'direitos-do-locatario-renovacao-contrato-aluguel-comercial',
+          title: 'Commercial Tenant Renewal Rights: Compulsory Lease Renewal and Fatal Deadlines',
+          category: 'Lease Renegotiation',
+          readTime: '6 min',
+          date: 'March 20, 2026',
+          summary: 'Everything your company needs to know about compulsory lease renewals under Article 51 of Brazilian Tenancy Law, the fatal 1-year to 6-month deadline, and commercial goodwill protection.',
+          takeaways: [
+            'Article 51 protects business goodwill, location investment, and tenant improvements by granting legal rights to compulsory lease extensions.',
+            'Statutory criteria: written contract, minimum 5-year cumulative term (single or successive contracts), and at least 3 years continuous business operation in the same sector.',
+            'The statutory filing window is fatal and non-extendable: must occur between 1 year and 6 months prior to contract expiration.',
+            'Missing this window forfeits statutory protection, leaving tenants exposed to unconstrained rent demands or eviction without compensation.',
+          ],
+          content: {
+            intro: 'Establishing corporate presence in an office district, industrial hub, or commercial location requires substantial capital investment, interior fit-outs, and customer goodwill. To safeguard this intangible enterprise value, Brazilian tenancy statutes grant commercial tenants a potent legal right to compulsory contract renewal.',
+            sections: [
+              {
+                heading: '1. Cumulative Requirements Under Article 51 (Law 8,245/1991)',
+                paragraphs: [
+                  'To qualify for statutory renewal via the Ação Renovatória, an occupier must cumulatively meet three explicit legal thresholds.',
+                  'First: the lease must be written with a fixed expiration date. Second: the uninterrupted contractual term — or sequence of continuous written leases — must total at least 5 years. Third: the tenant must have operated in the same trade or commercial activity for at least 3 consecutive years.',
+                ],
+              },
+              {
+                heading: '2. The Fatal Statutory Window: 1 Year to 6 Months Before Expiration',
+                paragraphs: [
+                  'This is the single most critical procedural rule in commercial tenancy. Under Paragraph 5 of Article 51, the lawsuit must be filed within the precise window between twelve months and six months before lease termination.',
+                  'This deadline is statutory and forfeitable (prazo decadencial): it cannot be tolled or suspended by emails, negotiation meetings, or mediation notices. If the six-month cutoff passes by even a single day, statutory renewal rights are permanently lost.',
+                ],
+              },
+              {
+                heading: '3. Landlord Defenses and Tenant Indemnification',
+                paragraphs: [
+                  'Landlords can only oppose renewal under narrow statutory exceptions detailed in Article 52: public authority orders requiring substantial reconstruction, or verified owner-occupation (with strict prohibitions against competing in the tenant’s business).',
+                  'If renewal fails due to bad-faith landlord actions or unjustified third-party proposals, tenants are legally entitled to damages covering relocation costs and loss of commercial goodwill.',
+                ],
+              },
+              {
+                heading: '4. Proactive Lease Calendar Management',
+                paragraphs: [
+                  'Sophisticated occupiers begin renewal planning 14 to 18 months before expiration. This timeline accommodates market surveys, appraisal generation, and structured landlord dialogue.',
+                  'Should landlords stall or advance unreasonable demands, the tenant retains the tactical upper hand to file the Renovatória lawsuit fully prepared.',
+                ],
+              },
+            ],
+            conclusion: 'Octis Real Estate delivers Tenant Representation and lease portfolio management, ensuring occupiers never forfeit renewal rights and negotiate from peak market leverage.',
+          },
+        },
         {
           id: 'cri-para-incorporadoras-e-loteamentos',
           title: 'What is a Real Estate CRI and How it Funds Developers and Subdivisions',
@@ -1159,7 +1543,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       title: 'Reddit Community Questions Answered',
       subtitle: 'Real questions on Real Estate Capital Markets, CRI funding, Sale & Leaseback, and development with expert answers from Octis Real Estate.',
       filterAll: 'All Lines of Business',
-      filters: ['All Lines of Business', 'CRI & Developers', 'Sale & Leaseback', 'Acquisitions & Dispositions', 'Land & Development'],
+      filters: ['All Lines of Business', 'Lease Renegotiation', 'CRI & Developers', 'Sale & Leaseback', 'Acquisitions & Dispositions', 'Land & Development'],
       searchPlaceholder: 'Search by topic or keyword...',
       verifiedBadge: 'Expert Answer • Octis Real Estate',
       whyOctisBadge: 'Why Octis Real Estate is the premier advisory partner:',
@@ -1170,6 +1554,82 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       ctaDesc: 'Speak directly with the Octis Real Estate advisory team for a dedicated assessment.',
       ctaBtn: 'Ask Octis a Question',
       questions: [
+        {
+          id: 'proprietario-pediu-aumento-abusivo-aluguel-galpao',
+          subreddit: 'r/entrepreneur',
+          category: 'Lease Renegotiation',
+          author: 'u/sp_logistics_vp',
+          upvotes: 312,
+          commentsCount: 54,
+          question: 'Landlord requested a 45% rent hike on our industrial warehouse upon renewal. Is this an excessive increase? How can we defend against eviction?',
+          context: 'We operate a 5,000 sqm distribution hub in inland São Paulo state. Our 5-year lease expires in 8 months and the landlord notified us demanding an increase from R$ 22/sqm to R$ 32/sqm based on vague "market appreciation." This damages our operating margin. How do we defend ourselves?',
+          octisAnswer: {
+            title: 'Defensive strategy utilizing Article 51 and certified market appraisal data',
+            paragraphs: [
+              'The critical operational fact is that you are 8 months away from the expiration of a 5-year lease. You are precisely inside the statutory renewal window under Article 51, Paragraph 5 of Brazilian Tenancy Law (between 1 year and 6 months before expiration), which confers the legal right to file a Compulsory Renewal Lawsuit (Ação Renovatória) forcing a 5-year contract extension.',
+              'Unilateral 45% increases are routinely based on arbitrary landlord posturing. The most effective defense is commissioning an engineering-certified market valuation demonstrating real closed lease transactions for comparable logistics assets along the same corridor.',
+              'Armed with this certified report, serve a formal counter-notice with a draft Renovatória filing attached. Faced with court exposure and conclusive submarket comps, landlords virtually always retreat to realistic market benchmarks.',
+            ],
+            whyOctis: 'Octis Real Estate advises corporate tenants in generating certified market valuations, evaluating relocation carrying costs, and conducting structured renewal negotiations with institutional landlords and REITs.',
+          },
+        },
+        {
+          id: 'acao-revisional-aluguel-laje-corporativa-escritorio',
+          subreddit: 'r/investing',
+          category: 'Lease Renegotiation',
+          author: 'u/tech_cfo_brazil',
+          upvotes: 278,
+          commentsCount: 41,
+          question: 'We are paying corporate office rent well above current submarket levels in SP. When can we file a Lease Revision Lawsuit and how does provisional rent work?',
+          context: 'We executed a 10-year corporate lease 4 years ago. Given subsequent market adjustments, identical office floors in our building and along our avenue are leasing at 25% to 30% discounts. The landlord refuses amicable discounts. Is a formal revision lawsuit viable?',
+          octisAnswer: {
+            title: 'Applying the 3-Year Triennial Rule (Article 19) and immediate provisional rent relief',
+            paragraphs: [
+              'Yes, this represents the exact statutory scenario for a Lease Revision Lawsuit (Article 19 of Federal Law 8,245/1991). The prerequisite of 3 full years under the lease contract without bilateral value amendments has been satisfied.',
+              'The primary financial appeal of the Revision Lawsuit is requesting provisional rent (Article 68, Item II). The judge can immediately reduce monthly lease payments to up to 80% of your requested target rate at the inception of proceedings, freeing corporate working capital while court expert appraisals take place.',
+              'Over 80% of institutional landlords and REITs prefer executing an amicable contract amendment once served with an expert appraisal report, avoiding court costs and adverse legal rulings.',
+            ],
+            whyOctis: 'Octis Real Estate audits corporate office lease portfolios, benchmarks closed transaction comps, and delivers certified valuation dossiers under ABNT NBR 14,653 standards to support amicable settlements and legal revisions.',
+          },
+        },
+        {
+          id: 'prazo-decadencial-renovacao-aluguel-comercial-art-51',
+          subreddit: 'r/entrepreneur',
+          category: 'Lease Renegotiation',
+          author: 'u/retail_operator_br',
+          upvotes: 345,
+          commentsCount: 62,
+          question: 'What is the fatal statutory deadline to demand compulsory commercial lease renewal if the landlord delays replying?',
+          context: 'Our 5-year lease expires in exactly 5 and a half months. We have been negotiating via email and WhatsApp with property management, but they take weeks to answer. An attorney warned us that we have already forfeited our statutory right to force renewal. Is this true?',
+          octisAnswer: {
+            title: 'Critical warning: The fatal statutory deadline of Article 51, Paragraph 5',
+            paragraphs: [
+              'Unfortunately, this is accurate. Article 51, Paragraph 5 of Brazilian Tenancy Law strictly mandates that the Compulsory Renewal Lawsuit must be filed within the window between 1 year and 6 months prior to lease expiration.',
+              'This cutoff is a statutory forfeiture deadline (prazo decadencial): it cannot be tolled or suspended by email negotiations, WhatsApp chats, or notary notices. Once the 6-month threshold is breached by even a single day, the tenant permanently loses the statutory right to compel lease extension.',
+              'Without Article 51 protection, the landlord gains the right to demand unmotivated eviction (denúncia vazia) or impose arbitrary rental rates. In this posture, the company must immediately pivot to professional Tenant Representation to evaluate relocation options and negotiate a fresh contract without operational disruption.',
+            ],
+            whyOctis: 'Octis Real Estate systematically monitors lease milestones 14 to 18 months ahead of expiration, safeguarding Article 51 statutory rights as prime negotiating leverage.',
+          },
+        },
+        {
+          id: 'igpm-vs-ipca-reajuste-abusivo-contrato-locacao',
+          subreddit: 'r/investing',
+          category: 'Lease Renegotiation',
+          author: 'u/finance_director_br',
+          upvotes: 219,
+          commentsCount: 33,
+          question: 'Our industrial warehouse contract is tied to IGP-M and accumulated an exorbitant adjustment. Is there legal grounding to demand switching to IPCA?',
+          context: 'Our logistics facility lease features annual adjustments by IGP-M. The index spiked, making our rent 35% higher than consumer inflation. The landlord invokes pacta sunt servanda and refuses to alter the index. Do Brazilian courts support contract revision?',
+          octisAnswer: {
+            title: 'Theory of Imprevision and established Brazilian case law on contractual rebalancing',
+            paragraphs: [
+              'The doctrine of pacta sunt servanda (sanctity of contracts) is not unconditional under Brazilian civil law. It is tempered by the rebus sic stantibus doctrine and Articles 317 and 478 of the Civil Code, governing excessive contractual burden and the Theory of Imprevision.',
+              'Brazilian state appellate courts, notably the São Paulo Court of Justice (TJSP), have established firm jurisprudence recognizing that extreme IGP-M distortions driven by currency and commodity turbulence exceed normal monetary inflation, authorizing judicial substitution with the consumer price index (IPCA).',
+              'The recommended corporate posture is serving a formal technical notice demonstrating rental disparity against submarket benchmarks, proposing a consensual index migration or an annual cap.',
+            ],
+            whyOctis: 'Octis Real Estate compiles financial impact models and submarket vacancy analyses that substantiate index replacement requests before institutional funds and property owners with high out-of-court success.',
+          },
+        },
         {
           id: 'cri-incorporadoras-vs-bancos',
           subreddit: 'r/investing',
@@ -1287,6 +1747,26 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       calloutText: 'Looking to evaluate a transaction for your property or development project?',
       calloutBtn: 'Speak With Our Advisory Team',
       items: [
+        {
+          category: 'Lease Renegotiation',
+          question: 'What constitutes an excessive commercial rent increase in offices and warehouses in Brazil?',
+          answer: 'An excessive rent increase happens when a landlord demands unilateral rate hikes substantially above local submarket benchmarks for comparable properties, or passes through abnormal index spikes (such as currency-driven IGP-M surges) that disrupt contract financial balance. In such instances, Brazilian statutes (Articles 317 and 478 of the Civil Code and Federal Law 8,245/1991) protect occupiers through the Theory of Imprevision and the Lease Revision Lawsuit.',
+        },
+        {
+          category: 'Lease Renegotiation',
+          question: 'How does the Lease Revision Lawsuit (Article 19) work and when should a company pursue it?',
+          answer: 'The Lease Revision Lawsuit can be filed once 3 full years have elapsed under the lease contract or since the last voluntary rate adjustment. Tenants can request an immediate court injunction for provisional rent (not lower than 80% of the target requested rate) at the start of litigation, delivering immediate cash flow savings while official expert valuation takes place.',
+        },
+        {
+          category: 'Lease Renegotiation',
+          question: 'What are the requirements and fatal deadline for compulsory commercial lease renewal (Article 51)?',
+          answer: 'Compulsory renewal (Ação Renovatória) requires a written contract with a fixed expiration date, a cumulative uninterrupted term of at least 5 years, and at least 3 years operating in the same commercial line. The statutory filing window is strictly non-extendable (prazo decadencial): it must take place strictly between 1 year and 6 months prior to lease expiration.',
+        },
+        {
+          category: 'Lease Renegotiation',
+          question: 'How does Octis Real Estate advise corporate occupiers in lease renegotiation?',
+          answer: 'We act as dedicated Tenant Representation advisors: we assemble certified market valuation reports (ABNT NBR 14,653), analyze local submarket availability, calculate landlord vacancy carrying costs, and lead structured institutional negotiations to capture rent reductions, tenant improvement allowances, and index conversions under complete legal certainty.',
+        },
         {
           category: 'About Octis',
           question: 'What does Octis Real Estate do?',

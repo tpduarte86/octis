@@ -14,10 +14,10 @@ export function HomePage() {
   return (
     <>
       <SEOHead
-        titlePt="Octis Real Estate | Negócios Imobiliários & Financiamento de Obras Brasil"
-        titleEn="Octis Real Estate | Real Estate Transactions & CRI Debt Brazil"
-        descriptionPt="A Octis Real Estate conecta proprietários, incorporadoras e investidores para compra, venda, aluguel comercial, Sale & Leaseback e financiamento de obras via CRI."
-        descriptionEn="Octis Real Estate connects property owners, developers, and investors for commercial leasing, acquisitions, dispositions, Sale & Leaseback, and CRI debt funding."
+        titlePt="Octis Real Estate | Renegociação de Aluguel, Escritórios, Galpões & CRI"
+        titleEn="Octis Real Estate | Commercial Lease Renegotiation, Offices, Logistics & CRI"
+        descriptionPt="Renegociação de contratos de aluguel comercial, ação revisional em escritórios e galpões, defesa contra aumento abusivo, compra, venda e financiamento de obras via CRI."
+        descriptionEn="Commercial lease renegotiation, rent revision lawsuits for offices and warehouses, defense against rent hikes, property transactions, and CRI construction debt in Brazil."
         path="/"
       />
 
