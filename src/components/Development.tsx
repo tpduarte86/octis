@@ -6,30 +6,32 @@ import { translations } from '../translations/content';
 
 const assetIcons = [Home, Warehouse, Briefcase, Map];
 
-export function Development() {
+export function Development({ showHeader = true }: { showHeader?: boolean }) {
   const { language } = useLanguage();
   const t = translations[language].development;
 
   return (
     <section id="development" className="py-20 md:py-28 bg-[#f8fafc] text-gray-900 border-t border-gray-200 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-14 md:mb-18 max-w-3xl mx-auto"
-        >
-          <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
-            <span className="w-1.5 h-1.5 bg-[#c59b27]" />
-            {t.badge}
-          </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 mb-4 leading-tight font-normal">
-            {t.title}
-          </h2>
-          <p className="text-gray-600 text-base md:text-lg font-light leading-relaxed">
-            {t.subtitle}
-          </p>
-        </motion.div>
+        {showHeader && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-14 md:mb-18 max-w-3xl mx-auto"
+          >
+            <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
+              <span className="w-1.5 h-1.5 bg-[#c59b27]" />
+              {t.badge}
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 mb-4 leading-tight font-normal">
+              {t.title}
+            </h2>
+            <p className="text-gray-600 text-base md:text-lg font-light leading-relaxed">
+              {t.subtitle}
+            </p>
+          </motion.div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {t.items.map((item, idx) => {

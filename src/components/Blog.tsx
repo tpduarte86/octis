@@ -4,7 +4,7 @@ import { BookOpen, Calendar, Clock, ArrowRight, X, ChevronRight, Share2, CheckCi
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/content';
 
-export function Blog() {
+export function Blog({ showHeader = true }: { showHeader?: boolean }) {
   const { language } = useLanguage();
   const t = translations[language].blog;
 
@@ -38,18 +38,20 @@ export function Blog() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Section Header */}
-        <div className="text-center mb-14 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
-            <span className="w-1.5 h-1.5 bg-[#c59b27]" />
-            <span>{t.badge}</span>
+        {showHeader && (
+          <div className="text-center mb-14 max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
+              <span className="w-1.5 h-1.5 bg-[#c59b27]" />
+              <span>{t.badge}</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 mb-4 font-normal leading-tight">
+              {t.title}
+            </h2>
+            <p className="text-gray-600 text-base md:text-lg font-light leading-relaxed">
+              {t.subtitle}
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 mb-4 font-normal leading-tight">
-            {t.title}
-          </h2>
-          <p className="text-gray-600 text-base md:text-lg font-light leading-relaxed">
-            {t.subtitle}
-          </p>
-        </div>
+        )}
 
         {/* Category Filters */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
@@ -59,10 +61,12 @@ export function Blog() {
               <button
                 key={cat}
                 type="button"
+                data-button-navy={isActive ? "true" : undefined}
+                style={isActive ? { color: '#ffffff', WebkitTextFillColor: '#ffffff' } : undefined}
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer border ${
                   isActive
-                    ? 'bg-[#0a1d37] text-white border-[#0a1d37]'
+                    ? 'bg-[#0a1d37] !text-white text-white border-[#0a1d37]'
                     : 'bg-white text-gray-700 border-gray-200 hover:border-gray-400'
                 }`}
               >

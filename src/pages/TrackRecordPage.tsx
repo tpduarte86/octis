@@ -56,8 +56,8 @@ export function TrackRecordPage() {
         </div>
       </section>
 
-      {/* Main Partner / Leadership Section */}
-      <Partner />
+      {/* Main Partner / Leadership Section without duplicate header */}
+      <Partner showHeader={false} />
 
       {/* Deal Highlights Showcase */}
       <section className="py-20 bg-[#f8fafc] border-t border-gray-200">

@@ -83,7 +83,9 @@ export function Header() {
 
           <Link
             to="/contato"
-            className="hidden sm:inline-flex px-4 py-2 bg-[#0a1d37] hover:bg-[#122b4f] text-white text-xs font-semibold uppercase tracking-wider transition-colors shrink-0"
+            data-button-navy="true"
+            style={{ color: '#ffffff', WebkitTextFillColor: '#ffffff' }}
+            className="hidden sm:inline-flex px-4 py-2 bg-[#0a1d37] hover:bg-[#122b4f] !text-white text-white text-xs font-semibold uppercase tracking-wider transition-colors shrink-0"
           >
             {t.contactButton}
           </Link>
@@ -126,7 +128,9 @@ export function Header() {
               <div className="pt-4 pb-2">
                 <Link
                   to="/contato"
-                  className="block text-center py-3 bg-[#0a1d37] hover:bg-[#122b4f] text-white font-semibold text-xs uppercase tracking-wider"
+                  data-button-navy="true"
+                  style={{ color: '#ffffff', WebkitTextFillColor: '#ffffff' }}
+                  className="block text-center py-3 bg-[#0a1d37] hover:bg-[#122b4f] !text-white text-white font-semibold text-xs uppercase tracking-wider"
                 >
                   {t.contactButton}
                 </Link>

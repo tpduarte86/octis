@@ -50,14 +50,15 @@ export function PropertiesPage() {
 
           <p className="text-base sm:text-lg md:text-xl text-gray-600 font-light max-w-3xl leading-relaxed">
             {language === 'en'
-              ? 'We believe the real economy is driven by every property sector. We work with residential developments, commercial offices, logistics distribution parks, and master-planned land.'
-              : 'Acreditamos que a economia real é movimentada por todas as categorias de imóveis. Atendemos desde moradia econômica e galpões simples até prédios corporativos de alto padrão.'}
+              ? 'We connect buyers, tenants, and institutional capital across every property sector: residential developments, corporate offices, logistics parks, and master-planned land.'
+              : 'Conectamos compradores, inquilinos e investidores para todas as categorias de imóveis: moradia econômica, lajes corporativas, galpões logísticos e loteamentos em todo o Brasil.'}
           </p>
+
         </div>
       </section>
 
-      {/* Main Asset Classes Grid */}
-      <Development />
+      {/* Main Asset Classes Grid without repeated header */}
+      <Development showHeader={false} />
 
       {/* Comparison: Simple to Class AAA (Clean CBRE Style) */}
       <section className="py-20 bg-[#f8fafc] border-t border-gray-200">

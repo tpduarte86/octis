@@ -56,8 +56,8 @@ export function RedditArticlesPage() {
         </div>
       </section>
 
-      {/* Main Blog Component */}
-      <Blog />
+      {/* Main Blog Component without duplicate header */}
+      <Blog showHeader={false} />
 
       {/* Link to Community Questions */}
       <section className="py-16 bg-[#0a1d37] text-white">

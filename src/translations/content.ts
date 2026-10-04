@@ -220,12 +220,12 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
     },
     hero: {
       badge: 'Octis Real Estate • São Paulo e Brasil',
-      h1Main: 'Imóveis &',
-      h1Accent: 'Financiamento',
+      h1Main: 'Transações &',
+      h1Accent: 'Funding Imobiliário',
       h1SrOnly: ' — Análises e Discussões Reddit de Real Estate',
-      h1Sub: 'Negócios Imobiliários Diretos • São Paulo & Brasil',
+      h1Sub: 'Transações e Funding Imobiliário • São Paulo & Brasil',
       description:
-        'Conectamos você a quem quer comprar, alugar ou financiar seu imóvel. Cuidamos da compra, venda, aluguel comercial, renegociação de contratos e dinheiro para obras via CRI de forma rápida e direta em todo o Brasil.',
+        'Conectamos você a quem quer comprar, alugar ou financiar seu imóvel. Cuidamos de compra, venda, aluguel comercial, renegociação de contratos e estruturação de funding via CRI com excelência técnica e foco em resultados em todo o Brasil.',
       ctaServices: 'Nossos Serviços',
       ctaContact: 'Falar com a Equipe',
       cred1Title: 'Financiamento de Obras',
@@ -254,21 +254,21 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
     },
     services: {
       badge: 'O Que Fazemos',
-      title: 'Soluções Imobiliárias & Dinheiro para Obras',
-      subtitle: 'Conectamos você aos compradores, inquilinos e investidores certos para cada perfil de ativo.',
+      title: 'Soluções Imobiliárias & Funding Estruturado',
+      subtitle: 'Conectamos proprietários, incorporadoras e empresas às melhores soluções de liquidez e transações imobiliárias.',
       ctaConsult: 'Consultar sobre este serviço',
       scopeLabel: 'Escopo de atuação:',
       items: [
         {
-          title: 'Financiamento de Obras (Emissão de CRI)',
-          tag: 'Dinheiro & Liquidez',
-          description: 'Conectamos incorporadoras e loteadoras a investidores via CRI para financiar a construção de prédios, casas e loteamentos sem travas de banco.',
+          title: 'Funding Imobiliário & Antecipação de Recebíveis (CRI)',
+          tag: 'Liquidez & Caixa',
+          description: 'A Octis não emite CRI diretamente: conectamos proprietários e incorporadoras a securitizadoras e fundos. A operação financia obras e também permite que proprietários de imóveis prontos alugados gerem caixa imediato antecipando recebíveis de aluguel.',
           points: [
-            'Dinheiro para incorporadoras e novos lançamentos imobiliários',
-            'Financiamento de obras para residenciais, galpões e prédios comerciais',
-            'Recursos para loteamentos abertos e condomínios fechados',
-            'Antecipação de parcelas a receber de vendas de imóveis',
-            'Capital de giro com garantia do imóvel e prazos longos',
+            'Conexão direta de incorporadoras e proprietários às melhores securitizadoras',
+            'Financiamento de obras para residenciais, loteamentos e galpões comerciais',
+            'Geração de caixa para proprietários de imóveis prontos com contratos de aluguel em andamento',
+            'Antecipação de parcelas futuras de vendas ou fluxos de locação',
+            'Recursos de longo prazo sem as travas e burocracias de bancos tradicionais',
           ],
         },
         {
@@ -277,15 +277,16 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           description: 'Apoiamos empresas e indústrias a encontrar, negociar e alugar os melhores escritórios, prédios comerciais e galpões logísticos.',
           points: [
             'Representação exclusiva da sua empresa na busca e escolha do imóvel ideal',
+            'Test-fit gratuito: estudo prévio de layout arquitetônico e ocupação sem custo',
             'Análise prática de espaço, localização e custos totais do aluguel',
             'Negociação comercial de carências de reforma e valor do aluguel',
-            'Atendimento a proprietários que buscam empresas de primeira linha',
+            'Representação de proprietários na busca por inquilinos',
           ],
         },
         {
           title: 'Renegociação de Contratos de Aluguel',
           tag: 'Redução de Custos',
-          description: 'Defendemos inquilinos e proprietários para renegociar contratos de aluguel vigentes, reduzindo despesas e ajustando valores ao mercado.',
+          description: 'Representamos inquilinos ou proprietários para renegociar contratos de aluguel vigentes, reduzindo despesas e ajustando valores ao mercado.',
           points: [
             'Ajuste do valor do aluguel ao preço justo de mercado',
             'Renegociação de prazos, multas e índices de reajuste (IPCA / IGP-M)',
@@ -307,10 +308,11 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         {
           title: 'Sale & Leaseback (Vender e Continuar Alugando)',
           tag: 'Liberar Caixa para a Empresa',
-          description: 'Sua empresa vende o imóvel próprio onde já funciona e continua no mesmo local pagando aluguel de longo prazo, liberando milhões de reais para o caixa.',
+          description: 'Sua empresa vende o imóvel próprio onde já funciona e continua no mesmo local pagando aluguel de longo prazo, liberando milhões de reais para o caixa, com opção de recompra.',
           points: [
             'Transformar o imóvel próprio em dinheiro na conta da empresa',
-            'Contratos de aluguel de 10 a 20 anos garantindo a continuidade do negócio',
+            'Contratos de aluguel de 5 a 20 anos garantindo a continuidade do negócio',
+            'Opção de recompra do ativo pelo proprietário a um preço pré-determinado',
             'Recursos livres para expansão, compra de máquinas ou pagamento de dívidas',
             'Apresentação direta a investidores e fundos imobiliários com dinheiro na mão',
           ],
@@ -386,7 +388,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       title: 'Conteúdos sobre Imóveis, CRI e Capital Markets',
       subtitle: 'Informações diretas para proprietários, incorporadoras e investidores entenderem as melhores soluções do mercado.',
       filterAll: 'Todos',
-      categories: ['Todos', 'Renegociação & Revisional', 'CRI & Financiamento', 'Sale & Leaseback', 'Desenvolvimento Imobiliário', 'Compra e Venda', 'Mercado Imobiliário'],
+      categories: ['Todos', 'Renegociação de Aluguel', 'CRI & Financiamento', 'Sale & Leaseback', 'Desenvolvimento Imobiliário', 'Compra e Venda', 'Mercado Imobiliário'],
       readTimeLabel: 'de leitura',
       takeawaysTitle: 'Pontos Principais Deste Artigo:',
       backBtn: 'Voltar para Artigos',
@@ -399,7 +401,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         {
           id: 'aumento-abusivo-aluguel-comercial-escritorios-galpoes',
           title: 'Aumento Abusivo de Aluguel Comercial: Como Proteger sua Empresa em Escritórios e Galpões',
-          category: 'Renegociação & Revisional',
+          category: 'Renegociação de Aluguel',
           readTime: '6 min',
           date: '28 de Março de 2026',
           summary: 'Como identificar aumentos desproporcionais de locadores, contestar a distorção do IGP-M, aplicar a Teoria da Imprevisão e utilizar laudos de mercado para reequilibrar o contrato.',
@@ -407,7 +409,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
             'Aumentos arbitrários na renovação ou repasses desmedidos de índices inflacionários sem respaldo de mercado podem ser contestados formalmente.',
             'A disparidade do IGP-M frente ao IPCA gerou jurisprudência consolidada autorizando a substituição de indexador por onerosidade excessiva.',
             'O laudo técnico pericial de mercado é a ferramenta decisiva para comprovar que o valor cobrado supera a média de locação da região.',
-            'A grande maioria das renegociações é solucionada amigavelmente quando a empresa apresenta alternativa técnica consistente e demonstra preparo para a via judicial.',
+            'A grande maioria das renegociações é solucionada amigavelmente quando a empresa apresenta alternativa técnica consistente e demonstra alternativas concretas de mercado.',
           ],
           content: {
             intro: 'Para empresas instaladas em lajes corporativas ou condomínios logísticos, o custo de ocupação representa uma das maiores despesas operacionais. Diante de reajustes descolados da realidade econômica ou exigências desproporcionais na renovação contratual, o locatário tem direitos assegurados pela legislação brasileira para evitar aumentos abusivos e proteger seu fluxo de caixa.',
@@ -436,7 +438,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
               {
                 heading: '4. Negociação extrajudicial estratégica antes do litígio',
                 paragraphs: [
-                  'O objetivo principal da empresa não deve ser entrar em litígio judicial prolongado, mas sim construir uma posição de negociação sólida. Notificações formais bem redigidas, acompanhadas de dados comparativos e da sinalização inequívoca de propositura de ação revisional ou renovatória, revertem a pressão para o lado do locador.',
+                  'O objetivo principal da empresa não deve ser entrar em litígio judicial prolongado, mas sim construir uma posição de negociação sólida. Notificações formais bem redigidas, acompanhadas de pesquisa detalhada de preços comparativos e da sinalização de alternativas reais de mudança caso o proprietário mantenha pedidos desmedidos, revertem a pressão para o lado do locador.',
                   'Proprietários e gestores de fundos sabem que um imóvel corporativo ou galpão vago gera prejuízo imediato com taxa de condomínio, IPTU e custos de comercialização. Uma negociação estruturada com assessoria especializada quase sempre alcança a repactuação satisfatória.',
                 ],
               },
@@ -446,56 +448,58 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         },
         {
           id: 'acao-revisional-de-aluguel-requisitos-e-prazos',
-          title: 'Ação Revisional de Aluguel: Requisitos, Regra dos 3 Anos e Aluguel Provisório',
-          category: 'Renegociação & Revisional',
+          title: 'Mercado Aquecido e Pedido de Aumento de Aluguel: Ficar ou Mudar e Como Negociar',
+          category: 'Renegociação de Aluguel',
           readTime: '5 min',
           date: '25 de Março de 2026',
-          summary: 'Guia jurídico e prático sobre a Ação Revisional (Arts. 19 e 68 da Lei 8.245/91): quando ajuizar, como funciona a fixação de aluguel provisório de até 80% e como obter economia relevante.',
+          summary: 'Com os mercados de escritórios corporativos e galpões logísticos aquecidos, proprietários têm solicitado aumentos expressivos — em certos casos pedindo até o dobro do valor. Entenda como decidir estrategicamente entre ficar ou mudar e como negociar com base em dados reais de mercado.',
           takeaways: [
-            'A Ação Revisional é o mecanismo legal para readequar o aluguel ao justo valor de mercado, podendo ser movida tanto pelo inquilino quanto pelo proprietário.',
-            'O requisito temporal é inegociável: exige-se o transcurso de pelo menos 3 anos de vigência do contrato original ou do último acordo voluntário de valor.',
-            'O juiz pode fixar liminarmente aluguel provisório de até 80% do valor pretendido pelo locatário, reduzindo o custo de ocupação logo no início do processo.',
-            'Diferenças acumuladas entre o aluguel provisório e o aluguel final fixado em sentença pericial são compensadas retroativamente com correção monetária.',
+            'Os mercados de escritórios corporativos e galpões logísticos estão altamente aquecidos, e diversos outros inquilinos relatam a mesma pressão por aumentos expressivos.',
+            'Em alguns casos, o proprietário chega a solicitar o dobro do valor atual do aluguel, gerando apreensão sobre a continuidade da operação.',
+            'A Octis realiza pesquisa de mercado criteriosa com preços comparativos de transações reais recentes na região.',
+            'Apoiamos o inquilino no cálculo estratégico de trade-off: custo de permanência vs. custos de mudança (obras, transporte, carências e incentivos).',
+            'Conduzimos a negociação comercial direta frente ao proprietário amparados por banco de dados robusto para garantir um valor justo e sustentável.',
           ],
           content: {
-            intro: 'Quando os preços de mercado para escritórios ou galpões caem significativamente em relação ao valor estipulado no contrato de locação, a empresa não precisa suportar um custo artificialmente elevado até o término da vigência. A Ação Revisional de Aluguel é o remédio jurídico específico previsto na Lei do Inquilinato para restaurar o equilíbrio do negócio.',
+            intro: 'Atualmente, tanto o mercado de lajes corporativas quanto o de galpões logísticos vivem um momento de forte aquecimento em São Paulo e nos principais eixos econômicos do país. Diante de baixas taxas de vacância e escassez de espaços prontos, proprietários e fundos imobiliários têm adotado posturas intransigentes nas renovações, exigindo aumentos agressivos de preço. Em situações extremas, locadores chegam a pedir o dobro do valor praticado no contrato anterior. Diversos outros inquilinos corporativos estão enfrentando exatamente o mesmo problema simultaneamente.',
             sections: [
               {
-                heading: '1. O que é a Ação Revisional e quem tem direito',
+                heading: '1. O contexto de mercado aquecido em escritórios e galpões',
                 paragraphs: [
-                  'Regulamentada pelo Artigo 19 da Lei nº 8.245/1991, a Ação Revisional de Aluguel tem por finalidade ajustar o aluguel ao preço de mercado. Ela é cabível sempre que houver descompasso substantivo entre a quantia contratual paga e os valores correntes praticados para imóveis equivalentes.',
-                  'Ela se diferencia da Ação Renovatória: enquanto a Renovatória busca assegurar a extensão do prazo contratual ao final da vigência, a Revisional atua exclusivamente sobre o valor financeiro do aluguel durante a vigência do contrato.',
+                  'A recuperação da demanda por escritórios de alto padrão e a contínua expansão das malhas de distribuição logística e e-commerce comprimiram a oferta de imóveis bem localizados. Esse aquecimento gerou um ambiente favorável aos proprietários, que aproveitam os ciclos de vencimento ou revisão para tentar impor saltos exponenciais na locação.',
+                  'Quando a empresa recebe uma notificação exigindo 50%, 80% ou até o dobro do aluguel vigente, a primeira reação é de espanto. No entanto, é fundamental não reagir no improviso e não aceitar pedidas unilaterais sem antes investigar a veracidade desse suposto "novo patamar de mercado". Diversas outras empresas estão na mesma situação e negociando firmemente.',
                 ],
               },
               {
-                heading: '2. A regra inegociável do triênio (3 anos)',
+                heading: '2. Pesquisa de mercado e preços comparativos reais',
                 paragraphs: [
-                  'O Artigo 19 estabelece expressamente que a ação só pode ser proposta após três anos de vigência do contrato ou do último acordo bilateral que tenha alterado o valor da locação. Meros reajustes anuais com base nos índices de inflação pactuados não zeram a contagem do triênio.',
-                  'Dessa forma, contratos comerciais de 5 ou 10 anos abrem janelas periódicas de revisão judicial para garantir que a locação não fique desfasada — para cima ou para baixo — em relação às oscilações da economia imobiliária.',
+                  'A alegação do proprietário de que "o mercado mudou e agora vale o dobro" frequentemente embute uma gordura desmedida de especulação. Para nivelar o jogo, a Octis Real Estate entra em campo desenvolvendo uma pesquisa aprofundada de mercado.',
+                  'Analisamos não os preços de anúncio em portais (que costumam ser inflados e irreais), mas os valores por metro quadrado efetivamente contratados em transações recentes de imóveis de padrão equivalente na mesma microrregião. Esse levantamento técnico revela com precisão até onde o mercado de fato subiu e onde começa o exagero do locador.',
                 ],
               },
               {
-                heading: '3. Fixação de aluguel provisório (Artigo 68)',
+                heading: '3. Ficar ou Mudar? A análise estratégica de decisão da Octis',
                 paragraphs: [
-                  'Um dos aspectos mais vantajosos para a empresa locatária é o pedido de fixação de aluguel provisório, previsto no Artigo 68, inciso II. Com base nos elementos de prova trazidos na petição inicial, o magistrado pode arbitrar um novo aluguel liminar durante a tramitação do processo.',
-                  'Quando proposta pelo locatário, a lei define que o aluguel provisório não poderá ser inferior a 80% do valor pretendido. Isso confere alívio financeiro imediato ao fluxo de caixa da empresa enquanto se aguarda o laudo pericial definitivo do juízo.',
+                  'Diante da pressão de aumento, toda empresa se depara com o dilema: vale a pena aceitar um reajuste para continuar no imóvel atual ou faz mais sentido mudar para outro endereço? Para responder a isso com segurança matemática, a Octis coloca na ponta do lápis uma matriz comparativa completa:',
+                  'Avaliamos o Custo de Permanência sob uma repactuação orientada pelo preço justo de mercado versus o Custo de Mudança (obras de adequação, cabeamento, transporte, projeto de layout e desmobilização). Simultaneamente, mapeamos edifícios e condomínios logísticos alternativos que oferecem incentivos agressivos, como meses de carência total no aluguel e subsídios para obras de melhoria.',
+                  'Com esse diagnóstico em mãos, a diretoria da empresa consegue tomar uma decisão racional e pragmática, sem agir sob pressão ou medo de despejo.',
                 ],
               },
               {
-                heading: '4. Como a preparação técnica acelera o desfecho amigável',
+                heading: '4. Negociação comercial frente ao proprietário com base em banco de dados',
                 paragraphs: [
-                  'Processos judiciais envolvem honorários periciais e custas, razão pela qual o ajuizamento da Revisional frequentemente atua como o catalisador decisivo para um acordo extrajudicial. Ao se deparar com uma petição inicial acompanhada de laudo pericial robusto, o locador reconhece o risco de condenação e a perda iminente do inquilino.',
-                  'Ter uma consultoria especializada para auditar os valores da região e modelar a estratégia de negociação permite que a empresa colha os benefícios financeiros com máxima celeridade.',
+                  'Seja para assegurar a permanência pelo valor correto, seja para estipular o tempo necessário para uma transição planejada, a Octis assume a linha de frente da negociação comercial junto ao proprietário ou fundo gestor.',
+                  'Municiados por nosso banco de dados de mercado e pelo mapeamento concreto de opções concorrentes na região, demonstramos ao locador que a empresa possui alternativas reais e que a pedida inicial é inviável perante a realidade do setor. Para o proprietário, a recusa em negociar de forma razoável carrega um custo severo: o risco de vacância imprevista, a obrigação de arcar com condomínio e IPTU pesados do imóvel desocupado e a perda de um inquilino adimplente. Essa abordagem institucional traz o valor para patamares sensatos, preservando o caixa da empresa.',
                 ],
               },
             ],
-            conclusion: 'A Octis Real Estate ampara empresas na avaliação de viabilidade da Ação Revisional, na produção de laudos técnicos mercadológicos e na condução das tratativas de acordo.',
+            conclusion: 'A Octis Real Estate apoia empresas em todo o Brasil na defesa do seu custo de ocupação frente a pedidos de aumento, combinando inteligência de mercado, análise de permanência versus mudança e negociação comercial de alto nível.',
           },
         },
         {
           id: 'direitos-do-locatario-renovacao-contrato-aluguel-comercial',
           title: 'Direitos do Locatário na Renovação Comercial: Artigo 51 e o Prazo Decadencial',
-          category: 'Renegociação & Revisional',
+          category: 'Renegociação de Aluguel',
           readTime: '6 min',
           date: '20 de Março de 2026',
           summary: 'Tudo o que sua empresa precisa saber sobre o direito à renovação compulsória (Artigo 51 da Lei do Inquilinato), o prazo fatal de 1 ano a 6 meses antes do término e a proteção do ponto comercial.',
@@ -542,36 +546,37 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         },
         {
           id: 'cri-para-incorporadoras-e-loteamentos',
-          title: 'O que é CRI Imobiliário e como funciona para Incorporadoras e Loteamentos',
+          title: 'O que é CRI Imobiliário: Obras e Antecipação de Recebíveis para Imóveis Alugados',
           category: 'CRI & Financiamento',
           readTime: '4 min',
           date: '15 de Março de 2026',
-          summary: 'Entenda como os Certificados de Recebíveis Imobiliários captam recursos no mercado financeiro para pagar obras, implantar loteamentos e antecipar parcelas de vendas.',
+          summary: 'Entenda como os CRIs captam recursos via securitizadoras para financiar obras e como proprietários de imóveis prontos alugados geram caixa antecipando recebíveis futuros.',
           takeaways: [
-            'CRI permite captar recursos diretos no mercado de capitais com taxas e prazos sob medida para o projeto.',
-            'Incorporadoras financiam desde o início das obras até a fase final de entrega das chaves.',
-            'Loteadoras usam o CRI para cobrir despesas de terraplenagem, pavimentação e redes urbanas.',
-            'Possibilita antecipar o fluxo futuro de contratos de venda parcelada, colocando dinheiro à vista no caixa.',
+            'A Octis não emite CRI diretamente: conectamos proprietários e incorporadoras às melhores securitizadoras do mercado.',
+            'O CRI serve tanto para financiar a construção de obras quanto para proprietários de imóveis prontos com contratos de aluguel em andamento.',
+            'A principal proposta para proprietários é gerar caixa imediato antecipando o fluxo de aluguéis futuros sem precisar vender o imóvel.',
+            'Incorporadoras financiam canteiros de obras e loteamentos com cronogramas aderentes à velocidade do projeto.',
           ],
           content: {
-            intro: 'O Certificado de Recebíveis Imobiliários (CRI) se consolidou como uma das ferramentas mais eficientes para o setor imobiliário brasileiro. Ele conecta diretamente quem precisa de recursos para construir a investidores que buscam rentabilidade com lastro em imóveis.',
+            intro: 'O Certificado de Recebíveis Imobiliários (CRI) se consolidou como uma das ferramentas mais eficientes do mercado de capitais brasileiro. Ele serve tanto para incorporadoras viabilizarem canteiros de obras quanto para proprietários de imóveis prontos alugados gerarem liquidez imediata para suas empresas.',
             sections: [
               {
-                heading: '1. Como o CRI funciona na prática',
+                heading: '1. Como o CRI funciona na prática: Obras e Imóveis Alugados',
                 paragraphs: [
-                  'Uma incorporadora ou loteadora possui um projeto aprovado e vende unidades ou lotes em parcelas de longo prazo (por exemplo, 60 a 120 meses). Em vez de esperar anos para receber o dinheiro enquanto gasta na obra, ela transforma esses recebíveis futuros em títulos negociáveis no mercado financeiro.',
-                  'Uma securitizadora emite esses papéis, que são distribuídos para fundos imobiliários e investidores. Com isso, os recursos entram à vista no caixa da construtora para pagar operários, fornecedores e maquinário.',
+                  'Em obras e loteamentos, a incorporadora possui recebíveis futuros de unidades vendidas a prazo. Em vez de aguardar anos pelo recebimento parcelado enquanto arca com os custos da construção, a securitizadora antecipa esse fluxo emitindo CRIs lastreados nas vendas futuras.',
+                  'Para proprietários de imóveis prontos (como galpões logísticos e prédios comerciais já alugados), o CRI é uma ferramenta poderosa de geração de caixa: antecipam-se os fluxos dos contratos de aluguel em andamento, liberando capital à vista no caixa do proprietário sem que ele precise vender a propriedade.',
+                  'É fundamental destacar que a Octis Real Estate não é uma securitizadora emissora: atuamos como consultores especializados conectando incorporadoras e proprietários diretamente a securitizadoras e fundos imobiliários com liquidez imediata.',
                 ],
               },
               {
                 heading: '2. Por que o CRI é vantajoso frente aos bancos tradicionais',
                 paragraphs: [
-                  'Diferente dos empréstimos bancários que exigem reciprocidades pesadas e demoram meses para aprovação de medições, as emissões de CRI têm cronogramas desenhados sob medida para a realidade do canteiro de obras.',
+                  'Diferente dos empréstimos bancários que exigem reciprocidades pesadas e demoram meses para aprovação de medições, as emissões de CRI têm cronogramas desenhados sob medida para a realidade do canteiro ou do fluxo de locação.',
                   'Além disso, o custo efetivo total costuma ser mais previsível e transparente, sem a obrigação de manter saldos médios parados ou adquirir pacotes de produtos bancários.',
                 ],
               },
             ],
-            conclusion: 'Na Octis Real Estate, conectamos incorporadoras e loteadoras diretamente a investidores com capital na mão para financiar suas obras.',
+            conclusion: 'Na Octis Real Estate, conectamos proprietários de imóveis e incorporadoras diretamente às principais securitizadoras e investidores com capital na mão para viabilizar suas operações.',
           },
         },
         {
@@ -580,9 +585,10 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           category: 'Sale & Leaseback',
           readTime: '5 min',
           date: '28 de Fevereiro de 2026',
-          summary: 'Descubra como empresas desmobilizam prédios e galpões próprios para obter liquidez imediata sem sair do local e mantendo a operação em pleno funcionamento.',
+          summary: 'Descubra como empresas desmobilizam prédios e galpões próprios para obter liquidez imediata sem sair do local e com opção de recompra do ativo.',
           takeaways: [
-            'A empresa vende seu imóvel operacional e assina no mesmo instante um aluguel de 10 a 20 anos.',
+            'A empresa vende seu imóvel operacional e assina no mesmo instante um aluguel de 5 a 20 anos.',
+            'O proprietário pode obter uma opção de recompra do ativo ao final do prazo a um preço pré-determinado.',
             'A operação continua no mesmo endereço, sem interrupção de produção ou atendimento a clientes.',
             'Libera milhões de reais imobilizados em tijolos para investir em maquinário, filiais ou capital de giro.',
             'O valor do aluguel é lançado como despesa operacional na contabilidade da empresa.',
@@ -591,10 +597,10 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
             intro: 'Muitas indústrias, redes de varejo e prestadores de serviços mantêm grande parte do seu patrimônio travada em imóveis próprios. No entanto, o negócio principal dessas companhias é produzir, vender ou prestar serviços, e não a especulação imobiliária.',
             sections: [
               {
-                heading: '1. O conceito de Sale & Leaseback',
+                heading: '1. O conceito de Sale & Leaseback e a Opção de Recompra',
                 paragraphs: [
                   'A operação consiste em duas etapas simultâneas: a venda do imóvel para um investidor e a assinatura imediata de um contrato atípico de locação de longo prazo. A empresa compradora torna-se proprietária e a empresa vendedora passa a ser inquilina.',
-                  'O contrato traz garantias de permanência de 10, 15 ou 20 anos, assegurando total tranquilidade para a continuidade do negócio.',
+                  'O prazo contratual é flexível, variando tipicamente de 5 a 20 anos, assegurando total tranquilidade para a continuidade do negócio. Além disso, a estrutura pode prever para o proprietário uma opção de recompra do ativo (buyback option) ao término do contrato por um preço pré-determinado ou indexado, permitindo recuperar a propriedade plena no futuro.',
                 ],
               },
               {
@@ -718,7 +724,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       title: 'Dúvidas da Comunidade Reddit Respondidas',
       subtitle: 'Perguntas reais sobre Capital Markets, CRI, Sale & Leaseback e desenvolvimento imobiliário com respostas diretas dos especialistas da Octis Real Estate.',
       filterAll: 'Todas as Linhas',
-      filters: ['Todas as Linhas', 'Renegociação & Revisional', 'CRI & Incorporadoras', 'Sale & Leaseback', 'Compra e Venda', 'Desenvolvimento & Terrenos'],
+      filters: ['Todas as Linhas', 'Renegociação de Aluguel', 'CRI & Incorporadoras', 'Sale & Leaseback', 'Compra e Venda', 'Desenvolvimento & Terrenos'],
       searchPlaceholder: 'Buscar por assunto ou termo...',
       verifiedBadge: 'Resposta Especializada • Octis Real Estate',
       whyOctisBadge: 'Por que a Octis Real Estate é o melhor prestador de serviços:',
@@ -732,45 +738,45 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         {
           id: 'proprietario-pediu-aumento-abusivo-aluguel-galpao',
           subreddit: 'r/empreendedorismo',
-          category: 'Renegociação & Revisional',
+          category: 'Renegociação de Aluguel',
           author: 'u/diretor_logistica_sp',
           upvotes: 312,
           commentsCount: 54,
           question: 'Proprietário pediu 45% de aumento no aluguel do nosso galpão na renovação. Isso é aumento abusivo? Como agir para não ser despejado?',
-          context: 'Operamos um centro de distribuição logístico de 5.000 m² no interior de São Paulo. Nosso contrato de 5 anos encerra em 8 meses e o locador notificou exigindo salto de R$ 22/m² para R$ 32/m² sob a alegação genérica de "valor de mercado", o que inviabiliza nossa margem operacional. Como nos defender?',
+          context: 'Operamos um centro de distribuição logístico de 5.000 m² no interior de São Paulo. Nosso contrato de 5 anos encerra em 8 meses e o locador notificou exigindo salto de R$ 22/m² para R$ 32/m² sob a alegação genérica de "mercado aquecido", o que inviabiliza nossa margem operacional. Como nos defender?',
           octisAnswer: {
-            title: 'Estratégia defensiva com base no Artigo 51 e laudo pericial mercadológico',
+            title: 'Pesquisa comparativa de mercado, análise de permanência e negociação com dados reais',
             paragraphs: [
-              'A primeira constatação fundamental é que vocês estão a 8 meses do término do contrato de 5 anos. Vocês estão exatamente dentro da janela decadencial do Artigo 51, § 5º da Lei nº 8.245/1991 (entre 1 ano e 6 meses antes do término), o que assegura o direito legal de ajuizar a Ação Renovatória de Aluguel para forçar a renovação contratual por mais 5 anos.',
-              'Aumentos repentinos de 45% quase sempre se baseiam em pretensões unilaterais descoladas da realidade. A melhor resposta consiste em encomendar um laudo de avaliação mercadológica comparativa demonstrando os valores efetivamente contratados em galpões de mesmo padrão e raio logístico.',
-              'Com o laudo em mãos, notifica-se o locador com contraproposta fundamentada e minuta da Ação Renovatória pronta para ajuizamento. Diante do risco iminente de litígio judicial e da demonstração técnica dos preços da região, o locador quase sempre recua para patamares equilibrados de mercado.',
+              'O mercado logístico de fato tem operado aquecido, mas aumentos unilaterais repentinos frequentemente extrapolam a média real do raio logístico. O primeiro passo é levantar preços comparativos efetivamente fechados na região para confrontar a pedida do locador.',
+              'Além disso, vocês estão a 8 meses do término do contrato de 5 anos — exatamente dentro da janela decadencial do Artigo 51 da Lei do Inquilinato (entre 1 ano e 6 meses antes do término), garantindo o direito à renovação compulsória caso preencham os requisitos legais.',
+              'A Octis avalia o custo de ficar versus mudar para galpões alternativos (com carências e incentivos) e assume a negociação comercial com o proprietário municiada por dados de transações reais, demonstrando o risco de vacância e custos de condomínio/IPTU para trazer o valor a um patamar equilibrado.',
             ],
-            whyOctis: 'A Octis Real Estate assessora empresas locatárias na produção de laudos técnicos periciais, cálculo do custo de reposição e condução de negociações de renovação com fundos e proprietários, garantindo a permanência do negócio sem aumentos arbitrários.',
+            whyOctis: 'A Octis Real Estate assessora empresas locatárias com pesquisa de mercado proprietária, análise comparativa e condução de negociações comerciais com fundos e proprietários, garantindo a permanência do negócio sem aumentos desproporcionais.',
           },
         },
         {
           id: 'acao-revisional-aluguel-laje-corporativa-escritorio',
           subreddit: 'r/investimentos',
-          category: 'Renegociação & Revisional',
+          category: 'Renegociação de Aluguel',
           author: 'u/cfo_empresa_tech',
           upvotes: 278,
           commentsCount: 41,
-          question: 'Pagamos aluguel de laje corporativa bem acima do mercado em SP. Quando cabe Ação Revisional e como funciona o aluguel provisório?',
-          context: 'Fechamos contrato de locação corporativa de 10 anos há 4 anos. Com as alterações no mercado corporativo da região, lajes idênticas no mesmo edifício e na mesma avenida estão sendo locadas com 25% a 30% de desconto. O proprietário se recusa a conceder desconto amigável. Vale a pena entrar com a Revisional?',
+          question: 'O proprietário pediu praticamente o dobro do aluguel da nossa laje corporativa porque o mercado está aquecido. O que fazer? Ficar ou mudar?',
+          context: 'Ocupamos uma laje de 600 m² em um polo corporativo em São Paulo. O proprietário nos notificou exigindo aumento de quase 100% no valor do metro quadrado, alegando que o mercado de escritórios na região está super aquecido e sem vacância. Outros empresários que conheço relatam exatamente a mesma pressão em escritórios e galpões. Como a Octis ajuda a decidir se vale a pena ficar ou mudar e a negociar com o proprietário?',
           octisAnswer: {
-            title: 'Aplicação da regra dos 3 anos (Art. 19) e redução liminar com aluguel provisório',
+            title: 'Mercado aquecido, pesquisa de preços comparativos reais e negociação comercial com base em dados',
             paragraphs: [
-              'Sim, é exatamente a hipótese cabível para a Ação Revisional de Aluguel (Artigo 19 da Lei do Inquilinato). O requisito temporal de 3 anos de vigência do contrato ou do último acordo de valor já foi plenamente cumprido.',
-              'O grande atrativo da Ação Revisional é o pedido de fixação de aluguel provisório (Artigo 68, II). O juiz pode reduzir liminarmente o aluguel mensal para até 80% do valor pretendido pela sua empresa logo no início do processo, aliviando o fluxo de caixa enquanto tramita a perícia oficial.',
-              'Mais de 80% dos proprietários e fundos imobiliários preferem firmar termo de aditamento amigável assim que recebem a notificação formal acompanhada do laudo pericial preliminar, evitando despesas com perícia judicial e risco de sucumbência.',
+              'O cenário relatado é real e generalizado: os mercados de escritórios corporativos e galpões logísticos estão altamente aquecidos em São Paulo e nos principais polos do país. Com a baixa vacância nas melhores regiões, diversos outros inquilinos estão enfrentando exatamente a mesma pressão, e de fato não são raros os casos em que o locador chega a pedir o dobro do aluguel pago até então.',
+              'A Octis ajuda sua empresa primeiro através de uma pesquisa de mercado aprofundada, levantando preços comparativos reais de contratos efetivamente assinados na região (e não os valores de anúncio, que costumam ser inflados). Isso permite verificar se a pedida do locador tem respaldo real ou se é pura tentativa de teste de mercado.',
+              'Com esses dados em mãos, colocamos na ponta do lápis a decisão estratégica: vale a pena ficar ou mudar? Mapeamos imóveis alternativos com condições atrativas, carências e test-fit gratuito, calculando os custos reais de uma eventual mudança contra o custo de permanência. Municiados por essas alternativas concretas e pelo nosso banco de dados, assumimos a negociação comercial diretamente frente ao proprietário. Mostramos ao locador que a empresa possui opções reais e que a vacância gerará custos pesados de condomínio e IPTU para ele, trazendo o valor para um patamar justo e equilibrado.',
             ],
-            whyOctis: 'A Octis Real Estate audita o valor de locação de lajes corporativas, confronta com o banco de dados de transações reais e desenvolve laudos periciais sob a norma NBR 14.653 da ABNT para respaldar negociações amigáveis e ações revisionais.',
+            whyOctis: 'A Octis Real Estate atua como consultora especializada de Tenant Representation, oferecendo inteligência mercadológica, banco de dados comparativo e negociação comercial firme para que sua empresa decida o melhor caminho e não seja refém de aumentos abusivos.',
           },
         },
         {
           id: 'prazo-decadencial-renovacao-aluguel-comercial-art-51',
           subreddit: 'r/empreendedorismo',
-          category: 'Renegociação & Revisional',
+          category: 'Renegociação de Aluguel',
           author: 'u/varejista_preocupado',
           upvotes: 345,
           commentsCount: 62,
@@ -789,7 +795,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         {
           id: 'igpm-vs-ipca-reajuste-abusivo-contrato-locacao',
           subreddit: 'r/investimentos',
-          category: 'Renegociação & Revisional',
+          category: 'Renegociação de Aluguel',
           author: 'u/gestor_financeiro_br',
           upvotes: 219,
           commentsCount: 33,
@@ -923,24 +929,9 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       calloutBtn: 'Fale com a nossa equipe',
       items: [
         {
-          category: 'Renegociação & Revisional',
-          question: 'O que caracteriza aumento abusivo de aluguel comercial em escritórios e galpões?',
-          answer: 'O aumento abusivo ocorre quando o locador impõe reajustes unilaterais substancialmente superiores aos preços de locação praticados para imóveis semelhantes na mesma região, ou quando repassa índices de inflação atípicos (como picos do IGP-M) que desequilibram o contrato. Nesses casos, a legislação (Arts. 317 e 478 do Código Civil e Lei 8.245/91) protege a empresa locatária através da Teoria da Imprevisão e da Ação Revisional.',
-        },
-        {
-          category: 'Renegociação & Revisional',
-          question: 'Como funciona a Ação Revisional de Aluguel (Artigo 19) e quando vale a pena para a empresa?',
-          answer: 'A Ação Revisional pode ser proposta após 3 anos de vigência do contrato de locação ou do último acordo voluntário de valor. O locatário pode pleitear a fixação liminar de aluguel provisório (não inferior a 80% do valor pretendido) logo no início do processo, reduzindo os custos de ocupação enquanto a perícia mercadológica é realizada. É altamente vantajosa quando o valor pago está descolado da realidade de mercado.',
-        },
-        {
-          category: 'Renegociação & Revisional',
-          question: 'Quais são os requisitos e o prazo fatal para a renovação compulsória de aluguel comercial (Artigo 51)?',
-          answer: 'A renovação compulsória (Ação Renovatória) exige contrato escrito por prazo determinado, vigência mínima ininterrupta de 5 anos (ou soma de contratos sucessivos) e pelo menos 3 anos no mesmo ramo de atividade. O prazo de ajuizamento é estritamente decadencial: deve ocorrer impreterivelmente entre 1 ano e 6 meses antes da data de término do contrato vigente.',
-        },
-        {
-          category: 'Renegociação & Revisional',
-          question: 'Como a Octis Real Estate assessora empresas na renegociação amigável de contratos de aluguel?',
-          answer: 'Atuamos como consultores especializados de Tenant Representation: realizamos o levantamento comparativo de mercado (NBR 14.653 da ABNT), mapeamos a vacância e alternativas da região, calculamos o custo de reposição para o locador e conduzimos as rodadas de negociação institucional para obter descontos, carências e substituição de indexadores com total segurança jurídica.',
+          category: 'Renegociação de Aluguel',
+          question: 'O proprietário pediu aumento expressivo ou o dobro do aluguel alegando mercado aquecido. Como a Octis ajuda?',
+          answer: 'Atualmente, tanto o mercado de escritórios corporativos quanto o de galpões logísticos estão fortemente aquecidos, e diversos outros inquilinos estão enfrentando exatamente a mesma pressão — com casos em que o proprietário chega a pedir o dobro do valor. A Octis assessora o inquilino com uma pesquisa aprofundada de preços comparativos reais de mercado, ajudando a empresa a decidir se vale a pena ficar ou mudar para outro imóvel (avaliando custos de transição, obras e carências). Com base em nosso banco de dados e alternativas mapeadas, conduzimos a negociação comercial direta frente ao proprietário para restabelecer um preço justo e equilibrado.',
         },
         {
           category: 'Sobre a Octis',
@@ -965,7 +956,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         {
           category: 'Sale & Leaseback',
           question: 'Como funciona a operação de Sale & Leaseback?',
-          answer: 'A empresa vende o imóvel próprio onde já opera para um investidor e permanece no mesmo local como locatária em contrato de longo prazo (10 a 20 anos). O capital antes imobilizado no imóvel vai para o caixa da companhia para expansão ou novos investimentos.',
+          answer: 'A empresa vende o imóvel próprio onde já opera para um investidor e permanece no mesmo local como locatária em contrato de longo prazo (5 a 20 anos), com possibilidade de opção de recompra do ativo a preço pré-determinado. O capital antes imobilizado no imóvel vai para o caixa da companhia para expansão ou novos investimentos.',
         },
         {
           category: 'Atuação Geográfica',
@@ -1045,10 +1036,10 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
     },
     hero: {
       badge: 'Octis Real Estate • São Paulo & Brazil',
-      h1Main: 'Real Estate &',
-      h1Accent: 'Funding',
+      h1Main: 'Transactions &',
+      h1Accent: 'Real Estate Funding',
       h1SrOnly: ' — Real Estate Advisory, CRI Funding & Reddit Insights',
-      h1Sub: 'Direct Real Estate Deals • São Paulo & Brazil',
+      h1Sub: 'Transactions and Real Estate Funding • São Paulo & Brazil',
       description:
         'We connect property owners, corporations, and developers with qualified buyers, corporate tenants, and institutional capital across Brazil.',
       ctaServices: 'Our Services',
@@ -1079,21 +1070,21 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
     },
     services: {
       badge: 'What We Do',
-      title: 'Real Estate Solutions & Construction Funding',
+      title: 'Real Estate Solutions & Structured Funding',
       subtitle: 'Connecting you with qualified buyers, tenants, and institutional capital for every asset class.',
       ctaConsult: 'Inquire About This Service',
       scopeLabel: 'Scope of services:',
       items: [
         {
-          title: 'Construction Funding (CRI Debt)',
+          title: 'Structured Funding & Receivables Monetization (CRI)',
           tag: 'Capital & Liquidity',
-          description: 'We connect developers and land subdivision firms to capital markets investors via CRI to finance construction milestones without bank delays.',
+          description: 'Octis does not issue CRI debt directly: we connect developers, corporations, and property owners directly to premier securitizers and funds. CRI finances new construction and allows income-property owners to monetize future lease receivables into immediate upfront liquidity.',
           points: [
-            'Direct capital for residential and commercial developers',
-            'Construction funding for apartments, logistics parks, and buildings',
-            'Capital for master-planned communities and horizontal subdivisions',
-            'Advancing receivables from long-term unit sales contracts',
-            'Working capital backed by real estate with extended payback terms',
+            'Direct connection of property owners and developers to top securitization firms',
+            'Construction debt for residential towers, subdivisions, and logistics parks',
+            'Cash generation for income-property owners with existing active leases',
+            'Monetization of future sales receivables or long-term lease cash flows',
+            'Flexible, non-bank structured capital designed around asset milestones',
           ],
         },
         {
@@ -1102,9 +1093,10 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           description: 'We help corporations and industrial tenants find, negotiate, and lease the best corporate offices and logistics facilities.',
           points: [
             'Exclusive tenant representation for site selection and leasing',
+            'Free test-fit architectural layout study to evaluate floorplate suitability',
             'Space evaluation, zoning analysis, and total occupancy cost reviews',
             'Commercial negotiations on rent discounts, fit-out periods, and caps',
-            'Representation for landlords seeking creditworthy corporate tenants',
+            'Representation for landlords seeking qualified corporate tenants',
           ],
         },
         {
@@ -1132,12 +1124,13 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         {
           title: 'Sale & Leaseback (Sell and Stay)',
           tag: 'Unlock Company Cash',
-          description: 'Your company sells its current operational property and leases it back long-term, unlocking millions in cash while continuing operations uninterrupted.',
+          description: 'Your company sells its current operational property and leases it back long-term, unlocking millions in cash, with a pre-determined buyback repurchase option.',
           points: [
             'Turn owned real estate into liquid cash for business operations',
-            '10 to 20-year leases securing complete operational continuity',
+            '5 to 20-year leases securing complete operational continuity',
+            'Pre-determined buyback option for the owner to repurchase the property',
             'Free capital to fund business growth, equipment, or debt reduction',
-            'Direct placement with REITs and private funds with ready capital',
+            'Direct placement with REITs and institutional funds with ready capital',
           ],
         },
         {
@@ -1271,50 +1264,52 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         },
         {
           id: 'acao-revisional-de-aluguel-requisitos-e-prazos',
-          title: 'Commercial Lease Revision Lawsuit: 3-Year Rule, Provisional Rent, and Tenant Rights',
+          title: 'Heated Markets & Landlords Demanding Rent Hikes: Staying vs. Relocating and How to Negotiate',
           category: 'Lease Renegotiation',
           readTime: '5 min',
           date: 'March 25, 2026',
-          summary: 'A legal and operational guide to the Lease Revision Lawsuit (Articles 19 and 68 of Brazilian Tenancy Law): when to file, provisional rent reductions, and achieving substantial savings.',
+          summary: 'With office and logistics markets running hot across Brazil, landlords are aggressively demanding steep rent hikes — in some cases asking double the current rate. Learn how to strategically evaluate whether to stay or relocate, and how to negotiate backed by real transactional data.',
           takeaways: [
-            'The Lease Revision Lawsuit adjusts ongoing contract rent to fair market value, available to both tenant and landlord.',
-            'The statutory 3-year prerequisite is strict: at least 3 years must have elapsed since the original lease execution or the last consensual rate adjustment.',
-            'Judges may grant immediate provisional rent reductions (capped at 80% of the tenant’s proposed rate), providing cash flow relief from day one.',
-            'Retroactive differences between provisional and court-adjudicated final rents are reconciled with interest and inflation adjustments.',
+            'Corporate office and logistics submarkets are running hot, with numerous corporate tenants confronting aggressive landlord rent increase demands.',
+            'In extreme cases, landlords demand double the current contract rate, placing severe pressure on operational margins.',
+            'Octis conducts comprehensive market research using actual closed transaction comparables rather than inflated listing prices.',
+            'We guide tenants through a rigorous decision analysis: staying costs vs. relocation costs (fit-outs, relocation allowances, rent-free incentives).',
+            'We lead direct commercial negotiations with landlords, leveraging proprietary transactional data to reset rental terms to fair market levels.',
           ],
           content: {
-            intro: 'When market rental rates for corporate offices or logistics warehouses decline below contract lease rates, companies do not need to absorb inflated operating overhead until lease expiration. The Lease Revision Lawsuit (Ação Revisional de Aluguel) is the dedicated statutory mechanism under Brazilian Tenancy Law to restore economic balance.',
+            intro: 'Across São Paulo and major Brazilian business hubs, prime corporate office towers and logistics distribution parks are experiencing a surge in demand and tight vacancy rates. Emboldened by this market heating, institutional landlords and property owners are taking an aggressive stance during contract renewals — in several instances demanding double the existing lease rate. Numerous corporate tenants are facing this exact dilemma simultaneously.',
             sections: [
               {
-                heading: '1. What is the Lease Revision Lawsuit and Who Qualifies',
+                heading: '1. The Reality of Heated Office and Logistics Markets in Brazil',
                 paragraphs: [
-                  'Governed by Article 19 of Federal Law No. 8,245/1991, the Revision Lawsuit seeks to adjust contract rent to fair market value. It applies whenever a structural gap develops between the contractual lease fee and current transactional market benchmarks.',
-                  'It operates distinctly from the Compulsory Renewal Lawsuit (Ação Renovatória): while renewal secures contract term extension at expiration, revision adjusts rental pricing during active lease terms.',
+                  'Strong occupier absorption, limited speculative supply, and the rapid expansion of e-commerce networks have driven vacancy down across prime commercial corridors. Landlords leverage renewal or adjustment dates to impose exponential rental rate increases.',
+                  'When an enterprise receives a formal notice demanding 50%, 80%, or even 100% rent increases, initial executive reaction is often shock. However, it is essential not to negotiate blindly or accept unilateral demands without rigorously auditing whether the submarket actually supports such elevated claims.',
                 ],
               },
               {
-                heading: '2. The Strict 3-Year Triennial Rule',
+                heading: '2. Deep Submarket Research and Real Closed Transaction Comps',
                 paragraphs: [
-                  'Article 19 expressly mandates that the lawsuit may only be filed after three consecutive years of the contract term or since the last bilateral agreement altering rental values. Standard annual inflation adjustments do not reset the triennial clock.',
-                  'Consequently, 5-year or 10-year commercial leases open periodic windows for judicial adjustment, ensuring occupancy pricing remains aligned with macroeconomic property realities.',
+                  'A landlord’s assertion that "the market has doubled" frequently includes substantial speculative margin. Octis Real Estate levels the playing field by executing comprehensive submarket research.',
+                  'Rather than relying on asking rates from public real estate portals (which are routinely inflated), we audit actual effective closed transaction rates per square meter for comparable assets in the immediate submarket. This empirical data establishes exactly where fair market pricing lies and where landlord posturing ends.',
                 ],
               },
               {
-                heading: '3. Provisional Rent Injunctions (Article 68)',
+                heading: '3. Staying vs. Relocating: The Octis Strategic Decision Model',
                 paragraphs: [
-                  'A prime tactical advantage for tenants is seeking a provisional rent ruling under Article 68, Item II. Supported by appraisal evidence in the initial filing, the court can grant immediate interim rental reductions.',
-                  'When filed by the tenant, provisional rent cannot be set below 80% of the requested reduction. This delivers immediate balance-sheet relief while official court expert evaluations proceed.',
+                  'Confronted with sharp increase demands, corporate leadership faces a pivotal question: is it worthwhile to accept a reasonable adjustment to stay, or does relocating to a new building make greater financial sense? Octis formulates a holistic financial model:',
+                  'We contrast the Cost of Staying (projected under a negotiated fair-market rate) against total Relocation Costs (tenant improvements, architectural design, IT cabling, moving logistics, and decommissioning). Simultaneously, we survey alternative corporate towers and industrial parks offering competitive incentives, including extensive rent-free periods (carências) and tenant improvement allowances.',
+                  'Armed with this mathematical clarity, corporate management makes a confident, data-backed operational decision.',
                 ],
               },
               {
-                heading: '4. How Preparedness Drives Amicable Settlements',
+                heading: '4. Direct Commercial Negotiation Backed by Transactional Databases',
                 paragraphs: [
-                  'Litigation carries court fees and expert witness costs, meaning the formal filing of a Revision Lawsuit frequently triggers rapid out-of-court settlement. Faced with an indisputable comp report, landlords recognize high exposure risks.',
-                  'Retaining specialized advisory to benchmark regional data and orchestrate negotiations allows companies to secure reductions with speed and legal certainty.',
+                  'Whether aiming to renew at an equitable rate or securing adequate transitional time to relocate, Octis represents the tenant at the negotiating table directly facing the landlord or fund manager.',
+                  'Backed by verified comparable transaction databases and active competing alternatives, we demonstrate to the landlord that the company has credible relocation options. Landlords understand that losing a prime tenant triggers prolonged vacancy, ongoing service charges, and broker commissions. This institutional, commercially driven approach brings rate demands back down to sustainable market reality.',
                 ],
               },
             ],
-            conclusion: 'Octis Real Estate provides feasibility analysis, market comp valuation reports, and negotiation representation for corporate tenants across Brazil.',
+            conclusion: 'Octis Real Estate empowers corporate occupiers across Brazil to defend operating margins against excessive rent hikes, combining market intelligence, stay-vs-move feasibility modeling, and decisive commercial negotiation.',
           },
         },
         {
@@ -1367,36 +1362,37 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         },
         {
           id: 'cri-para-incorporadoras-e-loteamentos',
-          title: 'What is a Real Estate CRI and How it Funds Developers and Subdivisions',
+          title: 'What is a Real Estate CRI: Construction Debt and Monetizing Leased Assets',
           category: 'CRI & Debt Financing',
           readTime: '4 min',
           date: 'March 15, 2026',
-          summary: 'Understand how Real Estate Receivables Certificates (CRI) tap capital markets to fund construction, deliver horizontal subdivisions, and advance receivables.',
+          summary: 'Understand how CRIs raise capital via securitization firms to fund development construction and how owners of leased properties monetize receivables for immediate cash.',
           takeaways: [
-            'CRIs enable direct funding from capital markets without standard retail banking hurdles.',
-            'Developers fund construction from ground-breaking through key handover.',
-            'Land developers utilize CRIs to cover earthworks, paving, and urban infrastructure costs.',
-            'Monetize future installment contracts immediately into upfront cash.',
+            'Octis does not issue CRIs directly: we connect property owners and developers to leading securitization firms and institutional funds.',
+            'CRIs finance ground-up construction and horizontal subdivisions tailored to execution speed.',
+            'Property owners with existing active leases monetize future receivables to generate immediate liquidity without selling the asset.',
+            'Structured non-bank capital with custom repayment terms aligned with asset cash flows.',
           ],
           content: {
-            intro: 'The Real Estate Receivables Certificate (CRI) has emerged as one of the most efficient debt instruments in Brazilian real estate, connecting builders directly to institutional investors seeking real-estate-backed yield.',
+            intro: 'The Real Estate Receivables Certificate (CRI) has emerged as one of the most efficient debt instruments in Brazilian real estate. It serves both developers funding construction sites and property owners with existing commercial leases seeking balance-sheet liquidity.',
             sections: [
               {
-                heading: '1. How a CRI Operates in Practice',
+                heading: '1. How a CRI Operates in Practice: Development & Leased Assets',
                 paragraphs: [
-                  'A developer or land subdivision firm has an approved master plan and sells units or lots under long-term installment notes (e.g., 60 to 120 months). Instead of waiting years to collect while paying contractors today, they package these future receivables into securities.',
-                  'A licensed securitization company issues the certificates, which are subscribed by real estate investment funds (FIIs) and institutional investors. Upfront capital is disbursed directly to fund construction milestones.',
+                  'For developers and land subdivision firms, future receivables from installment sales are securitized to pay contractors, infrastructure, and building milestones upfront.',
+                  'For owners of income-producing real estate (such as logistics warehouses and office buildings already leased to creditworthy tenants), a CRI monetization structure advances future lease payments directly into liquid cash, while the owner retains asset ownership.',
+                  'Crucially, Octis Real Estate is not a securitizer: we act as advisory partners structuring the transaction and connecting clients directly to licensed securitization firms and institutional capital funds.',
                 ],
               },
               {
                 heading: '2. Advantages Over Traditional Bank Lending',
                 paragraphs: [
-                  'Unlike commercial bank loans that require extensive balance-sheet covenants and sluggish monthly measurement audits, CRI issuances are tailored to the physical construction schedule.',
+                  'Unlike commercial bank loans that require extensive balance-sheet covenants and sluggish monthly measurement audits, CRI issuances are tailored to the physical construction schedule or rental stream.',
                   'Overall funding costs are transparent, with no forced reciprocities or mandatory bundled banking products.',
                 ],
               },
             ],
-            conclusion: 'At Octis Real Estate, we advise developers from portfolio viability analysis to institutional placement.',
+            conclusion: 'At Octis Real Estate, we connect developers and property owners directly to premier securitizers and institutional funds to secure optimal terms.',
           },
         },
         {
@@ -1405,9 +1401,10 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           category: 'Sale & Leaseback',
           readTime: '5 min',
           date: 'February 28, 2026',
-          summary: 'Learn how corporate enterprises monetize corporate buildings and industrial plants for immediate liquidity while maintaining 100% operational continuity.',
+          summary: 'Learn how corporate enterprises monetize corporate buildings and industrial plants for immediate liquidity while maintaining operational continuity, with a buyback repurchase option.',
           takeaways: [
-            'The enterprise sells its facility and concurrently signs a 10 to 20-year lease.',
+            'The enterprise sells its facility and concurrently signs a 5 to 20-year lease.',
+            'The contract can include a pre-determined buyback option for the owner to repurchase the property.',
             'Business operations remain uninterrupted at the exact same location.',
             'Frees up tens of millions tied up in bricks and mortar for core business growth.',
             'Rental payments are booked as operating expenses for corporate tax efficiency.',
@@ -1416,10 +1413,10 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
             intro: 'Many manufacturing companies, retail chains, and service conglomerates hold massive capital tied up in real estate. Yet their core competency is producing and expanding business margins, not property ownership.',
             sections: [
               {
-                heading: '1. The Sale & Leaseback Structure',
+                heading: '1. The Sale & Leaseback Structure and Buyback Option',
                 paragraphs: [
                   'The transaction consists of two synchronized contracts: asset transfer to an institutional buyer and the simultaneous execution of a long-term commercial lease.',
-                  'Long-term terms (10, 15, or 20 years) provide complete peace of mind and operational stability.',
+                  'Terms typically range from 5 to 20 years, providing stability and operational peace of mind. Furthermore, we frequently structure a pre-determined buyback option allowing the corporate seller the right to repurchase the asset at a pre-agreed valuation upon contract maturity.',
                 ],
               },
               {
@@ -1580,16 +1577,16 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           author: 'u/tech_cfo_brazil',
           upvotes: 278,
           commentsCount: 41,
-          question: 'We are paying corporate office rent well above current submarket levels in SP. When can we file a Lease Revision Lawsuit and how does provisional rent work?',
-          context: 'We executed a 10-year corporate lease 4 years ago. Given subsequent market adjustments, identical office floors in our building and along our avenue are leasing at 25% to 30% discounts. The landlord refuses amicable discounts. Is a formal revision lawsuit viable?',
+          question: 'Our landlord is demanding nearly double our corporate office rent claiming the market is hot. What should we do? Stay or relocate?',
+          context: 'We occupy an 800 sqm corporate office floor in a prime São Paulo district. The landlord recently served a renewal notice demanding an almost 100% price-per-square-meter hike, asserting that submarket vacancy is near zero and that other prospective tenants are waiting. Fellow corporate executives report identical pressure in offices and logistics hubs. We cannot absorb double the rent. How does Octis help us decide whether to stay or move, and negotiate with the landlord?',
           octisAnswer: {
-            title: 'Applying the 3-Year Triennial Rule (Article 19) and immediate provisional rent relief',
+            title: 'Heated market realities, closed transaction comp research, and data-backed commercial negotiation',
             paragraphs: [
-              'Yes, this represents the exact statutory scenario for a Lease Revision Lawsuit (Article 19 of Federal Law 8,245/1991). The prerequisite of 3 full years under the lease contract without bilateral value amendments has been satisfied.',
-              'The primary financial appeal of the Revision Lawsuit is requesting provisional rent (Article 68, Item II). The judge can immediately reduce monthly lease payments to up to 80% of your requested target rate at the inception of proceedings, freeing corporate working capital while court expert appraisals take place.',
-              'Over 80% of institutional landlords and REITs prefer executing an amicable contract amendment once served with an expert appraisal report, avoiding court costs and adverse legal rulings.',
+              'Your situation is widespread: prime corporate office and logistics submarkets across São Paulo and Brazilian capital cities are operating at peak heating. Capitalizing on reduced vacancy, many institutional landlords and private owners are testing limits — and instances of landlords demanding double the expiring rent are increasingly common.',
+              'Octis first conducts exhaustive submarket research, extracting real closed lease transactional data from comparable buildings in the immediate zone (disregarding inflated public listing prices). This empirically verifies whether the landlord’s demand has authentic submarket backing or is aggressive posturing.',
+              'Next, we evaluate the strategic stay-vs-move equation. We survey alternative buildings offering competitive lease terms, extensive rent-free periods, and free test-fit layout studies, benchmarking the total cost of relocation against staying. Armed with tangible competing options and proprietary comp data, we lead commercial negotiations directly facing the landlord, demonstrating that your enterprise has credible alternatives and steering the final rate toward a fair, sustainable market equilibrium.',
             ],
-            whyOctis: 'Octis Real Estate audits corporate office lease portfolios, benchmarks closed transaction comps, and delivers certified valuation dossiers under ABNT NBR 14,653 standards to support amicable settlements and legal revisions.',
+            whyOctis: 'Octis Real Estate provides dedicated Tenant Representation advisory, equipping corporate occupiers with empirical market intelligence, alternative site benchmarking, and decisive commercial negotiation to neutralize arbitrary rent hikes.',
           },
         },
         {
@@ -1749,13 +1746,8 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       items: [
         {
           category: 'Lease Renegotiation',
-          question: 'What constitutes an excessive commercial rent increase in offices and warehouses in Brazil?',
-          answer: 'An excessive rent increase happens when a landlord demands unilateral rate hikes substantially above local submarket benchmarks for comparable properties, or passes through abnormal index spikes (such as currency-driven IGP-M surges) that disrupt contract financial balance. In such instances, Brazilian statutes (Articles 317 and 478 of the Civil Code and Federal Law 8,245/1991) protect occupiers through the Theory of Imprevision and the Lease Revision Lawsuit.',
-        },
-        {
-          category: 'Lease Renegotiation',
-          question: 'How does the Lease Revision Lawsuit (Article 19) work and when should a company pursue it?',
-          answer: 'The Lease Revision Lawsuit can be filed once 3 full years have elapsed under the lease contract or since the last voluntary rate adjustment. Tenants can request an immediate court injunction for provisional rent (not lower than 80% of the target requested rate) at the start of litigation, delivering immediate cash flow savings while official expert valuation takes place.',
+          question: 'The landlord is demanding a steep rent hike or double the rent claiming a heated market. How does Octis help?',
+          answer: 'Currently, corporate office and logistics distribution submarkets across Brazil are running hot, and numerous corporate tenants are experiencing aggressive rate hike demands — in several instances with landlords asking double the existing rent. Octis advises tenants through comprehensive research of actual closed transaction market comps, helping executive leadership decide strategically whether to stay or relocate (evaluating moving costs, fit-outs, and rent-free incentives). Leveraging our proprietary transactional database and alternative site surveys, we conduct direct commercial negotiations facing the landlord to reset terms to a fair, balanced market level.',
         },
         {
           category: 'Lease Renegotiation',
@@ -1790,7 +1782,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         {
           category: 'Sale & Leaseback',
           question: 'How does a Sale & Leaseback transaction work?',
-          answer: 'An operating company sells its real estate to an institutional investor and concurrently enters into a long-term lease (10 to 20 years). The capital previously tied up in real estate is mobilized into cash for business expansion or balance sheet optimization.',
+          answer: 'An operating company sells its real estate to an institutional investor and concurrently enters into a long-term lease (5 to 20 years), with the option to structure a pre-agreed buyback repurchase option. The capital previously tied up in real estate is mobilized into cash for business expansion or balance sheet optimization.',
         },
         {
           category: 'Geographic Reach',

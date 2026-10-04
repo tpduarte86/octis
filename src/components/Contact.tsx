@@ -198,7 +198,9 @@ export function Contact() {
 
             <button 
               type="submit"
-              className="w-full bg-[#0a1d37] hover:bg-[#122b4f] text-white py-3.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer"
+              data-button-navy="true"
+              style={{ color: '#ffffff', WebkitTextFillColor: '#ffffff' }}
+              className="w-full bg-[#0a1d37] hover:bg-[#122b4f] !text-white text-white py-3.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer"
             >
               {t.submitBtn}
             </button>

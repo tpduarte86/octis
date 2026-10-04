@@ -16,8 +16,8 @@ export function HomePage() {
       <SEOHead
         titlePt="Octis Real Estate | Renegociação de Aluguel, Escritórios, Galpões & CRI"
         titleEn="Octis Real Estate | Commercial Lease Renegotiation, Offices, Logistics & CRI"
-        descriptionPt="Renegociação de contratos de aluguel comercial, ação revisional em escritórios e galpões, defesa contra aumento abusivo, compra, venda e financiamento de obras via CRI."
-        descriptionEn="Commercial lease renegotiation, rent revision lawsuits for offices and warehouses, defense against rent hikes, property transactions, and CRI construction debt in Brazil."
+        descriptionPt="Renegociação de contratos de aluguel comercial em escritórios e galpões aquecidos, pesquisa de preços comparativos, compra, venda e financiamento de obras via CRI."
+        descriptionEn="Commercial lease renegotiation for offices and logistics warehouses in heated markets, comparative pricing research, property transactions, and CRI funding in Brazil."
         path="/"
       />
 

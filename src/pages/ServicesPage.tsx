@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Services } from '../components/Services';
+import { ChevronRight, ArrowRight } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
+import { Services } from '../components/Services';
 import { useLanguage } from '../context/LanguageContext';
-import { ArrowRight } from 'lucide-react';
 
 export function ServicesPage() {
   const { language } = useLanguage();
@@ -18,66 +18,46 @@ export function ServicesPage() {
         path="/servicos"
       />
 
-      {/* Main Services Cards */}
-      <Services />
+      {/* Page Hero Header (Clean CBRE Style) */}
+      <section className="py-16 md:py-24 bg-white border-b border-gray-200 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+          
+          {/* Breadcrumbs */}
+          <nav className="flex items-center gap-2 text-xs text-gray-500 mb-6 uppercase tracking-wider">
+            <Link to="/" className="hover:text-[#0a1d37] transition-colors">
+              {language === 'en' ? 'Home' : 'Início'}
+            </Link>
+            <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
+            <span className="text-[#0a1d37] font-semibold">{language === 'en' ? 'Services' : 'Serviços'}</span>
+          </nav>
 
-      {/* Workflow Section */}
-      <section className="py-20 bg-[#f8fafc] border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
-              <span className="w-1.5 h-1.5 bg-[#c59b27]" />
-              {language === 'en' ? 'Step-by-Step Methodology' : 'Como Trabalhamos'}
-            </div>
-            <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-4 font-normal">
-              {language === 'en' ? 'Our Execution Process' : 'O Processo de Atendimento da Octis'}
-            </h2>
-            <p className="text-gray-600 text-sm md:text-base font-light">
-              {language === 'en'
-                ? 'A straightforward path designed to eliminate delays and maximize capital certainty.'
-                : 'Um fluxo claro e direto para viabilizar sua operação com segurança jurídica.'}
-            </p>
+          <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
+            <span className="w-1.5 h-1.5 bg-[#c59b27]" />
+            {language === 'en' ? 'Advisory & Solutions' : 'Atuação & Soluções'}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 bg-white border border-gray-200 shadow-xs relative">
-              <span className="text-4xl font-serif text-[#0a1d37] font-normal block mb-4">01</span>
-              <h3 className="text-xl font-serif text-gray-900 mb-3 font-normal">
-                {language === 'en' ? 'Asset & Financial Diagnosis' : 'Avaliação e Diagnóstico'}
-              </h3>
-              <p className="text-sm text-gray-600 font-light leading-relaxed">
-                {language === 'en'
-                  ? 'We analyze the real estate asset, development cash flow, or balance sheet needs to determine the exact optimal mandate: CRI issuance, Sale & Leaseback, or outright sale.'
-                  : 'Analisamos o imóvel, o fluxo financeiro do empreendimento ou a necessidade da empresa para definir a melhor alternativa: emissão de CRI, Sale & Leaseback ou venda direta.'}
-              </p>
-            </div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-gray-900 mb-6 leading-tight max-w-4xl font-normal">
+            {language === 'en' ? (
+              <>
+                Real Estate Advisory &amp; <span className="text-[#0a1d37] italic">Structured Capital Solutions</span>
+              </>
+            ) : (
+              <>
+                Serviços Imobiliários &amp; <span className="text-[#0a1d37] italic">Funding Estruturado</span>
+              </>
+            )}
+          </h1>
 
-            <div className="p-8 bg-white border border-gray-200 shadow-xs relative">
-              <span className="text-4xl font-serif text-[#0a1d37] font-normal block mb-4">02</span>
-              <h3 className="text-xl font-serif text-gray-900 mb-3 font-normal">
-                {language === 'en' ? 'Institutional Matching' : 'Conexão com Investidores'}
-              </h3>
-              <p className="text-sm text-gray-600 font-light leading-relaxed">
-                {language === 'en'
-                  ? 'We take the transaction directly to our network of premier securitization firms, institutional real estate funds (FIIs), and qualified buyers with ready capital.'
-                  : 'Apresentamos a operação diretamente a fundos imobiliários, securitizadoras e investidores com capital líquido alocado para compras e emissões imediatas.'}
-              </p>
-            </div>
-
-            <div className="p-8 bg-white border border-gray-200 shadow-xs relative">
-              <span className="text-4xl font-serif text-[#0a1d37] font-normal block mb-4">03</span>
-              <h3 className="text-xl font-serif text-gray-900 mb-3 font-normal">
-                {language === 'en' ? 'Closing & Capital Release' : 'Fechamento e Liquidação'}
-              </h3>
-              <p className="text-sm text-gray-600 font-light leading-relaxed">
-                {language === 'en'
-                  ? 'We support the entire negotiation, contract drafting, and closing procedures until funds are successfully disbursed to your company account.'
-                  : 'Apoiamos todas as rodadas de negociação, alinhamento contratual e procedimentos de conclusão até o dinheiro ser creditado na conta da sua empresa.'}
-              </p>
-            </div>
-          </div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 font-light max-w-3xl leading-relaxed">
+            {language === 'en'
+              ? 'Connecting property owners, corporations, and developers directly to institutional liquidity, commercial leasing with free test-fit analysis, and debt funding via leading securitizers across Brazil.'
+              : 'Conectamos proprietários, empresas e incorporadoras diretamente a securitizadoras para funding e antecipação de recebíveis, locação comercial com test-fit gratuito e transações diretas em todo o Brasil.'}
+          </p>
         </div>
       </section>
+
+      {/* Main Services Cards */}
+      <Services />
 
       {/* Direct CTA */}
       <section className="py-16 bg-[#0a1d37] text-white">

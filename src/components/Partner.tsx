@@ -4,7 +4,7 @@ import { Award, Building2, Coins, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/content';
 
-export function Partner() {
+export function Partner({ showHeader = true }: { showHeader?: boolean }) {
   const { language } = useLanguage();
   const t = translations[language].leadership;
 
@@ -12,23 +12,25 @@ export function Partner() {
     <section id="leadership" className="py-20 md:py-28 bg-white border-t border-gray-200 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-14 max-w-3xl mx-auto"
-        >
-          <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
-            <span className="w-1.5 h-1.5 bg-[#c59b27]" />
-            {t.badge}
-          </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 mb-4 font-normal leading-tight">
-            {t.title}
-          </h2>
-          <p className="text-base md:text-lg text-gray-600 font-light leading-relaxed">
-            {t.subtitle}
-          </p>
-        </motion.div>
+        {showHeader && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-14 max-w-3xl mx-auto"
+          >
+            <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
+              <span className="w-1.5 h-1.5 bg-[#c59b27]" />
+              {t.badge}
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 mb-4 font-normal leading-tight">
+              {t.title}
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 font-light leading-relaxed">
+              {t.subtitle}
+            </p>
+          </motion.div>
+        )}
 
         {/* 3 Main Stat Cards (Clean White with Deep Navy Serifs) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">

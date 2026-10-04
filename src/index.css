@@ -52,3 +52,37 @@ body {
     linear-gradient(to right, rgba(10, 29, 55, 0.03) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(10, 29, 55, 0.03) 1px, transparent 1px);
 }
+
+/* Ensure solid navy buttons always render high-contrast solid white text, even under OS/Browser Dark Mode */
+.btn-navy,
+[data-button-navy="true"] {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.btn-navy:hover,
+[data-button-navy="true"]:hover {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+[data-button-navy="true"] svg,
+.btn-navy svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Explicitly ensure white/outline buttons have dark readable text */
+.btn-outline-navy,
+[data-button-outline="true"] {
+  color: #0a1d37 !important;
+  -webkit-text-fill-color: #0a1d37 !important;
+}
+
+.btn-outline-navy:hover,
+[data-button-outline="true"]:hover {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background-color: #0a1d37 !important;
+}
+
