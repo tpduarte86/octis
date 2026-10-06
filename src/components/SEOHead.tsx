@@ -7,9 +7,10 @@ interface SEOProps {
   descriptionPt: string;
   descriptionEn: string;
   path: string;
+  schemaJson?: object;
 }
 
-export function SEOHead({ titlePt, titleEn, descriptionPt, descriptionEn, path }: SEOProps) {
+export function SEOHead({ titlePt, titleEn, descriptionPt, descriptionEn, path, schemaJson }: SEOProps) {
   const { language } = useLanguage();
 
   const title = language === 'en' ? titleEn : titlePt;
@@ -66,7 +67,21 @@ export function SEOHead({ titlePt, titleEn, descriptionPt, descriptionEn, path }
 
     updateTwitter('twitter:title', title);
     updateTwitter('twitter:description', description);
-  }, [title, description, canonicalUrl]);
+
+    // 6. Structured Data Schema JSON-LD
+    let scriptTag = document.querySelector('script#octis-schema-json');
+    if (schemaJson) {
+      if (!scriptTag) {
+        scriptTag = document.createElement('script');
+        scriptTag.setAttribute('id', 'octis-schema-json');
+        scriptTag.setAttribute('type', 'application/ld+json');
+        document.head.appendChild(scriptTag);
+      }
+      scriptTag.textContent = JSON.stringify(schemaJson);
+    } else if (scriptTag) {
+      scriptTag.remove();
+    }
+  }, [title, description, canonicalUrl, schemaJson]);
 
   return null;
 }

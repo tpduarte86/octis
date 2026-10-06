@@ -16,6 +16,15 @@ import { translations } from '../translations/content';
 
 const serviceIcons = [Coins, KeyRound, FileText, Building, HandCoins, Users];
 
+const serviceSlugs = [
+  'funding-imobiliario-antecipacao-recebiveis-cri',
+  'aluguel-comercial-busca-de-imoveis',
+  'renegociacao-de-contratos-de-aluguel',
+  'compra-e-venda-de-imoveis',
+  'sale-and-leaseback',
+  'socios-investidores-e-parcerias',
+];
+
 export function Services() {
   const { language } = useLanguage();
   const t = translations[language].services;
@@ -27,6 +36,7 @@ export function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {t.items.map((service, index) => {
             const Icon = serviceIcons[index % serviceIcons.length];
+            const slug = serviceSlugs[index % serviceSlugs.length];
 
             return (
               <motion.div
@@ -46,7 +56,12 @@ export function Services() {
                   </div>
 
                   <h3 className="text-xl font-serif text-gray-900 mb-2 font-normal">
-                    {service.title}
+                    <Link 
+                      to={`/servicos/${slug}`} 
+                      className="hover:text-[#c59b27] transition-colors"
+                    >
+                      {service.title}
+                    </Link>
                   </h3>
 
                   <p className="text-gray-600 font-light text-xs sm:text-sm leading-relaxed mb-5">
@@ -68,12 +83,19 @@ export function Services() {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-gray-100">
+                <div className="pt-4 border-t border-gray-100 flex items-center justify-between gap-3 flex-wrap">
                   <Link
-                    to="/contato"
+                    to={`/servicos/${slug}`}
                     className="text-xs font-semibold uppercase tracking-wider text-[#0a1d37] hover:text-[#c59b27] transition-colors inline-flex items-center gap-1.5"
                   >
-                    {t.ctaConsult} <ArrowRight className="w-3.5 h-3.5" />
+                    {language === 'en' ? 'Service Page' : 'Ver Detalhes'} <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+
+                  <Link
+                    to={`/contato?servico=${encodeURIComponent(slug)}`}
+                    className="text-xs font-medium text-gray-500 hover:text-gray-900 transition-colors inline-flex items-center"
+                  >
+                    {t.ctaConsult}
                   </Link>
                 </div>
               </motion.div>

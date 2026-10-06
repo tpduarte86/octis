@@ -818,15 +818,15 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           author: 'u/incorporador_paulista',
           upvotes: 247,
           commentsCount: 38,
-          question: 'Vale a pena emitir CRI para financiar obra residencial ou o financiamento bancário padrão ainda é melhor?',
-          context: 'Estamos planejando um novo empreendimento residencial em São Paulo. O banco tradicional está pedindo reciprocidades altas, exigindo aplicações e com um processo de medição lento que pode atrasar o canteiro. O CRI é viável para nosso porte?',
+          question: 'Vale a pena emitir CRI para financiar obra ou antecipar aluguéis, ou o financiamento bancário padrão ainda é melhor?',
+          context: 'Estamos planejando um novo empreendimento residencial em São Paulo. O banco tradicional está pedindo reciprocidades altas, exigindo aplicações e com um processo de medição lento que pode atrasar o canteiro. Além disso, temos outros imóveis locados e queremos gerar caixa. O CRI serve para ambos?',
           octisAnswer: {
-            title: 'Por que o CRI via Octis Real Estate supera o crédito bancário tradicional',
+            title: 'Por que a conexão a securitizadoras via Octis supera o crédito bancário tradicional',
             paragraphs: [
-              'O financiamento bancário tradicional impõe regras padronizadas que muitas vezes não acompanham a velocidade das obras. Além de exigir contrapartidas financeiras que encarecem o custo total, a liberação de recursos é engessada.',
-              'Com a emissão de CRI, o cronograma financeiro é desenhado de acordo com as necessidades reais do projeto. Os recebíveis das vendas parceladas servem como lastro, trazendo recursos à vista direto de investidores do mercado de capitais.',
+              'O financiamento bancário tradicional impõe regras padronizadas que muitas vezes não acompanham a velocidade das obras e exigem contrapartidas financeiras que encarecem o custo total.',
+              'A Octis Real Estate não é uma securitizadora emissora: conectamos incorporadoras e proprietários diretamente às principais securitizadoras e fundos do país. A emissão de CRI não é apenas para financiar canteiros de obras ou loteamentos: serve perfeitamente para proprietários que têm imóveis prontos com contratos de aluguel em andamento gerarem caixa imediato antecipando recebíveis futuros, sem vender o patrimônio.',
             ],
-            whyOctis: 'A Octis Real Estate é o parceiro de referência para incorporadoras: avaliamos a viabilidade financeira do empreendimento, conectamos o projeto às melhores securitizadoras e fundos do país e conduzimos todo o processo de captação até o dinheiro estar na conta da obra.',
+            whyOctis: 'A Octis Real Estate é o parceiro de referência: conectamos o projeto diretamente a securitizadoras com apetite de emissão, seja para financiar a obra com cronogramas customizados, seja para monetizar recebíveis de locação em imóveis prontos.',
           },
         },
         {
@@ -837,14 +837,14 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           upvotes: 189,
           commentsCount: 29,
           question: 'Nossa empresa precisa de caixa livre e temos galpão próprio. Como funciona o Sale & Leaseback sem risco de perder o ponto?',
-          context: 'Temos uma fábrica e centro de distribuição com valor estimado em R$ 35 milhões. Manter esse capital imobilizado está travando nossa expansão. Vale a pena vender para um investidor e continuar pagando aluguel? Como fica a segurança do contrato?',
+          context: 'Temos uma fábrica e centro de distribuição com valor estimado em R$ 35 milhões. Manter esse capital imobilizado está travando nossa expansão. Vale a pena vender para um investidor e continuar pagando aluguel? Como fica a segurança do contrato e o prazo?',
           octisAnswer: {
-            title: 'Segurança operacional e liquidez imediata com a Octis Real Estate',
+            title: 'Segurança operacional, prazo flexível de 5 a 20 anos e opção de recompra',
             paragraphs: [
-              'Na operação de Sale & Leaseback, a empresa vende o imóvel e assina no mesmo instante um contrato de locação de longo prazo (geralmente entre 10 e 20 anos), com cláusulas atípicas que garantem a posse ininterrupta do imóvel.',
+              'Na operação de Sale & Leaseback, a empresa vende o imóvel e assina no mesmo instante um contrato de locação de longo prazo (de 5 a 20 anos), com opção de recompra do ativo pelo proprietário ao final do período por um preço pré-determinado, além de cláusulas atípicas que garantem a posse ininterrupta do espaço.',
               'Sua empresa não altera a rotina produtiva, mantém a mesma equipe no mesmo local e transforma dezenas de milhões de reais em caixa livre para aplicar na atividade principal, gerar margem ou quitar passivos caros.',
             ],
-            whyOctis: 'A Octis Real Estate é líder nesse modelo de negociação. Temos relacionamento direto com os maiores fundos imobiliários e family offices compradores do Brasil, assegurando o melhor valor de venda para o seu imóvel e aluguéis equilibrados para a sua empresa.',
+            whyOctis: 'A Octis Real Estate é líder nesse modelo de negociação. Temos relacionamento direto com os maiores fundos imobiliários e family offices compradores do Brasil, assegurando o melhor valor de venda para o seu imóvel, opção de recompra estruturada e aluguéis equilibrados.',
           },
         },
         {
@@ -1634,15 +1634,15 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           author: 'u/sp_developer',
           upvotes: 247,
           commentsCount: 38,
-          question: 'Is it worth issuing a CRI to fund residential construction, or is traditional bank debt still superior?',
-          context: 'We are planning a new residential development in São Paulo. Our commercial bank is demanding heavy reciprocity, locked deposits, and has a slow inspection process that could stall our site. Is a CRI viable for our scale?',
+          question: 'Is it worth issuing a CRI to fund construction or monetize leases, or is traditional bank debt still superior?',
+          context: 'We are planning a new residential development in São Paulo. Our commercial bank is demanding heavy reciprocity, locked deposits, and has a slow inspection process. Additionally, we own other leased income assets and want to generate cash. Does a CRI serve both purposes?',
           octisAnswer: {
-            title: 'Why CRI funding via Octis Real Estate outperforms traditional bank lending',
+            title: 'Why connecting to securitizers via Octis outperforms traditional bank lending',
             paragraphs: [
-              'Traditional commercial bank loans impose rigid bureaucratic rules that rarely match the agility required on a modern construction site. In addition to demanding financial reciprocities that inflate overall borrowing costs, monthly disbursements are often delayed.',
-              'With a CRI issuance, the funding schedule is customized to actual project timelines. Future sales receivables serve as liquid collateral, tapping upfront capital directly from institutional capital markets.',
+              'Traditional commercial bank loans impose rigid bureaucratic rules that rarely match the agility required on a modern construction site, alongside burdensome financial reciprocities.',
+              'Octis Real Estate does not issue CRI debt directly: we connect developers and property owners directly to premier securitization firms and institutional funds. CRI structures are not only for ground-up construction and subdivisions, but also enable owners of completed properties with active leases to generate upfront liquidity by anticipating future lease receivables without selling the asset.',
             ],
-            whyOctis: 'Octis Real Estate is the trusted partner for developers: we evaluate project financial feasibility, connect the transaction to premier securitizers and institutional funds, and manage the placement until capital reaches the project account.',
+            whyOctis: 'Octis Real Estate is the trusted partner: we connect the transaction directly to licensed securitizers with active placement capacity, whether to fund construction projects on tailored milestones or monetize rental receivables on income properties.',
           },
         },
         {
@@ -1653,14 +1653,14 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           upvotes: 189,
           commentsCount: 29,
           question: 'Our company needs working capital and we own our warehouse. How does Sale & Leaseback work without operational risk?',
-          context: 'We own an industrial plant and distribution facility valued at R$ 35 million. Holding this capital tied up is hampering our growth. Is it wise to sell to an investor and lease back? How secure is the lease contract?',
+          context: 'We own an industrial plant and distribution facility valued at R$ 35 million. Holding this capital tied up is hampering our growth. Is it wise to sell to an investor and lease back? How secure is the lease contract and the term?',
           octisAnswer: {
-            title: 'Operational continuity and upfront liquidity with Octis Real Estate',
+            title: 'Operational continuity, flexible 5 to 20-year term, and pre-agreed repurchase option',
             paragraphs: [
-              'In a Sale & Leaseback transaction, the company sells the real estate asset and simultaneously signs a long-term lease (typically 10 to 20 years) with atypical commercial clauses guaranteeing continuous occupancy.',
+              'In a Sale & Leaseback transaction, the company sells the real estate asset and simultaneously signs a long-term lease (from 5 to 20 years), with a contractual option for the owner to repurchase the asset at the end of the term at a pre-determined price, backed by atypical commercial clauses guaranteeing continuous occupancy.',
               'Your company keeps the exact same team, machinery, and operations in place while unlocking tens of millions in cash to reinvest into core activities, capture margins, or pay down expensive debt.',
             ],
-            whyOctis: 'Octis Real Estate is a recognized leader in this deal structure. We maintain direct dialogue with Brazil’s top REITs and family offices, ensuring maximum asset valuation and balanced lease terms for your balance sheet.',
+            whyOctis: 'Octis Real Estate is a recognized leader in this deal structure. We maintain direct dialogue with Brazil’s top REITs and family offices, ensuring maximum asset valuation, structured buyback options, and balanced lease terms for your balance sheet.',
           },
         },
         {

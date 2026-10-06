@@ -9,6 +9,23 @@ export function Contact() {
 
   const [submitted, setSubmitted] = useState(false);
 
+  // Map service query param from dedicated service pages
+  const getInitialMandate = () => {
+    if (typeof window === 'undefined') return t.mandates[0]?.value;
+    const servico = new URLSearchParams(window.location.search).get('servico');
+    if (!servico) return t.mandates[0]?.value;
+    
+    if (servico.includes('cri')) return language === 'en' ? 'CRI Debt Issuance' : 'Emissão de CRI';
+    if (servico.includes('aluguel-comercial')) return language === 'en' ? 'Corporate Leasing & Tenant Rep' : 'Locação Corporativa & Tenant Rep';
+    if (servico.includes('renegociacao')) return language === 'en' ? 'Lease Renegotiation' : 'Renegociação de Contrato de Locação';
+    if (servico.includes('sale-and-leaseback') || servico.includes('sale-leaseback')) return 'Sale & Leaseback';
+    if (servico.includes('compra-e-venda')) return language === 'en' ? 'Property Disposition' : 'Venda de Imóvel';
+    if (servico.includes('socios-investidores') || servico.includes('parcerias')) return language === 'en' ? 'Real Estate Development & Land' : 'Desenvolvimento Imobiliário & Terrenos';
+    return t.mandates[0]?.value;
+  };
+
+  const [selectedMandate, setSelectedMandate] = useState(getInitialMandate);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -172,6 +189,8 @@ export function Contact() {
               <select
                 id="mandateType"
                 name="mandateType"
+                value={selectedMandate}
+                onChange={(e) => setSelectedMandate(e.target.value)}
                 className="w-full bg-white border border-gray-300 px-4 py-2.5 text-gray-900 focus:outline-none focus:border-[#0a1d37] focus:ring-1 focus:ring-[#0a1d37] text-sm cursor-pointer"
               >
                 {t.mandates.map((m) => (

@@ -84,43 +84,33 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
-                <Link to="/servicos" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
-                  {language === 'en' ? 'CRI Debt Issuance' : 'Emissão de CRI'}
+                <Link to="/servicos/funding-imobiliario-antecipacao-recebiveis-cri" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
+                  {language === 'en' ? 'CRI Debt & Receivables' : 'Funding & Emissão de CRI'}
                 </Link>
               </li>
               <li>
-                <Link to="/servicos" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
-                  {language === 'en' ? 'Corporate Leasing & Tenant Rep' : 'Locação Corporativa & Tenant Rep'}
+                <Link to="/servicos/aluguel-comercial-busca-de-imoveis" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
+                  {language === 'en' ? 'Corporate Leasing & Test-Fit' : 'Aluguel Comercial & Test-Fit'}
                 </Link>
               </li>
               <li>
-                <Link to="/servicos" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
-                  {language === 'en' ? 'Lease Contract Renegotiation' : 'Renegociação de Contratos'}
+                <Link to="/servicos/renegociacao-de-contratos-de-aluguel" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
+                  {language === 'en' ? 'Lease Contract Renegotiation' : 'Renegociação de Aluguel'}
                 </Link>
               </li>
               <li>
-                <Link to="/servicos" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
+                <Link to="/servicos/compra-e-venda-de-imoveis" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
+                  {language === 'en' ? 'Property Brokerage' : 'Compra e Venda de Imóveis'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/servicos/sale-and-leaseback" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
                   {language === 'en' ? 'Sale & Leaseback' : 'Sale & Leaseback'}
                 </Link>
               </li>
               <li>
-                <Link to="/servicos" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
-                  {language === 'en' ? 'Property Dispositions' : 'Compra e Venda de Imóveis'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/imoveis" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
-                  {language === 'en' ? 'Residential (Affordable to Prime)' : 'Residencial (Econômico ao Luxo)'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/imoveis" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
-                  {language === 'en' ? 'Warehouses & Logistics' : 'Galpões de Todos os Portes'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/imoveis" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
-                  {language === 'en' ? 'Land & Master-Planned Subdivisions' : 'Loteamentos e Terrenos'}
+                <Link to="/servicos/socios-investidores-e-parcerias" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
+                  {language === 'en' ? 'Equity Partners & Land Swaps' : 'Sócios Investidores & Permutas'}
                 </Link>
               </li>
             </ul>
