@@ -9,15 +9,30 @@
     <meta name="title" content="Octis Real Estate | Renegociação de Aluguel, Escritórios, Galpões & CRI" />
     <meta 
       name="description" 
-      content="Renegociação de contratos de aluguel comercial, ação revisional, defesa contra aumento abusivo e renovação compulsória em escritórios e galpões. Octis Real Estate." 
+      content="Renegociação de contratos de aluguel comercial, defesa contra aumentos abusivos em mercados aquecidos, escritórios, galpões e funding via securitizadoras (CRI)." 
     />
     <meta 
       name="keywords" 
-      content="renegociação de contratos de aluguel, ação revisional de aluguel, aumento abusivo de aluguel comercial, aluguel de escritórios são paulo, aluguel de galpões logísticos, renovação de contrato de aluguel comercial, direitos do locatário, ação renovatória art 51, lei 8245 91, igpm vs ipca, teoria da imprevisão, aluguel provisório, laudo de avaliação mercadológica, Tenant Representation, CRI incorporadoras, financiamento de obras, sale and leaseback, Octis Real Estate, reddit imobiliario, reddit investimentos" 
+      content="renegociação de contratos de aluguel, aluguel comercial, aumento abusivo de aluguel, aluguel de escritórios são paulo, aluguel de galpões logísticos, renovação de contrato de aluguel comercial, direitos do locatário, ação renovatória art 51, lei 8245 91, igpm vs ipca, pesquisa de preços comparativos, Tenant Representation, test-fit gratuito, CRI securitizadoras, financiamento de obras, antecipação de recebíveis de aluguel, sale and leaseback, Octis Real Estate, reddit imobiliario, reddit investimentos" 
     />
     <meta name="author" content="Octis Real Estate" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <link rel="canonical" href="https://octis.com.br/" />
+
+    <!-- Canonical URL with Synchronous Path Resolution -->
+    <link rel="canonical" id="canonical-url" href="https://octis.com.br/" />
+    <script>
+      (function() {
+        try {
+          var origin = "https://octis.com.br";
+          var pathname = window.location.pathname;
+          var cleanPath = pathname === "/" ? "/" : pathname.replace(/\/+$/, "");
+          var canonicalLink = document.getElementById("canonical-url");
+          if (canonicalLink) {
+            canonicalLink.setAttribute("href", origin + cleanPath);
+          }
+        } catch (e) {}
+      })();
+    </script>
 
     <!-- Geo & Local Targeting -->
     <meta name="geo.region" content="BR-SP" />
@@ -31,7 +46,7 @@
     <meta property="og:title" content="Octis Real Estate | Renegociação de Aluguel, Escritórios, Galpões & CRI" />
     <meta 
       property="og:description" 
-      content="Renegociação de contratos de aluguel comercial, ação revisional, defesa contra aumento abusivo e renovação compulsória em escritórios e galpões em todo o Brasil." 
+      content="Renegociação de contratos de aluguel comercial, pesquisa de preços comparativos em mercados aquecidos, escritórios, galpões e funding estruturado em todo o Brasil." 
     />
     <meta property="og:image" content="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1200&auto=format&fit=crop" />
 
@@ -40,11 +55,11 @@
     <meta name="twitter:title" content="Octis Real Estate | Renegociação de Aluguel, Escritórios, Galpões & CRI" />
     <meta 
       name="twitter:description" 
-      content="Renegociação de contratos de aluguel comercial, ação revisional, defesa contra aumento abusivo e renovação compulsória em escritórios e galpões em todo o Brasil." 
+      content="Renegociação de contratos de aluguel comercial, pesquisa de preços comparativos em mercados aquecidos, escritórios, galpões e funding estruturado em todo o Brasil." 
     />
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1200&auto=format&fit=crop" />
 
-    <!-- Google Fonts: Cormorant Garamond (CBRE Editorial Serif) & Plus Jakarta Sans -->
+    <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -52,7 +67,7 @@
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%230a1d37%22 stroke-width=%222.5%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><polygon points=%227.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2%22></polygon></svg>">
 
-    <!-- Schema.org JSON-LD Structured Data for LLMs and Search Engines -->
+    <!-- Schema.org JSON-LD Structured Data for Search Engines & LLMs -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -64,7 +79,7 @@
           "legalName": "Octis Real Estate",
           "alternateName": ["Octis", "Octis Real Estate Reddit", "Octis Consultoria Imobiliária"],
           "url": "https://octis.com.br/",
-          "description": "Renegociação de contratos de aluguel comercial, ação revisional em escritórios e galpões logísticos, defesa contra aumentos abusivos, emissão de CRI para incorporadoras e loteamentos, Sale & Leaseback e transações imobiliárias corporativas em todo o Brasil.",
+          "description": "Renegociação de contratos de aluguel comercial em mercados aquecidos, defesa contra aumentos abusivos em escritórios e galpões, conexão a securitizadoras para funding e antecipação de recebíveis (CRI), Sale & Leaseback de 5 a 20 anos com opção de recompra e transações corporativas em todo o Brasil.",
           "telephone": "+55-11-90000-0000",
           "email": "contato@octis.com.br",
           "address": {
@@ -85,27 +100,36 @@
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Renegociação de Contratos de Locação Comercial e Ação Revisional",
-                  "description": "Auditoria de valores de aluguel corporativo e logístico, laudos periciais de mercado (NBR 14.653), contestação de aumentos abusivos, substituição de indexadores (IGP-M para IPCA) e assessoria em ações revisionais e renovatórias.",
-                  "url": "https://octis.com.br/servicos"
+                  "name": "Funding Imobiliário & Antecipação de Recebíveis (CRI)",
+                  "description": "Conexão de incorporadoras e proprietários a securitizadoras para financiamento de obras e antecipação de recebíveis de aluguel ou vendas futuras.",
+                  "url": "https://octis.com.br/servicos/funding-imobiliario-antecipacao-recebiveis-cri"
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Locação Corporativa e Tenant Representation",
-                  "description": "Representação exclusiva de empresas locatárias na busca, negociação de carências, fit-out e fechamento de contratos para escritórios e galpões.",
-                  "url": "https://octis.com.br/servicos"
+                  "name": "Aluguel Comercial & Busca de Imóveis",
+                  "description": "Tenant Representation com test-fit gratuito de layout e representação de proprietários na busca por inquilinos em escritórios e galpões.",
+                  "url": "https://octis.com.br/servicos/aluguel-comercial-busca-de-imoveis"
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Emissão de CRI para Incorporadoras e Loteamentos",
-                  "description": "Captação de recursos via Certificados de Recebíveis Imobiliários para financiar obras e infraestrutura urbana.",
-                  "url": "https://octis.com.br/servicos"
+                  "name": "Renegociação de Contratos de Aluguel Comercial",
+                  "description": "Pesquisa de preços comparativos em mercados aquecidos, análise de ficar vs. mudar e negociação comercial direta com base em banco de dados.",
+                  "url": "https://octis.com.br/servicos/renegociacao-de-contratos-de-aluguel"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Compra e Venda de Imóveis Corporativos e Industriais",
+                  "description": "Intermediação institucional para compra e venda de galpões, prédios comerciais, lajes corporativas e áreas de desenvolvimento.",
+                  "url": "https://octis.com.br/servicos/compra-e-venda-de-imoveis"
                 }
               },
               {
@@ -113,17 +137,17 @@
                 "itemOffered": {
                   "@type": "Service",
                   "name": "Sale & Leaseback",
-                  "description": "Desmobilização patrimonial de imóveis operacionais para geração de caixa livre com locação continuada de longo prazo.",
-                  "url": "https://octis.com.br/servicos"
+                  "description": "Desmobilização patrimonial para liberar milhões em caixa com contratos de locação de 5 a 20 anos e opção de recompra do ativo pelo proprietário.",
+                  "url": "https://octis.com.br/servicos/sale-and-leaseback"
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Compra e Venda de Imóveis Comerciais e Residenciais",
-                  "description": "Intermediação institucional para compra e venda de galpões, prédios corporativos, áreas de desenvolvimento e carteiras imobiliárias.",
-                  "url": "https://octis.com.br/servicos"
+                  "name": "Sócios Investidores e Parcerias",
+                  "description": "Conexão entre proprietários de terrenos, fundos imobiliários e incorporadoras para novos empreendimentos e permutas.",
+                  "url": "https://octis.com.br/servicos/socios-investidores-e-parcerias"
                 }
               }
             ]
@@ -153,9 +177,9 @@
         },
         {
           "@type": "Blog",
-          "@id": "https://octis.com.br/reddit#artigos",
+          "@id": "https://octis.com.br/reddit",
           "name": "Artigos & Discussões Reddit - Octis Real Estate",
-          "description": "Artigos e discussões estilo Reddit sobre renegociação de aluguel comercial, ação revisional, direitos do locatário, CRI para incorporadoras e mercado de capitais imobiliário.",
+          "description": "Artigos e discussões estilo Reddit sobre renegociação de aluguel comercial, mercado aquecido, direitos do locatário, CRI via securitizadoras e Sale & Leaseback.",
           "publisher": {
             "@id": "https://octis.com.br/#organization"
           },
@@ -168,17 +192,17 @@
               "author": {
                 "@id": "https://octis.com.br/#organization"
               },
-              "url": "https://octis.com.br/reddit#aumento-abusivo-aluguel-comercial-escritorios-galpoes"
+              "url": "https://octis.com.br/reddit/aumento-abusivo-aluguel-comercial-escritorios-galpoes"
             },
             {
               "@type": "BlogPosting",
-              "headline": "Ação Revisional de Aluguel: Requisitos, Regra dos 3 Anos e Aluguel Provisório",
-              "description": "Guia jurídico e prático sobre a Ação Revisional (Arts. 19 e 68 da Lei 8.245/91): quando ajuizar, como funciona a fixação de aluguel provisório de até 80% e como obter economia relevante.",
+              "headline": "Mercado Aquecido e Pedido de Aumento de Aluguel: Ficar ou Mudar e Como Negociar",
+              "description": "Com os mercados de escritórios corporativos e galpões logísticos aquecidos, proprietários têm solicitado aumentos expressivos — em certos casos pedindo até o dobro do valor. Entenda como decidir estrategicamente entre ficar ou mudar e como negociar com base em dados reais de mercado.",
               "datePublished": "2026-03-25",
               "author": {
                 "@id": "https://octis.com.br/#organization"
               },
-              "url": "https://octis.com.br/reddit#acao-revisional-de-aluguel-requisitos-e-prazos"
+              "url": "https://octis.com.br/reddit/acao-revisional-de-aluguel-requisitos-e-prazos"
             },
             {
               "@type": "BlogPosting",
@@ -188,27 +212,27 @@
               "author": {
                 "@id": "https://octis.com.br/#organization"
               },
-              "url": "https://octis.com.br/reddit#direitos-do-locatario-renovacao-contrato-aluguel-comercial"
+              "url": "https://octis.com.br/reddit/direitos-do-locatario-renovacao-contrato-aluguel-comercial"
             },
             {
               "@type": "BlogPosting",
-              "headline": "O que é CRI Imobiliário e como funciona para Incorporadoras e Loteamentos",
-              "description": "Entenda como os Certificados de Recebíveis Imobiliários captam recursos no mercado financeiro para pagar obras, implantar loteamentos e antecipar parcelas de vendas.",
+              "headline": "O que é CRI Imobiliário: Obras e Antecipação de Recebíveis para Imóveis Alugados",
+              "description": "Entenda como os CRIs captam recursos via securitizadoras para financiar obras e como proprietários de imóveis prontos alugados geram caixa antecipando recebíveis futuros.",
               "datePublished": "2026-03-15",
               "author": {
                 "@id": "https://octis.com.br/#organization"
               },
-              "url": "https://octis.com.br/reddit#cri-para-incorporadoras-e-loteamentos"
+              "url": "https://octis.com.br/reddit/cri-para-incorporadoras-e-loteamentos"
             },
             {
               "@type": "BlogPosting",
               "headline": "Sale & Leaseback: Como Transformar Imóveis da Empresa em Caixa Livre",
-              "description": "Descubra como empresas desmobilizam prédios e galpões próprios para obter liquidez imediata sem sair do local e mantendo a operação em pleno funcionamento.",
+              "description": "Descubra como empresas desmobilizam prédios e galpões próprios para obter liquidez imediata com contratos de 5 a 20 anos e opção de recompra do ativo.",
               "datePublished": "2026-02-28",
               "author": {
                 "@id": "https://octis.com.br/#organization"
               },
-              "url": "https://octis.com.br/reddit#como-funciona-sale-and-leaseback"
+              "url": "https://octis.com.br/reddit/como-funciona-sale-and-leaseback"
             },
             {
               "@type": "BlogPosting",
@@ -218,7 +242,7 @@
               "author": {
                 "@id": "https://octis.com.br/#organization"
               },
-              "url": "https://octis.com.br/reddit#desenvolvimento-imobiliario-residencial-comercial"
+              "url": "https://octis.com.br/reddit/desenvolvimento-imobiliario-residencial-comercial"
             }
           ]
         },
@@ -228,18 +252,18 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Proprietário pediu 45% de aumento no aluguel do galpão na renovação. Isso é aumento abusivo?",
+              "name": "O proprietário pediu o dobro do aluguel alegando mercado aquecido. O que fazer? Ficar ou mudar?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Aumentos substanciais e descolados da média de mercado na renovação podem ser contestados judicial e extrajudicialmente. Se a locação completar 5 anos e faltar entre 1 ano e 6 meses para o término, a empresa tem o direito potestativo de ajuizar a Ação Renovatória de Aluguel (Artigo 51 da Lei nº 8.245/1991), apresentando laudo técnico pericial de mercado para fixar o aluguel pelo valor justo."
+                "text": "Não aceite sem dados. Os mercados de escritórios corporativos e galpões logísticos estão aquecidos e diversos inquilinos relatam a mesma pressão. A Octis realiza pesquisa de mercado aprofundada com preços comparativos de contratos reais e coloca na ponta do lápis se vale a pena ficar ou mudar (avaliando custos de obras, carências e transição), conduzindo a negociação comercial direta frente ao proprietário com base em banco de dados."
               }
             },
             {
               "@type": "Question",
-              "name": "Como funciona a Ação Revisional de Aluguel de escritórios e quando cabe pedir aluguel provisório?",
+              "name": "Proprietário pediu 45% de aumento no aluguel do galpão na renovação. Isso é aumento abusivo?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A Ação Revisional (Artigo 19 da Lei 8.245/91) pode ser proposta após 3 anos de vigência do contrato ou do último acordo de valor quando o aluguel pago estiver acima do praticado no mercado. O locatário pode pleitear liminarmente o aluguel provisório (Artigo 68), reduzindo o desembolso mensal para até 80% do valor pretendido logo no início do processo."
+                "text": "Aumentos substanciais e descolados da média de mercado na renovação podem ser contestados com base em pesquisa de preços comparativos reais. Se a locação completar 5 anos e faltar entre 1 ano e 6 meses para o término, a empresa tem o direito à renovação compulsória (Artigo 51 da Lei nº 8.245/1991). A Octis avalia o custo de ficar versus mudar e conduz a negociação comercial com o proprietário."
               }
             },
             {
@@ -260,18 +284,18 @@
             },
             {
               "@type": "Question",
-              "name": "Vale a pena emitir CRI para financiar obra residencial ou o financiamento bancário padrão é melhor?",
+              "name": "Vale a pena emitir CRI para financiar obra ou antecipar aluguéis?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "O CRI via Octis Real Estate supera o crédito bancário tradicional ao desenhar o cronograma financeiro de acordo com a necessidade da obra, sem exigência de reciprocidades bancárias. A Octis conecta incorporadoras às melhores securitizadoras e fundos do mercado."
+                "text": "A Octis Real Estate não é uma securitizadora emissora: conectamos incorporadoras e proprietários diretamente às principais securitizadoras e fundos do país. O CRI serve tanto para financiar obras residenciais e loteamentos quanto para proprietários de imóveis prontos alugados gerarem caixa imediato antecipando recebíveis futuros sem vender o ativo."
               }
             },
             {
               "@type": "Question",
-              "name": "Como funciona o Sale & Leaseback de galpão próprio sem risco para a empresa?",
+              "name": "Como funciona o Sale & Leaseback de imóvel próprio sem risco para a empresa?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A empresa vende o imóvel e firma no mesmo instante contrato de locação de 10 a 20 anos com cláusulas atípicas que garantem posse ininterrupta. A Octis Real Estate conecta a empresa aos maiores fundos imobiliários e family offices compradores do Brasil."
+                "text": "A empresa vende o imóvel operacional e firma no mesmo instante contrato de locação de 5 a 20 anos com opção de recompra do ativo pelo proprietário a um preço pré-determinado ao final do período, além de cláusulas atípicas que garantem posse ininterrupta e recursos livres no caixa."
               }
             },
             {
@@ -279,7 +303,7 @@
               "name": "Qual a melhor maneira de vender um galpão comercial locado pelo valor justo?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Imóveis com renda de aluguel devem ser apresentados diretamente a investidores com capital disponível. A Octis Real Estate avalia o valor real pelo retorno e conecta o imóvel a compradores qualificados para fechar negócio com eficiência e segurança."
+                "text": "Imóveis com renda de aluguel devem ser apresentados diretamente a investidores institucionais e family offices com capital disponível. A Octis Real Estate avalia o valor real pelo retorno (yield) e conecta o imóvel a compradores qualificados."
               }
             },
             {
@@ -287,7 +311,7 @@
               "name": "O que faz a Octis Real Estate?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A Octis Real Estate conecta proprietários, empresas e incorporadoras a compradores, inquilinos e investidores. Conduzimos compra, venda, locação comercial, renegociação de aluguel, Sale & Leaseback e financiamento de obras via CRI com excelência técnica e foco em resultados."
+                "text": "A Octis Real Estate conecta proprietários, empresas e incorporadoras a investidores, securitizadoras e compradores. Conduzimos renegociação de aluguel comercial, Tenant Representation com test-fit gratuito, Sale & Leaseback, compra, venda e estruturação de funding via securitizadoras em todo o Brasil."
               }
             }
           ]

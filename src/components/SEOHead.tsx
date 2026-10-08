@@ -8,14 +8,29 @@ interface SEOProps {
   descriptionEn: string;
   path: string;
   schemaJson?: object;
+  noindex?: boolean;
+  ogType?: 'website' | 'article';
 }
 
-export function SEOHead({ titlePt, titleEn, descriptionPt, descriptionEn, path, schemaJson }: SEOProps) {
+export function SEOHead({
+  titlePt,
+  titleEn,
+  descriptionPt,
+  descriptionEn,
+  path,
+  schemaJson,
+  noindex = false,
+  ogType = 'website',
+}: SEOProps) {
   const { language } = useLanguage();
 
   const title = language === 'en' ? titleEn : titlePt;
   const description = language === 'en' ? descriptionEn : descriptionPt;
-  const canonicalUrl = `https://octis.com.br${path}`;
+
+  // Strict Canonical URL Normalization:
+  // Root path '/' retains trailing slash; subpaths have no trailing slash to prevent duplicate content flags
+  const normalizedPath = path === '/' ? '/' : (path.startsWith('/') ? path : `/${path}`).replace(/\/+$/, '');
+  const canonicalUrl = `https://octis.com.br${normalizedPath}`;
 
   useEffect(() => {
     // 1. Update Title
@@ -30,7 +45,20 @@ export function SEOHead({ titlePt, titleEn, descriptionPt, descriptionEn, path, 
     }
     metaDesc.setAttribute('content', description);
 
-    // 3. Update Canonical URL
+    // 3. Update Robots Directive (Crucial for 404s and preventing soft-404 indexing errors)
+    let metaRobots = document.querySelector('meta[name="robots"]');
+    if (!metaRobots) {
+      metaRobots = document.createElement('meta');
+      metaRobots.setAttribute('name', 'robots');
+      document.head.appendChild(metaRobots);
+    }
+    if (noindex) {
+      metaRobots.setAttribute('content', 'noindex, nofollow');
+    } else {
+      metaRobots.setAttribute('content', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+    }
+
+    // 4. Update Canonical Link Tag
     let linkCanonical = document.querySelector('link[rel="canonical"]');
     if (!linkCanonical) {
       linkCanonical = document.createElement('link');
@@ -39,7 +67,7 @@ export function SEOHead({ titlePt, titleEn, descriptionPt, descriptionEn, path, 
     }
     linkCanonical.setAttribute('href', canonicalUrl);
 
-    // 4. Update OpenGraph Tags
+    // 5. Update OpenGraph Tags
     const updateMeta = (prop: string, val: string) => {
       let tag = document.querySelector(`meta[property="${prop}"]`);
       if (!tag) {
@@ -53,8 +81,9 @@ export function SEOHead({ titlePt, titleEn, descriptionPt, descriptionEn, path, 
     updateMeta('og:title', title);
     updateMeta('og:description', description);
     updateMeta('og:url', canonicalUrl);
+    updateMeta('og:type', ogType);
 
-    // 5. Update Twitter Tags
+    // 6. Update Twitter Tags
     const updateTwitter = (name: string, val: string) => {
       let tag = document.querySelector(`meta[name="${name}"]`);
       if (!tag) {
@@ -68,12 +97,12 @@ export function SEOHead({ titlePt, titleEn, descriptionPt, descriptionEn, path, 
     updateTwitter('twitter:title', title);
     updateTwitter('twitter:description', description);
 
-    // 6. Structured Data Schema JSON-LD
-    let scriptTag = document.querySelector('script#octis-schema-json');
+    // 7. Structured Data Schema JSON-LD
+    let scriptTag = document.querySelector('script#octis-dynamic-schema');
     if (schemaJson) {
       if (!scriptTag) {
         scriptTag = document.createElement('script');
-        scriptTag.setAttribute('id', 'octis-schema-json');
+        scriptTag.setAttribute('id', 'octis-dynamic-schema');
         scriptTag.setAttribute('type', 'application/ld+json');
         document.head.appendChild(scriptTag);
       }
@@ -81,7 +110,7 @@ export function SEOHead({ titlePt, titleEn, descriptionPt, descriptionEn, path, 
     } else if (scriptTag) {
       scriptTag.remove();
     }
-  }, [title, description, canonicalUrl, schemaJson]);
+  }, [title, description, canonicalUrl, schemaJson, noindex, ogType]);
 
   return null;
 }

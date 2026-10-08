@@ -1,1 +1,27 @@
-/*    /index.html   200
+# Force 301 Redirects for Legacy URLs & GSC Errors
+/blog/bim-aprofundando-o-conceito  /reddit  301
+/blog/*                            /reddit  301
+/blog                              /reddit  301
+/artigos/*                         /reddit  301
+/artigos                           /reddit  301
+/sobre                             /quem-somos  301
+/lideranca                         /experiencia 301
+/faq                               /duvidas-reddit 301
+
+# Service Aliases to Canonical Service URLs
+/servicos/cri                      /servicos/funding-imobiliario-antecipacao-recebiveis-cri 301
+/servicos/financiamento-obras-cri  /servicos/funding-imobiliario-antecipacao-recebiveis-cri 301
+/servicos/financiamento-de-obras   /servicos/funding-imobiliario-antecipacao-recebiveis-cri 301
+/servicos/aluguel-comercial        /servicos/aluguel-comercial-busca-de-imoveis 301
+/servicos/locacao-comercial        /servicos/aluguel-comercial-busca-de-imoveis 301
+/servicos/renegociacao-aluguel     /servicos/renegociacao-de-contratos-de-aluguel 301
+/servicos/renegociacao-contratos   /servicos/renegociacao-de-contratos-de-aluguel 301
+/servicos/revisao-aluguel          /servicos/renegociacao-de-contratos-de-aluguel 301
+/servicos/compra-e-venda           /servicos/compra-e-venda-de-imoveis 301
+/servicos/sale-leaseback           /servicos/sale-and-leaseback 301
+/servicos/slb                      /servicos/sale-and-leaseback 301
+/servicos/vender-e-alugar          /servicos/sale-and-leaseback 301
+/servicos/parcerias-terrenos       /servicos/socios-investidores-e-parcerias 301
+
+# Single Page App Routing (SPA fallback)
+/*                                 /index.html 200

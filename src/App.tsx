@@ -17,8 +17,10 @@ import { ServiceDetailPage } from './pages/ServiceDetailPage';
 import { PropertiesPage } from './pages/PropertiesPage';
 import { TrackRecordPage } from './pages/TrackRecordPage';
 import { RedditArticlesPage } from './pages/RedditArticlesPage';
+import { ArticleDetailPage } from './pages/ArticleDetailPage';
 import { RedditQuestionsPage } from './pages/RedditQuestionsPage';
 import { ContactPage } from './pages/ContactPage';
+import { NotFoundPage } from './pages/NotFoundPage';
 
 export default function App() {
   return (
@@ -46,14 +48,19 @@ export default function App() {
               <Route path="/servicos/sale-and-leaseback" element={<ServiceDetailPage slug="sale-and-leaseback" />} />
               <Route path="/servicos/socios-investidores-e-parcerias" element={<ServiceDetailPage slug="socios-investidores-e-parcerias" />} />
 
-              {/* SEO Aliases & Short Redirects */}
+              {/* SEO Aliases & Short Redirects for Services */}
               <Route path="/servicos/cri" element={<Navigate to="/servicos/funding-imobiliario-antecipacao-recebiveis-cri" replace />} />
               <Route path="/servicos/financiamento-obras-cri" element={<Navigate to="/servicos/funding-imobiliario-antecipacao-recebiveis-cri" replace />} />
+              <Route path="/servicos/financiamento-de-obras" element={<Navigate to="/servicos/funding-imobiliario-antecipacao-recebiveis-cri" replace />} />
               <Route path="/servicos/aluguel-comercial" element={<Navigate to="/servicos/aluguel-comercial-busca-de-imoveis" replace />} />
               <Route path="/servicos/locacao-comercial" element={<Navigate to="/servicos/aluguel-comercial-busca-de-imoveis" replace />} />
               <Route path="/servicos/renegociacao-aluguel" element={<Navigate to="/servicos/renegociacao-de-contratos-de-aluguel" replace />} />
+              <Route path="/servicos/renegociacao-contratos" element={<Navigate to="/servicos/renegociacao-de-contratos-de-aluguel" replace />} />
+              <Route path="/servicos/revisao-aluguel" element={<Navigate to="/servicos/renegociacao-de-contratos-de-aluguel" replace />} />
               <Route path="/servicos/compra-e-venda" element={<Navigate to="/servicos/compra-e-venda-de-imoveis" replace />} />
               <Route path="/servicos/sale-leaseback" element={<Navigate to="/servicos/sale-and-leaseback" replace />} />
+              <Route path="/servicos/slb" element={<Navigate to="/servicos/sale-and-leaseback" replace />} />
+              <Route path="/servicos/vender-e-alugar" element={<Navigate to="/servicos/sale-and-leaseback" replace />} />
               <Route path="/servicos/parcerias-terrenos" element={<Navigate to="/servicos/socios-investidores-e-parcerias" replace />} />
 
               {/* Dynamic Fallback for /servicos/:slug */}
@@ -66,8 +73,14 @@ export default function App() {
 
               {/* Reddit Community & Knowledge Hub */}
               <Route path="/reddit" element={<RedditArticlesPage />} />
+              <Route path="/reddit/:id" element={<ArticleDetailPage />} />
+
+              {/* Aliases for Articles and Blog */}
               <Route path="/artigos" element={<Navigate to="/reddit" replace />} />
+              <Route path="/artigos/:id" element={<ArticleDetailPage />} />
+              
               <Route path="/blog" element={<Navigate to="/reddit" replace />} />
+              <Route path="/blog/:id" element={<ArticleDetailPage />} />
               
               <Route path="/duvidas-reddit" element={<RedditQuestionsPage />} />
               <Route path="/faq" element={<Navigate to="/duvidas-reddit" replace />} />
@@ -75,8 +88,8 @@ export default function App() {
               {/* Contact Page */}
               <Route path="/contato" element={<ContactPage />} />
 
-              {/* Fallback to Home */}
-              <Route path="*" element={<Navigate to="/" replace />} />
+              {/* Proper 404 Page to prevent Soft-404 and duplicate indexing errors */}
+              <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>
           <Footer />

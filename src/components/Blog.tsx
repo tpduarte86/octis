@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { BookOpen, Calendar, Clock, ArrowRight, X, ChevronRight, Share2, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -101,7 +102,12 @@ export function Blog({ showHeader = true }: { showHeader?: boolean }) {
                 </div>
 
                 <h3 className="text-xl font-serif text-gray-900 mb-3 leading-snug font-normal">
-                  {article.title}
+                  <Link
+                    to={`/reddit/${article.id}`}
+                    className="hover:text-[#c59b27] transition-colors"
+                  >
+                    {article.title}
+                  </Link>
                 </h3>
 
                 <p className="text-gray-600 font-light text-xs sm:text-sm leading-relaxed mb-6">
@@ -130,13 +136,12 @@ export function Blog({ showHeader = true }: { showHeader?: boolean }) {
                   {article.date}
                 </span>
 
-                <button
-                  type="button"
-                  onClick={() => setActiveArticleId(article.id)}
-                  className="text-xs font-semibold uppercase tracking-wider text-[#0a1d37] hover:text-[#c59b27] transition-colors inline-flex items-center gap-1 cursor-pointer"
+                <Link
+                  to={`/reddit/${article.id}`}
+                  className="text-xs font-semibold uppercase tracking-wider text-[#0a1d37] hover:text-[#c59b27] transition-colors inline-flex items-center gap-1"
                 >
                   {language === 'en' ? 'Read Article' : 'Ler Artigo'} <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+                </Link>
               </div>
             </motion.article>
           ))}
