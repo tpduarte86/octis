@@ -262,7 +262,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         {
           title: 'Funding Imobiliário & Antecipação de Recebíveis (CRI)',
           tag: 'Liquidez & Caixa',
-          description: 'A Octis não emite CRI diretamente: conectamos proprietários e incorporadoras a securitizadoras e fundos. A operação financia obras e também permite que proprietários de imóveis prontos alugados gerem caixa imediato antecipando recebíveis de aluguel.',
+          description: 'Conectamos proprietários e incorporadoras a securitizadoras e fundos. A operação financia obras e também permite que proprietários de imóveis prontos alugados gerem caixa imediato antecipando recebíveis de aluguel.',
           points: [
             'Conexão direta de incorporadoras e proprietários às melhores securitizadoras',
             'Financiamento de obras para residenciais, loteamentos e galpões comerciais',
@@ -1078,7 +1078,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         {
           title: 'Structured Funding & Receivables Monetization (CRI)',
           tag: 'Capital & Liquidity',
-          description: 'Octis does not issue CRI debt directly: we connect developers, corporations, and property owners directly to premier securitizers and funds. CRI finances new construction and allows income-property owners to monetize future lease receivables into immediate upfront liquidity.',
+          description: 'We connect developers, corporations, and property owners directly to premier securitizers and funds. CRI finances new construction and allows income-property owners to monetize future lease receivables into immediate upfront liquidity.',
           points: [
             'Direct connection of property owners and developers to top securitization firms',
             'Construction debt for residential towers, subdivisions, and logistics parks',
