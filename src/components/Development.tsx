@@ -1,12 +1,18 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Home, Briefcase, Warehouse, Map, Check } from 'lucide-react';
+import { Home, Briefcase, Warehouse, Map, Check, ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/content';
 
 const assetIcons = [Home, Warehouse, Briefcase, Map];
 
-export function Development({ showHeader = true }: { showHeader?: boolean }) {
+export function Development({
+  showHeader = true,
+  showResidentialPortalLink = false,
+}: {
+  showHeader?: boolean;
+  showResidentialPortalLink?: boolean;
+}) {
   const { language } = useLanguage();
   const t = translations[language].development;
 
@@ -36,6 +42,7 @@ export function Development({ showHeader = true }: { showHeader?: boolean }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {t.items.map((item, idx) => {
             const Icon = assetIcons[idx % assetIcons.length];
+            const isResidential = idx === 0;
             return (
               <motion.div 
                 key={item.title}
@@ -75,6 +82,25 @@ export function Development({ showHeader = true }: { showHeader?: boolean }) {
                       </li>
                     ))}
                   </ul>
+
+                  {showResidentialPortalLink && isResidential && (
+                    <div className="mt-4 pt-3 border-t border-gray-100">
+                      <a
+                        href="https://prontoapto.com.br"
+                        target="_blank"
+                        rel="noopener"
+                        className="group inline-flex items-center gap-1 text-[11px] text-gray-500 hover:text-[#0a1d37] font-light transition-colors duration-150"
+                      >
+                        <span>
+                          {t.residentialPortalPrefix}
+                          <span className="font-medium text-gray-700 group-hover:text-[#0a1d37] underline decoration-gray-300 group-hover:decoration-[#c59b27] underline-offset-2 transition-colors">
+                            {t.residentialPortalDomain}
+                          </span>
+                        </span>
+                        <ArrowUpRight className="w-3 h-3 text-gray-400 group-hover:text-[#c59b27] shrink-0 transition-colors" />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             );

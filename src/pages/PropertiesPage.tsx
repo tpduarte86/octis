@@ -58,7 +58,7 @@ export function PropertiesPage() {
       </section>
 
       {/* Main Asset Classes Grid without repeated header */}
-      <Development showHeader={false} />
+      <Development showHeader={false} showResidentialPortalLink={true} />
 
       {/* Comparison: Simple to Class AAA (Clean CBRE Style) */}
       <section className="py-20 bg-[#f8fafc] border-t border-gray-200">

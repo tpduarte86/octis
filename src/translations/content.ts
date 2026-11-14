@@ -64,6 +64,8 @@ export interface TranslationData {
     title: string;
     subtitle: string;
     examplesLabel: string;
+    residentialPortalPrefix: string;
+    residentialPortalDomain: string;
     items: {
       title: string;
       scope: string;
@@ -335,6 +337,8 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       title: 'Atendemos todas as classes de ativos, dos mais simples ao AAA.',
       subtitle: 'Seja um galpão simples, um terreno para loteamento, um prédio residencial econômico ou uma laje corporativa de alto padrão, nós encontramos a solução certa.',
       examplesLabel: 'Exemplos atendidos:',
+      residentialPortalPrefix: 'Busca de apartamentos? Acesse ',
+      residentialPortalDomain: 'prontoapto.com.br',
       items: [
         {
           title: 'Residencial (Todos os Perfis)',
@@ -1151,6 +1155,8 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       title: 'We cover all real estate asset classes, from entry-level to Class AAA.',
       subtitle: 'Whether an operational warehouse, a master-planned land parcel, an affordable housing community, or a high-spec corporate tower, we deliver the right execution.',
       examplesLabel: 'Asset types covered:',
+      residentialPortalPrefix: 'Looking for apartments? Visit ',
+      residentialPortalDomain: 'prontoapto.com.br',
       items: [
         {
           title: 'Residential (All Segments)',
