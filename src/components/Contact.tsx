@@ -16,7 +16,7 @@ export function Contact() {
     if (!servico) return t.mandates[0]?.value;
     
     if (servico.includes('cri')) return language === 'en' ? 'CRI Debt Issuance' : 'Emissão de CRI';
-    if (servico.includes('aluguel-comercial')) return language === 'en' ? 'Corporate Leasing & Tenant Rep' : 'Locação Corporativa & Tenant Rep';
+    if (servico.includes('tenant-representation') || servico.includes('aluguel-comercial')) return language === 'en' ? 'Corporate Leasing & Tenant Rep' : 'Locação Corporativa & Tenant Rep';
     if (servico.includes('renegociacao')) return language === 'en' ? 'Lease Renegotiation' : 'Renegociação de Contrato de Locação';
     if (servico.includes('sale-and-leaseback') || servico.includes('sale-leaseback')) return 'Sale & Leaseback';
     if (servico.includes('compra-e-venda')) return language === 'en' ? 'Property Disposition' : 'Venda de Imóvel';

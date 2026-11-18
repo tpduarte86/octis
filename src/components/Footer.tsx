@@ -84,13 +84,13 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
-                <Link to="/servicos/funding-imobiliario-antecipacao-recebiveis-cri" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
-                  {language === 'en' ? 'CRI Debt & Receivables' : 'Funding & Emissão de CRI'}
+                <Link to="/servicos/tenant-representation" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
+                  Tenant Representation
                 </Link>
               </li>
               <li>
-                <Link to="/servicos/aluguel-comercial-busca-de-imoveis" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
-                  {language === 'en' ? 'Corporate Leasing & Test-Fit' : 'Aluguel Comercial & Test-Fit'}
+                <Link to="/servicos/funding-imobiliario-antecipacao-recebiveis-cri" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
+                  {language === 'en' ? 'CRI Debt & Receivables' : 'Funding & Emissão de CRI'}
                 </Link>
               </li>
               <li>

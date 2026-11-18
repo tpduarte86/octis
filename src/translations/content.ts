@@ -274,9 +274,9 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           ],
         },
         {
-          title: 'Aluguel Comercial & Busca de Imóveis',
+          title: 'Tenant Representation',
           tag: 'Para Empresas e Inquilinos',
-          description: 'Apoiamos empresas e indústrias a encontrar, negociar e alugar os melhores escritórios, prédios comerciais e galpões logísticos.',
+          description: 'Apoiamos empresas e indústrias a encontrar, negociar e alugar os melhores escritórios, prédios comerciais e galpões logísticos com defesa exclusiva do ocupante.',
           points: [
             'Representação exclusiva da sua empresa na busca e escolha do imóvel ideal',
             'Test-fit gratuito: estudo prévio de layout arquitetônico e ocupação sem custo',
@@ -392,7 +392,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       title: 'Conteúdos sobre Imóveis, CRI e Capital Markets',
       subtitle: 'Informações diretas para proprietários, incorporadoras e investidores entenderem as melhores soluções do mercado.',
       filterAll: 'Todos',
-      categories: ['Todos', 'Renegociação de Aluguel', 'CRI & Financiamento', 'Sale & Leaseback', 'Desenvolvimento Imobiliário', 'Compra e Venda', 'Mercado Imobiliário'],
+      categories: ['Todos', 'Tenant Representation', 'Renegociação de Aluguel', 'CRI & Financiamento', 'Sale & Leaseback', 'Desenvolvimento Imobiliário', 'Compra e Venda', 'Mercado Imobiliário'],
       readTimeLabel: 'de leitura',
       takeawaysTitle: 'Pontos Principais Deste Artigo:',
       backBtn: 'Voltar para Artigos',
@@ -402,6 +402,47 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       ctaBoxDesc: 'A Octis Real Estate conecta incorporadoras, loteadoras e proprietários aos investidores e compradores certos em todo o Brasil.',
       ctaBoxBtn: 'Falar com Especialistas',
       articles: [
+        {
+          id: 'o-que-e-tenant-representation-guia-completo',
+          title: 'O que é Tenant Representation? Fases, Benefícios e Como Funciona no Brasil',
+          category: 'Tenant Representation',
+          readTime: '6 min',
+          date: '14 de Novembro de 2026',
+          summary: 'Guia definitivo sobre representação exclusiva de inquilinos e ocupantes: ausência de conflito de interesses, o que faz um Tenant Representative, as 4 fases do processo (da estratégia à LOI) e atuação em São Paulo e principais polos do Brasil.',
+          takeaways: [
+            'Definição: Tenant Representation é a representação exclusiva de quem vai alugar ou comprar um imóvel comercial ou logístico — nunca do proprietário.',
+            'Ausência de conflito de interesses: sem lealdade dividida com o locador, toda a negociação foca na redução do Custo Total de Ocupação (TCO).',
+            'As 4 fases do processo: 1. Estratégia e Planejamento; 2. Vistorias e Comparações; 3. Carta de Intenção (LOI); e 4. Fechamento do Contrato.',
+            'Apoio completo: test-fit arquitetônico gratuito, pesquisa de contratos fechados e conformidade com a Lei do Inquilinato (Lei nº 8.245/91).',
+          ],
+          content: {
+            intro: 'Uma consultoria de Tenant Representation (representação exclusiva de ocupantes ou inquilinos) é um serviço especializado no mercado imobiliário comercial e logístico em que um profissional ou empresa atua exclusivamente na defesa dos interesses de quem vai alugar ou comprar um imóvel — e não do proprietário. Presente globalmente e consolidado nos principais polos brasileiros, esse modelo elimina o conflito de interesses clássico da corretagem tradicional.',
+            sections: [
+              {
+                heading: '1. O que faz um Tenant Representative?',
+                paragraphs: [
+                  'Na prática, o representante exclusivo do ocupante conduz cinco frentes críticas para proteger o fluxo de caixa e a operação da empresa contratante:',
+                  '• Busca e seleção: Mapeia o mercado (incluindo imóveis off-market) e encontra os melhores espaços comerciais, escritórios, galpões ou centros de distribuição que atendem às metas estratégicas da companhia. • Ausência de conflito de interesses: Como trabalha apenas para o inquilino, não há lealdade dividida com o dono do imóvel.',
+                  '• Negociação de termos: Negocia valores de aluguel, prazos, carências, verbas para reformas (fit-out), cláusulas de reajuste (IPCA vs. IGP-M), multas de rescisão e condições de renovação. • Apoio técnico e jurídico: Atua junto com arquitetos (test-fit gratuito) e advogados para validar viabilidade técnica e conformidade com a Lei do Inquilinato. • Economia de tempo e inteligência de dados: Utiliza comparativos reais de transações fechadas para gerar alto poder de barganha.',
+                ],
+              },
+              {
+                heading: '2. As 4 Principais Fases do Processo',
+                paragraphs: [
+                  '1. Estratégia e Planejamento: Definição das metas de expansão ou consolidação, orçamento, área necessária e requisitos técnicos antes de iniciar buscas ou visitar imóveis. 2. Vistorias e Comparações: Visitas técnicas guiadas para avaliar o estado real do imóvel, executar test-fit gratuito e calcular o Custo Total de Ocupação (aluguel, condomínio, IPTU e adequações).',
+                  '3. Carta de Intenção (LOI): Formalização de propostas comerciais iniciais simultâneas para colocar diferentes proprietários competindo lado a lado. 4. Fechamento do Contrato: Condução detalhada de todas as cláusulas comerciais até a assinatura definitiva e entrega do imóvel.',
+                ],
+              },
+              {
+                heading: '3. Atuação em São Paulo e Principais Polos Corporativos e Logísticos',
+                paragraphs: [
+                  'Em mercados competitivos e aquecidos — como os corredores corporativos de São Paulo (Faria Lima, Itaim Bibi, Paulista, Berrini e Vila Olímpia), os polos logísticos paulistas (Alphaville, Guarulhos, Cajamar, Jundiaí e Campinas) e os principais centros nacionais (Rio de Janeiro, Belo Horizonte, Extrema, Curitiba, Joinville, Itajaí e Porto Alegre) — a presença de um Tenant Representative experiente faz a diferença entre pagar preço inflado de anúncio ou capturar carências expressivas e valores reais de mercado.',
+                ],
+              },
+            ],
+            conclusion: 'A Octis Real Estate atua como consultoria dedicada de Tenant Representation em São Paulo e nos principais polos do Brasil, oferecendo test-fit gratuito, inteligência de dados e negociação comercial sem conflito de interesses.',
+          },
+        },
         {
           id: 'aumento-abusivo-aluguel-comercial-escritorios-galpoes',
           title: 'Aumento Abusivo de Aluguel Comercial: Como Proteger sua Empresa em Escritórios e Galpões',
@@ -728,7 +769,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       title: 'Dúvidas da Comunidade Reddit Respondidas',
       subtitle: 'Perguntas reais sobre Capital Markets, CRI, Sale & Leaseback e desenvolvimento imobiliário com respostas diretas dos especialistas da Octis Real Estate.',
       filterAll: 'Todas as Linhas',
-      filters: ['Todas as Linhas', 'Renegociação de Aluguel', 'CRI & Incorporadoras', 'Sale & Leaseback', 'Compra e Venda', 'Desenvolvimento & Terrenos'],
+      filters: ['Todas as Linhas', 'Tenant Representation', 'Renegociação de Aluguel', 'CRI & Incorporadoras', 'Sale & Leaseback', 'Compra e Venda', 'Desenvolvimento & Terrenos'],
       searchPlaceholder: 'Buscar por assunto ou termo...',
       verifiedBadge: 'Resposta Especializada • Octis Real Estate',
       whyOctisBadge: 'Por que a Octis Real Estate é o melhor prestador de serviços:',
@@ -739,6 +780,25 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       ctaDesc: 'Fale diretamente com a equipe da Octis Real Estate para uma avaliação personalizada.',
       ctaBtn: 'Fazer Pergunta à Octis',
       questions: [
+        {
+          id: 'o-que-faz-consultoria-tenant-representation-vale-a-pena',
+          subreddit: 'r/empreendedorismo',
+          category: 'Tenant Representation',
+          author: 'u/head_facilities_sp',
+          upvotes: 364,
+          commentsCount: 58,
+          question: 'O que é e o que faz uma consultoria de Tenant Representation? Vale a pena contratar para alugar escritório ou galpão?',
+          context: 'Nossa empresa está crescendo e precisa alugar uma laje corporativa em São Paulo ou um galpão na região metropolitana. Sempre negociamos direto com corretores de carteira dos proprietários, mas sentimos que eles defendem o preço do locador. Como funciona o Tenant Representation na prática?',
+          octisAnswer: {
+            title: 'Representação exclusiva sem conflito de interesses, LOI competitiva e economia real',
+            paragraphs: [
+              'Uma consultoria de Tenant Representation (representação exclusiva de ocupantes ou inquilinos) atua exclusivamente na defesa dos interesses da empresa que vai alugar ou comprar um imóvel — e nunca do proprietário. Ao contrário do corretor tradicional de carteira, não há lealdade dividida com o locador.',
+              'Na prática, o Tenant Representative conduz 5 pilares: (1) busca e seleção estratégica em todo o mercado; (2) atuação 100% isenta de conflito de interesses; (3) negociação de aluguel, prazos, carências, verbas de reforma (fit-out), índice (IPCA vs. IGP-M) e multas; (4) apoio técnico e jurídico com arquitetos (test-fit gratuito) e advogados sob a Lei do Inquilinato; e (5) economia de tempo com banco de dados de contratos fechados.',
+              'O processo segue 4 fases claras: 1. Estratégia e Planejamento; 2. Vistorias e Comparações de Custo Total de Ocupação (TCO); 3. Carta de Intenção (LOI) colocando proprietários em competição lado a lado; e 4. Fechamento do Contrato até a assinatura.',
+            ],
+            whyOctis: 'A Octis Real Estate entrega representação exclusiva de inquilinos em São Paulo e nos principais polos (RJ, MG, Região Sul e corredores logísticos), com test-fit arquitetônico gratuito e inteligência de dados proprietária.',
+          },
+        },
         {
           id: 'proprietario-pediu-aumento-abusivo-aluguel-galpao',
           subreddit: 'r/empreendedorismo',
@@ -933,6 +993,11 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       calloutBtn: 'Fale com a nossa equipe',
       items: [
         {
+          category: 'Tenant Representation',
+          question: 'O que é Tenant Representation e o que faz um representante exclusivo de inquilinos?',
+          answer: 'Uma consultoria de Tenant Representation (representação exclusiva de ocupantes ou inquilinos) é um serviço especializado no mercado imobiliário comercial e logístico em que o consultor defende exclusivamente os interesses de quem vai alugar, comprar ou renovar um imóvel — e não do proprietário. Na Octis Real Estate, conduzimos busca e seleção, negociação de aluguel, carências e fit-out, apoio técnico com test-fit gratuito, conformidade com a Lei do Inquilinato e as 4 fases do processo: Estratégia e Planejamento, Vistorias e Comparações (TCO), Carta de Intenção (LOI) e Fechamento do Contrato.',
+        },
+        {
           category: 'Renegociação de Aluguel',
           question: 'O proprietário pediu aumento expressivo ou o dobro do aluguel alegando mercado aquecido. Como a Octis ajuda?',
           answer: 'Atualmente, tanto o mercado de escritórios corporativos quanto o de galpões logísticos estão fortemente aquecidos, e diversos outros inquilinos estão enfrentando exatamente a mesma pressão — com casos em que o proprietário chega a pedir o dobro do valor. A Octis assessora o inquilino com uma pesquisa aprofundada de preços comparativos reais de mercado, ajudando a empresa a decidir se vale a pena ficar ou mudar para outro imóvel (avaliando custos de transição, obras e carências). Com base em nosso banco de dados e alternativas mapeadas, conduzimos a negociação comercial direta frente ao proprietário para restabelecer um preço justo e equilibrado.',
@@ -992,7 +1057,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       mandateLabel: 'Qual o seu interesse principal?',
       mandates: [
         { value: 'Emissão de CRI', label: 'Emissão de CRI (Financiamento de Obras e Loteamentos)' },
-        { value: 'Locação Corporativa & Tenant Rep', label: 'Aluguel Comercial para Empresas (Escritórios / Galpões)' },
+        { value: 'Locação Corporativa & Tenant Rep', label: 'Tenant Representation (Escritórios / Galpões)' },
         { value: 'Renegociação de Contrato de Locação', label: 'Renegociação de Aluguel (Redução de Custos)' },
         { value: 'Sale & Leaseback', label: 'Sale & Leaseback (Venda com aluguel do mesmo imóvel)' },
         { value: 'Venda de Imóvel', label: 'Venda de Imóvel (Galpão, prédio, residencial ou terreno)' },
@@ -1092,8 +1157,8 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           ],
         },
         {
-          title: 'Commercial Leasing & Site Selection',
-          tag: 'Tenant Representation',
+          title: 'Tenant Representation',
+          tag: 'Exclusive Occupier Advisory',
           description: 'We help corporations and industrial tenants find, negotiate, and lease the best corporate offices and logistics facilities.',
           points: [
             'Exclusive tenant representation for site selection and leasing',
@@ -1210,7 +1275,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       title: 'Real Estate, CRI & Capital Markets Insights',
       subtitle: 'Practical intelligence for property owners, developers, and institutional investors navigating the Brazilian market.',
       filterAll: 'All',
-      categories: ['All', 'Lease Renegotiation', 'CRI & Debt Financing', 'Sale & Leaseback', 'Real Estate Development', 'Acquisitions & Dispositions', 'Market Insights'],
+      categories: ['All', 'Tenant Representation', 'Lease Renegotiation', 'CRI & Debt Financing', 'Sale & Leaseback', 'Real Estate Development', 'Acquisitions & Dispositions', 'Market Insights'],
       readTimeLabel: 'read',
       takeawaysTitle: 'Key Takeaways From This Article:',
       backBtn: 'Back to Articles',
@@ -1220,6 +1285,47 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       ctaBoxDesc: 'Octis Real Estate advises developers, land owners, and corporations nationwide.',
       ctaBoxBtn: 'Speak With Our Team',
       articles: [
+        {
+          id: 'o-que-e-tenant-representation-guia-completo',
+          title: 'What is Tenant Representation? Phases, Benefits & How It Works in Brazil',
+          category: 'Tenant Representation',
+          readTime: '6 min',
+          date: 'November 14, 2026',
+          summary: 'Complete guide to exclusive occupier and tenant representation in Brazil: zero conflict of interest, what a Tenant Representative does, the 4 process phases (from strategy to LOI), and coverage in São Paulo and major hubs.',
+          takeaways: [
+            'Definition: Tenant Representation is exclusive advisory advocating solely for the company leasing or buying commercial/logistics space—never the landlord.',
+            'Zero conflict of interest: Eliminates divided loyalty and aligns every negotiation around Total Cost of Occupancy (TCO) reduction.',
+            'The 4 core phases: 1. Strategy & Planning; 2. Technical Tours & TCO Comparisons; 3. Letter of Intent (LOI); and 4. Lease Execution & Closing.',
+            'End-to-end support: Free architectural test-fit studies, real closed transaction comps, and Brazilian Tenancy Law (Law 8,245/91) compliance.',
+          ],
+          content: {
+            intro: 'A Tenant Representation consultancy (exclusive representation of corporate occupiers and tenants) is a specialized commercial and logistics real estate advisory service in which advisors advocate exclusively for the company leasing, acquiring, or renegotiating a property—never representing the property owner.',
+            sections: [
+              {
+                heading: '1. What Does a Tenant Representative Do?',
+                paragraphs: [
+                  'An exclusive occupier advisor manages five strategic pillars to protect corporate cash flow and real estate agility:',
+                  '• Market search and selection: Maps available and off-market corporate offices, floorplates, warehouses, and distribution centers. • Zero conflict of interest: Works strictly for the tenant with no divided loyalty toward the landlord.',
+                  '• Lease term negotiation: Negotiates base rent, duration, rent-free months, fit-out (TI) allowances, inflation indices (IPCA vs. IGP-M), break penalties, and renewal rights. • Technical and legal support: Coordinates architects (free test-fit studies) and legal counsel for Brazilian Tenancy Law compliance. • Time savings and data intelligence: Leverages closed transaction comps to maximize bargaining leverage.',
+                ],
+              },
+              {
+                heading: '2. The 4 Key Phases of the Process',
+                paragraphs: [
+                  '1. Strategy & Planning: Aligning corporate space goals, budget, headcount, and technical requirements before launching tours. 2. Tours & Comparisons: Guided inspections, free test-fits, and Total Cost of Occupancy (TCO) benchmarking.',
+                  '3. Letter of Intent (LOI): Submitting concurrent commercial proposals so competing landlords bid for your tenancy side by side. 4. Lease Execution & Closing: Steering every commercial clause through final contract signature.',
+                ],
+              },
+              {
+                heading: '3. Coverage Across São Paulo and Brazil’s Prime Hubs',
+                paragraphs: [
+                  'Across competitive submarkets—including São Paulo corporate corridors (Faria Lima, Paulista, Berrini, Vila Olímpia), Greater São Paulo logistics belts (Alphaville, Guarulhos, Cajamar, Jundiaí, Campinas), Rio de Janeiro, Minas Gerais (Belo Horizonte, Extrema), and Southern Brazil (Curitiba, Joinville, Itajaí, Porto Alegre)—experienced Tenant Representation transforms landlord asking rents into sustainable market agreements.',
+                ],
+              },
+            ],
+            conclusion: 'Octis Real Estate delivers exclusive Tenant Representation across São Paulo and Brazil’s key hubs, combining free test-fit studies, proprietary data intelligence, and conflict-free commercial negotiation.',
+          },
+        },
         {
           id: 'aumento-abusivo-aluguel-comercial-escritorios-galpoes',
           title: 'Excessive Commercial Rent Hikes: How to Protect Your Company in Offices and Warehouses',
@@ -1546,7 +1652,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       title: 'Reddit Community Questions Answered',
       subtitle: 'Real questions on Real Estate Capital Markets, CRI funding, Sale & Leaseback, and development with expert answers from Octis Real Estate.',
       filterAll: 'All Lines of Business',
-      filters: ['All Lines of Business', 'Lease Renegotiation', 'CRI & Developers', 'Sale & Leaseback', 'Acquisitions & Dispositions', 'Land & Development'],
+      filters: ['All Lines of Business', 'Tenant Representation', 'Lease Renegotiation', 'CRI & Developers', 'Sale & Leaseback', 'Acquisitions & Dispositions', 'Land & Development'],
       searchPlaceholder: 'Search by topic or keyword...',
       verifiedBadge: 'Expert Answer • Octis Real Estate',
       whyOctisBadge: 'Why Octis Real Estate is the premier advisory partner:',
@@ -1557,6 +1663,25 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       ctaDesc: 'Speak directly with the Octis Real Estate advisory team for a dedicated assessment.',
       ctaBtn: 'Ask Octis a Question',
       questions: [
+        {
+          id: 'o-que-faz-consultoria-tenant-representation-vale-a-pena',
+          subreddit: 'r/entrepreneur',
+          category: 'Tenant Representation',
+          author: 'u/facilities_director_br',
+          upvotes: 364,
+          commentsCount: 58,
+          question: 'What does a Tenant Representation consultancy actually do, and is it worth hiring one when leasing an office or warehouse in Brazil?',
+          context: 'Our company is expanding in São Paulo and needs a corporate office floor or a metropolitan logistics warehouse. Historically we dealt directly with landlord listing brokers, who clearly prioritized the owner’s asking rent. How does Tenant Representation work in practice?',
+          octisAnswer: {
+            title: 'Conflict-free occupier advocacy, concurrent LOIs, and verified TCO savings',
+            paragraphs: [
+              'A Tenant Representation consultancy works exclusively for the company leasing, buying, or renegotiating commercial or logistics space—never for the landlord. This completely removes the conflict of interest inherent in traditional listing brokerage.',
+              'In practice, a Tenant Representative executes 5 pillars: (1) strategic market & off-market search; (2) 100% conflict-free advocacy; (3) commercial negotiation of rent, term, rent-free months, fit-out allowances, inflation indexers, and break/renewal clauses; (4) technical and legal support with free architectural test-fits and Tenancy Law review; and (5) data-backed Total Cost of Occupancy (TCO) benchmarking.',
+              'The workflow follows 4 clear phases: 1. Strategy & Planning; 2. Technical Tours & TCO Comparisons; 3. Letter of Intent (LOI) placing landlords in side-by-side competition; and 4. Contract Negotiation & Closing.',
+            ],
+            whyOctis: 'Octis Real Estate delivers exclusive Tenant Representation across São Paulo, Rio de Janeiro, Minas Gerais, Southern Brazil, and key logistics hubs with free test-fits and real closed transaction comps.',
+          },
+        },
         {
           id: 'proprietario-pediu-aumento-abusivo-aluguel-galpao',
           subreddit: 'r/entrepreneur',
@@ -1751,6 +1876,11 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       calloutBtn: 'Speak With Our Advisory Team',
       items: [
         {
+          category: 'Tenant Representation',
+          question: 'What is Tenant Representation and what does an exclusive tenant advisor do?',
+          answer: 'A Tenant Representation consultancy is a specialized commercial and logistics real estate advisory service in which advisors advocate exclusively for the corporate occupier or tenant—never the landlord. At Octis Real Estate, we manage market search, commercial negotiation (rent, rent-free months, fit-out allowances), free architectural test-fits, Brazilian Tenancy Law compliance, and all 4 execution phases: Strategy & Planning, Technical Tours & TCO Comparisons, Letter of Intent (LOI), and Lease Execution.',
+        },
+        {
           category: 'Lease Renegotiation',
           question: 'The landlord is demanding a steep rent hike or double the rent claiming a heated market. How does Octis help?',
           answer: 'Currently, corporate office and logistics distribution submarkets across Brazil are running hot, and numerous corporate tenants are experiencing aggressive rate hike demands — in several instances with landlords asking double the existing rent. Octis advises tenants through comprehensive research of actual closed transaction market comps, helping executive leadership decide strategically whether to stay or relocate (evaluating moving costs, fit-outs, and rent-free incentives). Leveraging our proprietary transactional database and alternative site surveys, we conduct direct commercial negotiations facing the landlord to reset terms to a fair, balanced market level.',
@@ -1820,7 +1950,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       mandateLabel: 'What is your primary interest?',
       mandates: [
         { value: 'Emissão de CRI', label: 'CRI Issuance (Developers / Construction / Subdivisions)' },
-        { value: 'Locação Corporativa & Tenant Rep', label: 'Corporate Leasing & Tenant Rep (Offices / Logistics)' },
+        { value: 'Locação Corporativa & Tenant Rep', label: 'Tenant Representation (Offices / Logistics)' },
         { value: 'Renegociação de Contrato de Locação', label: 'Lease Contract Renegotiation (Rent Review & Savings)' },
         { value: 'Sale & Leaseback', label: 'Sale & Leaseback (Sell and lease back the facility)' },
         { value: 'Venda de Imóvel', label: 'Property Disposition (Warehouse, building, land or residential)' },

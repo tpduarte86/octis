@@ -8,18 +8,18 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 
 const servicesNavList = [
   {
+    namePt: 'Tenant Representation',
+    nameEn: 'Tenant Representation',
+    descPt: 'Representação exclusiva de inquilinos e Test-Fit gratuito',
+    descEn: 'Exclusive occupier advocacy & free architectural test-fit',
+    path: '/servicos/tenant-representation',
+  },
+  {
     namePt: 'Funding & Emissão de CRI',
     nameEn: 'CRI Funding & Debt',
     descPt: 'Securitização para obras e antecipação de aluguéis',
     descEn: 'Securitization for construction & lease monetization',
     path: '/servicos/funding-imobiliario-antecipacao-recebiveis-cri',
-  },
-  {
-    namePt: 'Aluguel Comercial & Busca de Imóveis',
-    nameEn: 'Commercial Leasing & Site Search',
-    descPt: 'Tenant Representation e Test-Fit gratuito',
-    descEn: 'Tenant representation & free architectural test-fit',
-    path: '/servicos/aluguel-comercial-busca-de-imoveis',
   },
   {
     namePt: 'Renegociação de Contratos de Aluguel',

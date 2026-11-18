@@ -18,7 +18,7 @@ const serviceIcons = [Coins, KeyRound, FileText, Building, HandCoins, Users];
 
 const serviceSlugs = [
   'funding-imobiliario-antecipacao-recebiveis-cri',
-  'aluguel-comercial-busca-de-imoveis',
+  'tenant-representation',
   'renegociacao-de-contratos-de-aluguel',
   'compra-e-venda-de-imoveis',
   'sale-and-leaseback',

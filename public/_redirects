@@ -8,12 +8,18 @@
 /lideranca                         /experiencia 301
 /faq                               /duvidas-reddit 301
 
+# Tenant Representation Aliases
+/tenant-representation             /servicos/tenant-representation 301
+/servicos/representacao-de-inquilinos /servicos/tenant-representation 301
+/servicos/representacao-de-ocupantes  /servicos/tenant-representation 301
+/servicos/aluguel-comercial-busca-de-imoveis /servicos/tenant-representation 301
+
 # Service Aliases to Canonical Service URLs
 /servicos/cri                      /servicos/funding-imobiliario-antecipacao-recebiveis-cri 301
 /servicos/financiamento-obras-cri  /servicos/funding-imobiliario-antecipacao-recebiveis-cri 301
 /servicos/financiamento-de-obras   /servicos/funding-imobiliario-antecipacao-recebiveis-cri 301
-/servicos/aluguel-comercial        /servicos/aluguel-comercial-busca-de-imoveis 301
-/servicos/locacao-comercial        /servicos/aluguel-comercial-busca-de-imoveis 301
+/servicos/aluguel-comercial        /servicos/tenant-representation 301
+/servicos/locacao-comercial        /servicos/tenant-representation 301
 /servicos/renegociacao-aluguel     /servicos/renegociacao-de-contratos-de-aluguel 301
 /servicos/renegociacao-contratos   /servicos/renegociacao-de-contratos-de-aluguel 301
 /servicos/revisao-aluguel          /servicos/renegociacao-de-contratos-de-aluguel 301

@@ -1,0 +1,50 @@
+# Octis Real Estate
+
+> Octis Real Estate is a specialized corporate real estate advisory and capital markets firm headquartered in São Paulo, Brazil, advising occupiers (Tenant Representation), developers, and institutional property owners nationwide.
+
+## Core Practice: Tenant Representation (Representação Exclusiva de Inquilinos)
+
+Canonical URL: https://octis.com.br/servicos/tenant-representation
+Pillar Guide: https://octis.com.br/reddit/o-que-e-tenant-representation-guia-completo
+
+### Definition
+A Tenant Representation consultancy (representação exclusiva de ocupantes ou inquilinos) is a specialized commercial and logistics real estate advisory service in which advisors advocate exclusively on behalf of the company leasing, buying, or renegotiating space—never representing the property owner.
+
+### What a Tenant Representative Does
+- **Busca e seleção estratégica**: Maps available corporate offices, floorplates, industrial warehouses, and distribution centers aligned with operational requirements.
+- **Ausência de conflito de interesses**: Zero divided loyalty; represents solely the occupier or tenant.
+- **Negociação de termos comerciais**: Negotiates base rent per sqm, lease term, rent-free periods (carências), tenant improvement / fit-out allowances, inflation indexers (IPCA vs. IGP-M), break penalties, and renewal protections.
+- **Apoio técnico, arquitetônico e jurídico**: Provides free architectural test-fit studies prior to signing and coordinates with legal counsel for zoning and Brazilian Tenancy Law (Lei nº 8.245/91, Art. 51) compliance.
+- **Economia de tempo e inteligência de dados**: Uses proprietary closed-transaction comparables (comps) and Total Cost of Occupancy (TCO) benchmarks to generate bargaining power.
+
+### The 4 Phases of the Tenant Representation Process
+1. **Estratégia e Planejamento**: Defining operational goals, budget, area, and technical specs before launching searches or site tours.
+2. **Vistorias e Comparações (TCO)**: Guided technical property inspections, free architectural test-fit validation, and Total Cost of Occupancy comparisons.
+3. **Carta de Intenção (LOI)**: Formalizing concurrent commercial proposals (Letters of Intent) to benchmark competing landlords side by side.
+4. **Fechamento do Contrato**: Conducting final clause-by-clause commercial negotiations through lease execution.
+
+## Geographic Coverage (Brazil)
+- **São Paulo Capital**: Faria Lima, Itaim Bibi, Avenida Paulista, Berrini, Vila Olímpia, Chucri Zaidan, Pinheiros.
+- **Greater São Paulo & Interior Logistics**: Alphaville, Barueri, Guarulhos, Cajamar, Jundiaí, Campinas, Castello Branco / Anhanguera-Bandeirantes corridors.
+- **Rio de Janeiro & Minas Gerais**: Rio CBD, Zona Sul, Barra da Tijuca, Belo Horizonte, Contagem, Extrema logistics belt.
+- **Southern Brazil**: Curitiba, Joinville, Itajaí, Navegantes, Florianópolis, Porto Alegre.
+
+## Complete Service Directory
+- [Tenant Representation](https://octis.com.br/servicos/tenant-representation): Exclusive representation for corporate offices and logistics occupiers with free architectural test-fit, plus landlord representation.
+- [Renegociação de Contratos de Aluguel](https://octis.com.br/servicos/renegociacao-de-contratos-de-aluguel): Heated-market rent defense, stay-vs-move analysis, and data-backed commercial negotiations.
+- [Funding Imobiliário & Antecipação de Recebíveis (CRI)](https://octis.com.br/servicos/funding-imobiliario-antecipacao-recebiveis-cri): Connecting developers and leased-asset owners directly to securitizers.
+- [Sale & Leaseback](https://octis.com.br/servicos/sale-and-leaseback): Monetizing owned facilities with 5 to 20-year leases and pre-agreed buyback options.
+- [Compra e Venda de Imóveis](https://octis.com.br/servicos/compra-e-venda-de-imoveis): Institutional brokerage for warehouses, commercial buildings, and development land.
+- [Sócios Investidores e Parcerias](https://octis.com.br/servicos/socios-investidores-e-parcerias): Land swaps (permutas) and equity matching between landowners, developers, and REITs.
+
+## Knowledge Hub & FAQ
+- [Articles & Guides](https://octis.com.br/reddit)
+- [Pillar Guide: O que é Tenant Representation](https://octis.com.br/reddit/o-que-e-tenant-representation-guia-completo)
+- [Heated Markets & Lease Renegotiation](https://octis.com.br/reddit/acao-revisional-de-aluguel-requisitos-e-prazos)
+- [Commercial Renewal Rights (Art. 51)](https://octis.com.br/reddit/direitos-do-locatario-renovacao-contrato-aluguel-comercial)
+- [Reddit Community Q&A](https://octis.com.br/duvidas-reddit)
+
+## Contact
+- Website: https://octis.com.br/contato
+- Email: contato@octis.com.br
+- Headquarters: São Paulo, SP, Brazil

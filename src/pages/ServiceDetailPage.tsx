@@ -207,6 +207,38 @@ export function ServiceDetailPage({ slug: propSlug }: ServiceDetailPageProps) {
         </div>
       </section>
 
+      {/* Contextual Tenant Representation Cross-Link on Lease Renegotiation */}
+      {service.slug === 'renegociacao-de-contratos-de-aluguel' && (
+        <section className="py-8 bg-[#f8fafc] border-b border-gray-200">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div>
+              <span className="text-[11px] uppercase tracking-wider font-semibold text-[#0a1d37] block mb-1">
+                {isPt ? 'Prática Dedicada de Ocupantes' : 'Dedicated Occupier Practice'}
+              </span>
+              <p className="text-sm text-gray-700 font-light">
+                {isPt
+                  ? 'Veja em detalhes como funciona a metodologia de Tenant Representation em 4 fases (Estratégia, Vistorias & TCO, LOI e Fechamento) com test-fit gratuito.'
+                  : 'Explore our 4-phase Tenant Representation methodology (Strategy, Inspections & TCO, LOI, and Lease Execution) with free test-fit.'}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 shrink-0">
+              <Link
+                to="/servicos/tenant-representation"
+                className="px-5 py-2.5 bg-[#0a1d37] text-white hover:bg-[#122b4f] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-1.5 transition-colors"
+              >
+                Tenant Representation <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+              <Link
+                to="/reddit/o-que-e-tenant-representation-guia-completo"
+                className="px-4 py-2.5 bg-white border border-gray-300 text-gray-800 hover:border-[#0a1d37] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-1.5 transition-colors"
+              >
+                {isPt ? 'Guia Completo' : 'Complete Guide'}
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Scope & Methodology Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">

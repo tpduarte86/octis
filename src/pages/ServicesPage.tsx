@@ -11,10 +11,10 @@ export function ServicesPage() {
   return (
     <div className="pt-20 min-h-screen bg-white text-gray-900">
       <SEOHead
-        titlePt="Serviços Imobiliários, Aluguel Comercial e Financiamento | Octis Real Estate"
-        titleEn="Real Estate Solutions, Commercial Leasing & Construction Funding | Octis Real Estate"
-        descriptionPt="Conheça os serviços da Octis Real Estate: financiamento de obras via CRI, aluguel comercial para empresas, renegociação de contratos, Sale & Leaseback e compra e venda de imóveis."
-        descriptionEn="Discover Octis Real Estate services: CRI construction funding, commercial leasing, contract renegotiation, Sale & Leaseback, and property brokerage in Brazil."
+        titlePt="Serviços Imobiliários, Tenant Representation, Renegociação e CRI | Octis Real Estate"
+        titleEn="Real Estate Solutions, Tenant Representation, Lease Renegotiation & CRI | Octis Real Estate"
+        descriptionPt="Conheça os serviços da Octis Real Estate: Tenant Representation exclusiva de inquilinos com test-fit gratuito, renegociação de contratos, funding via CRI e Sale & Leaseback."
+        descriptionEn="Discover Octis Real Estate services: exclusive Tenant Representation with free test-fit, contract renegotiation, CRI funding, and Sale & Leaseback in Brazil."
         path="/servicos"
       />
 
@@ -50,9 +50,55 @@ export function ServicesPage() {
 
           <p className="text-base sm:text-lg md:text-xl text-gray-600 font-light max-w-3xl leading-relaxed">
             {language === 'en'
-              ? 'Connecting property owners, corporations, and developers directly to institutional liquidity, commercial leasing with free test-fit analysis, and debt funding via leading securitizers across Brazil.'
-              : 'Conectamos proprietários, empresas e incorporadoras diretamente a securitizadoras para funding e antecipação de recebíveis, locação comercial com test-fit gratuito e transações diretas em todo o Brasil.'}
+              ? 'Connecting property owners, corporations, and developers directly to exclusive Tenant Representation, commercial leasing with free test-fit analysis, and debt funding via leading securitizers across Brazil.'
+              : 'Conectamos empresas ocupantes, proprietários e incorporadoras a serviços especializados de Tenant Representation, locação comercial com test-fit gratuito, antecipação de recebíveis via securitizadoras e transações diretas em todo o Brasil.'}
           </p>
+        </div>
+      </section>
+
+      {/* Tenant Representation Spotlight */}
+      <section className="py-12 md:py-16 bg-[#f8fafc] border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="bg-white border border-gray-200 p-8 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-8">
+              <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
+                <span className="w-1.5 h-1.5 bg-[#c59b27]" />
+                {language === 'en' ? 'Exclusive Occupier Practice' : 'Representação de Ocupantes'}
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-3 font-normal">
+                {language === 'en'
+                  ? 'Tenant Representation: Zero Conflict of Interest for Corporate Tenants'
+                  : 'Tenant Representation: Representação de Inquilinos e Ocupantes'}
+              </h2>
+              <p className="text-sm sm:text-base text-gray-600 font-light leading-relaxed mb-5">
+                {language === 'en'
+                  ? 'Structured across 4 execution phases — Strategy, Technical Inspections & TCO, Letter of Intent (LOI), and Lease Execution — with free architectural test-fit across São Paulo, Rio de Janeiro, Minas Gerais, Southern Brazil, and major logistics hubs.'
+                  : 'Atuação independente ao lado da empresa ocupante em 4 fases estruturadas — Estratégia, Vistorias e Custo Total de Ocupação (TCO), Carta de Intenção (LOI) e Fechamento do Contrato — com test-fit gratuito em São Paulo, RJ, MG, Sul e eixos logísticos.'}
+              </p>
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-700 font-medium">
+                <span>01. {language === 'en' ? 'Site Search & Data' : 'Busca e Dados Comparativos'}</span>
+                <span>02. {language === 'en' ? 'Free Architectural Test-Fit' : 'Test-Fit Arquitetônico Gratuito'}</span>
+                <span>03. {language === 'en' ? 'Competitive LOI Bidding' : 'Disputa Lado a Lado via LOI'}</span>
+                <span>04. {language === 'en' ? 'Contract & Legal Coordination' : 'Apoio Técnico e Jurídico'}</span>
+              </div>
+            </div>
+            <div className="lg:col-span-4 flex flex-col gap-3 lg:items-end">
+              <Link
+                to="/servicos/tenant-representation"
+                data-button-navy="true"
+                style={{ color: '#ffffff', WebkitTextFillColor: '#ffffff' }}
+                className="w-full lg:w-auto px-6 py-3.5 bg-[#0a1d37] hover:bg-[#122b4f] !text-white text-white font-semibold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors"
+              >
+                {language === 'en' ? 'Explore Tenant Representation' : 'Acessar Tenant Representation'} <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/reddit/o-que-e-tenant-representation-guia-completo"
+                className="w-full lg:w-auto px-6 py-3 bg-white border border-gray-300 text-gray-800 hover:border-[#0a1d37] font-semibold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors"
+              >
+                {language === 'en' ? 'Read Complete Guide' : 'Ler Guia Completo (AEO)'}
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
