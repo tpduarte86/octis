@@ -1,0 +1,47 @@
+import { renderToString } from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom';
+import { AppRoutes } from './App';
+import { HeadProvider, HeadCollector, CollectedHead } from './context/HeadContext';
+import { servicesData } from './data/servicesData';
+import { translations } from './translations/content';
+
+export interface PrerenderResult {
+  html: string;
+  head: CollectedHead | null;
+}
+
+export function render(url: string): PrerenderResult {
+  const collector: HeadCollector = { current: null };
+
+  const html = renderToString(
+    <HeadProvider collector={collector}>
+      <StaticRouter location={url}>
+        <AppRoutes />
+      </StaticRouter>
+    </HeadProvider>
+  );
+
+  return {
+    html,
+    head: collector.current,
+  };
+}
+
+export function getStaticRoutes(): string[] {
+  const baseRoutes = [
+    '/',
+    '/quem-somos',
+    '/servicos',
+    '/imoveis',
+    '/experiencia',
+    '/reddit',
+    '/duvidas-reddit',
+    '/contato',
+  ];
+
+  const serviceRoutes = servicesData.map((s) => `/servicos/${s.slug}`);
+  const articleRoutes = translations.pt.blog.articles.map((a) => `/reddit/${a.id}`);
+
+  // Deduplicate and preserve order
+  return Array.from(new Set([...baseRoutes, ...serviceRoutes, ...articleRoutes]));
+}

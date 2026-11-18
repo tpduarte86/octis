@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { useHeadCollector } from '../context/HeadContext';
 
 interface SEOProps {
   titlePt: string;
@@ -23,6 +24,7 @@ export function SEOHead({
   ogType = 'website',
 }: SEOProps) {
   const { language } = useLanguage();
+  const headCollector = useHeadCollector();
 
   const title = language === 'en' ? titleEn : titlePt;
   const description = language === 'en' ? descriptionEn : descriptionPt;
@@ -31,6 +33,18 @@ export function SEOHead({
   // Root path '/' retains trailing slash; subpaths have no trailing slash to prevent duplicate content flags
   const normalizedPath = path === '/' ? '/' : (path.startsWith('/') ? path : `/${path}`).replace(/\/+$/, '');
   const canonicalUrl = `https://octis.com.br${normalizedPath}`;
+
+  // Capture SEO metadata synchronously during SSG renderToString
+  if (headCollector) {
+    headCollector.current = {
+      title,
+      description,
+      canonicalUrl,
+      ogType,
+      noindex,
+      schemaJson,
+    };
+  }
 
   useEffect(() => {
     // 1. Update Title

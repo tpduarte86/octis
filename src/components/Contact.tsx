@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Mail, ArrowUpRight, MapPin, Clock, CheckCircle } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/content';
@@ -8,23 +8,29 @@ export function Contact() {
   const t = translations[language].contact;
 
   const [submitted, setSubmitted] = useState(false);
+  const [selectedMandate, setSelectedMandate] = useState(t.mandates[0]?.value);
 
-  // Map service query param from dedicated service pages
-  const getInitialMandate = () => {
-    if (typeof window === 'undefined') return t.mandates[0]?.value;
+  // Sync service query param after hydration for clean SSR/SSG parity
+  useEffect(() => {
     const servico = new URLSearchParams(window.location.search).get('servico');
-    if (!servico) return t.mandates[0]?.value;
-    
-    if (servico.includes('cri')) return language === 'en' ? 'CRI Debt Issuance' : 'Emissão de CRI';
-    if (servico.includes('tenant-representation') || servico.includes('aluguel-comercial')) return language === 'en' ? 'Corporate Leasing & Tenant Rep' : 'Locação Corporativa & Tenant Rep';
-    if (servico.includes('renegociacao')) return language === 'en' ? 'Lease Renegotiation' : 'Renegociação de Contrato de Locação';
-    if (servico.includes('sale-and-leaseback') || servico.includes('sale-leaseback')) return 'Sale & Leaseback';
-    if (servico.includes('compra-e-venda')) return language === 'en' ? 'Property Disposition' : 'Venda de Imóvel';
-    if (servico.includes('socios-investidores') || servico.includes('parcerias')) return language === 'en' ? 'Real Estate Development & Land' : 'Desenvolvimento Imobiliário & Terrenos';
-    return t.mandates[0]?.value;
-  };
+    if (!servico) return;
 
-  const [selectedMandate, setSelectedMandate] = useState(getInitialMandate);
+    if (servico.includes('cri')) {
+      setSelectedMandate(language === 'en' ? 'CRI Debt Issuance' : 'Emissão de CRI');
+    } else if (servico.includes('tenant-representation') || servico.includes('aluguel-comercial')) {
+      setSelectedMandate(language === 'en' ? 'Corporate Leasing & Tenant Rep' : 'Locação Corporativa & Tenant Rep');
+    } else if (servico.includes('renegociacao')) {
+      setSelectedMandate(language === 'en' ? 'Lease Renegotiation' : 'Renegociação de Contrato de Locação');
+    } else if (servico.includes('sale-and-leaseback') || servico.includes('sale-leaseback')) {
+      setSelectedMandate('Sale & Leaseback');
+    } else if (servico.includes('compra-e-venda')) {
+      setSelectedMandate(language === 'en' ? 'Property Disposition' : 'Venda de Imóvel');
+    } else if (servico.includes('socios-investidores') || servico.includes('parcerias')) {
+      setSelectedMandate(
+        language === 'en' ? 'Real Estate Development & Land' : 'Desenvolvimento Imobiliário & Terrenos'
+      );
+    }
+  }, [language]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

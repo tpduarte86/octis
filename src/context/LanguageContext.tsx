@@ -11,45 +11,40 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-function detectVisitorLanguage(): { lang: Language; auto: boolean } {
-  // Check user saved preference
-  if (typeof window !== 'undefined') {
+function getManualLanguagePreference(): Language | null {
+  if (typeof window === 'undefined') return null;
+
+  try {
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    if (urlLang === 'en' || urlLang === 'pt') {
+      return urlLang;
+    }
+
     const saved = localStorage.getItem('octis_lang');
     if (saved === 'pt' || saved === 'en') {
-      return { lang: saved, auto: false };
+      return saved;
     }
-
-    try {
-      // Check browser languages
-      const browserLanguages = navigator.languages || [navigator.language || ''];
-      const hasPortuguese = browserLanguages.some(l => l.toLowerCase().startsWith('pt'));
-
-      // Check timezone
-      const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
-      const isBrazilTimeZone = /Sao_Paulo|Fortaleza|Manaus|Recife|Belem|Cuiaba|Porto_Velho|Boa_Vista|Rio_Branco|Campo_Grande|Noronha|Bahia|Maceio|Araguaina/i.test(timeZone);
-
-      // If user is NOT Portuguese language and NOT in Brazil timezone, automatically default to ENGLISH
-      if (!hasPortuguese && !isBrazilTimeZone) {
-        return { lang: 'en', auto: true };
-      }
-
-      if (hasPortuguese) {
-        return { lang: 'pt', auto: true };
-      }
-
-      if (isBrazilTimeZone) {
-        return { lang: 'pt', auto: true };
-      }
-    } catch {
-      // fallback
-    }
+  } catch {
+    // ignore storage/URL errors
   }
 
-  return { lang: 'pt', auto: true };
+  return null;
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [languageState, setLanguageState] = useState<{ lang: Language; auto: boolean }>(() => detectVisitorLanguage());
+  // Always start in Portuguese (pt-BR) to match SSG HTML and ensure Googlebot indexes PT-BR content cleanly
+  const [languageState, setLanguageState] = useState<{ lang: Language; auto: boolean }>({
+    lang: 'pt',
+    auto: false,
+  });
+
+  // Restore manual user preference (via switcher or ?lang=en) after hydration
+  useEffect(() => {
+    const manualPref = getManualLanguagePreference();
+    if (manualPref && manualPref !== 'pt') {
+      setLanguageState({ lang: manualPref, auto: false });
+    }
+  }, []);
 
   const setLanguage = (lang: Language) => {
     setLanguageState({ lang, auto: false });
@@ -65,15 +60,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   };
 
   useEffect(() => {
-    // Sync document html lang attribute
+    // Sync document html lang attribute without overwriting document.title (controlled exclusively by SEOHead)
     document.documentElement.lang = languageState.lang === 'pt' ? 'pt-BR' : 'en';
-
-    // Sync document title according to language
-    if (languageState.lang === 'en') {
-      document.title = 'Octis Real Estate | Capital Markets & Real Estate Advisory Brazil';
-    } else {
-      document.title = 'Octis Real Estate | Capital Markets Imobiliário & Discussões Reddit Brasil';
-    }
   }, [languageState.lang]);
 
   return (
