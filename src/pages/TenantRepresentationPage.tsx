@@ -767,8 +767,28 @@ export function TenantRepresentationPage() {
           </div>
 
           <div className="pt-8 border-t border-white/15 flex flex-wrap items-center justify-center gap-6 text-xs text-gray-300 font-light">
-            <Link to="/servicos/compra-e-venda-de-imoveis" className="hover:text-[#c59b27] transition-colors">
-              {isPt ? 'Compra e Venda de Imóveis' : 'Property Brokerage'}
+            <Link to="/edificios/torre-faria-lima" className="hover:text-[#c59b27] transition-colors">
+              {isPt ? 'Torre Faria Lima' : 'Torre Faria Lima'}
+            </Link>
+            <span aria-hidden="true">·</span>
+            <Link to="/edificios/millenium-office-park" className="hover:text-[#c59b27] transition-colors">
+              {isPt ? 'Millenium Office Park' : 'Millenium Office Park'}
+            </Link>
+            <span aria-hidden="true">·</span>
+            <Link to="/edificios/birmann-12" className="hover:text-[#c59b27] transition-colors">
+              Birmann 12
+            </Link>
+            <span aria-hidden="true">·</span>
+            <Link to="/edificios/river-south-1492" className="hover:text-[#c59b27] transition-colors">
+              River South
+            </Link>
+            <span aria-hidden="true">·</span>
+            <Link to="/edificios/viva-torre-corporativa" className="hover:text-[#c59b27] transition-colors">
+              Viva Torre Corporativa
+            </Link>
+            <span aria-hidden="true">·</span>
+            <Link to="/edificios" className="hover:text-[#c59b27] transition-colors">
+              {isPt ? 'Edifícios Corporativos' : 'Corporate Buildings'}
             </Link>
             <span aria-hidden="true">·</span>
             <Link to="/reddit/o-que-e-tenant-representation-guia-completo" className="hover:text-[#c59b27] transition-colors">

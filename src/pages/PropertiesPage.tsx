@@ -60,6 +60,66 @@ export function PropertiesPage() {
       {/* Main Asset Classes Grid without repeated header */}
       <Development showHeader={false} showResidentialPortalLink={true} />
 
+      {/* Featured Corporate Buildings for Lease */}
+      <section className="py-16 bg-white border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-2">
+              <span className="w-1.5 h-1.5 bg-[#c59b27]" />
+              {language === 'en' ? 'Featured Office Towers' : 'Edifícios em Destaque para Locação'}
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-2 font-normal">
+              {language === 'en'
+                ? 'Explore Selected Corporate Buildings in São Paulo'
+                : 'Conheça Edifícios Selecionados para Locação Corporativa'}
+            </h2>
+            <p className="text-sm text-gray-600 font-light">
+              {language === 'en'
+                ? 'Direct access to specs, indicative lease ranges, and availability — including Torre Faria Lima, Millenium Office Park, Birmann 12, River South, and Viva Torre Corporativa.'
+                : 'Consulte fichas técnicas, faixas estimadas de locação e disponibilidade — como Torre Faria Lima, Millenium Office Park, Birmann 12, River South e Viva Torre Corporativa.'}
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3 shrink-0">
+            <Link
+              to="/edificios/torre-faria-lima"
+              className="px-5 py-3 bg-[#0a1d37] text-white hover:bg-[#122b4f] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors"
+            >
+              Torre Faria Lima <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <Link
+              to="/edificios/millenium-office-park"
+              className="px-5 py-3 bg-[#0a1d37] text-white hover:bg-[#122b4f] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors"
+            >
+              Millenium Office Park <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <Link
+              to="/edificios/birmann-12"
+              className="px-5 py-3 bg-[#0a1d37] text-white hover:bg-[#122b4f] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors"
+            >
+              Birmann 12 <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <Link
+              to="/edificios/river-south-1492"
+              className="px-5 py-3 bg-[#0a1d37] text-white hover:bg-[#122b4f] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors"
+            >
+              River South <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <Link
+              to="/edificios/viva-torre-corporativa"
+              className="px-5 py-3 bg-[#0a1d37] text-white hover:bg-[#122b4f] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors"
+            >
+              Viva Torre Corporativa <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <Link
+              to="/edificios"
+              className="px-5 py-3 bg-white border border-gray-300 text-gray-800 hover:border-[#0a1d37] text-xs font-semibold uppercase tracking-wider inline-flex items-center transition-colors"
+            >
+              {language === 'en' ? 'All Buildings' : 'Ver Todos'}
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Comparison: Simple to Class AAA (Clean CBRE Style) */}
       <section className="py-20 bg-[#f8fafc] border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6 md:px-12">

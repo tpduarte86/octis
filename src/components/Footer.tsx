@@ -14,6 +14,7 @@ export function Footer() {
     { name: nav.home, path: '/' },
     { name: nav.services, path: '/servicos' },
     { name: nav.development, path: '/imoveis' },
+    { name: language === 'en' ? 'Corporate Buildings' : 'Edifícios Corporativos', path: '/edificios' },
     { name: nav.leadership, path: '/experiencia' },
     { name: nav.redditArticles, path: '/reddit' },
     { name: nav.redditFaq, path: '/duvidas-reddit' },

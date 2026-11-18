@@ -3,6 +3,7 @@ import { StaticRouter } from 'react-router-dom';
 import { AppRoutes } from './App';
 import { HeadProvider, HeadCollector, CollectedHead } from './context/HeadContext';
 import { servicesData } from './data/servicesData';
+import { buildingsData } from './data/buildingsData';
 import { translations } from './translations/content';
 
 export interface PrerenderResult {
@@ -33,6 +34,7 @@ export function getStaticRoutes(): string[] {
     '/quem-somos',
     '/servicos',
     '/imoveis',
+    '/edificios',
     '/experiencia',
     '/reddit',
     '/duvidas-reddit',
@@ -40,8 +42,9 @@ export function getStaticRoutes(): string[] {
   ];
 
   const serviceRoutes = servicesData.map((s) => `/servicos/${s.slug}`);
+  const buildingRoutes = buildingsData.map((b) => `/edificios/${b.slug}`);
   const articleRoutes = translations.pt.blog.articles.map((a) => `/reddit/${a.id}`);
 
   // Deduplicate and preserve order
-  return Array.from(new Set([...baseRoutes, ...serviceRoutes, ...articleRoutes]));
+  return Array.from(new Set([...baseRoutes, ...serviceRoutes, ...buildingRoutes, ...articleRoutes]));
 }

@@ -21,6 +21,8 @@ import { RedditArticlesPage } from './pages/RedditArticlesPage';
 import { ArticleDetailPage } from './pages/ArticleDetailPage';
 import { RedditQuestionsPage } from './pages/RedditQuestionsPage';
 import { ContactPage } from './pages/ContactPage';
+import { BuildingsDirectoryPage } from './pages/BuildingsDirectoryPage';
+import { BuildingDetailPage } from './pages/BuildingDetailPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export function AppRoutes() {
@@ -71,6 +73,8 @@ export function AppRoutes() {
             <Route path="/servicos/:slug" element={<ServiceDetailPage />} />
             
             <Route path="/imoveis" element={<PropertiesPage />} />
+            <Route path="/edificios" element={<BuildingsDirectoryPage />} />
+            <Route path="/edificios/:slug" element={<BuildingDetailPage />} />
             
             <Route path="/experiencia" element={<TrackRecordPage />} />
             <Route path="/lideranca" element={<Navigate to="/experiencia" replace />} />
