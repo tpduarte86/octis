@@ -32,23 +32,23 @@ export function TenantRepresentationPage() {
     ? [
         {
           icon: Search,
-          title: 'Busca e Seleção Estratégica',
-          desc: 'Mapeamos todo o inventário disponível (inclusive oportunidades off-market) para encontrar os melhores escritórios, lajes corporativas, galpões ou centros de distribuição alinhados às metas da empresa.',
+          title: 'Busca e Seleção de Imóveis',
+          desc: 'Mapeamos o inventário disponível (inclusive oportunidades off-market) para encontrar os melhores escritórios, lajes corporativas, galpões ou centros de distribuição alinhados às metas da empresa.',
         },
         {
           icon: ShieldCheck,
           title: 'Ausência Total de Conflito de Interesses',
-          desc: 'Atuamos exclusivamente na defesa de quem vai alugar, comprar ou renovar o imóvel. Não temos lealdade dividida com o proprietário ou fundo locador.',
+          desc: 'Atuamos na defesa de quem vai alugar, comprar ou renovar o imóvel. Não temos lealdade dividida com o proprietário ou fundo locador.',
         },
         {
           icon: FileSignature,
           title: 'Negociação Avançada de Termos',
-          desc: 'Negociamos valor do aluguel por m², prazos contratuais, meses de carência, verba para obras (fit-out / TI), indexadores (IPCA vs. IGP-M), multas de rescisão e direito de renovação.',
+          desc: 'Negociamos valor do aluguel, os prazos contratuais, meses de carência, verba para obras (fit-out / TI), indexadores (IPCA x IGP-M), multas de rescisão e direito de renovação.',
         },
         {
           icon: Scale,
           title: 'Apoio Técnico, Arquitetônico e Jurídico',
-          desc: 'Realizamos test-fit gratuito de layout com arquitetos e atuamos ao lado de advogados para validar zoneamento, AVCB e total conformidade com a Lei do Inquilinato (Lei nº 8.245/91).',
+          desc: 'Realizamos test-fit gratuito de layout com arquitetos e auxiliamos sua equipe para validar CNAE, zoneamento, AVCB.',
         },
         {
           icon: BarChart3,
@@ -60,22 +60,22 @@ export function TenantRepresentationPage() {
         {
           icon: Search,
           title: 'Strategic Site Search & Selection',
-          desc: 'We map the full market inventory—including off-market opportunities—to source optimal corporate offices, floorplates, industrial warehouses, and distribution centers.',
+          desc: 'We map the market inventory—including off-market opportunities—to source optimal corporate offices, floorplates, industrial warehouses, and distribution centers.',
         },
         {
           icon: ShieldCheck,
           title: 'Zero Conflict of Interest',
-          desc: 'We act exclusively in the best interest of the corporate occupier or tenant—never representing the landlord on the same side of the table.',
+          desc: 'We act exclusively in the best interest of the corporate occupier or tenant. Never representing the landlord on the same side of the table.',
         },
         {
           icon: FileSignature,
           title: 'Advanced Commercial Term Negotiation',
-          desc: 'We negotiate base rent per sqm, lease duration, rent-free months, tenant improvement (fit-out) allowances, inflation indices (IPCA vs. IGP-M), break options, and renewal clauses.',
+          desc: 'We negotiate base rent, lease duration, rent-free months, tenant improvement (fit-out and IT) allowances, inflation indices (IPCA vs. IGP-M), break options, and renewal clauses.',
         },
         {
           icon: Scale,
           title: 'Technical, Architectural & Legal Support',
-          desc: 'We provide free architectural test-fit studies alongside legal counsel review for zoning, building compliance, and Brazilian Tenancy Law (Law 8,245/91) protection.',
+          desc: 'We provide free architectural test-fit studies alongside legal counsel review for zoning, building compliance, and Brazilian Tenancy Law protection.',
         },
         {
           icon: BarChart3,
@@ -89,7 +89,7 @@ export function TenantRepresentationPage() {
         {
           step: '01',
           title: 'Estratégia e Planejamento',
-          desc: 'Definição das metas operacionais, orçamento, metragem ideal, requisitos técnicos de energia/piso/pé-direito e raio geográfico antes de iniciar buscas ou visitar imóveis.',
+          desc: 'Definição das metas operacionais, orçamento, área ideal, requisitos técnicos de energia/piso/pé-direito e raio geográfico antes de iniciar buscas ou visitar imóveis.',
         },
         {
           step: '02',
@@ -111,7 +111,7 @@ export function TenantRepresentationPage() {
         {
           step: '01',
           title: 'Strategy & Planning',
-          desc: 'Defining corporate headcount targets, budget ceiling, technical specifications (power, floor load, clear height), and target corridors prior to touring properties.',
+          desc: 'Defining corporate targets, budget , technical specifications (power, floor load, clear height), and target corridors prior to touring properties.',
         },
         {
           step: '02',
@@ -191,7 +191,7 @@ export function TenantRepresentationPage() {
         {
           region: 'São Paulo — Eixos Corporativos',
           locations: 'Faria Lima, Itaim Bibi, Avenida Paulista, Berrini, Vila Olímpia, Chucri Zaidan e Pinheiros.',
-          focus: 'Lajes corporativas AAA, edifícios monousuários e sedes administrativas.',
+          focus: 'Lajes corporativas, edifícios monousuários e sedes administrativas.',
         },
         {
           region: 'Grande São Paulo & Interior (Logística)',
@@ -213,7 +213,7 @@ export function TenantRepresentationPage() {
         {
           region: 'São Paulo — Prime Office Corridors',
           locations: 'Faria Lima, Itaim Bibi, Paulista Avenue, Berrini, Vila Olímpia, Chucri Zaidan, and Pinheiros.',
-          focus: 'Class AAA corporate floorplates, single-tenant headquarters, and office suites.',
+          focus: 'Corporate floorplates, single-tenant headquarters, and office suites.',
         },
         {
           region: 'Greater São Paulo & Industrial Belt',
@@ -237,17 +237,17 @@ export function TenantRepresentationPage() {
         {
           question: 'O que é Tenant Representation no mercado imobiliário?',
           answer:
-            'Uma consultoria de Tenant Representation (representação exclusiva de ocupantes ou inquilinos) é um serviço especializado no mercado imobiliário comercial e logístico em que o consultor atua exclusivamente na defesa dos interesses da empresa que vai alugar, comprar ou renegociar um imóvel — e nunca do proprietário.',
+            'Uma consultoria de Tenant Representation (representação de ocupantes) é um serviço especializado no mercado imobiliário comercial, de escritórios e logístico em que o consultor atua exclusivamente na defesa dos interesses da empresa que vai alugar, comprar ou renegociar um imóvel — e nunca do proprietário.',
         },
         {
           question: 'O que faz um Tenant Representative na prática?',
           answer:
-            'Um Tenant Representative realiza 5 funções centrais: (1) busca e seleção estratégica de escritórios e galpões; (2) atuação sem conflito de interesses (100% focado no inquilino); (3) negociação de aluguel, prazos, carências, fit-out, multas e reajuste; (4) apoio técnico e jurídico com test-fit gratuito e conformidade com a Lei do Inquilinato; e (5) economia de tempo com inteligência de dados de transações reais.',
+            'Um Tenant Representative realiza 5 funções centrais: (1) busca e seleção de escritórios e/ou galpões; (2) atuação sem conflito de interesses (100% focado no inquilino); (3) negociação de aluguel, prazos, carências, fit-out, multas e reajuste; (4) apoio técnico e jurídico com test-fit gratuito e conformidade com a Lei do Inquilinato; e (5) economia de tempo com inteligência de dados de transações reais.',
         },
         {
           question: 'Quais são as principais fases do processo de Tenant Representation?',
           answer:
-            'O processo segue 4 fases estruturadas: 1. Estratégia e Planejamento (definição de metas e orçamento antes das visitas); 2. Vistorias e Comparações (visitas técnicas guiadas, test-fit gratuito e cálculo do Custo Total de Ocupação); 3. Carta de Intenção — LOI (propostas formais para comparar proprietários lado a lado); e 4. Fechamento do Contrato (condução das cláusulas até a assinatura).',
+            'O processo segue 4 fases estruturadas: 1. Estratégia e Planejamento (definição de metas e orçamento antes das visitas); 2. Vistorias e Comparações (visitas técnicas guiadas, test-fit gratuito e cálculo do Custo Total de Ocupação); 3. Carta de Intenção — LOI (propostas formais para comparar proprietários lado a lado); e 4. Fechamento do Contrato (condução das cláusulas até a assinatura) e 5. Estimativa total de custo de ocupação, nominal e VPL.',
         },
         {
           question: 'Como funciona a remuneração e quanto custa contratar Tenant Representation?',
@@ -274,7 +274,7 @@ export function TenantRepresentationPage() {
         {
           question: 'What does a Tenant Representative do?',
           answer:
-            'A Tenant Representative performs 5 core functions: (1) strategic market search and selection; (2) conflict-free exclusive occupier advocacy; (3) negotiation of rent, rent-free periods, fit-out allowances, penalties, and renewal rights; (4) technical and legal coordination including free test-fit layouts and Brazilian Tenancy Law review; and (5) data-driven Total Cost of Occupancy benchmarking.',
+            'A Tenant Representative performs 5 core functions: (1) strategic market search and selection; (2) conflict-free exclusive occupier advocacy; (3) negotiation of rent, rent-free periods, fit-out allowances, penalties, and renewal rights; (4) technical and legal coordination including free test-fit layouts and Brazilian Tenancy Law review; and (5) data-driven Total Cost of Occupancy benchmarking, NPV and nominal.',
         },
         {
           question: 'What are the 4 key phases of the Tenant Representation process?',
@@ -294,7 +294,7 @@ export function TenantRepresentationPage() {
         {
           question: 'Which Brazilian cities and hubs does Octis cover for Tenant Representation?',
           answer:
-            'Headquartered in São Paulo (Faria Lima, Paulista, Berrini, Vila Olímpia, Alphaville, Cajamar, Guarulhos, Jundiaí, Campinas), Octis executes Tenant Representation mandates across Brazil, including Rio de Janeiro, Minas Gerais (Belo Horizonte and Extrema), and Southern Brazil (Curitiba, Joinville, Itajaí, and Porto Alegre).',
+            'Headquartered in São Paulo (Faria Lima, Paulista, Berrini, Vila Olímpia, Alphaville, Cajamar, Guarulhos, Jundiaí, Campinas), Please ask availability for mandates across Brazil, including Rio de Janeiro, Minas Gerais (Belo Horizonte and Extrema), and Southern Brazil (Curitiba, Joinville, Itajaí, and Porto Alegre).',
         },
       ];
 

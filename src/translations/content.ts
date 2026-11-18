@@ -239,11 +239,11 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
     },
     about: {
       badge: 'Sobre a Octis',
-      title: 'Soluções imobiliárias completas com precisão e segurança.',
-      p1: 'Com sede em São Paulo e atuação em todo o Brasil, a Octis Real Estate conecta proprietários, empresas e incorporadoras a compradores, inquilinos e investidores. Cuidamos de compra e venda, aluguel comercial, Sale & Leaseback e recursos via CRI para obras.',
-      p2: 'Nosso trabalho é focado: avaliamos o imóvel pelo valor real de mercado, encontramos os interessados certos e conduzimos negociações com excelência técnica.',
-      p3: 'Atendemos todos os tipos de imóveis: casas, apartamentos, loteamentos, galpões, prédios comerciais e terrenos para construção.',
-      point1Title: 'Dinheiro para Obras (CRI)',
+      title: 'Soluções imobiliárias completas.',
+      p1: 'Com sede em São Paulo e atuação nos principais polos do Brasil, a Octis Real Estate conecta proprietários, empresas e incorporadoras a compradores, inquilinos e investidores. Assessoramos compra e venda, aluguel, Sale & Leaseback e levantamento de recursos via dívida ou equity.',
+      p2: 'Nosso trabalho é focado: entendemos o potencial do imóvel, encontramos os interessados certos e conduzimos negociações com excelência técnica.',
+      p3: 'Atendemos todos os tipos de imóveis: residencial (incorporadores), loteamentos, galpões, prédios comerciais e terrenos para construção.',
+      point1Title: 'Securitização (CRI)',
       point1Desc: 'Recursos para incorporadoras, loteamentos e novos projetos.',
       point2Title: 'Todos os Imóveis',
       point2Desc: 'Do padrão econômico ao AAA.',
@@ -421,16 +421,21 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
               {
                 heading: '1. O que faz um Tenant Representative?',
                 paragraphs: [
-                  'Na prática, o representante exclusivo do ocupante conduz cinco frentes críticas para proteger o fluxo de caixa e a operação da empresa contratante:',
-                  '• Busca e seleção: Mapeia o mercado (incluindo imóveis off-market) e encontra os melhores espaços comerciais, escritórios, galpões ou centros de distribuição que atendem às metas estratégicas da companhia. • Ausência de conflito de interesses: Como trabalha apenas para o inquilino, não há lealdade dividida com o dono do imóvel.',
-                  '• Negociação de termos: Negocia valores de aluguel, prazos, carências, verbas para reformas (fit-out), cláusulas de reajuste (IPCA vs. IGP-M), multas de rescisão e condições de renovação. • Apoio técnico e jurídico: Atua junto com arquitetos (test-fit gratuito) e advogados para validar viabilidade técnica e conformidade com a Lei do Inquilinato. • Economia de tempo e inteligência de dados: Utiliza comparativos reais de transações fechadas para gerar alto poder de barganha.',
+                  'Na prática, o representante exclusivo do ocupante conduz cinco frentes  para proteger os interesses da empresa contratante:',
+                  '• Busca e seleção: Mapeia o mercado (incluindo imóveis off-market) e encontra os melhores espaços comerciais, escritórios, galpões ou centros de distribuição que atendem às metas estratégicas da companhia.', 
+                  '• Ausência de conflito de interesses: Como trabalha apenas para o inquilino, não há lealdade dividida com o dono do imóvel.',
+                  '• Negociação de termos do contrato: Negocia valores de aluguel, prazos, carências, verbas para reformas (fit-out), cláusulas de reajuste (IPCA vs. IGP-M), multas de rescisão e condições de renovação.', 
+                  '• Apoio técnico e jurídico: Atua junto com arquitetos (test-fit gratuito) e auxilia a validar viabilidade técnica e conformidade com a Lei do Inquilinato.',
+                  '• Economia de tempo e inteligência de dados: Utiliza comparativos reais de transações fechadas para gerar alto poder de barganha.',
                 ],
               },
               {
                 heading: '2. As 4 Principais Fases do Processo',
                 paragraphs: [
-                  '1. Estratégia e Planejamento: Definição das metas de expansão ou consolidação, orçamento, área necessária e requisitos técnicos antes de iniciar buscas ou visitar imóveis. 2. Vistorias e Comparações: Visitas técnicas guiadas para avaliar o estado real do imóvel, executar test-fit gratuito e calcular o Custo Total de Ocupação (aluguel, condomínio, IPTU e adequações).',
-                  '3. Carta de Intenção (LOI): Formalização de propostas comerciais iniciais simultâneas para colocar diferentes proprietários competindo lado a lado. 4. Fechamento do Contrato: Condução detalhada de todas as cláusulas comerciais até a assinatura definitiva e entrega do imóvel.',
+                  '1. Estratégia e Planejamento: Definição das metas de expansão ou consolidação, orçamento, área necessária e requisitos técnicos antes de iniciar buscas ou visitar imóveis.',
+                  '2. Vistorias e Comparações: Visitas técnicas guiadas para avaliar o estado real do imóvel, executar test-fit gratuito e calcular o Custo Total de Ocupação (aluguel, condomínio, IPTU e adequações).',
+                  '3. Carta de Intenção (LOI): Formalização de propostas comerciais iniciais simultâneas para colocar diferentes proprietários competindo lado a lado.',
+                  '4. Fechamento do Contrato: Condução detalhada de todas as cláusulas comerciais até a assinatura definitiva e entrega do imóvel.',
                 ],
               },
               {

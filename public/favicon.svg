@@ -7,12 +7,4 @@
     stroke-width="34"
     stroke-linejoin="round"
   />
-  <polygon
-    points="206,144 306,144 368,206 368,306 306,368 206,368 144,306 144,206"
-    fill="none"
-    stroke="#c59b27"
-    stroke-width="18"
-    stroke-linejoin="round"
-  />
-  <circle cx="256" cy="256" r="24" fill="#c59b27"/>
 </svg>
