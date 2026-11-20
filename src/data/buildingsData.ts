@@ -106,14 +106,14 @@ export const buildingsData: BuildingDetail[] = [
     seoDescriptionPt: 'Alugue conjuntos de 383 m² ou lajes de 766 m² no Edifício Torre Faria Lima (Av. Brig. Faria Lima, 201). Opções mobiliadas ou open space, 10 vagas e test-fit gratuito pela Octis.',
     seoDescriptionEn: 'Lease 383 sqm suites or 766 sqm full floorplates at Torre Faria Lima (Av. Brig. Faria Lima, 201, São Paulo). Furnished or open-space units with free test-fit by Octis.',
     overviewPt: [
-      'Localizado estrategicamente na esquina da Avenida Brigadeiro Faria Lima com a Avenida Pedroso de Morais, o Edifício Torre Faria Lima é um dos marcos arquitetônicos mais reconhecidos da capital paulista. Concebido pelo arquiteto Ruy Ohtake e integrado ao Complexo Cultural Tomie Ohtake, o empreendimento reúne identidade visual singular, eficiência operacional e facilidade de acesso.',
-      'Suas plantas curvas de grande vão dispensam pilares internos, permitindo máxima liberdade no desenho de estações de trabalho, salas executivas e áreas de colaboração. Empresas interessadas encontram configurações em meia laje (~383 m²) ou andar completo (~766 m² BOMA), tanto em entrega open space com infraestrutura pronta quanto em unidades já mobiliadas para ocupação imediata.',
-      'Por meio da consultoria de Tenant Representation da Octis Real Estate, sua empresa obtém acesso às unidades disponíveis no edifício, estudo de layout (test-fit) gratuito antes da proposta e negociação comercial direta para otimizar valor de locação, carência e condições contratuais.',
+      'Na esquina da Avenida Brigadeiro Faria Lima com a Avenida Pedroso de Morais, o Edifício Torre Faria Lima é um dos prédios comerciais mais conhecidos de São Paulo. Assinado pelo arquiteto Ruy Ohtake e integrado ao Complexo Cultural Tomie Ohtake, o endereço combina arquitetura marcante com acesso fácil a metrô e corredores viários.',
+      'As plantas curvas de grande vão não têm pilares internos, o que dá liberdade para organizar estações de trabalho, salas fechadas e áreas de reunião sem desperdício de espaço. Há opções de meia laje (~383 m²) ou andar inteiro (~766 m² BOMA), tanto em formato open space com infraestrutura instalada quanto em unidades já mobiliadas para entrada imediata.',
+      'Pela consultoria de Tenant Representation da Octis Real Estate, sua empresa acessa a disponibilidade real do prédio, recebe estudo de layout (test-fit) gratuito antes de enviar proposta e negocia aluguel, carência e cláusulas contratuais com base em preços de fechamento da região.',
     ],
     overviewEn: [
-      'Positioned at the intersection of Avenida Brigadeiro Faria Lima and Avenida Pedroso de Morais, Torre Faria Lima stands as one of São Paulo’s most iconic corporate addresses. Designed by renowned architect Ruy Ohtake and seamlessly connected to the Tomie Ohtake Cultural Complex, the tower pairs bold architectural identity with practical corporate functionality.',
-      'The building’s signature curved floorplates are engineered without internal columns, giving tenants complete freedom to organize workstations, executive suites, and collaborative zones. Occupiers can lease half-floor suites (~383 sqm) or full floors (~766 sqm BOMA), choosing between turnkey furnished configurations or ready-to-customize open-space units.',
-      'Through Octis Real Estate’s Tenant Representation team, prospective occupiers receive verified availability across the building, a free architectural test-fit study prior to submitting an offer, and data-backed negotiation of base rent, rent-free periods, and fit-out allowances.',
+      'At the corner of Avenida Brigadeiro Faria Lima and Avenida Pedroso de Morais, Torre Faria Lima is one of São Paulo’s most recognizable office addresses. Designed by architect Ruy Ohtake and connected directly to the Tomie Ohtake Cultural Complex, the tower pairs distinctive architecture with straightforward access to transit and main roads.',
+      'Its curved floorplates span without internal columns, giving occupiers freedom to lay out workstations, executive rooms, and meeting areas cleanly. Companies can lease half-floor suites (~383 sqm) or full floors (~766 sqm BOMA), choosing between turnkey furnished units or ready-to-fit open-space layouts.',
+      'Through Octis Real Estate’s Tenant Representation desk, prospective tenants receive verified building availability, a free architectural test-fit study prior to submitting an offer, and market-benchmarked negotiation of rent, rent-free months, and fit-out terms.',
     ],
     highlightsPt: [
       'Conjuntos corporativos de 383 m² (meia laje) ou andares completos com ~766 m² BOMA',
@@ -129,7 +129,7 @@ export const buildingsData: BuildingDetail[] = [
     highlightsEn: [
       'Half-floor corporate suites (383 sqm) or full panoramic floorplates (~766 sqm BOMA)',
       'Turnkey furnished suites with meeting rooms or clean open-space delivery',
-      'Column-free structural span maximizing usable workstation density',
+      'Column-free structural span allowing higher usable workstation density',
       '10 dedicated parking spaces allocated per 383 sqm suite',
       'Raised access flooring, modular ceiling grid, lighting fixtures, and central HVAC installed',
       'Certified rooftop helipad rated for up to 4 metric tons',
@@ -375,14 +375,14 @@ export const buildingsData: BuildingDetail[] = [
     seoDescriptionPt: 'Alugue lajes de 1.254 m² ou conjuntos de ~627 m² no Millenium Office Park, Vila Olímpia (Av. Chedid Jafet, 222). Acesso interno ao JK Iguatemi, heliponto, auditório e 32 vagas/andar.',
     seoDescriptionEn: 'Lease 1,254 sqm floorplates or ~627 sqm suites at Millenium Office Park in Vila Olímpia (Av. Chedid Jafet, 222). Direct JK Iguatemi access, helipad, auditorium, and 32 parking spaces per floor.',
     overviewPt: [
-      'Situado na Avenida Chedid Jafet, 222, em um dos trechos mais valorizados da Vila Olímpia, o Millenium Office Park é um complexo corporativo consolidado que combina arquitetura contemporânea em pele de vidro azul e granito com infraestrutura completa voltada a sedes de médias e grandes empresas.',
-      'As lajes corporativas possuem cerca de 1.254,38 m² de área locável por pavimento — permitindo ocupação integral ou fracionamento em dois conjuntos de aproximadamente 627 m² — com piso elevado instalado, excelente iluminação natural em toda a extensão da fachada e alta proporção de garagem (32 vagas vinculadas por andar, ou 16 por meio conjunto), além de estacionamento rotativo no térreo com carregadores para veículos elétricos.',
-      'Um dos maiores diferenciais operacionais do complexo é sua conveniência: os ocupantes contam com passagem exclusiva para pedestres conectada ao Shopping JK Iguatemi, restaurante interno, auditório equipado para eventos, salas de treinamento, áreas de descompressão ajardinadas e heliponto suspenso interligando as torres. Pela consultoria de Tenant Representation da Octis, sua empresa recebe estudo de layout (test-fit) gratuito e negociação comercial estruturada.',
+      'Na Avenida Chedid Jafet, 222, em um dos pontos mais disputados da Vila Olímpia, o Millenium Office Park é um complexo corporativo consolidado, com fachada em vidro azul e granito e estrutura pensada para sedes de médias e grandes empresas.',
+      'Cada pavimento tem cerca de 1.254,38 m² de área locável — podendo ser alugado inteiro ou dividido em dois conjuntos de ~627 m² — com piso elevado instalado, boa entrada de luz natural e 32 vagas vinculadas por andar (16 por meio conjunto), além de estacionamento rotativo no térreo com carregadores para veículos elétricos.',
+      'No dia a dia, o destaque fica por conta da conveniência: passagem interna de pedestres ligada ao Shopping JK Iguatemi, restaurante no próprio complexo, auditório equipado, salas de treinamento, áreas externas ajardinadas e heliponto ligando as torres. Pela consultoria de Tenant Representation da Octis, sua empresa recebe test-fit gratuito e apoio direto na negociação da proposta.',
     ],
     overviewEn: [
-      'Located at Avenida Chedid Jafet, 222 in one of Vila Olímpia’s most sought-after corporate enclaves, Millenium Office Park is an established business complex pairing contemporary reflective-glass and granite architecture with comprehensive enterprise amenities.',
-      'Typical corporate floorplates deliver approximately 1,254.38 sqm of rentable area per level—accommodating single-floor headquarters or ~627 sqm half-floor suites—complete with raised access flooring, generous perimeter daylight, and an exceptional parking ratio (32 allocated spaces per floor, or 16 per half-suite), supplemented by 127 ground-level visitor/valet spaces and EV charging stations.',
-      'The complex stands out for day-to-day corporate convenience: occupiers benefit from a dedicated private pedestrian walkway straight to Shopping JK Iguatemi, an on-site restaurant, a fully equipped auditorium, training rooms, landscaped outdoor decompression lounges, and a signature rooftop helipad. Through Octis Real Estate’s Tenant Representation desk, prospective tenants receive a free architectural test-fit study and disciplined LOI negotiation.',
+      'At Avenida Chedid Jafet, 222 in one of Vila Olímpia’s main corporate pockets, Millenium Office Park is an established business complex featuring reflective-glass and granite facades alongside full on-site corporate amenities.',
+      'Typical corporate floorplates deliver roughly 1,254.38 sqm of rentable area per level—fitting single-floor headquarters or ~627 sqm half-floor suites—complete with raised flooring, strong perimeter daylight, and 32 allocated spaces per floor (16 per half-suite), supplemented by 127 ground-level visitor/valet spaces and EV chargers.',
+      'Day-to-day convenience is a clear draw: occupiers get a private pedestrian walkway straight to Shopping JK Iguatemi, an on-site restaurant, a fitted auditorium, training rooms, landscaped outdoor seating areas, and a rooftop helipad. Through Octis Real Estate’s Tenant Representation desk, prospective tenants receive a free architectural test-fit study and structured LOI negotiation.',
     ],
     highlightsPt: [
       'Lajes corporativas amplas de ~1.254,38 m² (ou conjuntos fracionados de ~627 m²)',
@@ -660,14 +660,14 @@ export const buildingsData: BuildingDetail[] = [
     seoDescriptionPt: 'Alugue lajes de 1.093 m² a 1.665 m² no Edifício Birmann 12 (Rua Alexandre Dumas, 1711 — Chácara Santo Antônio). Opções mobiliadas com até 170 posições, gerador 100%, auditório e test-fit gratuito Octis.',
     seoDescriptionEn: 'Lease 1,093 sqm to 1,665 sqm floorplates at Birmann 12 (Rua Alexandre Dumas, 1711, São Paulo). Turnkey furnished suites with ~170 workstations, full backup power, auditorium, and free test-fit by Octis.',
     overviewPt: [
-      'Instalado na Rua Alexandre Dumas, 1711, no eixo corporativo da Chácara Santo Antônio, o Edifício Birmann 12 integra um complexo empresarial reconhecido pela robustez técnica, paisagismo generoso e infraestrutura completa de serviços no próprio condomínio.',
-      'As unidades disponíveis abrangem metragens amplas de 1.093 m² a 1.665 m², com a partir de 17 vagas de garagem vinculadas e destaque para configurações já mobiliadas — equipadas com aproximadamente 170 estações de trabalho, salas de reunião envidraçadas, salas privativas de gestão e copa de apoio, reduzindo significativamente o CAPEX inicial de implantação.',
-      'No campo operacional, o empreendimento entrega geradores capazes de suprir 100% da demanda em quedas de energia, controle de acesso modernizado por biometria facial e QR Code, auditório para 50 participantes, cafeteria, ambulatório e carregadores elétricos. Por meio da Octis Real Estate, sua empresa conta com estudo comparativo de ocupação e assessoria de Tenant Representation do test-fit ao fechamento da Carta de Intenção (LOI).',
+      'Na Rua Alexandre Dumas, 1711, no eixo corporativo da Chácara Santo Antônio, o Edifício Birmann 12 faz parte de um complexo empresarial conhecido pela boa especificação técnica, áreas verdes amplas e serviços internos no próprio condomínio.',
+      'As unidades disponíveis vão de 1.093 m² a 1.665 m², com a partir de 17 vagas de garagem vinculadas e opções já mobiliadas — cerca de 170 estações de trabalho, salas de reunião envidraçadas, salas de diretoria e copa montada, o que reduz bastante o investimento inicial de obra.',
+      'Na operação diária, o prédio entrega geradores para 100% da demanda em caso de queda de energia, controle de acesso por biometria facial e QR Code, auditório para 50 pessoas, cafeteria, ambulatório e carregadores para carros elétricos. Pela Octis Real Estate, sua empresa conta com comparativo de custo de ocupação e representação exclusiva do test-fit ao fechamento da Carta de Intenção (LOI).',
     ],
     overviewEn: [
-      'Located at Rua Alexandre Dumas, 1711 in the established Chácara Santo Antônio business corridor, Edifício Birmann 12 is part of a flagship corporate complex prized for engineering reliability, landscaped grounds, and comprehensive on-site conveniences.',
-      'Available spaces range from 1,093 sqm to 1,665 sqm, paired with 17+ dedicated parking spaces per suite and turnkey furnished layouts featuring approximately 170 workstations, glazed boardrooms, private executive offices, and a fitted breakout pantry—minimizing upfront fit-out CAPEX.',
-      'Building infrastructure includes 100% full-building backup power generators, central HVAC, upgraded facial-recognition and QR Code turnstiles, a 50-seat auditorium, cafeteria, on-site medical clinic, 24-hour loading docks, and EV charging points. Through Octis Real Estate’s Tenant Representation team, occupiers receive complimentary layout studies and benchmarked LOI negotiations.',
+      'At Rua Alexandre Dumas, 1711 in the established Chácara Santo Antônio business corridor, Edifício Birmann 12 belongs to a well-known corporate complex valued for reliable building systems, landscaped grounds, and practical on-site services.',
+      'Available spaces range from 1,093 sqm to 1,665 sqm, paired with 17+ dedicated parking spaces per suite and turnkey furnished layouts featuring roughly 170 workstations, glazed meeting rooms, private executive offices, and a fitted pantry—cutting upfront fit-out CAPEX.',
+      'Building infrastructure includes 100% full-building backup power generators, central HVAC, upgraded facial-recognition and QR Code turnstiles, a 50-seat auditorium, cafeteria, on-site medical clinic, 24-hour loading docks, and EV charging points. Through Octis Real Estate’s Tenant Representation desk, occupiers receive complimentary layout studies and benchmarked LOI negotiations.',
     ],
     highlightsPt: [
       'Conjuntos corporativos amplos de 1.093 m² a 1.665 m² com opções mobiliadas (cerca de 170 posições de trabalho)',
@@ -948,7 +948,7 @@ export const buildingsData: BuildingDetail[] = [
     overviewPt: [
       'Concebido pelo renomado escritório internacional de arquitetura Perkins & Will, o Edifício River South está localizado na Rua Agostinho Cantu, 190, no Butantã — a poucos minutos da Avenida Brigadeiro Faria Lima, da Marginal Pinheiros e a 650 metros da Estação Butantã do Metrô (Linha 4-Amarela).',
       'Com proposta de uso misto e volumetria escalonada com terraços ajardinados, o empreendimento disponibiliza 10 pavimentos corporativos (incluindo 2 andares com mezanino), oferecendo flexibilidade para ocupações a partir de 741 m², conjuntos referência de ~1.594,34 m² BOMA ou blocos contínuos que superam 20.600 m² para grandes sedes.',
-      'Um diferencial construtivo marcante do projeto é a engenharia de circulação vertical: as cabines alcançam 2,70 metros de altura livre e dispõem de elevadores sociais e de maca dimensionados com portas amplas, viabilizando tanto escritórios corporativos e centros de tecnologia quanto clínicas, laboratórios ou operações ligadas à área da saúde. Com a consultoria de Tenant Representation da Octis, sua empresa conta com estudo de layout gratuito e condução estratégica da Carta de Intenção (LOI).',
+      'Um ponto técnico importante do projeto está nos elevadores: as cabines têm 2,70 metros de altura livre e portas largas tanto nos elevadores sociais quanto nos de maca, o que permite instalar desde escritórios e centros de tecnologia até clínicas, laboratórios e operações de saúde. Com a consultoria de Tenant Representation da Octis, sua empresa conta com estudo de layout gratuito e condução direta da Carta de Intenção (LOI).',
     ],
     overviewEn: [
       'Designed by internationally acclaimed architectural firm Perkins & Will, River South is situated at Rua Agostinho Cantu, 190 in Butantã—just minutes from Avenida Brigadeiro Faria Lima and Marginal Pinheiros, and 650 meters from Butantã Metro Station (Yellow Line 4).',
@@ -979,7 +979,7 @@ export const buildingsData: BuildingDetail[] = [
       'Localizado na Rua Agostinho Cantu, 190 — Butantã, em conexão direta com o vetor Pinheiros / Faria Lima',
       'A apenas 650 metros da Estação Butantã do Metrô (Linha 4-Amarela)',
       'A cerca de 2,0 km da Avenida Brigadeiro Faria Lima e próximo à Marginal Pinheiros',
-      'A 1,6 km da Universidade de São Paulo (USP) — proximidade estratégica para centros de P&D e inovação',
+      'A 1,6 km da Universidade de São Paulo (USP) — boa localização para centros de P&D e equipes técnicas',
       'Cerca de 9,6 km do Aeroporto de Congonhas, facilitando deslocamentos executivos',
     ],
     locationHighlightsEn: [
@@ -1213,9 +1213,9 @@ export const buildingsData: BuildingDetail[] = [
     seoDescriptionPt: 'Alugue lajes corporativas de 1.200 m² a 1.308 m² no Viva Torre Corporativa (Santo Amaro / Campo Belo). Edifício Triple A LEED Platinum a 3,8 km de Congonhas. Test-fit gratuito pela Octis.',
     seoDescriptionEn: 'Lease 1,200 sqm to 1,308 sqm Triple-A floorplates at Viva Torre Corporativa in Santo Amaro / Campo Belo, 3.8 km from Congonhas Airport. Free test-fit by Octis.',
     overviewPt: [
-      'Implantada em um terreno de 9.500 m² na Avenida Vereador José Diniz, 3465, a Viva Torre Corporativa ocupa uma esquina estratégica na transição entre Santo Amaro, Campo Belo, Brooklin e Moema. O projeto de arquitetura internacional combina volumes envidraçados escalonados com amplas praças arborizadas e jardins integrados que favorecem o conforto térmico, a convivência e a chegada de colaboradores.',
-      'Com 19 pavimentos tipo que totalizam cerca de 24.000 m² de área BOMA, o edifício disponibiliza lajes amplas e regulares entre 1.200 m² e 1.308 m². A engenharia privilegia o aproveitamento de layout: pé-direito livre de 3,00 metros do piso elevado ao forro (4,14 m piso a piso), piso elevado de 15 cm, sobrecarga estrutural de 450 kg/m² e ar-condicionado VRF com controle setorizado por conjunto.',
-      'Concebida segundo os rigorosos critérios da certificação LEED Core & Shell v4 — nível Platinum, a torre entrega autonomia integral por geradores (mínimo de 24 horas para 100% do prédio), 8 elevadores sociais com chamada antecipada, 497 vagas de garagem preparadas para recarga elétrica e futuro mall de conveniência na praça térrea. Com a Octis (Tenant Representation), sua empresa acessa estudo de ocupação gratuito e negociação estruturada via LOI.',
+      'Implantada em um terreno de 9.500 m² na Avenida Vereador José Diniz, 3465, a Viva Torre Corporativa fica na divisa entre Santo Amaro, Campo Belo, Brooklin e Moema. O projeto de arquitetura internacional combina volumes envidraçados escalonados com praças arborizadas e jardins no térreo que deixam o entorno mais agradável para colaboradores e visitantes.',
+      'São 19 pavimentos tipo somando cerca de 24.000 m² BOMA, com lajes regulares entre 1.200 m² e 1.308 m². A especificação facilita a montagem do escritório: pé-direito livre de 3,00 metros do piso elevado ao forro (4,14 m piso a piso), piso elevado de 15 cm, sobrecarga de 450 kg/m² e ar-condicionado VRF com controle separado por conjunto.',
+      'Projetada nos critérios da certificação LEED Core & Shell v4 — nível Platinum, a torre entrega geradores com autonomia mínima de 24 horas para 100% do prédio, 8 elevadores sociais com chamada antecipada, 497 vagas de garagem preparadas para recarga elétrica e previsão de mall de serviços na praça térrea. Com a Octis (Tenant Representation), sua empresa recebe estudo de layout gratuito e apoio completo na negociação via LOI.',
     ],
     overviewEn: [
       'Positioned on a 9,500 sqm site at Avenida Vereador José Diniz, 3465, Viva Torre Corporativa sits at the intersection of Santo Amaro, Campo Belo, Brooklin, and Moema. Its internationally authored design features shifted glazed volumes anchored by landscaped plazas, hanging gardens, and shaded pedestrian areas built to support workplace wellbeing.',
@@ -1243,7 +1243,7 @@ export const buildingsData: BuildingDetail[] = [
       '50-bike storage facility with showers/lockers, loading docks, full BMS/CCTV, and future helipad provision',
     ],
     locationHighlightsPt: [
-      'Endereço na Av. Vereador José Diniz, 3465 — eixo estratégico entre Campo Belo, Brooklin, Moema e Santo Amaro',
+      'Endereço na Av. Vereador José Diniz, 3465 — ligação direta entre Campo Belo, Brooklin, Moema e Santo Amaro',
       'A apenas 3,8 km do Aeroporto de Congonhas, facilitando deslocamentos executivos regionais e nacionais',
       'Acesso ágil pelas avenidas dos Bandeirantes, Jornalista Roberto Marinho, Ibirapuera e Washington Luís',
       'Mobilidade sobre trilhos próxima às estações Campo Belo e Eucaliptos (Linha 5-Lilás) e futura estação Vereador José Diniz (Linha 17-Ouro)',
@@ -1408,7 +1408,7 @@ export const buildingsData: BuildingDetail[] = [
         altPt: 'Planta tipo do pavimento corporativo do Viva Torre Corporativa com core deslocado e vão aberto',
         altEn: 'Typical floorplan of Viva Torre Corporativa showing side elevator core and open office bay',
         captionPt: 'Planta tipo (~1.204 m² a 1.308 m²) — core concentrado e máximo aproveitamento de estações',
-        captionEn: 'Typical floorplan (~1,204 to 1,308 sqm) — side-core layout maximizing open workspace efficiency',
+        captionEn: 'Typical floorplan (~1,204 to 1,308 sqm) — side-core layout for open workspace efficiency',
         category: 'floorplan',
       },
       {

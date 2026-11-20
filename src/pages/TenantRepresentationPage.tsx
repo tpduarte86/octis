@@ -53,14 +53,14 @@ export function TenantRepresentationPage() {
         {
           icon: BarChart3,
           title: 'Economia de Tempo e Inteligência de Dados',
-          desc: 'Utilizamos banco de dados proprietário com valores reais de contratos fechados e comparativos de Custo Total de Ocupação (TCO) para gerar máximo poder de barganha.',
+          desc: 'Usamos banco de dados próprio com valores reais de contratos fechados e comparativos de Custo Total de Ocupação (TCO) para fortalecer o poder de negociação da empresa.',
         },
       ]
     : [
         {
           icon: Search,
-          title: 'Strategic Site Search & Selection',
-          desc: 'We map the market inventory—including off-market opportunities—to source optimal corporate offices, floorplates, industrial warehouses, and distribution centers.',
+          title: 'Site Search & Property Selection',
+          desc: 'We map available inventory—including off-market spaces—to source suitable corporate offices, floorplates, industrial warehouses, and distribution centers.',
         },
         {
           icon: ShieldCheck,
@@ -80,7 +80,7 @@ export function TenantRepresentationPage() {
         {
           icon: BarChart3,
           title: 'Time Savings & Proprietary Data Intelligence',
-          desc: 'We leverage closed transaction comps and structured Total Cost of Occupancy (TCO) benchmarks to create undeniable negotiating leverage.',
+          desc: 'We use closed transaction comps and structured Total Cost of Occupancy (TCO) benchmarks to strengthen your negotiating position.',
         },
       ];
 
@@ -99,7 +99,7 @@ export function TenantRepresentationPage() {
         {
           step: '03',
           title: 'Carta de Intenção (LOI)',
-          desc: 'Formalização simultânea de propostas comerciais iniciais (Letter of Intent) para colocar diferentes proprietários lado a lado e extrair as melhores condições financeiras.',
+          desc: 'Envio simultâneo de propostas comerciais iniciais (Letter of Intent) para colocar diferentes proprietários lado a lado e conseguir melhores condições financeiras.',
         },
         {
           step: '04',
@@ -121,7 +121,7 @@ export function TenantRepresentationPage() {
         {
           step: '03',
           title: 'Letter of Intent (LOI)',
-          desc: 'Issuing concurrent commercial proposals (LOIs) to benchmark competing landlords side by side and maximize rent-free periods and tenant improvement incentives.',
+          desc: 'Issuing concurrent commercial proposals (LOIs) to compare competing landlords side by side and negotiate stronger rent-free periods and fit-out incentives.',
         },
         {
           step: '04',
@@ -150,7 +150,7 @@ export function TenantRepresentationPage() {
         {
           criteria: 'Estratégia de Proposta',
           tenantRep: 'Cartas de Intenção (LOI) simultâneas gerando concorrência real',
-          traditional: 'Negociação isolada imóvel por imóvel sem alavancagem',
+          traditional: 'Negociação isolada imóvel por imóvel, com menos poder de barganha',
         },
         {
           criteria: 'Renovação e Lei do Inquilinato',
@@ -175,8 +175,8 @@ export function TenantRepresentationPage() {
           traditional: 'No spatial validation; fit-out bottlenecks discovered post-lease',
         },
         {
-          criteria: 'Bidding Leverage',
-          tenantRep: 'Concurrent Letters of Intent (LOIs) creating competitive tension',
+          criteria: 'Proposal Strategy',
+          tenantRep: 'Concurrent Letters of Intent (LOIs) creating real competition',
           traditional: 'Isolated property-by-property talks with weak bargaining power',
         },
         {
@@ -523,8 +523,8 @@ export function TenantRepresentationPage() {
             </h2>
             <p className="text-gray-600 text-sm sm:text-base font-light leading-relaxed">
               {isPt
-                ? 'A atuação de um representante exclusivo de inquilinos cobre toda a jornada imobiliária corporativa para proteger o caixa e a operação da empresa.'
-                : 'Dedicated occupier advisory spans every technical, commercial, and legal step required to protect corporate cash flow and operational continuity.'}
+                ? 'Um representante exclusivo de inquilinos acompanha cada etapa da busca ou renovação do imóvel para proteger o caixa e a rotina da empresa.'
+                : 'Dedicated occupier advisory covers every technical, commercial, and legal step needed to protect corporate cash flow and daily operations.'}
             </p>
           </div>
 

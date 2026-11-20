@@ -77,9 +77,9 @@ export const servicesData: ServiceDetail[] = [
       },
       {
         titlePt: 'Prazos Customizados',
-        titleEn: 'Tailored Maturities',
-        descPt: 'Estruturas de 5 a 15 anos com cronograma de amortização desenhado sob o fluxo do projeto.',
-        descEn: '5 to 15-year terms with customized payback schedules aligned to project cash flow.',
+        titleEn: 'Flexible Maturities',
+        descPt: 'Estruturas de 5 a 15 anos com amortização ajustada ao fluxo do projeto.',
+        descEn: '5 to 15-year terms with payback schedules aligned to project cash flow.',
       },
       {
         titlePt: 'Conexão Institucional',
@@ -181,17 +181,17 @@ export const servicesData: ServiceDetail[] = [
         questionPt: 'O CRI serve apenas para obras ou também para imóveis já prontos?',
         questionEn: 'Is a CRI solely for construction or also for completed properties?',
         answerPt:
-          'Serve para ambos. Além de financiar obras de incorporação e loteamentos, o CRI é uma ferramenta de ponta para proprietários de imóveis prontos com contratos de aluguel em andamento (galpões, escritórios, centros de distribuição) anteciparem anos de recebíveis e gerarem caixa imediato.',
+          'Serve para ambos. Além de financiar obras de incorporação e loteamentos, o CRI é uma alternativa prática para donos de imóveis prontos com contratos de aluguel ativos (galpões, escritórios, centros de distribuição) anteciparem recebíveis e fazerem caixa sem vender o bem.',
         answerEn:
-          'It serves both. Beyond funding ground-up construction, a CRI is a premier capital markets tool for owners of completed, income-producing properties (warehouses, office towers) to advance years of lease receivables into immediate cash.',
+          'It serves both. Beyond funding ground-up construction, a CRI lets owners of completed, income-producing properties (warehouses, office towers) advance years of lease receivables into upfront cash.',
       },
       {
         questionPt: 'Qual o volume financeiro usual para estruturação de um CRI?',
         questionEn: 'What is the typical transaction volume for structuring a CRI?',
         answerPt:
-          'Emissões de CRI costumam ser recomendadas para operações a partir de R$ 10 milhões a R$ 20 milhões, faixa na qual os custos de securitização, auditoria e registro CVM se tornam altamente eficientes frente aos juros bancários.',
+          'Emissões de CRI costumam fazer sentido a partir de R$ 10 milhões a R$ 20 milhões, faixa em que os custos de securitização, auditoria e registro na CVM compensam frente às taxas bancárias.',
         answerEn:
-          'CRI issuances are typically optimized for transaction volumes starting from R$ 10M to R$ 20M, where securitization, legal, and rating agency costs are most cost-effective relative to retail banking spreads.',
+          'CRI issuances generally make sense starting from R$ 10M to R$ 20M, where securitization, legal, and rating costs become competitive against commercial bank spreads.',
       },
     ],
   },
@@ -235,8 +235,8 @@ export const servicesData: ServiceDetail[] = [
       {
         titlePt: 'Carências & Fit-Out',
         titleEn: 'Rent-Free & Allowances',
-        descPt: 'Maximização de meses sem aluguel durante obras e subsídios concedidos pelo locador.',
-        descEn: 'Maximizing rent-free months during buildout and securing landlord tenant improvement allowances.',
+        descPt: 'Negociação de meses sem aluguel durante a obra e verbas de adequação pagas pelo locador.',
+        descEn: 'Negotiating rent-free months during buildout and landlord tenant improvement allowances.',
       },
       {
         titlePt: 'Escritórios & Galpões',
@@ -359,9 +359,9 @@ export const servicesData: ServiceDetail[] = [
     seoDescriptionPt: 'Enfrentando pedidos de aumento ou o dobro do aluguel em mercados aquecidos? Avaliamos se vale a pena ficar ou mudar e negociamos com dados reais de mercado.',
     seoDescriptionEn: 'Confronting steep rent hike demands in heated office and logistics markets? Octis evaluates staying vs relocating and leads data-backed commercial negotiations.',
     heroLeadPt:
-      'Atualmente, tanto o mercado de escritórios corporativos quanto o de galpões logísticos estão fortemente aquecidos nos principais eixos econômicos do país. Com a baixa vacância nas melhores regiões, diversos inquilinos têm sido surpreendidos com pedidos agressivos de aumento — em alguns casos, o proprietário chega a pedir o dobro do valor pago anteriormente. A Octis Real Estate assessora o locatário realizando uma pesquisa minuciosa de preços comparativos reais, ajudando a empresa a decidir se vale a pena ficar ou mudar (avaliando custos de obras, carências e transição) e assumindo a negociação comercial direta frente ao locador com base em nosso banco de dados.',
+      'Tanto o mercado de escritórios corporativos quanto o de galpões logísticos estão com baixa vacância nos principais polos do país. Por causa disso, vários inquilinos têm recebido pedidos altos de reajuste — em alguns casos chegando ao dobro do aluguel anterior. A Octis Real Estate levanta os preços de contratos realmente fechados na região, coloca na ponta do lápis se compensa ficar ou mudar (contando obra, carência e transição) e negocia direto com o proprietário apoiada na nossa base de dados.',
     heroLeadEn:
-      'Across São Paulo and major Brazilian business hubs, prime corporate office towers and logistics distribution parks are experiencing a surge in demand and tight vacancy rates. Emboldened by this market heating, landlords are aggressively demanding steep rent hikes — in some cases asking double the current rate. Octis Real Estate advises tenants through comprehensive research of actual closed transaction market comps, helping executive leadership decide strategically whether to stay or relocate, and leading direct commercial negotiations to reset terms to a fair, balanced market level.',
+      'Across São Paulo and major Brazilian business hubs, corporate office towers and logistics parks are operating with tight vacancy. Many landlords have used renewals to push steep rent hikes — in some cases asking double the current rate. Octis Real Estate audits actual closed lease comps, helps leadership run the numbers on staying versus relocating, and leads commercial negotiations directly with the landlord.',
     metrics: [
       {
         titlePt: 'Pesquisa de Comps Reais',
@@ -372,33 +372,33 @@ export const servicesData: ServiceDetail[] = [
       {
         titlePt: 'Ficar ou Mudar?',
         titleEn: 'Stay vs. Move Analysis',
-        descPt: 'Matriz comparativa completa: custos de obras, mudança e carências versus preço de permanência.',
-        descEn: 'Rigorous financial model comparing relocation fit-outs and rent-free periods against staying.',
+        descPt: 'Comparativo financeiro direto: custos de obra, mudança e carências frente ao valor de permanência.',
+        descEn: 'Direct financial model comparing relocation fit-outs and rent-free periods against staying.',
       },
       {
         titlePt: 'Mercados Aquecidos',
         titleEn: 'Heated Market Defense',
-        descPt: 'Inteligência comercial para conter aumentos desmedidos ou pedidos de valor dobrado.',
-        descEn: 'Strategic commercial leverage neutralizing aggressive rent hike demands or doubled rates.',
+        descPt: 'Dados de mercado para segurar aumentos fora da curva ou pedidos de valor dobrado.',
+        descEn: 'Market data and competing options to push back on aggressive rent hikes or doubled rates.',
       },
       {
         titlePt: 'Negociação Direta',
         titleEn: 'Direct Negotiation',
-        descPt: 'Condução institucional frente ao proprietário ou fundo gestor preservando o relacionamento.',
-        descEn: 'Institutional negotiation with landlords or REIT managers preserving business relationships.',
+        descPt: 'Condução comercial frente ao proprietário ou fundo gestor preservando o relacionamento.',
+        descEn: 'Commercial negotiation with landlords or REIT managers while preserving working relationships.',
       },
     ],
     scopePt: [
-      'Pesquisa aprofundada de mercado com preços comparativos de contratos recentes no mesmo raio geográfico',
-      'Análise estratégica de trade-off: custo de permanência vs. custos de mudança (obras, transporte, carências)',
+      'Levantamento de preços comparativos de contratos fechados recentemente no mesmo raio geográfico',
+      'Comparativo financeiro de ficar versus mudar (obra, transporte, devolução e meses de carência)',
       'Renegociação de valores de locação, prazos, multas e índices de reajuste (IPCA / IGP-M)',
       'Apoio completo em renovações de contrato de longo prazo e preservação do ponto comercial',
       'Adequação de espaço: devolução de áreas ociosas, expansão planejada ou sublocação autorizada',
       'Condução das tratativas frente a fundos imobiliários, incorporadoras e grandes proprietários',
     ],
     scopeEn: [
-      'In-depth market research extracting closed lease transaction comps in the immediate submarket',
-      'Strategic trade-off modeling: staying costs vs. relocation costs (fit-outs, relocation allowances, rent-free incentives)',
+      'Market research compiling closed lease comps in the immediate submarket',
+      'Financial stay-vs-move modeling (fit-out, moving costs, decommissioning, and rent-free incentives)',
       'Renegotiation of base rental rates, term extensions, break penalties, and inflation indices (IPCA vs. IGP-M)',
       'Full representation on long-term lease renewals and commercial goodwill protection',
       'Space rightsizing: footprint reduction for vacant space, planned expansion, or authorized subleasing',
@@ -652,8 +652,8 @@ export const servicesData: ServiceDetail[] = [
       {
         titlePt: 'Contratos de 5 a 20 Anos',
         titleEn: '5 to 20-Year Leases',
-        descPt: 'Total estabilidade com contratos atípicos garantindo a permanência contínua no mesmo local.',
-        descEn: 'Total operational continuity with long-term commercial leases protecting full facility occupancy.',
+        descPt: 'Estabilidade de longo prazo com contratos atípicos para manter a empresa no mesmo endereço.',
+        descEn: 'Long-term stability through atypical leases keeping operations at the same address.',
       },
       {
         titlePt: 'Opção de Recompra',
@@ -676,9 +676,9 @@ export const servicesData: ServiceDetail[] = [
     ],
     scopePt: [
       'Transformação do imóvel próprio em dinheiro líquido no caixa sem interrupção de atividades',
-      'Contratos atípicos de locação de 5 a 20 anos garantindo permanência pacífica e continuidade do negócio',
+      'Contratos atípicos de locação de 5 a 20 anos para manter a empresa operando no mesmo endereço',
       'Possibilidade de estipular opção de recompra (buyback) do ativo pelo proprietário a valor pré-determinado',
-      'Recursos livres para expansão, compra de equipamentos, aquisições estratégicas ou pagamento de dívidas caras',
+      'Recursos livres para expansão, compra de equipamentos, novas aquisições ou pagamento de dívidas caras',
       'Apresentação direta a fundos imobiliários (FIIs) e investidores com capital líquido alocado para SLB',
       'Modelagem do cap rate e do valor de aluguel compatível com a saúde financeira de longo prazo da empresa',
     ],
@@ -733,17 +733,17 @@ export const servicesData: ServiceDetail[] = [
         titlePt: 'Redes de Varejo, Hospitais e Faculdades',
         titleEn: 'Retailers, Healthcare & Education',
         descPt:
-          'Operações consolidadas em pontos estratégicos que buscam captar milhões para expandir filiais e abrir novas unidades.',
+          'Operações já firmadas em bons pontos comerciais que buscam capital para abrir novas filiais e unidades.',
         descEn:
-          'Chains occupying prime real estate seeking tens of millions to expand new branches, stores, and campuses.',
+          'Chains in established locations raising capital to open new branches, stores, and campuses.',
       },
       {
-        titlePt: 'Empresas em Desalavancagem Financeira',
-        titleEn: 'Companies Deleveraging Balance Sheets',
+        titlePt: 'Empresas em Redução de Dívida',
+        titleEn: 'Companies Reducing Debt',
         descPt:
-          'Companhias que desejam quitar dívidas bancárias caras e substituir juros por um aluguel operacional dedutível no IR.',
+          'Companhias que desejam quitar dívidas bancárias caras e trocar juros por um aluguel operacional dedutível no IR.',
         descEn:
-          'Enterprises seeking to extinguish expensive commercial bank debt and replace interest with deductible lease payments.',
+          'Enterprises looking to pay off expensive bank debt and replace interest with deductible lease payments.',
       },
     ],
     faqs: [
@@ -751,25 +751,25 @@ export const servicesData: ServiceDetail[] = [
         questionPt: 'Minha empresa corre o risco de ser despejada no Sale & Leaseback?',
         questionEn: 'Does our company face any eviction risk during a Sale & Leaseback?',
         answerPt:
-          'Não. O contrato de Sale & Leaseback é atípico e de longo prazo (5 a 20 anos), com cláusulas rígidas que garantem a posse pacífica da sua empresa. O investidor adquire o imóvel exatamente com o objetivo de mantê-lo alugado para a sua empresa pelo prazo acordado.',
+          'Não. O contrato de Sale & Leaseback é atípico e de longo prazo (5 a 20 anos), com cláusulas firmes que protegem a permanência da sua empresa. O investidor compra o imóvel justamente para mantê-lo alugado para vocês durante todo o período combinado.',
         answerEn:
-          'No. A Sale & Leaseback contract is a long-term atypical lease (5 to 20 years) with robust protections ensuring uninterrupted occupancy. The institutional investor acquires the asset specifically to collect steady rent from your company.',
+          'No. A Sale & Leaseback contract is a long-term atypical lease (5 to 20 years) with strong protections for uninterrupted occupancy. The institutional investor buys the asset specifically to keep it leased to your company.',
       },
       {
         questionPt: 'Como funciona a opção de recompra do imóvel (buyback)?',
         questionEn: 'How does the buyback repurchase option work?',
         answerPt:
-          'A estrutura contratual pode prever a prerrogativa exclusiva de a sua empresa recomprar o imóvel ao término do contrato (ou em janelas periódicas) por um preço pré-determinado ou indexado à inflação, assegurando que o ativo possa retornar ao patrimônio pleno no futuro.',
+          'O contrato pode prever o direito exclusivo de a sua empresa recomprar o imóvel ao final do prazo (ou em janelas combinadas) por um preço pré-definido ou corrigido pela inflação, deixando aberta a volta do ativo ao patrimônio da companhia.',
         answerEn:
-          'The contract can establish an exclusive option for your company to repurchase the facility upon lease maturity (or during set windows) at a pre-agreed valuation, ensuring the asset can return to corporate ownership.',
+          'The contract can establish an exclusive option for your company to repurchase the facility at lease maturity (or during agreed windows) at a pre-set valuation, leaving the door open to reacquire the property.',
       },
       {
         questionPt: 'Qual o prazo dos contratos de Sale & Leaseback estruturados pela Octis?',
         questionEn: 'What is the term length for Sale & Leaseback contracts with Octis?',
         answerPt:
-          'Os contratos estruturados pela Octis variam tipicamente de 5 a 20 anos, sendo desenhados sob medida para o planejamento financeiro e a vocação operacional de cada empresa.',
+          'Os contratos costumam variar de 5 a 20 anos, ajustados ao planejamento financeiro e ao ciclo operacional de cada empresa.',
         answerEn:
-          'Contracts structured by Octis typically range from 5 to 20 years, tailored specifically to each company’s operational and strategic capital planning.',
+          'Contracts typically range from 5 to 20 years, matched to each company’s financial and operational horizon.',
       },
     ],
   },
@@ -785,12 +785,12 @@ export const servicesData: ServiceDetail[] = [
     shortTitleEn: 'Equity Partners & Joint Ventures',
     seoTitlePt: 'Sócios Investidores, Parcerias & Permutas Imobiliárias | Octis',
     seoTitleEn: 'Real Estate Equity Partners, Joint Ventures & Land Swaps | Octis',
-    seoDescriptionPt: 'Conectamos donos de terrenos e incorporadoras a sócios investidores com capital para viabilizar loteamentos, prédios e empreendimentos.',
+    seoDescriptionPt: 'Conectamos donos de terrenos e incorporadoras a sócios investidores com capital para tirar loteamentos, prédios e empreendimentos do papel.',
     seoDescriptionEn: 'Connecting landowners and developers to institutional equity partners, joint ventures, and structured land swaps across Brazil.',
     heroLeadPt:
-      'Conectamos proprietários de terrenos e projetos imobiliários a incorporadoras sólidas e investidores com capital líquido para iniciar, acelerar ou expandir empreendimentos residenciais, comerciais e loteamentos. Estruturamos permutas físicas e financeiras bem modeladas, entrada de sócios investidores (equity) e parcerias estratégicas com gestores de fundos imobiliários com governança e transparência.',
+      'Conectamos proprietários de terrenos e projetos imobiliários a incorporadoras sérias e investidores com capital disponível para iniciar, acelerar ou expandir empreendimentos residenciais, comerciais e loteamentos. Atuamos em permutas físicas e financeiras, entrada de sócios investidores (equity) e parcerias com gestores de fundos imobiliários com regras claras desde o começo.',
     heroLeadEn:
-      'We match land owners and real estate projects with reputable builders and institutional equity partners to kickstart or accelerate residential communities, commercial towers, and land developments. We structure physical and financial land swaps, equity co-investments, and strategic joint ventures with professional governance.',
+      'We match landowners and real estate projects with vetted builders and equity partners to launch or expand residential communities, commercial buildings, and subdivisions. We structure physical and financial land swaps, equity co-investments, and joint ventures with clear governance.',
     metrics: [
       {
         titlePt: 'Aporte de Capital',
@@ -801,8 +801,8 @@ export const servicesData: ServiceDetail[] = [
       {
         titlePt: 'Permutas Estruturadas',
         titleEn: 'Structured Land Swaps',
-        descPt: 'Permutas físicas ou financeiras que valorizam a terra muito mais do que a venda à vista com desconto.',
-        descEn: 'Physical and financial land swaps maximizing land value far beyond discounted cash sales.',
+        descPt: 'Permutas físicas ou financeiras que rendem bem mais ao dono do terreno do que a venda à vista com desconto.',
+        descEn: 'Physical and financial land swaps delivering stronger returns than discounted cash sales.',
       },
       {
         titlePt: 'Alinhamento & Governança',
@@ -868,17 +868,17 @@ export const servicesData: ServiceDetail[] = [
         titlePt: 'Proprietários de Terrenos e Glebas',
         titleEn: 'Landowners & Plot Holders',
         descPt:
-          'Donos de terrenos que desejam rentabilizar sua área participando dos lucros do empreendimento, em vez de vender com deságio.',
+          'Donos de terrenos que querem participar do resultado do empreendimento em vez de vender a área com deságio.',
         descEn:
-          'Landowners seeking to maximize land returns by partnering in development profits rather than selling at steep cash discounts.',
+          'Landowners looking to capture development returns rather than selling at steep cash discounts.',
       },
       {
         titlePt: 'Incorporadoras e Loteadoras',
         titleEn: 'Developers & Builders',
         descPt:
-          'Empresas que buscam terrenos estratégicos com permuta ou parceiros financeiros com capital para viabilizar novos lançamentos.',
+          'Empresas que buscam áreas bem localizadas em permuta ou sócios com capital para novos lançamentos.',
         descEn:
-          'Builders seeking prime development sites via land swaps or co-investors to fuel pipeline launches.',
+          'Builders seeking well-located development sites via land swaps or co-investors for new launches.',
       },
       {
         titlePt: 'Investidores de Capital Privado',
@@ -902,9 +902,9 @@ export const servicesData: ServiceDetail[] = [
         questionPt: 'Como a Octis seleciona as incorporadoras parceiras?',
         questionEn: 'How does Octis select builder and developer partners?',
         answerPt:
-          'Trabalhamos exclusivamente com incorporadoras e construtoras com histórico comprovado de entregas no prazo, saúde financeira auditada e governança sólida, garantindo que o dono da terra esteja plenamente respaldado.',
+          'Trabalhamos com incorporadoras e construtoras que têm histórico real de entregas no prazo, balanço saudável e boa governança, protegendo o dono do terreno do início ao fim da obra.',
         answerEn:
-          'We partner exclusively with developers and builders possessing audited balance sheets, on-time delivery track records, and solid corporate governance, ensuring landowners are completely safeguarded.',
+          'We partner with developers and builders that have audited balance sheets, on-time delivery records, and solid corporate governance to protect the landowner from start to finish.',
       },
       {
         questionPt: 'Como são divididos os lucros e responsabilidades na parceria?',

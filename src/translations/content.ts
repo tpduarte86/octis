@@ -227,7 +227,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       h1SrOnly: ' — Análises e Discussões Reddit de Real Estate',
       h1Sub: 'Transações e Funding Imobiliário • São Paulo & Brasil',
       description:
-        'Conectamos você a quem quer comprar, alugar ou financiar seu imóvel. Cuidamos de compra, venda, aluguel comercial, renegociação de contratos e estruturação de funding via CRI com excelência técnica e foco em resultados em todo o Brasil.',
+        'Conectamos você a quem quer comprar, alugar ou financiar seu imóvel. Atuamos em compra e venda, locação comercial, renegociação de contratos e operações de CRI em todo o Brasil.',
       ctaServices: 'Nossos Serviços',
       ctaContact: 'Falar com a Equipe',
       cred1Title: 'Financiamento de Obras',
@@ -241,7 +241,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       badge: 'Sobre a Octis',
       title: 'Soluções imobiliárias completas.',
       p1: 'Com sede em São Paulo e atuação nos principais polos do Brasil, a Octis Real Estate conecta proprietários, empresas e incorporadoras a compradores, inquilinos e investidores. Assessoramos compra e venda, aluguel, Sale & Leaseback e levantamento de recursos via dívida ou equity.',
-      p2: 'Nosso trabalho é focado: entendemos o potencial do imóvel, encontramos os interessados certos e conduzimos negociações com excelência técnica.',
+      p2: 'Nosso trabalho é direto: entendemos o potencial do imóvel, chegamos aos interessados certos e conduzimos a negociação até a assinatura.',
       p3: 'Atendemos todos os tipos de imóveis: residencial (incorporadores), loteamentos, galpões, prédios comerciais e terrenos para construção.',
       point1Title: 'Securitização (CRI)',
       point1Desc: 'Recursos para incorporadoras, loteamentos e novos projetos.',
@@ -252,7 +252,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       point4Title: 'Foco em Fechar Negócio',
       point4Desc: 'Processo objetivo, técnico e com segurança jurídica.',
       cardBadge: 'Nosso Objetivo',
-      cardDesc: 'Estruturar transações imobiliárias sólidas e viabilizar financiamento para obras.',
+      cardDesc: 'Conduzir negócios imobiliários bem estruturados e levantar recursos para obras.',
     },
     services: {
       badge: 'O Que Fazemos',
@@ -313,7 +313,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           description: 'Sua empresa vende o imóvel próprio onde já funciona e continua no mesmo local pagando aluguel de longo prazo, liberando milhões de reais para o caixa, com opção de recompra.',
           points: [
             'Transformar o imóvel próprio em dinheiro na conta da empresa',
-            'Contratos de aluguel de 5 a 20 anos garantindo a continuidade do negócio',
+            'Contratos de aluguel de 5 a 20 anos para manter a operação no mesmo local',
             'Opção de recompra do ativo pelo proprietário a um preço pré-determinado',
             'Recursos livres para expansão, compra de máquinas ou pagamento de dívidas',
             'Apresentação direta a investidores e fundos imobiliários com dinheiro na mão',
@@ -378,7 +378,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       stat2Desc: 'Negociações concluídas em galpões, prédios comerciais, loteamentos e residenciais.',
       stat3Number: 'Todas as Classes',
       stat3Label: 'Do Imóvel Simples ao Padrão AAA',
-      stat3Desc: 'Soluções sob medida para o tamanho e a necessidade de cada cliente.',
+      stat3Desc: 'Atendimento ajustado ao porte e ao momento de cada cliente.',
       boxTitle: 'Como Trabalhamos com Você',
       commitments: [
         { title: 'Comunicação Direta', desc: 'Conversas claras, objetivas e sem termos complicados.' },
@@ -422,7 +422,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
                 heading: '1. O que faz um Tenant Representative?',
                 paragraphs: [
                   'Na prática, o representante exclusivo do ocupante conduz cinco frentes  para proteger os interesses da empresa contratante:',
-                  '• Busca e seleção: Mapeia o mercado (incluindo imóveis off-market) e encontra os melhores espaços comerciais, escritórios, galpões ou centros de distribuição que atendem às metas estratégicas da companhia.', 
+                  '• Busca e seleção: Mapeia o mercado (incluindo imóveis fora de portais) e encontra os melhores espaços comerciais, escritórios, galpões ou centros de distribuição para o perfil da empresa.', 
                   '• Ausência de conflito de interesses: Como trabalha apenas para o inquilino, não há lealdade dividida com o dono do imóvel.',
                   '• Negociação de termos do contrato: Negocia valores de aluguel, prazos, carências, verbas para reformas (fit-out), cláusulas de reajuste (IPCA vs. IGP-M), multas de rescisão e condições de renovação.', 
                   '• Apoio técnico e jurídico: Atua junto com arquitetos (test-fit gratuito) e auxilia a validar viabilidade técnica e conformidade com a Lei do Inquilinato.',
@@ -486,14 +486,14 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
                 ],
               },
               {
-                heading: '4. Negociação extrajudicial estratégica antes do litígio',
+                heading: '4. Negociação fora dos tribunais antes do litígio',
                 paragraphs: [
-                  'O objetivo principal da empresa não deve ser entrar em litígio judicial prolongado, mas sim construir uma posição de negociação sólida. Notificações formais bem redigidas, acompanhadas de pesquisa detalhada de preços comparativos e da sinalização de alternativas reais de mudança caso o proprietário mantenha pedidos desmedidos, revertem a pressão para o lado do locador.',
-                  'Proprietários e gestores de fundos sabem que um imóvel corporativo ou galpão vago gera prejuízo imediato com taxa de condomínio, IPTU e custos de comercialização. Uma negociação estruturada com assessoria especializada quase sempre alcança a repactuação satisfatória.',
+                  'O objetivo principal da empresa não é entrar em uma disputa judicial longa, mas chegar à mesa com argumentos sólidos. Notificações formais bem embasadas, junto com pesquisa de preços comparativos e opções reais de mudança caso o locador mantenha pedidos fora da curva, mudam o peso da conversa.',
+                  'Proprietários e gestores de fundos sabem que um escritório ou galpão vago gera custo imediato com condomínio, IPTU e nova comercialização. Com dados na mão e assessoria experiente, na maioria dos casos o acordo sai sem precisar judicializar.',
                 ],
               },
             ],
-            conclusion: 'A Octis Real Estate audita contratos de locação corporativa, elabora laudos técnicos de mercado e conduz negociações de reequilíbrio econômico para empresas em todo o território nacional.',
+            conclusion: 'A Octis Real Estate revisa contratos de locação corporativa, produz levantamentos técnicos de mercado e conduz negociações de reequilíbrio para empresas em todo o país.',
           },
         },
         {
@@ -502,48 +502,48 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           category: 'Renegociação de Aluguel',
           readTime: '5 min',
           date: '25 de Março de 2026',
-          summary: 'Com os mercados de escritórios corporativos e galpões logísticos aquecidos, proprietários têm solicitado aumentos expressivos — em certos casos pedindo até o dobro do valor. Entenda como decidir estrategicamente entre ficar ou mudar e como negociar com base em dados reais de mercado.',
+          summary: 'Com os mercados de escritórios corporativos e galpões logísticos aquecidos, proprietários têm pedido aumentos altos — às vezes até o dobro do valor atual. Veja como fazer a conta entre ficar ou mudar e negociar com base em contratos reais.',
           takeaways: [
-            'Os mercados de escritórios corporativos e galpões logísticos estão altamente aquecidos, e diversos outros inquilinos relatam a mesma pressão por aumentos expressivos.',
-            'Em alguns casos, o proprietário chega a solicitar o dobro do valor atual do aluguel, gerando apreensão sobre a continuidade da operação.',
-            'A Octis realiza pesquisa de mercado criteriosa com preços comparativos de transações reais recentes na região.',
-            'Apoiamos o inquilino no cálculo estratégico de trade-off: custo de permanência vs. custos de mudança (obras, transporte, carências e incentivos).',
-            'Conduzimos a negociação comercial direta frente ao proprietário amparados por banco de dados robusto para garantir um valor justo e sustentável.',
+            'Os mercados de escritórios corporativos e galpões logísticos estão bem aquecidos, e muitos inquilinos relatam a mesma pressão por reajustes altos.',
+            'Em alguns casos, o proprietário chega a pedir o dobro do aluguel atual, colocando em dúvida a permanência no endereço.',
+            'A Octis levanta preços comparativos de contratos fechados recentemente na mesma região.',
+            'Ajudamos o inquilino a colocar na ponta do lápis o custo de ficar frente ao custo de mudar (obras, mudança, carências e incentivos).',
+            'Conduzimos a negociação comercial direto com o proprietário usando dados reais de mercado para chegar a um valor equilibrado.',
           ],
           content: {
-            intro: 'Atualmente, tanto o mercado de lajes corporativas quanto o de galpões logísticos vivem um momento de forte aquecimento em São Paulo e nos principais eixos econômicos do país. Diante de baixas taxas de vacância e escassez de espaços prontos, proprietários e fundos imobiliários têm adotado posturas intransigentes nas renovações, exigindo aumentos agressivos de preço. Em situações extremas, locadores chegam a pedir o dobro do valor praticado no contrato anterior. Diversos outros inquilinos corporativos estão enfrentando exatamente o mesmo problema simultaneamente.',
+            intro: 'Tanto o mercado de lajes corporativas quanto o de galpões logísticos passam por um momento de baixa vacância em São Paulo e nos principais polos do país. Com menos espaços prontos disponíveis, proprietários e fundos imobiliários têm endurecido nas renovações e pedido reajustes altos. Em casos extremos, chegam a cobrar o dobro do contrato anterior — uma pressão que várias empresas estão enfrentando ao mesmo tempo.',
             sections: [
               {
-                heading: '1. O contexto de mercado aquecido em escritórios e galpões',
+                heading: '1. Por que escritórios e galpões estão pressionados',
                 paragraphs: [
-                  'A recuperação da demanda por escritórios de alto padrão e a contínua expansão das malhas de distribuição logística e e-commerce comprimiram a oferta de imóveis bem localizados. Esse aquecimento gerou um ambiente favorável aos proprietários, que aproveitam os ciclos de vencimento ou revisão para tentar impor saltos exponenciais na locação.',
-                  'Quando a empresa recebe uma notificação exigindo 50%, 80% ou até o dobro do aluguel vigente, a primeira reação é de espanto. No entanto, é fundamental não reagir no improviso e não aceitar pedidas unilaterais sem antes investigar a veracidade desse suposto "novo patamar de mercado". Diversas outras empresas estão na mesma situação e negociando firmemente.',
+                  'A retomada da procura por escritórios bem localizados e a expansão das operações de logística e e-commerce enxugaram a oferta de imóveis prontos. Com isso, muitos proprietários aproveitam o vencimento ou a revisional do contrato para tentar puxar o valor do metro quadrado bem acima da inflação.',
+                  'Quando chega uma notificação pedindo 50%, 80% ou o dobro do aluguel atual, o susto é natural. Mas não convém responder no impulso nem aceitar a pedida sem checar se a vizinhança realmente está fechando contratos nesse nível. Outras empresas da região estão passando pela mesma situação e negociando firme.',
                 ],
               },
               {
-                heading: '2. Pesquisa de mercado e preços comparativos reais',
+                heading: '2. Pesquisa de mercado com contratos reais',
                 paragraphs: [
-                  'A alegação do proprietário de que "o mercado mudou e agora vale o dobro" frequentemente embute uma gordura desmedida de especulação. Para nivelar o jogo, a Octis Real Estate entra em campo desenvolvendo uma pesquisa aprofundada de mercado.',
-                  'Analisamos não os preços de anúncio em portais (que costumam ser inflados e irreais), mas os valores por metro quadrado efetivamente contratados em transações recentes de imóveis de padrão equivalente na mesma microrregião. Esse levantamento técnico revela com precisão até onde o mercado de fato subiu e onde começa o exagero do locador.',
+                  'Quando o proprietário diz que "o mercado dobrou", quase sempre existe uma boa margem de pedido especulativo ali. Para equilibrar a conversa, a Octis faz um levantamento próprio na microrregião.',
+                  'Em vez de olhar apenas preços de anúncio em portais (que costumam ficar acima do valor fechado), levantamos o preço por metro quadrado efetivamente contratado em imóveis parecidos no entorno. Esse dado mostra onde termina o reajuste real do mercado e onde começa o exagero.',
                 ],
               },
               {
-                heading: '3. Ficar ou Mudar? A análise estratégica de decisão da Octis',
+                heading: '3. Ficar ou Mudar? Como fazer a conta certa',
                 paragraphs: [
-                  'Diante da pressão de aumento, toda empresa se depara com o dilema: vale a pena aceitar um reajuste para continuar no imóvel atual ou faz mais sentido mudar para outro endereço? Para responder a isso com segurança matemática, a Octis coloca na ponta do lápis uma matriz comparativa completa:',
-                  'Avaliamos o Custo de Permanência sob uma repactuação orientada pelo preço justo de mercado versus o Custo de Mudança (obras de adequação, cabeamento, transporte, projeto de layout e desmobilização). Simultaneamente, mapeamos edifícios e condomínios logísticos alternativos que oferecem incentivos agressivos, como meses de carência total no aluguel e subsídios para obras de melhoria.',
-                  'Com esse diagnóstico em mãos, a diretoria da empresa consegue tomar uma decisão racional e pragmática, sem agir sob pressão ou medo de despejo.',
+                  'Diante de um pedido alto de aumento, surge a dúvida prática: compensa pagar mais para ficar ou sair para outro imóvel? Para responder com números, a Octis monta um comparativo completo:',
+                  'Cruzamos o custo de permanecer no endereço atual (já em um valor realista de mercado) com o custo total de mudança — incluindo obra de adaptação, cabeamento, transporte, projeto e devolução do imóvel atual. Ao mesmo tempo, mapeamos prédios ou galpões concorrentes que ofereçam meses de carência e ajuda de custo para reforma.',
+                  'Com essa planilha na mesa, a diretoria decide com clareza e sem ceder à pressa ou ao receio de ficar sem alternativa.',
                 ],
               },
               {
-                heading: '4. Negociação comercial frente ao proprietário com base em banco de dados',
+                heading: '4. Negociação comercial apoiada em dados de mercado',
                 paragraphs: [
-                  'Seja para assegurar a permanência pelo valor correto, seja para estipular o tempo necessário para uma transição planejada, a Octis assume a linha de frente da negociação comercial junto ao proprietário ou fundo gestor.',
-                  'Municiados por nosso banco de dados de mercado e pelo mapeamento concreto de opções concorrentes na região, demonstramos ao locador que a empresa possui alternativas reais e que a pedida inicial é inviável perante a realidade do setor. Para o proprietário, a recusa em negociar de forma razoável carrega um custo severo: o risco de vacância imprevista, a obrigação de arcar com condomínio e IPTU pesados do imóvel desocupado e a perda de um inquilino adimplente. Essa abordagem institucional traz o valor para patamares sensatos, preservando o caixa da empresa.',
+                  'Seja para renovar por um valor justo ou ganhar fôlego para uma mudança organizada, a Octis vai à mesa de negociação direto com o proprietário ou gestor do fundo.',
+                  'Com nossa base de contratos fechados e opções reais cotadas na vizinhança, mostramos que a empresa tem para onde ir se a pedida ficar fora da realidade. Para o locador, perder um bom inquilino significa arcar com meses de imóvel vazio, condomínio, IPTU e nova comissão. Essa conversa franca costuma trazer o aluguel de volta para um patamar razoável.',
                 ],
               },
             ],
-            conclusion: 'A Octis Real Estate apoia empresas em todo o Brasil na defesa do seu custo de ocupação frente a pedidos de aumento, combinando inteligência de mercado, análise de permanência versus mudança e negociação comercial de alto nível.',
+            conclusion: 'A Octis Real Estate atua ao lado de empresas em todo o Brasil para conter aumentos fora da curva, combinando levantamento de mercado, conta de ficar versus mudar e negociação direta com o locador.',
           },
         },
         {
@@ -591,7 +591,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
                 ],
               },
             ],
-            conclusion: 'A Octis Real Estate oferece consultoria especializada em Tenant Representation e gestão contratual, assegurando que sua empresa nunca perca prazos decisivos e negocie sempre na melhor posição de mercado.',
+            conclusion: 'A Octis Real Estate assessora empresas em Tenant Representation e gestão de contratos para que prazos importantes não passem despercebidos e a renovação aconteça em boa posição.',
           },
         },
         {
@@ -608,25 +608,25 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
             'Incorporadoras financiam canteiros de obras e loteamentos com cronogramas aderentes à velocidade do projeto.',
           ],
           content: {
-            intro: 'O Certificado de Recebíveis Imobiliários (CRI) se consolidou como uma das ferramentas mais eficientes do mercado de capitais brasileiro. Ele serve tanto para incorporadoras viabilizarem canteiros de obras quanto para proprietários de imóveis prontos alugados gerarem liquidez imediata para suas empresas.',
+            intro: 'O Certificado de Recebíveis Imobiliários (CRI) virou uma das alternativas mais usadas no mercado de capitais brasileiro. Serve tanto para incorporadoras bancarem o andamento de obras quanto para donos de imóveis prontos e alugados levantarem caixa sem se desfazer do bem.',
             sections: [
               {
                 heading: '1. Como o CRI funciona na prática: Obras e Imóveis Alugados',
                 paragraphs: [
-                  'Em obras e loteamentos, a incorporadora possui recebíveis futuros de unidades vendidas a prazo. Em vez de aguardar anos pelo recebimento parcelado enquanto arca com os custos da construção, a securitizadora antecipa esse fluxo emitindo CRIs lastreados nas vendas futuras.',
-                  'Para proprietários de imóveis prontos (como galpões logísticos e prédios comerciais já alugados), o CRI é uma ferramenta poderosa de geração de caixa: antecipam-se os fluxos dos contratos de aluguel em andamento, liberando capital à vista no caixa do proprietário sem que ele precise vender a propriedade.',
-                  'É fundamental destacar que a Octis Real Estate não é uma securitizadora emissora: atuamos como consultores especializados conectando incorporadoras e proprietários diretamente a securitizadoras e fundos imobiliários com liquidez imediata.',
+                  'Em obras e loteamentos, a incorporadora tem parcelas a receber das unidades vendidas a prazo. Em vez de esperar anos pelos pagamentos enquanto precisa arcar com a construção, a securitizadora antecipa esse fluxo emitindo CRIs lastreados nas vendas futuras.',
+                  'Para proprietários de imóveis prontos (como galpões logísticos e prédios comerciais já alugados), o CRI funciona para fazer caixa rápido: antecipam-se os recebíveis dos contratos de locação ativos e o dinheiro entra à vista, mantendo o imóvel no patrimônio do dono.',
+                  'Vale deixar claro que a Octis Real Estate não é uma securitizadora emissora: atuamos na originação e estruturação, conectando incorporadoras e proprietários diretamente a securitizadoras e fundos com apetite para a operação.',
                 ],
               },
               {
                 heading: '2. Por que o CRI é vantajoso frente aos bancos tradicionais',
                 paragraphs: [
-                  'Diferente dos empréstimos bancários que exigem reciprocidades pesadas e demoram meses para aprovação de medições, as emissões de CRI têm cronogramas desenhados sob medida para a realidade do canteiro ou do fluxo de locação.',
-                  'Além disso, o custo efetivo total costuma ser mais previsível e transparente, sem a obrigação de manter saldos médios parados ou adquirir pacotes de produtos bancários.',
+                  'Diferente dos empréstimos bancários que pedem reciprocidades altas e demoram meses na aprovação de medições, a emissão de CRI pode ter cronograma ajustado ao ritmo real da obra ou do contrato de aluguel.',
+                  'O custo total da operação também costuma ficar mais claro desde o início, sem exigência de saldo médio parado nem contratação de pacotes de produtos bancários.',
                 ],
               },
             ],
-            conclusion: 'Na Octis Real Estate, conectamos proprietários de imóveis e incorporadoras diretamente às principais securitizadoras e investidores com capital na mão para viabilizar suas operações.',
+            conclusion: 'Na Octis Real Estate, aproximamos proprietários e incorporadoras das securitizadoras e investidores certos para colocar a operação de pé.',
           },
         },
         {
@@ -644,13 +644,13 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
             'O valor do aluguel é lançado como despesa operacional na contabilidade da empresa.',
           ],
           content: {
-            intro: 'Muitas indústrias, redes de varejo e prestadores de serviços mantêm grande parte do seu patrimônio travada em imóveis próprios. No entanto, o negócio principal dessas companhias é produzir, vender ou prestar serviços, e não a especulação imobiliária.',
+            intro: 'Muitas indústrias, redes de varejo e prestadores de serviços mantêm boa parte do seu capital presa em imóveis próprios. Mas o negócio principal dessas companhias é produzir, vender ou atender clientes, não carregar patrimônio imobiliário parado.',
             sections: [
               {
                 heading: '1. O conceito de Sale & Leaseback e a Opção de Recompra',
                 paragraphs: [
-                  'A operação consiste em duas etapas simultâneas: a venda do imóvel para um investidor e a assinatura imediata de um contrato atípico de locação de longo prazo. A empresa compradora torna-se proprietária e a empresa vendedora passa a ser inquilina.',
-                  'O prazo contratual é flexível, variando tipicamente de 5 a 20 anos, assegurando total tranquilidade para a continuidade do negócio. Além disso, a estrutura pode prever para o proprietário uma opção de recompra do ativo (buyback option) ao término do contrato por um preço pré-determinado ou indexado, permitindo recuperar a propriedade plena no futuro.',
+                  'A operação acontece em duas pontas simultâneas: venda do imóvel para um investidor e assinatura imediata de um contrato atípico de locação de longo prazo. Quem compra vira proprietário; quem vende segue operando ali como inquilino.',
+                  'O prazo costuma ir de 5 a 20 anos, dando previsibilidade para a continuidade do negócio. Também é possível incluir uma opção de recompra (buyback) ao final do contrato, com valor pré-definido ou corrigido por índice, caso a empresa queira retomar o imóvel no futuro.',
                 ],
               },
               {
@@ -798,10 +798,10 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
             title: 'Representação exclusiva sem conflito de interesses, LOI competitiva e economia real',
             paragraphs: [
               'Uma consultoria de Tenant Representation (representação exclusiva de ocupantes ou inquilinos) atua exclusivamente na defesa dos interesses da empresa que vai alugar ou comprar um imóvel — e nunca do proprietário. Ao contrário do corretor tradicional de carteira, não há lealdade dividida com o locador.',
-              'Na prática, o Tenant Representative conduz 5 pilares: (1) busca e seleção estratégica em todo o mercado; (2) atuação 100% isenta de conflito de interesses; (3) negociação de aluguel, prazos, carências, verbas de reforma (fit-out), índice (IPCA vs. IGP-M) e multas; (4) apoio técnico e jurídico com arquitetos (test-fit gratuito) e advogados sob a Lei do Inquilinato; e (5) economia de tempo com banco de dados de contratos fechados.',
-              'O processo segue 4 fases claras: 1. Estratégia e Planejamento; 2. Vistorias e Comparações de Custo Total de Ocupação (TCO); 3. Carta de Intenção (LOI) colocando proprietários em competição lado a lado; e 4. Fechamento do Contrato até a assinatura.',
+              'Na prática, o trabalho de Tenant Representation cobre cinco frentes: (1) busca e seleção em todo o mercado; (2) atuação sem conflito de interesses; (3) negociação de aluguel, prazos, carências, verba de reforma (fit-out), índice (IPCA x IGP-M) e multas; (4) apoio técnico com arquitetos (test-fit gratuito) e suporte à área jurídica na Lei do Inquilinato; e (5) economia de tempo usando dados reais de contratos fechados.',
+              'O processo segue quatro etapas: 1. Planejamento; 2. Visitas e comparação do Custo Total de Ocupação (TCO); 3. Carta de Intenção (LOI) colocando proprietários em disputa lado a lado; e 4. Fechamento do contrato até a assinatura.',
             ],
-            whyOctis: 'A Octis Real Estate entrega representação exclusiva de inquilinos em São Paulo e nos principais polos (RJ, MG, Região Sul e corredores logísticos), com test-fit arquitetônico gratuito e inteligência de dados proprietária.',
+            whyOctis: 'A Octis Real Estate atende empresas ocupantes em São Paulo e em outros polos do Brasil (RJ, MG, Região Sul e corredores logísticos), com test-fit arquitetônico gratuito e base própria de contratos fechados.',
           },
         },
         {
@@ -816,11 +816,11 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           octisAnswer: {
             title: 'Pesquisa comparativa de mercado, análise de permanência e negociação com dados reais',
             paragraphs: [
-              'O mercado logístico de fato tem operado aquecido, mas aumentos unilaterais repentinos frequentemente extrapolam a média real do raio logístico. O primeiro passo é levantar preços comparativos efetivamente fechados na região para confrontar a pedida do locador.',
-              'Além disso, vocês estão a 8 meses do término do contrato de 5 anos — exatamente dentro da janela decadencial do Artigo 51 da Lei do Inquilinato (entre 1 ano e 6 meses antes do término), garantindo o direito à renovação compulsória caso preencham os requisitos legais.',
-              'A Octis avalia o custo de ficar versus mudar para galpões alternativos (com carências e incentivos) e assume a negociação comercial com o proprietário municiada por dados de transações reais, demonstrando o risco de vacância e custos de condomínio/IPTU para trazer o valor a um patamar equilibrado.',
+              'O mercado logístico está realmente aquecido, mas pedidos altos de uma hora para outra costumam passar da média efetiva da região. O primeiro passo é levantar contratos fechados recentemente no mesmo raio para testar se a pedida faz sentido.',
+              'Outro ponto importante: faltam 8 meses para encerrar o contrato de 5 anos — ou seja, vocês estão dentro da janela do Artigo 51 da Lei do Inquilinato (entre 1 ano e 6 meses antes do término), o que dá respaldo legal para a renovação compulsória se os demais requisitos estiverem em ordem.',
+              'A Octis coloca na conta o custo de ficar frente ao de mudar para galpões concorrentes (já descontando carências e incentivos) e negocia direto com o proprietário com base em contratos reais, deixando claro o custo de vacância, condomínio e IPTU para chegar a um valor equilibrado.',
             ],
-            whyOctis: 'A Octis Real Estate assessora empresas locatárias com pesquisa de mercado proprietária, análise comparativa e condução de negociações comerciais com fundos e proprietários, garantindo a permanência do negócio sem aumentos desproporcionais.',
+            whyOctis: 'A Octis Real Estate atua ao lado de inquilinos com levantamento próprio de mercado, comparativo financeiro e negociação direta com fundos e proprietários para evitar reajustes fora da curva.',
           },
         },
         {
@@ -835,11 +835,11 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           octisAnswer: {
             title: 'Mercado aquecido, pesquisa de preços comparativos reais e negociação comercial com base em dados',
             paragraphs: [
-              'O cenário relatado é real e generalizado: os mercados de escritórios corporativos e galpões logísticos estão altamente aquecidos em São Paulo e nos principais polos do país. Com a baixa vacância nas melhores regiões, diversos outros inquilinos estão enfrentando exatamente a mesma pressão, e de fato não são raros os casos em que o locador chega a pedir o dobro do aluguel pago até então.',
-              'A Octis ajuda sua empresa primeiro através de uma pesquisa de mercado aprofundada, levantando preços comparativos reais de contratos efetivamente assinados na região (e não os valores de anúncio, que costumam ser inflados). Isso permite verificar se a pedida do locador tem respaldo real ou se é pura tentativa de teste de mercado.',
-              'Com esses dados em mãos, colocamos na ponta do lápis a decisão estratégica: vale a pena ficar ou mudar? Mapeamos imóveis alternativos com condições atrativas, carências e test-fit gratuito, calculando os custos reais de uma eventual mudança contra o custo de permanência. Municiados por essas alternativas concretas e pelo nosso banco de dados, assumimos a negociação comercial diretamente frente ao proprietário. Mostramos ao locador que a empresa possui opções reais e que a vacância gerará custos pesados de condomínio e IPTU para ele, trazendo o valor para um patamar justo e equilibrado.',
+              'Essa situação está acontecendo com muita gente: escritórios e galpões vivem um momento de baixa vacância em São Paulo e em outros polos. Por causa disso, vários locadores têm testado limites na renovação — e não é raro ver pedidos próximos do dobro do aluguel anterior.',
+              'O primeiro passo da Octis é levantar os valores de contratos realmente fechados na região, deixando de lado os preços de anúncio que costumam ficar inflados. Assim fica fácil ver se a pedida acompanha o mercado ou está fora da realidade.',
+              'Com os números em mãos, fazemos a conta de ficar versus mudar. Buscamos imóveis alternativos com boas condições, carências e test-fit gratuito, comparando o gasto real de mudança com o custo de permanecer. Tendo outras opções concretas e dados de contratos fechados, vamos à mesa com o proprietário mostrando que perder o inquilino traz vacância, condomínio e IPTU no colo dele — o que costuma puxar o valor para um patamar mais justo.',
             ],
-            whyOctis: 'A Octis Real Estate atua como consultora especializada de Tenant Representation, oferecendo inteligência mercadológica, banco de dados comparativo e negociação comercial firme para que sua empresa decida o melhor caminho e não seja refém de aumentos abusivos.',
+            whyOctis: 'A Octis Real Estate assessora empresas ocupantes com dados reais da região, cotação de alternativas e negociação comercial firme para que a decisão não seja tomada no escuro.',
           },
         },
         {
@@ -855,10 +855,10 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
             title: 'Atenção máxima: O prazo decadencial do Artigo 51, § 5º da Lei 8.245/91',
             paragraphs: [
               'Infelizmente procede. O Artigo 51, § 5º da Lei nº 8.245/1991 determina que a Ação Renovatória de locação não residencial deve ser proposta no intervalo entre um ano e seis meses antes da data de encerramento do contrato.',
-              'Esse prazo é de natureza decadencial: ele não se suspende e não se interrompe por emails, mensagens de WhatsApp, notificações de cartório ou conversas amigáveis. Ao deixar o prazo ultrapassar o marco de 6 meses antes do vencimento, a empresa decai irreversivelmente do direito à renovação compulsória.',
-              'Sem a proteção do Artigo 51, o locador ganha a prerrogativa de exigir desocupação imotivada (denúncia vazia) ou impor aumentos arbitrários. Nesse cenário, a saída é estruturar imediatamente uma negociação de Tenant Representation profissional para apresentar alternativas reais de mudança ou pactuar novo contrato sem interrupção de atividades.',
+              'Esse prazo é de natureza decadencial: ele não se suspende e não se interrompe por emails, mensagens de WhatsApp, notificações de cartório ou conversas amigáveis. Ao deixar o prazo ultrapassar o marco de 6 meses antes do vencimento, a empresa perde o direito à renovação compulsória.',
+              'Sem a proteção do Artigo 51, o locador pode exigir a devolução do imóvel (denúncia vazia) ou pedir reajustes mais altos. Nesse caso, o caminho mais seguro é iniciar logo um trabalho de Tenant Representation para mapear opções reais de mudança ou negociar um novo contrato sem parar a operação.',
             ],
-            whyOctis: 'A Octis monitora preventivamente o calendário contratual de locatários corporativos com 18 a 14 meses de antecedência, assegurando que o prazo do Artigo 51 seja preservado como trunfo máximo de negociação.',
+            whyOctis: 'A Octis acompanha o vencimento de contratos com 14 a 18 meses de antecedência para que a janela do Artigo 51 não se perca na mesa de negociação.',
           },
         },
         {
@@ -888,7 +888,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           upvotes: 247,
           commentsCount: 38,
           question: 'Vale a pena emitir CRI para financiar obra ou antecipar aluguéis, ou o financiamento bancário padrão ainda é melhor?',
-          context: 'Estamos planejando um novo empreendimento residencial em São Paulo. O banco tradicional está pedindo reciprocidades altas, exigindo aplicações e com um processo de medição lento que pode atrasar o canteiro. Além disso, temos outros imóveis locados e queremos gerar caixa. O CRI serve para ambos?',
+          context: 'Estamos planejando um novo empreendimento residencial em São Paulo. O banco tradicional está pedindo reciprocidades altas, exigindo aplicações e com um processo de medição lento que pode atrasar o canteiro. Também temos outros imóveis locados e queremos gerar caixa. O CRI serve para os dois casos?',
           octisAnswer: {
             title: 'Por que a conexão a securitizadoras via Octis supera o crédito bancário tradicional',
             paragraphs: [
@@ -913,7 +913,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
               'Na operação de Sale & Leaseback, a empresa vende o imóvel e assina no mesmo instante um contrato de locação de longo prazo (de 5 a 20 anos), com opção de recompra do ativo pelo proprietário ao final do período por um preço pré-determinado, além de cláusulas atípicas que garantem a posse ininterrupta do espaço.',
               'Sua empresa não altera a rotina produtiva, mantém a mesma equipe no mesmo local e transforma dezenas de milhões de reais em caixa livre para aplicar na atividade principal, gerar margem ou quitar passivos caros.',
             ],
-            whyOctis: 'A Octis Real Estate é líder nesse modelo de negociação. Temos relacionamento direto com os maiores fundos imobiliários e family offices compradores do Brasil, assegurando o melhor valor de venda para o seu imóvel, opção de recompra estruturada e aluguéis equilibrados.',
+            whyOctis: 'A Octis Real Estate trabalha de perto com os principais fundos imobiliários e family offices compradores do Brasil, buscando bom preço de venda, opção de recompra bem definida e aluguel compatível com o caixa da empresa.',
           },
         },
         {
@@ -928,7 +928,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           octisAnswer: {
             title: 'Conexão direta com investidores de renda através da Octis Real Estate',
             paragraphs: [
-              'Imóveis comerciais e industriais de renda não devem ser tratados como imóveis residenciais avulsos. O comprador desse segmento busca taxa de retorno (yield), qualidade do inquilino e solidez do contrato.',
+              'Imóveis comerciais e industriais de renda não devem ser tratados como imóveis residenciais avulsos. O comprador desse segmento busca taxa de retorno (yield), qualidade do inquilino e segurança do contrato.',
               'Imobiliárias comuns raramente têm acesso a quem investe milhões em imóveis comerciais. Trabalhar com quem tem compradores diretos faz toda a diferença.',
             ],
             whyOctis: 'A Octis Real Estate apresenta o seu galpão diretamente a compradores e investidores com capital alocado para fechar negócio com eficiência e segurança.',
@@ -947,9 +947,9 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
             title: 'CRI de loteamento: a solução ideal conduzida pela Octis Real Estate',
             paragraphs: [
               'O setor de loteamentos tem uma particularidade: a maior parte dos gastos acontece antes de qualquer entrada de receita, e as vendas são parceladas em 60 a 180 meses. Bancos tradicionais fogem desse modelo.',
-              'O CRI resolve esse descasamento com perfeição, emitindo títulos garantidos pelos recebíveis dos futuros compradores e liberando o montante à vista para cobrir os custos das obras urbanas.',
+              'O CRI resolve esse descasamento de forma direta, emitindo títulos lastreados nos recebíveis dos compradores e liberando o montante à vista para bancar as obras de infraestrutura.',
             ],
-            whyOctis: 'A Octis Real Estate atende loteadoras em todo o país, viabilizando o dinheiro direto com investidores para o loteamento sair do papel rápido.',
+            whyOctis: 'A Octis Real Estate atende loteadoras em todo o país e conecta o projeto direto a investidores para tirar as obras do papel sem travar o caixa.',
           },
         },
         {
@@ -1010,7 +1010,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         {
           category: 'Sobre a Octis',
           question: 'O que faz a Octis Real Estate?',
-          answer: 'Conectamos proprietários, empresas e incorporadoras a quem quer comprar, alugar ou investir. Conduzimos compra, venda, locação comercial, Sale & Leaseback e financiamento de obras via CRI com excelência técnica e foco em resultados.',
+          answer: 'Conectamos proprietários, empresas e incorporadoras a quem quer comprar, alugar ou investir. Atuamos em compra e venda, locação comercial, Sale & Leaseback e financiamento de obras via CRI.',
         },
         {
           category: 'CRI & Incorporadoras',
@@ -1035,7 +1035,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         {
           category: 'Atuação Geográfica',
           question: 'Onde fica a Octis Real Estate e onde vocês atuam?',
-          answer: 'Nossa sede fica em São Paulo (SP) e atendemos clientes em todo o Brasil, viabilizando negócios e recursos em qualquer estado.',
+          answer: 'Nossa sede fica em São Paulo (SP) e atendemos clientes em todo o Brasil, conduzindo negócios e captações em qualquer estado.',
         },
       ],
     },
@@ -1075,7 +1075,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       submitBtn: 'Enviar Mensagem',
     },
     footer: {
-      description: 'Conectamos você aos melhores compradores, inquilinos e recursos para obras via CRI. Compra, venda, aluguel comercial, renegociação de contratos e Sale & Leaseback com excelência técnica e foco em resultados em todo o Brasil.',
+      description: 'Conectamos você aos compradores, inquilinos e securitizadoras certas. Compra e venda, locação comercial, renegociação de contratos, CRI e Sale & Leaseback em todo o Brasil.',
       location: 'São Paulo, SP — Atuação Nacional',
       navTitle: 'Navegação',
       solutionsTitle: 'Soluções',
@@ -1152,7 +1152,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         {
           title: 'Structured Funding & Receivables Monetization (CRI)',
           tag: 'Capital & Liquidity',
-          description: 'We connect developers, corporations, and property owners directly to premier securitizers and funds. CRI finances new construction and allows income-property owners to monetize future lease receivables into immediate upfront liquidity.',
+          description: 'We connect developers, corporations, and property owners directly to leading securitizers and funds. CRI finances new construction and allows income-property owners to turn future lease receivables into immediate upfront cash.',
           points: [
             'Direct connection of property owners and developers to top securitization firms',
             'Construction debt for residential towers, subdivisions, and logistics parks',
@@ -1198,7 +1198,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         {
           title: 'Sale & Leaseback (Sell and Stay)',
           tag: 'Unlock Company Cash',
-          description: 'Your company sells its current operational property and leases it back long-term, unlocking millions in cash, with a pre-determined buyback repurchase option.',
+          description: 'Your company sells its operational property and leases it back long-term, freeing up millions in cash, with a pre-agreed repurchase option.',
           points: [
             'Turn owned real estate into liquid cash for business operations',
             '5 to 20-year leases securing complete operational continuity',
@@ -1266,7 +1266,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       stat2Desc: 'Executed across industrial warehouses, commercial towers, subdivisions, and residential projects.',
       stat3Number: 'All Classes',
       stat3Label: 'From Entry-Level to Class AAA',
-      stat3Desc: 'Tailored execution matched to the exact size and objective of every client.',
+      stat3Desc: 'Execution matched to the exact size and goal of every client.',
       boxTitle: 'Our Operating Philosophy',
       commitments: [
         { title: 'Direct Communication', desc: 'Clear, transparent dialogue without unnecessary jargon.' },
@@ -1309,9 +1309,9 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
               {
                 heading: '1. What Does a Tenant Representative Do?',
                 paragraphs: [
-                  'An exclusive occupier advisor manages five strategic pillars to protect corporate cash flow and real estate agility:',
+                  'An exclusive occupier advisor works across five practical areas to protect corporate cash flow:',
                   '• Market search and selection: Maps available and off-market corporate offices, floorplates, warehouses, and distribution centers. • Zero conflict of interest: Works strictly for the tenant with no divided loyalty toward the landlord.',
-                  '• Lease term negotiation: Negotiates base rent, duration, rent-free months, fit-out (TI) allowances, inflation indices (IPCA vs. IGP-M), break penalties, and renewal rights. • Technical and legal support: Coordinates architects (free test-fit studies) and legal counsel for Brazilian Tenancy Law compliance. • Time savings and data intelligence: Leverages closed transaction comps to maximize bargaining leverage.',
+                  '• Lease term negotiation: Negotiates base rent, duration, rent-free months, fit-out (TI) allowances, inflation indices (IPCA vs. IGP-M), break penalties, and renewal rights. • Technical and legal support: Coordinates architects (free test-fit studies) and legal counsel for Brazilian Tenancy Law compliance. • Time savings and market data: Uses closed transaction comps to back up every counter-offer.',
                 ],
               },
               {
@@ -1371,7 +1371,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
               {
                 heading: '4. Strategic Out-of-Court Negotiation Before Litigation',
                 paragraphs: [
-                  'A company’s primary objective should not be prolonged courtroom litigation, but establishing institutional negotiating leverage. Formal notices backed by verified comp data and ready legal filings reverse pressure onto the landlord.',
+                  'A company’s primary objective should not be prolonged courtroom litigation, but building a solid negotiating position. Formal notices backed by verified comp data and ready legal filings shift the pressure back onto the landlord.',
                   'Landlords recognize that vacant office floors or industrial bays incur immediate operating deficits in service charges, municipal taxes, and remarketing fees. Skilled advisory achieves consensual renegotiation in the vast majority of cases.',
                 ],
               },
@@ -1389,31 +1389,31 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           takeaways: [
             'Corporate office and logistics submarkets are running hot, with numerous corporate tenants confronting aggressive landlord rent increase demands.',
             'In extreme cases, landlords demand double the current contract rate, placing severe pressure on operational margins.',
-            'Octis conducts comprehensive market research using actual closed transaction comparables rather than inflated listing prices.',
-            'We guide tenants through a rigorous decision analysis: staying costs vs. relocation costs (fit-outs, relocation allowances, rent-free incentives).',
-            'We lead direct commercial negotiations with landlords, leveraging proprietary transactional data to reset rental terms to fair market levels.',
+            'Octis conducts thorough market research using actual closed transaction comparables rather than inflated listing prices.',
+            'We guide tenants through a clear decision analysis: staying costs vs. relocation costs (fit-outs, moving expenses, rent-free incentives).',
+            'We lead direct commercial negotiations with landlords, using real transaction data to bring rental terms back to fair market levels.',
           ],
           content: {
-            intro: 'Across São Paulo and major Brazilian business hubs, prime corporate office towers and logistics distribution parks are experiencing a surge in demand and tight vacancy rates. Emboldened by this market heating, institutional landlords and property owners are taking an aggressive stance during contract renewals — in several instances demanding double the existing lease rate. Numerous corporate tenants are facing this exact dilemma simultaneously.',
+            intro: 'Across São Paulo and major Brazilian business hubs, prime corporate office towers and logistics distribution parks are experiencing strong demand and tight vacancy rates. Backed by this heated market, institutional landlords and property owners are taking a tougher stance during renewals — in several instances asking double the current rent. Many corporate tenants are running into this exact same pressure.',
             sections: [
               {
                 heading: '1. The Reality of Heated Office and Logistics Markets in Brazil',
                 paragraphs: [
-                  'Strong occupier absorption, limited speculative supply, and the rapid expansion of e-commerce networks have driven vacancy down across prime commercial corridors. Landlords leverage renewal or adjustment dates to impose exponential rental rate increases.',
-                  'When an enterprise receives a formal notice demanding 50%, 80%, or even 100% rent increases, initial executive reaction is often shock. However, it is essential not to negotiate blindly or accept unilateral demands without rigorously auditing whether the submarket actually supports such elevated claims.',
+                  'Strong occupier absorption, limited new supply, and e-commerce expansion have driven vacancy down across key commercial corridors. Landlords use renewal or adjustment dates to push steep rent increases.',
+                  'When a company receives a notice asking for 50%, 80%, or even 100% more rent, the first reaction is usually shock. Still, it is important not to negotiate blindly or accept unilateral demands without checking whether the submarket actually supports those numbers.',
                 ],
               },
               {
-                heading: '2. Deep Submarket Research and Real Closed Transaction Comps',
+                heading: '2. Submarket Research and Real Closed Transaction Comps',
                 paragraphs: [
-                  'A landlord’s assertion that "the market has doubled" frequently includes substantial speculative margin. Octis Real Estate levels the playing field by executing comprehensive submarket research.',
-                  'Rather than relying on asking rates from public real estate portals (which are routinely inflated), we audit actual effective closed transaction rates per square meter for comparable assets in the immediate submarket. This empirical data establishes exactly where fair market pricing lies and where landlord posturing ends.',
+                  'A landlord’s claim that "the market has doubled" often includes a wide speculative margin. Octis Real Estate evens the table through direct submarket research.',
+                  'Rather than relying on asking rates from public real estate portals (which are routinely inflated), we audit actual effective closed transaction rates per square meter for comparable assets in the immediate submarket. This empirical data shows where fair market pricing ends and where landlord posturing begins.',
                 ],
               },
               {
-                heading: '3. Staying vs. Relocating: The Octis Strategic Decision Model',
+                heading: '3. Staying vs. Relocating: The Financial Comparison',
                 paragraphs: [
-                  'Confronted with sharp increase demands, corporate leadership faces a pivotal question: is it worthwhile to accept a reasonable adjustment to stay, or does relocating to a new building make greater financial sense? Octis formulates a holistic financial model:',
+                  'Faced with sharp increase demands, leadership runs into a direct question: does it pay to accept a reasonable adjustment and stay, or does moving to another building make more sense? Octis puts the full math side by side:',
                   'We contrast the Cost of Staying (projected under a negotiated fair-market rate) against total Relocation Costs (tenant improvements, architectural design, IT cabling, moving logistics, and decommissioning). Simultaneously, we survey alternative corporate towers and industrial parks offering competitive incentives, including extensive rent-free periods (carências) and tenant improvement allowances.',
                   'Armed with this mathematical clarity, corporate management makes a confident, data-backed operational decision.',
                 ],
@@ -1474,7 +1474,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
                 ],
               },
             ],
-            conclusion: 'Octis Real Estate delivers Tenant Representation and lease portfolio management, ensuring occupiers never forfeit renewal rights and negotiate from peak market leverage.',
+            conclusion: 'Octis Real Estate delivers Tenant Representation and lease portfolio management so occupiers do not miss renewal windows and negotiate from a strong market footing.',
           },
         },
         {
@@ -1486,7 +1486,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           summary: 'Understand how CRIs raise capital via securitization firms to fund development construction and how owners of leased properties monetize receivables for immediate cash.',
           takeaways: [
             'Octis does not issue CRIs directly: we connect property owners and developers to leading securitization firms and institutional funds.',
-            'CRIs finance ground-up construction and horizontal subdivisions tailored to execution speed.',
+            'CRIs finance ground-up construction and horizontal subdivisions aligned with the build schedule.',
             'Property owners with existing active leases monetize future receivables to generate immediate liquidity without selling the asset.',
             'Structured non-bank capital with custom repayment terms aligned with asset cash flows.',
           ],
@@ -1498,23 +1498,23 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
                 paragraphs: [
                   'For developers and land subdivision firms, future receivables from installment sales are securitized to pay contractors, infrastructure, and building milestones upfront.',
                   'For owners of income-producing real estate (such as logistics warehouses and office buildings already leased to creditworthy tenants), a CRI monetization structure advances future lease payments directly into liquid cash, while the owner retains asset ownership.',
-                  'Crucially, Octis Real Estate is not a securitizer: we act as advisory partners structuring the transaction and connecting clients directly to licensed securitization firms and institutional capital funds.',
+                  'One clear point: Octis Real Estate is not a securitizer. We structure the case and connect clients directly to licensed securitization firms and institutional capital funds.',
                 ],
               },
               {
                 heading: '2. Advantages Over Traditional Bank Lending',
                 paragraphs: [
-                  'Unlike commercial bank loans that require extensive balance-sheet covenants and sluggish monthly measurement audits, CRI issuances are tailored to the physical construction schedule or rental stream.',
-                  'Overall funding costs are transparent, with no forced reciprocities or mandatory bundled banking products.',
+                  'Unlike commercial bank loans that require heavy balance-sheet covenants and slow monthly measurement audits, CRI issuances follow the actual construction schedule or rental stream.',
+                  'Overall funding costs are transparent, with no forced reciprocities or bundled banking products.',
                 ],
               },
             ],
-            conclusion: 'At Octis Real Estate, we connect developers and property owners directly to premier securitizers and institutional funds to secure optimal terms.',
+            conclusion: 'At Octis Real Estate, we connect developers and property owners directly to licensed securitizers and institutional funds.',
           },
         },
         {
           id: 'como-funciona-sale-and-leaseback',
-          title: 'Sale & Leaseback: Unlocking Corporate Cash from Real Estate Assets',
+          title: 'Sale & Leaseback: Turning Company Real Estate into Free Cash',
           category: 'Sale & Leaseback',
           readTime: '5 min',
           date: 'February 28, 2026',
@@ -1589,9 +1589,9 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
             intro: 'Selling a commercial property or industrial facility requires an institutional framework. Commercial buyers analyze cash flows, tenant covenant strength, and legal cleanliness.',
             sections: [
               {
-                heading: '1. The Crucial Role of Benchmark Pricing',
+                heading: '1. Why Realistic Pricing Matters',
                 paragraphs: [
-                  'Overpricing alienates serious institutional capital and leaves properties idle for years, accumulating municipal taxes, security, and maintenance overhead.',
+                  'Overpricing drives away serious institutional buyers and leaves properties sitting idle for years, accumulating municipal taxes, security, and maintenance overhead.',
                 ],
               },
             ],
@@ -1660,7 +1660,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       filters: ['All Lines of Business', 'Tenant Representation', 'Lease Renegotiation', 'CRI & Developers', 'Sale & Leaseback', 'Acquisitions & Dispositions', 'Land & Development'],
       searchPlaceholder: 'Search by topic or keyword...',
       verifiedBadge: 'Expert Answer • Octis Real Estate',
-      whyOctisBadge: 'Why Octis Real Estate is the premier advisory partner:',
+      whyOctisBadge: 'How Octis Real Estate helps in this case:',
       answersCount: 'replies',
       noResults: 'No questions found matching your search query.',
       clearFilters: 'Clear search filters',
@@ -1741,7 +1741,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
               'This cutoff is a statutory forfeiture deadline (prazo decadencial): it cannot be tolled or suspended by email negotiations, WhatsApp chats, or notary notices. Once the 6-month threshold is breached by even a single day, the tenant permanently loses the statutory right to compel lease extension.',
               'Without Article 51 protection, the landlord gains the right to demand unmotivated eviction (denúncia vazia) or impose arbitrary rental rates. In this posture, the company must immediately pivot to professional Tenant Representation to evaluate relocation options and negotiate a fresh contract without operational disruption.',
             ],
-            whyOctis: 'Octis Real Estate systematically monitors lease milestones 14 to 18 months ahead of expiration, safeguarding Article 51 statutory rights as prime negotiating leverage.',
+            whyOctis: 'Octis Real Estate tracks lease deadlines 14 to 18 months ahead of expiration, preserving Article 51 statutory rights as strong negotiating protection.',
           },
         },
         {
@@ -1776,9 +1776,9 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
             title: 'Why connecting to securitizers via Octis outperforms traditional bank lending',
             paragraphs: [
               'Traditional commercial bank loans impose rigid bureaucratic rules that rarely match the agility required on a modern construction site, alongside burdensome financial reciprocities.',
-              'Octis Real Estate does not issue CRI debt directly: we connect developers and property owners directly to premier securitization firms and institutional funds. CRI structures are not only for ground-up construction and subdivisions, but also enable owners of completed properties with active leases to generate upfront liquidity by anticipating future lease receivables without selling the asset.',
+              'Octis Real Estate does not issue CRI debt directly: we connect developers and property owners directly to active securitization firms and institutional funds. CRI structures are not only for ground-up construction and subdivisions, but also let owners of completed properties with active leases generate upfront cash by advancing future lease receivables without selling the asset.',
             ],
-            whyOctis: 'Octis Real Estate is the trusted partner: we connect the transaction directly to licensed securitizers with active placement capacity, whether to fund construction projects on tailored milestones or monetize rental receivables on income properties.',
+            whyOctis: 'Octis Real Estate connects the transaction directly to licensed securitizers with active placement capacity, whether to fund construction milestones or advance rental receivables on income properties.',
           },
         },
         {
@@ -1794,7 +1794,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
             title: 'Operational continuity, flexible 5 to 20-year term, and pre-agreed repurchase option',
             paragraphs: [
               'In a Sale & Leaseback transaction, the company sells the real estate asset and simultaneously signs a long-term lease (from 5 to 20 years), with a contractual option for the owner to repurchase the asset at the end of the term at a pre-determined price, backed by atypical commercial clauses guaranteeing continuous occupancy.',
-              'Your company keeps the exact same team, machinery, and operations in place while unlocking tens of millions in cash to reinvest into core activities, capture margins, or pay down expensive debt.',
+              'Your company keeps the exact same team, machinery, and operations in place while freeing up tens of millions in cash to reinvest in core activities, grow margins, or pay down expensive debt.',
             ],
             whyOctis: 'Octis Real Estate is a recognized leader in this deal structure. We maintain direct dialogue with Brazil’s top REITs and family offices, ensuring maximum asset valuation, structured buyback options, and balanced lease terms for your balance sheet.',
           },
@@ -1843,12 +1843,12 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           upvotes: 210,
           commentsCount: 34,
           question: 'I hold a well-located urban land parcel. Should I sell for cash or partner with a developer on a unit swap?',
-          context: 'Our family inherited a prime urban tract. We received low cash offers with steep discounts. We want to understand how to maximize value through development.',
+          context: 'Our family inherited a well-located urban tract. We received low cash offers with steep discounts. We want to understand how to get a better return through development.',
           octisAnswer: {
             title: 'Multiplying land equity with Octis Real Estate advisory',
             paragraphs: [
-              'Selling land under pressure almost always results in significant value loss. In contrast, entering a physical swap (receiving completed units) or financial swap (percentage of gross sales) can double or triple total land return.',
-              'The critical factor is selecting solvent developers with an impeccable delivery track record, backed by robust legal guarantees.',
+              'Selling land under pressure almost always leaves money on the table. Entering a physical swap (receiving completed units) or financial swap (percentage of gross sales) can double or triple the total return on the land.',
+              'What matters most is picking solvent developers with a solid delivery track record and clear legal protections in the contract.',
             ],
             whyOctis: 'Octis Real Estate analyzes the site’s highest-and-best use, qualifies solvent developers, and negotiates balanced partnership agreements across affordable, mid-market, or luxury segments.',
           },
@@ -1888,7 +1888,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         {
           category: 'Lease Renegotiation',
           question: 'The landlord is demanding a steep rent hike or double the rent claiming a heated market. How does Octis help?',
-          answer: 'Currently, corporate office and logistics distribution submarkets across Brazil are running hot, and numerous corporate tenants are experiencing aggressive rate hike demands — in several instances with landlords asking double the existing rent. Octis advises tenants through comprehensive research of actual closed transaction market comps, helping executive leadership decide strategically whether to stay or relocate (evaluating moving costs, fit-outs, and rent-free incentives). Leveraging our proprietary transactional database and alternative site surveys, we conduct direct commercial negotiations facing the landlord to reset terms to a fair, balanced market level.',
+          answer: 'Corporate office and logistics submarkets across Brazil are currently running hot, and many corporate tenants are facing sharp rent hike requests — in some cases with landlords asking double the current rate. Octis supports tenants with field research of actual closed lease comps, helping leadership compare the real math of staying versus moving (including fit-outs, moving costs, and rent-free periods). Using our closed-deal database and competing building options, we lead direct commercial talks with the landlord to bring terms back to fair market levels.',
         },
         {
           category: 'Lease Renegotiation',

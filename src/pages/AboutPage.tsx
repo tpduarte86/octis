@@ -65,12 +65,12 @@ export function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-4 font-normal">
-              {language === 'en' ? 'Our Operating Foundations' : 'Pilares da Nossa Atuação'}
+              {language === 'en' ? 'How We Work in Practice' : 'Como Atuamos na Prática'}
             </h2>
             <p className="text-gray-600 text-sm md:text-base font-light">
               {language === 'en'
-                ? 'We operate with practical discipline to ensure operations reach closing without unnecessary friction.'
-                : 'Trabalhamos com disciplina prática para garantir que as operações cheguem ao fechamento sem travas burocráticas.'}
+                ? 'We keep deals moving with clear numbers and direct communication, avoiding unnecessary delays.'
+                : 'Trabalhamos com foco prático e números claros para levar as operações ao fechamento sem travas burocráticas.'}
             </p>
           </div>
 
@@ -127,7 +127,7 @@ export function AboutPage() {
           </h2>
           <p className="text-gray-200 text-sm md:text-base font-light mb-8 max-w-xl mx-auto">
             {language === 'en'
-              ? 'Our team provides direct, transparent assessments tailored to your needs.'
+              ? 'Our team provides direct, transparent assessments matched to your specific asset.'
               : 'Nossa equipe atende com agilidade e clareza para avaliar a melhor alternativa para o seu ativo.'}
           </p>
           <div className="flex flex-wrap justify-center gap-4">

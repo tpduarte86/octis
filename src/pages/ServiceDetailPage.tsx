@@ -251,12 +251,12 @@ export function ServiceDetailPage({ slug: propSlug }: ServiceDetailPageProps) {
                 {isPt ? 'O Que Fazemos' : 'Scope of Execution'}
               </div>
               <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-4 font-normal">
-                {isPt ? 'Escopo Detalhado da Operação' : 'Comprehensive Service Scope'}
+                {isPt ? 'Escopo Detalhado da Operação' : 'Detailed Scope of Work'}
               </h2>
               <p className="text-gray-600 text-sm font-light leading-relaxed mb-8">
                 {isPt
-                  ? 'A Octis acompanha cada etapa do processo com rigor analítico, eliminando intermediários desnecessários e garantindo a defesa dos seus interesses.'
-                  : 'Octis guides every transaction phase with technical precision, eliminating friction and maximizing value realization.'}
+                  ? 'A Octis acompanha cada etapa da operação de perto, corta intermediários desnecessários e defende o seu lado da mesa.'
+                  : 'Octis stays involved through every step of the deal, cutting unnecessary middlemen and protecting your position at the table.'}
               </p>
 
               <div className="space-y-3.5">
@@ -284,8 +284,8 @@ export function ServiceDetailPage({ slug: propSlug }: ServiceDetailPageProps) {
               </h2>
               <p className="text-gray-600 text-sm font-light leading-relaxed mb-8">
                 {isPt
-                  ? 'Fluxo desenhado para acelerar conclusões e dar previsibilidade em cada estágio.'
-                  : 'A disciplined roadmap designed to eliminate delays and maximize capital certainty.'}
+                  ? 'Um roteiro claro para acelerar o fechamento e dar previsibilidade a cada etapa.'
+                  : 'A clear sequence of steps built to avoid delays and bring predictability to closing.'}
               </p>
 
               <div className="space-y-4">
@@ -324,8 +324,8 @@ export function ServiceDetailPage({ slug: propSlug }: ServiceDetailPageProps) {
             </h2>
             <p className="text-gray-600 text-sm font-light">
               {isPt
-                ? 'Estruturas desenhadas sob medida para atender perfis com necessidades claras de capital e ocupação.'
-                : 'Custom-tailored solutions for enterprises and property owners with precise capital requirements.'}
+                ? 'Operações montadas de acordo com o momento de caixa e a necessidade de espaço de cada empresa.'
+                : 'Deal structures built around the actual capital and occupancy needs of each business.'}
             </p>
           </div>
 
