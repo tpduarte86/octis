@@ -107,6 +107,14 @@ function applyHeadAndBody(
     }
   }
 
+  // Per Google Search Central Site Names guidelines, keep WebSite structured data strictly on the homepage
+  if (routePath !== '/') {
+    html = html.replace(
+      /\s*<!-- Dedicated Homepage-Only WebSite Schema for Google Search Site Name -->\s*<script id="octis-website-schema" type="application\/ld\+json">[\s\S]*?<\/script>/i,
+      ''
+    );
+  }
+
   // Inject pre-rendered React markup with route tag for safe hydration
   html = html.replace(
     '<div id="root"></div>',
