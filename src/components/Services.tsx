@@ -93,7 +93,8 @@ export function Services() {
                   </Link>
 
                   <Link
-                    to={`/contato?servico=${encodeURIComponent(slug)}`}
+                    to="/contato"
+                    state={{ servico: slug }}
                     className="text-xs font-medium text-gray-500 hover:text-gray-900 transition-colors inline-flex items-center"
                   >
                     {t.ctaConsult}

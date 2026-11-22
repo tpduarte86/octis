@@ -132,7 +132,8 @@ export function ServiceDetailPage({ slug: propSlug }: ServiceDetailPageProps) {
               
               <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
                 <Link
-                  to={`/contato?servico=${encodeURIComponent(service.slug)}`}
+                  to="/contato"
+                  state={{ servico: service.slug }}
                   className="px-7 py-3.5 bg-[#0a1d37] text-white hover:bg-[#081528] font-semibold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors shadow-xs"
                 >
                   {isPt ? 'Falar com Nossa Equipe' : 'Inquire With Our Team'} <ArrowRight className="w-4 h-4" />
@@ -414,7 +415,8 @@ export function ServiceDetailPage({ slug: propSlug }: ServiceDetailPageProps) {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              to={`/contato?servico=${encodeURIComponent(service.slug)}`}
+              to="/contato"
+              state={{ servico: service.slug }}
               className="px-8 py-3.5 bg-white text-[#0a1d37] hover:bg-gray-100 font-semibold text-xs uppercase tracking-wider inline-flex items-center gap-2 transition-colors"
             >
               {isPt ? 'Consultar Nossa Equipe' : 'Speak With Our Team'} <ArrowRight className="w-4 h-4" />

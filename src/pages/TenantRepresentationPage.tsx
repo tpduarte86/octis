@@ -456,7 +456,8 @@ export function TenantRepresentationPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
                 <Link
-                  to="/contato?servico=tenant-representation"
+                  to="/contato"
+                  state={{ servico: 'tenant-representation' }}
                   className="px-7 py-3.5 bg-[#0a1d37] text-white hover:bg-[#081528] font-semibold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors whitespace-nowrap shrink-0"
                 >
                   {isPt ? 'Falar com um Tenant Representative' : 'Speak With a Tenant Representative'}{' '}
@@ -753,7 +754,8 @@ export function TenantRepresentationPage() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <Link
-              to="/contato?servico=tenant-representation"
+              to="/contato"
+              state={{ servico: 'tenant-representation' }}
               className="px-8 py-3.5 bg-white text-[#0a1d37] hover:bg-gray-100 font-semibold text-xs uppercase tracking-wider inline-flex items-center gap-2 transition-colors whitespace-nowrap"
             >
               {isPt ? 'Iniciar Atendimento' : 'Start Consultation'} <ArrowRight className="w-4 h-4" />

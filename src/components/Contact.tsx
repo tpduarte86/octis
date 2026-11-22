@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Mail, ArrowUpRight, MapPin, Clock, CheckCircle } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/content';
 
 export function Contact() {
   const { language } = useLanguage();
+  const location = useLocation();
   const t = translations[language].contact;
 
   const [submitted, setSubmitted] = useState(false);
   const [selectedMandate, setSelectedMandate] = useState(t.mandates[0]?.value);
 
-  // Sync service query param after hydration for clean SSR/SSG parity
+  // Sync pre-selected service from router state (clean canonical URL) or legacy query param
   useEffect(() => {
-    const servico = new URLSearchParams(window.location.search).get('servico');
+    const stateServico = (location.state as { servico?: string } | null)?.servico;
+    const servico = stateServico || new URLSearchParams(location.search).get('servico');
     if (!servico) return;
 
     if (servico.includes('cri')) {
@@ -30,7 +33,7 @@ export function Contact() {
         language === 'en' ? 'Real Estate Development & Land' : 'Desenvolvimento Imobiliário & Terrenos'
       );
     }
-  }, [language]);
+  }, [language, location.state, location.search]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
