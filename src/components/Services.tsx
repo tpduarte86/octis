@@ -32,7 +32,8 @@ export function Services() {
   return (
     <section id="services" className="py-16 md:py-24 bg-white border-t border-gray-200 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        {/* 6 Comprehensive Service Cards */}
+        <h2 className="sr-only">{t.title}</h2>
+        {/* 6 Service Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {t.items.map((service, index) => {
             const Icon = serviceIcons[index % serviceIcons.length];

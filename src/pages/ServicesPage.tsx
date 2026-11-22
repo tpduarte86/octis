@@ -11,10 +11,10 @@ export function ServicesPage() {
   return (
     <div className="pt-20 min-h-screen bg-white text-gray-900">
       <SEOHead
-        titlePt="Serviços Imobiliários, Tenant Representation, Renegociação e CRI | Octis Real Estate"
-        titleEn="Real Estate Solutions, Tenant Representation, Lease Renegotiation & CRI | Octis Real Estate"
-        descriptionPt="Conheça os serviços da Octis Real Estate: Tenant Representation exclusiva de inquilinos com test-fit gratuito, renegociação de contratos, funding via CRI e Sale & Leaseback."
-        descriptionEn="Discover Octis Real Estate services: exclusive Tenant Representation with free test-fit, contract renegotiation, CRI funding, and Sale & Leaseback in Brazil."
+        titlePt="Serviços Imobiliários, Tenant Rep e CRI | Octis"
+        titleEn="Real Estate Advisory, Tenant Rep & CRI | Octis"
+        descriptionPt="Tenant Representation com test-fit gratuito, renegociação de aluguel, funding via CRI, Sale & Leaseback e compra e venda de imóveis no Brasil."
+        descriptionEn="Exclusive Tenant Representation with free test-fit, lease renegotiation, CRI funding, Sale & Leaseback, and commercial property brokerage."
         path="/servicos"
       />
 

@@ -12,10 +12,10 @@ export function BuildingsDirectoryPage() {
   return (
     <div className="pt-20 min-h-screen bg-white text-gray-900">
       <SEOHead
-        titlePt="Edifícios Corporativos & Conjuntos para Locação em São Paulo | Octis"
-        titleEn="Corporate Office Buildings & Suites for Lease in São Paulo | Octis"
-        descriptionPt="Seleção de edifícios corporativos em São Paulo com conjuntos e lajes para locação, faixas estimadas de valores e assessoria exclusiva de Tenant Representation com test-fit gratuito."
-        descriptionEn="Curated corporate office buildings in São Paulo with suites and floorplates for lease, indicative cost ranges, and exclusive Tenant Representation with free test-fit."
+        titlePt="Edifícios Corporativos para Locação em SP | Octis"
+        titleEn="Corporate Office Buildings for Lease in SP | Octis"
+        descriptionPt="Seleção de edifícios corporativos em São Paulo com conjuntos e lajes para locação, faixas estimadas de valores e Tenant Representation."
+        descriptionEn="Curated corporate office buildings in São Paulo with suites and floorplates for lease, indicative rent ranges, and Tenant Representation."
         path="/edificios"
       />
 

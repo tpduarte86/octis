@@ -12,6 +12,7 @@ export function Footer() {
 
   const footerNav = [
     { name: nav.home, path: '/' },
+    { name: language === 'en' ? 'About Us' : 'Quem Somos', path: '/quem-somos' },
     { name: nav.services, path: '/servicos' },
     { name: nav.development, path: '/imoveis' },
     { name: language === 'en' ? 'Corporate Buildings' : 'Edifícios Corporativos', path: '/edificios' },
@@ -64,9 +65,9 @@ export function Footer() {
           
           {/* Nav Links */}
           <div>
-            <h4 className="text-white font-serif text-base mb-4 border-b border-slate-800 pb-2">
+            <p className="text-white font-serif text-base mb-4 border-b border-slate-800 pb-2">
               {t.navTitle}
-            </h4>
+            </p>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               {footerNav.map((item) => (
                 <li key={item.path}>
@@ -80,9 +81,9 @@ export function Footer() {
           
           {/* Solutions Links */}
           <div>
-            <h4 className="text-white font-serif text-base mb-4 border-b border-slate-800 pb-2">
+            <p className="text-white font-serif text-base mb-4 border-b border-slate-800 pb-2">
               {t.solutionsTitle}
-            </h4>
+            </p>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
                 <Link to="/servicos/tenant-representation" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">

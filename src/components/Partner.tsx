@@ -12,7 +12,7 @@ export function Partner({ showHeader = true }: { showHeader?: boolean }) {
     <section id="leadership" className="py-20 md:py-28 bg-white border-t border-gray-200 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
-        {showHeader && (
+        {showHeader ? (
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -30,6 +30,8 @@ export function Partner({ showHeader = true }: { showHeader?: boolean }) {
               {t.subtitle}
             </p>
           </motion.div>
+        ) : (
+          <h2 className="sr-only">{t.title}</h2>
         )}
 
         {/* 3 Main Stat Cards (Clean White with Deep Navy Serifs) */}

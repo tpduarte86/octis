@@ -5,6 +5,72 @@ import { SEOHead } from '../components/SEOHead';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/content';
 
+const articleSeoMeta: Record<
+  string,
+  { titlePt: string; titleEn: string; descPt: string; descEn: string }
+> = {
+  'o-que-e-tenant-representation-guia-completo': {
+    titlePt: 'O que é Tenant Representation? Guia Completo | Octis',
+    titleEn: 'What Is Tenant Representation? Full Guide | Octis',
+    descPt: 'Entenda a representação exclusiva de inquilinos, as 4 fases do processo (da estratégia à LOI), test-fit gratuito e atuação em São Paulo e no Brasil.',
+    descEn: 'Learn how exclusive Tenant Representation works across 4 phases—from site search and TCO to competitive LOIs—for offices and warehouses in Brazil.',
+  },
+  'aumento-abusivo-aluguel-comercial-escritorios-galpoes': {
+    titlePt: 'Aumento Abusivo de Aluguel Comercial: Defesa | Octis',
+    titleEn: 'Excessive Commercial Rent Hikes: Defense | Octis',
+    descPt: 'Saiba como identificar aumentos desproporcionais de aluguel em escritórios e galpões, contestar o IGP-M e usar laudos de mercado na negociação.',
+    descEn: 'How to spot excessive landlord rent hikes in offices and warehouses, challenge IGP-M spikes, and use certified market appraisals in negotiations.',
+  },
+  'acao-revisional-de-aluguel-requisitos-e-prazos': {
+    titlePt: 'Aluguel em Mercado Aquecido: Ficar ou Mudar? | Octis',
+    titleEn: 'Heated Market Rent Hikes: Stay or Relocate? | Octis',
+    descPt: 'Proprietário pediu aumento alto ou o dobro do aluguel? Veja como comparar o custo de ficar ou mudar e negociar com base em contratos reais.',
+    descEn: 'Landlord asking double the rent in a heated market? Compare stay vs. relocation costs and negotiate commercial leases with real closed comps.',
+  },
+  'direitos-do-locatario-renovacao-contrato-aluguel-comercial': {
+    titlePt: 'Renovação Comercial: Artigo 51 e Prazo Fatal | Octis',
+    titleEn: 'Commercial Lease Renewal: Art. 51 Deadline | Octis',
+    descPt: 'Entenda o direito à renovação compulsória (Artigo 51 da Lei do Inquilinato), o prazo fatal de 1 ano a 6 meses antes do término e a proteção do ponto.',
+    descEn: 'Understand compulsory commercial lease renewal under Article 51 of Brazilian Tenancy Law, the fatal 1-year to 6-month filing window, and rights.',
+  },
+  'cri-para-incorporadoras-e-loteamentos': {
+    titlePt: 'CRI Imobiliário: Obras e Aluguéis Antecipados | Octis',
+    titleEn: 'Real Estate CRI: Construction & Lease Cash | Octis',
+    descPt: 'Veja como emitir CRI via securitizadoras para financiar obras e loteamentos ou gerar caixa antecipando aluguéis futuros de imóveis prontos.',
+    descEn: 'Learn how CRIs via securitization firms finance ground-up construction and let owners of leased properties advance future rental cash flows.',
+  },
+  'como-funciona-sale-and-leaseback': {
+    titlePt: 'Sale & Leaseback: Imóvel Próprio em Caixa | Octis',
+    titleEn: 'Sale & Leaseback: Turn Real Estate to Cash | Octis',
+    descPt: 'Saiba como vender prédios e galpões próprios e continuar ocupando o imóvel com contrato de 5 a 20 anos e opção de recompra definida.',
+    descEn: 'How companies sell owned offices or warehouses and lease them back for 5 to 20 years with operational continuity and a buyback option.',
+  },
+  'desenvolvimento-imobiliario-residencial-comercial': {
+    titlePt: 'Desenvolvimento Imobiliário: Econômico ao AAA | Octis',
+    titleEn: 'Real Estate Development: Entry to Class AAA | Octis',
+    descPt: 'Como estruturar empreendimentos residenciais, condomínios de galpões e prédios comerciais com sócios investidores, permutas e recursos de CRI.',
+    descEn: 'How to structure residential projects, logistics parks, and office towers in Brazil through equity partners, land swaps, and CRI funding.',
+  },
+  'venda-de-imoveis-comerciais-e-galpoes': {
+    titlePt: 'Venda de Imóveis Comerciais e Galpões | Octis',
+    titleEn: 'Selling Commercial Buildings & Warehouses | Octis',
+    descPt: 'Como precificar galpões e prédios comerciais pelo retorno (Cap Rate), organizar a documentação e apresentar o ativo a investidores qualificados.',
+    descEn: 'Essential steps to value leased warehouses and offices by Cap Rate, prepare documentation, and connect directly with institutional buyers.',
+  },
+  'cri-versus-financiamento-bancario-tradicional': {
+    titlePt: 'CRI ou Financiamento Bancário para Obras? | Octis',
+    titleEn: 'CRI Debt vs. Traditional Bank Construction | Octis',
+    descPt: 'Comparativo direto entre financiamento bancário tradicional e emissão de CRI para incorporadoras e loteadoras que buscam agilidade no canteiro.',
+    descEn: 'Direct comparison between traditional bank construction loans and CRI debt issuance for Brazilian real estate developers and subdivisions.',
+  },
+  'classes-de-imoveis-do-simples-ao-aaa': {
+    titlePt: 'Classes de Imóveis: Do Simples ao Padrão AAA | Octis',
+    titleEn: 'Real Estate Asset Classes: Entry to AAA | Octis',
+    descPt: 'Guia prático sobre as categorias de galpões, lajes corporativas e imóveis residenciais no Brasil e o perfil de comprador para cada padrão.',
+    descEn: 'Practical guide to industrial, office, and residential property classes in Brazil—from everyday operational assets to Class AAA towers.',
+  },
+};
+
 export function ArticleDetailPage() {
   const { id } = useParams<{ id: string }>();
   const { language } = useLanguage();
@@ -19,6 +85,10 @@ export function ArticleDetailPage() {
   }
 
   const otherArticles = t.articles.filter((a) => a.id !== article.id);
+  const seoMeta = articleSeoMeta[article.id];
+  const fallbackTitle = `${article.title.slice(0, 50).trim()} | Octis`;
+  const fallbackDesc =
+    article.summary.length > 155 ? `${article.summary.slice(0, 152).trim()}...` : article.summary;
 
   const handleShare = () => {
     if (navigator.clipboard) {
@@ -33,7 +103,7 @@ export function ArticleDetailPage() {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: article.title,
-    description: article.summary,
+    description: seoMeta ? (language === 'en' ? seoMeta.descEn : seoMeta.descPt) : fallbackDesc,
     url: `https://octis.com.br/reddit/${article.id}`,
     datePublished: '2026-03-25',
     dateModified: '2026-10-07',
@@ -57,10 +127,10 @@ export function ArticleDetailPage() {
   return (
     <div className="pt-20 min-h-screen bg-white text-gray-900">
       <SEOHead
-        titlePt={`${article.title} | Octis Real Estate`}
-        titleEn={`${article.title} | Octis Real Estate`}
-        descriptionPt={article.summary}
-        descriptionEn={article.summary}
+        titlePt={seoMeta?.titlePt ?? fallbackTitle}
+        titleEn={seoMeta?.titleEn ?? fallbackTitle}
+        descriptionPt={seoMeta?.descPt ?? fallbackDesc}
+        descriptionEn={seoMeta?.descEn ?? fallbackDesc}
         path={`/reddit/${article.id}`}
         schemaJson={schemaJson}
         ogType="article"

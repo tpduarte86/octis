@@ -19,7 +19,7 @@ export function Development({
   return (
     <section id="development" className="py-20 md:py-28 bg-[#f8fafc] text-gray-900 border-t border-gray-200 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        {showHeader && (
+        {showHeader ? (
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -37,6 +37,8 @@ export function Development({
               {t.subtitle}
             </p>
           </motion.div>
+        ) : (
+          <h2 className="sr-only">{t.title}</h2>
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

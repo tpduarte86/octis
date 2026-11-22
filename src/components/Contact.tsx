@@ -83,7 +83,7 @@ export function Contact() {
                 <Mail className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-xs uppercase tracking-wider font-semibold text-gray-500 mb-1">{t.emailLabel}</h4>
+                <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 mb-1">{t.emailLabel}</h3>
                 <a 
                   href="mailto:contato@octis.com.br" 
                   className="text-gray-900 font-medium hover:text-[#0a1d37] transition-colors flex items-center gap-1.5 text-base"
@@ -98,7 +98,7 @@ export function Contact() {
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-xs uppercase tracking-wider font-semibold text-gray-500 mb-1">{t.locationLabel}</h4>
+                <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 mb-1">{t.locationLabel}</h3>
                 <p className="text-gray-800 font-light text-sm">{t.locationVal}</p>
               </div>
             </div>
@@ -108,7 +108,7 @@ export function Contact() {
                 <Clock className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-xs uppercase tracking-wider font-semibold text-gray-500 mb-1">{t.hoursLabel}</h4>
+                <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 mb-1">{t.hoursLabel}</h3>
                 <p className="text-gray-800 font-light text-sm">{t.hoursVal}</p>
               </div>
             </div>

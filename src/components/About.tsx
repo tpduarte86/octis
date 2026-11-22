@@ -40,7 +40,7 @@ export function About() {
                   <Landmark className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-900">{t.point1Title}</h4>
+                  <h3 className="text-sm font-semibold text-gray-900">{t.point1Title}</h3>
                   <p className="text-xs text-gray-500 font-light mt-0.5 leading-relaxed">{t.point1Desc}</p>
                 </div>
               </div>
@@ -50,7 +50,7 @@ export function About() {
                   <Building2 className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-900">{t.point2Title}</h4>
+                  <h3 className="text-sm font-semibold text-gray-900">{t.point2Title}</h3>
                   <p className="text-xs text-gray-500 font-light mt-0.5 leading-relaxed">{t.point2Desc}</p>
                 </div>
               </div>
@@ -60,7 +60,7 @@ export function About() {
                   <Users2 className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-900">{t.point3Title}</h4>
+                  <h3 className="text-sm font-semibold text-gray-900">{t.point3Title}</h3>
                   <p className="text-xs text-gray-500 font-light mt-0.5 leading-relaxed">{t.point3Desc}</p>
                 </div>
               </div>
@@ -70,7 +70,7 @@ export function About() {
                   <CheckCircle2 className="w-4 h-4 text-[#c59b27]" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-900">{t.point4Title}</h4>
+                  <h3 className="text-sm font-semibold text-gray-900">{t.point4Title}</h3>
                   <p className="text-xs text-gray-500 font-light mt-0.5 leading-relaxed">{t.point4Desc}</p>
                 </div>
               </div>

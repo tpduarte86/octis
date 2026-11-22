@@ -11,10 +11,10 @@ export function TrackRecordPage() {
   return (
     <div className="pt-20 min-h-screen bg-white text-gray-900">
       <SEOHead
-        titlePt="Experiência & Track Record: +R$ 1 Bi em Transações | Octis Real Estate"
-        titleEn="Track Record & Advisory Experience: R$ 1B+ Transacted | Octis Real Estate"
-        descriptionPt="Conheça a experiência de mais de 15 anos e R$ 1 bilhão transacionado da Octis Real Estate em Capital Markets e transações imobiliárias em todo o Brasil."
-        descriptionEn="Explore Octis Real Estate's track record of 15+ years and R$ 1B+ in transactions across Capital Markets, CRI debt, and commercial real estate in Brazil."
+        titlePt="Experiência: +R$ 1 Bi em Transações | Octis"
+        titleEn="Track Record: R$ 1B+ in Closed Deals | Octis"
+        descriptionPt="Mais de 15 anos e R$ 1 bilhão transacionado pela Octis Real Estate em locações corporativas, compra e venda, CRI e Capital Markets no Brasil."
+        descriptionEn="Explore Octis Real Estate's track record of 15+ years and R$ 1B+ in transactions across Capital Markets, CRI debt, and commercial real estate."
         path="/experiencia"
       />
 

@@ -170,9 +170,9 @@ export function RedditCommunityQuestions() {
         {/* Bottom CTA Box */}
         <div className="mt-14 p-8 bg-[#0a1d37] text-white flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <h4 className="font-serif text-2xl mb-1 font-normal">
+            <h3 className="font-serif text-2xl mb-1 font-normal">
               {t.ctaTitle}
-            </h4>
+            </h3>
             <p className="text-xs sm:text-sm text-gray-200 font-light">
               {t.ctaDesc}
             </p>

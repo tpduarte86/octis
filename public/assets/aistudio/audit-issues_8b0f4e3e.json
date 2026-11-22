@@ -1,0 +1,778 @@
+[
+  {
+    "severity": "warning",
+    "issueType": "orphan-page",
+    "issue": "Orphan page",
+    "url": "https://octis.com.br/quem-somos",
+    "details": null,
+    "howToFix": "Link to this page from relevant pages (navigation, related content, hub pages), or remove it from the sitemap if it shouldn't be indexed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://octis.com.br/contato?servico=compra-e-venda-de-imoveis",
+    "details": {
+      "canonicalUrl": "https://octis.com.br/contato"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://octis.com.br/contato?servico=funding-imobiliario-antecipacao-recebiveis-cri",
+    "details": {
+      "canonicalUrl": "https://octis.com.br/contato"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://octis.com.br/contato?servico=renegociacao-de-contratos-de-aluguel",
+    "details": {
+      "canonicalUrl": "https://octis.com.br/contato"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://octis.com.br/contato?servico=sale-and-leaseback",
+    "details": {
+      "canonicalUrl": "https://octis.com.br/contato"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://octis.com.br/contato?servico=socios-investidores-e-parcerias",
+    "details": {
+      "canonicalUrl": "https://octis.com.br/contato"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://octis.com.br/contato?servico=tenant-representation",
+    "details": {
+      "canonicalUrl": "https://octis.com.br/contato"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/contato",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/contato?servico=compra-e-venda-de-imoveis",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/contato?servico=funding-imobiliario-antecipacao-recebiveis-cri",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/contato?servico=renegociacao-de-contratos-de-aluguel",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/contato?servico=sale-and-leaseback",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/contato?servico=socios-investidores-e-parcerias",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/contato?servico=tenant-representation",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/duvidas-reddit",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/edificios",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/edificios/birmann-12",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/edificios/millenium-office-park",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/edificios/river-south-1492",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/edificios/torre-faria-lima",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/edificios/viva-torre-corporativa",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/experiencia",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/imoveis",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/quem-somos",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/reddit",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/servicos",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://octis.com.br/servicos/tenant-representation",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/",
+    "details": {
+      "length": 163,
+      "max": 160,
+      "description": "Renegociação de contratos de aluguel comercial em escritórios e galpões aquecidos, pesquisa de preço…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/duvidas-reddit",
+    "details": {
+      "length": 162,
+      "max": 160,
+      "description": "Perguntas reais da comunidade Reddit (r/investimentos, r/empreendedorismo) respondidas pela equipe d…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/edificios",
+    "details": {
+      "length": 181,
+      "max": 160,
+      "description": "Seleção de edifícios corporativos em São Paulo com conjuntos e lajes para locação, faixas estimadas …"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/edificios/birmann-12",
+    "details": {
+      "length": 202,
+      "max": 160,
+      "description": "Alugue lajes de 1.093 m² a 1.665 m² no Edifício Birmann 12 (Rua Alexandre Dumas, 1711 — Chácara Sant…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/edificios/millenium-office-park",
+    "details": {
+      "length": 182,
+      "max": 160,
+      "description": "Alugue lajes de 1.254 m² ou conjuntos de ~627 m² no Millenium Office Park, Vila Olímpia (Av. Chedid …"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/edificios/river-south-1492",
+    "details": {
+      "length": 177,
+      "max": 160,
+      "description": "Alugue lajes de 741 m², ~1.594 m² BOMA ou múltiplos pavimentos (até 20.609 m²) no Edifício River Sou…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/edificios/torre-faria-lima",
+    "details": {
+      "length": 177,
+      "max": 160,
+      "description": "Alugue conjuntos de 383 m² ou lajes de 766 m² no Edifício Torre Faria Lima (Av. Brig. Faria Lima, 20…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/edificios/viva-torre-corporativa",
+    "details": {
+      "length": 187,
+      "max": 160,
+      "description": "Alugue lajes corporativas de 1.200 m² a 1.308 m² no Viva Torre Corporativa (Santo Amaro / Campo Belo…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/imoveis",
+    "details": {
+      "length": 164,
+      "max": 160,
+      "description": "A Octis Real Estate atende todas as categorias de imóveis: residenciais (econômicos ao luxo), galpõe…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/reddit/acao-revisional-de-aluguel-requisitos-e-prazos",
+    "details": {
+      "length": 239,
+      "max": 160,
+      "description": "Com os mercados de escritórios corporativos e galpões logísticos aquecidos, proprietários têm pedido…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/reddit/aumento-abusivo-aluguel-comercial-escritorios-galpoes",
+    "details": {
+      "length": 178,
+      "max": 160,
+      "description": "Como identificar aumentos desproporcionais de locadores, contestar a distorção do IGP-M, aplicar a T…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/reddit/cri-para-incorporadoras-e-loteamentos",
+    "details": {
+      "length": 170,
+      "max": 160,
+      "description": "Entenda como os CRIs captam recursos via securitizadoras para financiar obras e como proprietários d…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/reddit/desenvolvimento-imobiliario-residencial-comercial",
+    "details": {
+      "length": 164,
+      "max": 160,
+      "description": "Como viabilizar empreendimentos residenciais de todas as faixas, condomínios de galpões e prédios co…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/reddit/direitos-do-locatario-renovacao-contrato-aluguel-comercial",
+    "details": {
+      "length": 194,
+      "max": 160,
+      "description": "Tudo o que sua empresa precisa saber sobre o direito à renovação compulsória (Artigo 51 da Lei do In…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/reddit/o-que-e-tenant-representation-guia-completo",
+    "details": {
+      "length": 242,
+      "max": 160,
+      "description": "Guia definitivo sobre representação exclusiva de inquilinos e ocupantes: ausência de conflito de int…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/servicos",
+    "details": {
+      "length": 173,
+      "max": 160,
+      "description": "Conheça os serviços da Octis Real Estate: Tenant Representation exclusiva de inquilinos com test-fit…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/servicos/funding-imobiliario-antecipacao-recebiveis-cri",
+    "details": {
+      "length": 161,
+      "max": 160,
+      "description": "Conectamos incorporadoras e proprietários a securitizadoras para financiar obras e antecipar recebív…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://octis.com.br/servicos/tenant-representation",
+    "details": {
+      "length": 172,
+      "max": 160,
+      "description": "Consultoria de Tenant Representation (representação exclusiva de inquilinos e ocupantes) para escrit…"
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/",
+    "details": {
+      "length": 71,
+      "max": 60,
+      "title": "Octis Real Estate | Renegociação de Aluguel, Escritórios, Galpões & CRI"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/duvidas-reddit",
+    "details": {
+      "length": 80,
+      "max": 60,
+      "title": "Dúvidas da Comunidade Reddit: CRI, Imóveis e Capital Markets | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/edificios",
+    "details": {
+      "length": 68,
+      "max": 60,
+      "title": "Edifícios Corporativos & Conjuntos para Locação em São Paulo | Octis"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/edificios/birmann-12",
+    "details": {
+      "length": 80,
+      "max": 60,
+      "title": "Edifício Birmann 12 (Rua Alexandre Dumas, 1711) — Conjuntos para Locação | Octis"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/edificios/millenium-office-park",
+    "details": {
+      "length": 86,
+      "max": 60,
+      "title": "Millenium Office Park (Av. Chedid Jafet, 222) — Conjuntos e Lajes para Locação | Octis"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/edificios/river-south-1492",
+    "details": {
+      "length": 86,
+      "max": 60,
+      "title": "Edifício River South (Rua Agostinho Cantu, 190 — Butantã) — Lajes para Locação | Octis"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/edificios/torre-faria-lima",
+    "details": {
+      "length": 77,
+      "max": 60,
+      "title": "Torre Faria Lima (Av. Brig. Faria Lima, 201) — Conjuntos para Locação | Octis"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/edificios/viva-torre-corporativa",
+    "details": {
+      "length": 79,
+      "max": 60,
+      "title": "Viva Torre Corporativa (Av. Vereador José Diniz, 3465) — Lajes Triple A | Octis"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/experiencia",
+    "details": {
+      "length": 70,
+      "max": 60,
+      "title": "Experiência & Track Record: +R$ 1 Bi em Transações | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/imoveis",
+    "details": {
+      "length": 74,
+      "max": 60,
+      "title": "Classes de Imóveis Atendidos: Do Simples ao Padrão AAA | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/reddit",
+    "details": {
+      "length": 81,
+      "max": 60,
+      "title": "Artigos & Discussões Reddit Brasil: CRI e Mercado Imobiliário | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/reddit/acao-revisional-de-aluguel-requisitos-e-prazos",
+    "details": {
+      "length": 99,
+      "max": 60,
+      "title": "Mercado Aquecido e Pedido de Aumento de Aluguel: Ficar ou Mudar e Como Negociar | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/reddit/aumento-abusivo-aluguel-comercial-escritorios-galpoes",
+    "details": {
+      "length": 108,
+      "max": 60,
+      "title": "Aumento Abusivo de Aluguel Comercial: Como Proteger sua Empresa em Escritórios e Galpões | Octis Rea…"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/reddit/classes-de-imoveis-do-simples-ao-aaa",
+    "details": {
+      "length": 84,
+      "max": 60,
+      "title": "Classes de Imóveis: O que Define Ativos do Simples ao Padrão AAA | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/reddit/como-funciona-sale-and-leaseback",
+    "details": {
+      "length": 88,
+      "max": 60,
+      "title": "Sale & Leaseback: Como Transformar Imóveis da Empresa em Caixa Livre | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/reddit/cri-para-incorporadoras-e-loteamentos",
+    "details": {
+      "length": 100,
+      "max": 60,
+      "title": "O que é CRI Imobiliário: Obras e Antecipação de Recebíveis para Imóveis Alugados | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/reddit/cri-versus-financiamento-bancario-tradicional",
+    "details": {
+      "length": 85,
+      "max": 60,
+      "title": "CRI ou Financiamento Bancário: Qual a Melhor Opção para sua Obra? | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/reddit/desenvolvimento-imobiliario-residencial-comercial",
+    "details": {
+      "length": 75,
+      "max": 60,
+      "title": "Desenvolvimento Imobiliário: Do Econômico ao Padrão AAA | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/reddit/direitos-do-locatario-renovacao-contrato-aluguel-comercial",
+    "details": {
+      "length": 97,
+      "max": 60,
+      "title": "Direitos do Locatário na Renovação Comercial: Artigo 51 e o Prazo Decadencial | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/reddit/o-que-e-tenant-representation-guia-completo",
+    "details": {
+      "length": 94,
+      "max": 60,
+      "title": "O que é Tenant Representation? Fases, Benefícios e Como Funciona no Brasil | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/reddit/venda-de-imoveis-comerciais-e-galpoes",
+    "details": {
+      "length": 93,
+      "max": 60,
+      "title": "Venda de Imóveis Comerciais e Galpões: Precificação e Liquidez de Mercado | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/servicos",
+    "details": {
+      "length": 84,
+      "max": 60,
+      "title": "Serviços Imobiliários, Tenant Representation, Renegociação e CRI | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/servicos/funding-imobiliario-antecipacao-recebiveis-cri",
+    "details": {
+      "length": 73,
+      "max": 60,
+      "title": "Funding Imobiliário & Antecipação de Recebíveis (CRI) | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/servicos/renegociacao-de-contratos-de-aluguel",
+    "details": {
+      "length": 66,
+      "max": 60,
+      "title": "Renegociação de Contratos de Aluguel Comercial | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/servicos/sale-and-leaseback",
+    "details": {
+      "length": 64,
+      "max": 60,
+      "title": "Sale & Leaseback: Venda e Locação de Imóveis | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/servicos/socios-investidores-e-parcerias",
+    "details": {
+      "length": 62,
+      "max": 60,
+      "title": "Sócios Investidores, Parcerias & Permutas Imobiliárias | Octis"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://octis.com.br/servicos/tenant-representation",
+    "details": {
+      "length": 63,
+      "max": 60,
+      "title": "Tenant Representation em São Paulo e Brasil | Octis Real Estate"
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  }
+]

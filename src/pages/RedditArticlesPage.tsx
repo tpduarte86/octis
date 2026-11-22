@@ -11,10 +11,10 @@ export function RedditArticlesPage() {
   return (
     <div className="pt-20 min-h-screen bg-white text-gray-900">
       <SEOHead
-        titlePt="Artigos & Discussões Reddit Brasil: CRI e Mercado Imobiliário | Octis Real Estate"
-        titleEn="Articles & Reddit Real Estate Insights: CRI Debt & Capital Markets | Octis Real Estate"
-        descriptionPt="Artigos e análises técnicas no estilo Reddit sobre emissão de CRI para incorporadoras, Sale & Leaseback, precificação de galpões e desenvolvimento imobiliário."
-        descriptionEn="In-depth articles and Reddit-style market analyses covering developer CRI debt, Sale & Leaseback transactions, warehouse pricing, and real estate development in Brazil."
+        titlePt="Artigos sobre Imóveis, Aluguel e CRI | Octis"
+        titleEn="Real Estate, Lease & CRI Insights | Octis"
+        descriptionPt="Artigos práticos sobre Tenant Representation, renegociação de aluguel, CRI para incorporadoras, Sale & Leaseback e venda de imóveis."
+        descriptionEn="Practical analyses covering Tenant Representation, lease renegotiation, developer CRI debt, Sale & Leaseback, and property sales in Brazil."
         path="/reddit"
       />
 

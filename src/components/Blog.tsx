@@ -39,7 +39,7 @@ export function Blog({ showHeader = true }: { showHeader?: boolean }) {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Section Header */}
-        {showHeader && (
+        {showHeader ? (
           <div className="text-center mb-14 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
               <span className="w-1.5 h-1.5 bg-[#c59b27]" />
@@ -52,6 +52,8 @@ export function Blog({ showHeader = true }: { showHeader?: boolean }) {
               {t.subtitle}
             </p>
           </div>
+        ) : (
+          <h2 className="sr-only">{t.title}</h2>
         )}
 
         {/* Category Filters */}
@@ -199,9 +201,9 @@ export function Blog({ showHeader = true }: { showHeader?: boolean }) {
                 <div className="space-y-6 text-sm text-gray-700 font-light leading-relaxed border-t border-gray-100 pt-6">
                   {activeArticle.content.sections.map((section, sIdx) => (
                     <div key={sIdx}>
-                      <h4 className="text-base font-serif text-gray-900 font-semibold mb-2">
+                      <h3 className="text-base font-serif text-gray-900 font-semibold mb-2">
                         {section.heading}
-                      </h4>
+                      </h3>
                       <div className="space-y-2">
                         {section.paragraphs.map((p, pIdx) => (
                           <p key={pIdx}>{p}</p>
@@ -212,9 +214,9 @@ export function Blog({ showHeader = true }: { showHeader?: boolean }) {
 
                   {/* Conclusion */}
                   <div className="p-5 bg-gray-50 border border-gray-200 mt-6">
-                    <h5 className="font-semibold text-gray-900 text-xs uppercase tracking-wider mb-2">
+                    <h4 className="font-semibold text-gray-900 text-xs uppercase tracking-wider mb-2">
                       {language === 'en' ? 'Octis Real Estate Takeaway' : 'Conclusão Octis Real Estate'}
-                    </h5>
+                    </h4>
                     <p className="text-sm text-gray-700">
                       {activeArticle.content.conclusion}
                     </p>

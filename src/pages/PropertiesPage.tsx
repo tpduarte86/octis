@@ -11,10 +11,10 @@ export function PropertiesPage() {
   return (
     <div className="pt-20 min-h-screen bg-white text-gray-900">
       <SEOHead
-        titlePt="Classes de Imóveis Atendidos: Do Simples ao Padrão AAA | Octis Real Estate"
-        titleEn="Real Estate Asset Classes: Entry-Level to Class AAA | Octis Real Estate"
-        descriptionPt="A Octis Real Estate atende todas as categorias de imóveis: residenciais (econômicos ao luxo), galpões logísticos, lajes corporativas e loteamentos em todo o Brasil."
-        descriptionEn="Octis Real Estate covers all property types across Brazil: residential communities, logistics warehouses, corporate office towers, and land subdivisions."
+        titlePt="Imóveis Atendidos: Do Simples ao AAA | Octis"
+        titleEn="Real Estate Asset Classes: Entry to AAA | Octis"
+        descriptionPt="Atendemos todas as classes de imóveis no Brasil: residenciais, galpões logísticos, lajes corporativas, prédios comerciais e loteamentos."
+        descriptionEn="Octis Real Estate covers all property types across Brazil: residential communities, logistics warehouses, corporate offices, and land."
         path="/imoveis"
       />
 
