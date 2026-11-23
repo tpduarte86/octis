@@ -793,7 +793,7 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
             </div>
 
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5511995418189"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-white border border-gray-300 text-gray-800 hover:border-[#0a1d37] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors"

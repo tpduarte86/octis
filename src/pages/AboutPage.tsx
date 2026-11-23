@@ -12,8 +12,8 @@ export function AboutPage() {
   return (
     <div className="pt-20 min-h-screen bg-white text-gray-900">
       <SEOHead
-        titlePt="Quem Somos | Octis Real Estate São Paulo & Brasil"
-        titleEn="About Us | Octis Real Estate Brazil"
+        titlePt="Quem Somos | Octis Real Estate"
+        titleEn="About Us | Octis Real Estate"
         descriptionPt="Conheça a Octis Real Estate: conectamos proprietários, empresas e incorporadoras a compradores, inquilinos e financiamento de obras em todo o Brasil."
         descriptionEn="Learn about Octis Real Estate: we connect property owners, developers, and corporations with buyers, tenants, and construction funding in Brazil."
         path="/quem-somos"

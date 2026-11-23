@@ -12,8 +12,8 @@ export function ContactPage() {
   return (
     <div className="pt-20 min-h-screen bg-white text-gray-900">
       <SEOHead
-        titlePt="Contato & Atendimento | Octis Real Estate São Paulo"
-        titleEn="Contact Office | Octis Real Estate São Paulo & Brazil"
+        titlePt="Contato & Atendimento | Octis Real Estate"
+        titleEn="Contact & Advisory | Octis Real Estate"
         descriptionPt="Entre em contato com a Octis Real Estate: compra, venda, aluguel comercial, Sale & Leaseback e financiamento de obras via CRI em São Paulo e todo o Brasil."
         descriptionEn="Contact Octis Real Estate: property sales, commercial leasing, Sale & Leaseback, and CRI construction funding in São Paulo and nationwide across Brazil."
         path="/contato"

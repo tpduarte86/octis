@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Mail, ArrowUpRight, MapPin, Clock, CheckCircle } from 'lucide-react';
+import { Mail, ArrowUpRight, MapPin, Clock, CheckCircle, PhoneCall } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/content';
 
@@ -92,6 +92,25 @@ export function Contact() {
                   className="text-gray-900 font-medium hover:text-[#0a1d37] transition-colors flex items-center gap-1.5 text-base"
                 >
                   contato@octis.com.br <ArrowUpRight className="w-4 h-4 text-[#c59b27]" />
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 p-6 bg-[#f8fafc] border border-gray-200">
+              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center shrink-0 mt-0.5 text-[#0a1d37]">
+                <PhoneCall className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 mb-1">
+                  {language === 'en' ? 'Direct WhatsApp' : 'WhatsApp Direto'}
+                </h3>
+                <a
+                  href="https://wa.me/5511995418189"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-900 font-medium hover:text-[#0a1d37] transition-colors flex items-center gap-1.5 text-base"
+                >
+                  +55 (11) 99541-8189 <ArrowUpRight className="w-4 h-4 text-[#c59b27]" />
                 </a>
               </div>
             </div>

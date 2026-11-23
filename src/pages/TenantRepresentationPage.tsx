@@ -394,8 +394,8 @@ export function TenantRepresentationPage() {
   return (
     <div className="pt-20 min-h-screen bg-white text-gray-900">
       <SEOHead
-        titlePt="Tenant Representation em São Paulo e Brasil | Octis"
-        titleEn="Tenant Representation in São Paulo & Brazil | Octis"
+        titlePt="Tenant Representation em São Paulo | Octis Real Estate"
+        titleEn="Tenant Representation in São Paulo | Octis Real Estate"
         descriptionPt="Consultoria de Tenant Representation para escritórios e galpões sem conflito de interesses, com test-fit gratuito, TCO e negociação via LOI."
         descriptionEn="Exclusive Tenant Representation in Brazil for corporate offices and warehouses: conflict-free negotiation, free test-fit, LOIs, and TCO analysis."
         path="/servicos/tenant-representation"

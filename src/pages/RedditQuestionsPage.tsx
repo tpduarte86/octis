@@ -12,8 +12,8 @@ export function RedditQuestionsPage() {
   return (
     <div className="pt-20 min-h-screen bg-white text-gray-900">
       <SEOHead
-        titlePt="Dúvidas Reddit: Aluguel, CRI e Imóveis | Octis"
-        titleEn="Reddit FAQ: Leases, CRI & Real Estate | Octis"
+        titlePt="Dúvidas sobre Aluguel e CRI | Octis Real Estate"
+        titleEn="FAQ: Leases, CRI & Real Estate | Octis Real Estate"
         descriptionPt="Perguntas reais do Reddit (r/investimentos, r/empreendedorismo) respondidas pela Octis sobre aluguel comercial, CRI, Sale & Leaseback e obras."
         descriptionEn="Real Reddit community questions answered by Octis Real Estate experts on commercial leases, CRI debt funding, Sale & Leaseback, and land."
         path="/duvidas-reddit"

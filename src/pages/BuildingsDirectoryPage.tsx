@@ -37,8 +37,8 @@ export function BuildingsDirectoryPage() {
   return (
     <div className="pt-20 min-h-screen bg-white text-gray-900">
       <SEOHead
-        titlePt="Edifícios Corporativos em São Paulo | Octis"
-        titleEn="Corporate Office Buildings in São Paulo | Octis"
+        titlePt="Edifícios Corporativos em São Paulo | Octis Real Estate"
+        titleEn="Corporate Buildings in São Paulo | Octis Real Estate"
         descriptionPt="Diretório de edifícios corporativos em São Paulo com fichas técnicas, endereço, plantas e consultoria de Tenant Representation da Octis."
         descriptionEn="Directory of corporate office buildings in São Paulo with technical specifications, locations, floorplates, and Tenant Representation advisory."
         path="/edificios"

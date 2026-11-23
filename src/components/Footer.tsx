@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Octagon, Mail, MapPin } from 'lucide-react';
+import { Octagon, Mail, MapPin, PhoneCall } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/content';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -52,6 +52,15 @@ export function Footer() {
                 <Mail className="w-4 h-4 text-[#c59b27] shrink-0" />
                 contato@octis.com.br
               </span>
+              <a
+                href="https://wa.me/5511995418189"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gray-300 hover:text-[#c59b27] transition-colors w-fit"
+              >
+                <PhoneCall className="w-4 h-4 text-[#c59b27] shrink-0" />
+                +55 11 99541-8189 (WhatsApp)
+              </a>
             </div>
             
             {/* Language Switcher in Footer */}

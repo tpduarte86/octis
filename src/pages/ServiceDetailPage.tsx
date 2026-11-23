@@ -65,7 +65,7 @@ export function ServiceDetailPage({ slug: propSlug }: ServiceDetailPageProps) {
       '@type': 'RealEstateAgent',
       name: 'Octis Real Estate',
       url: 'https://octis.com.br',
-      telephone: '+55 11 99999-9999',
+      telephone: '+55-11-99541-8189',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'São Paulo',
@@ -422,7 +422,7 @@ export function ServiceDetailPage({ slug: propSlug }: ServiceDetailPageProps) {
               {isPt ? 'Consultar Nossa Equipe' : 'Speak With Our Team'} <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5511995418189"
               target="_blank"
               rel="noopener noreferrer"
               className="px-7 py-3.5 bg-transparent border border-white/40 text-white hover:bg-white/10 font-semibold text-xs uppercase tracking-wider inline-flex items-center gap-2 transition-colors"

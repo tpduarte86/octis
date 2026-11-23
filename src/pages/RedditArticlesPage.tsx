@@ -11,8 +11,8 @@ export function RedditArticlesPage() {
   return (
     <div className="pt-20 min-h-screen bg-white text-gray-900">
       <SEOHead
-        titlePt="Artigos sobre Imóveis, Aluguel e CRI | Octis"
-        titleEn="Real Estate, Lease & CRI Insights | Octis"
+        titlePt="Artigos sobre Imóveis e CRI | Octis Real Estate"
+        titleEn="Real Estate, Lease & CRI Insights | Octis Real Estate"
         descriptionPt="Artigos práticos sobre Tenant Representation, renegociação de aluguel, CRI para incorporadoras, Sale & Leaseback e venda de imóveis."
         descriptionEn="Practical analyses covering Tenant Representation, lease renegotiation, developer CRI debt, Sale & Leaseback, and property sales in Brazil."
         path="/reddit"
