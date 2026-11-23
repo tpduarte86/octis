@@ -1,6 +1,6 @@
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
-import { AppRoutes } from './App';
+import { ServerAppRoutes } from './ServerAppRoutes';
 import { HeadProvider, HeadCollector, CollectedHead } from './context/HeadContext';
 import { servicesData } from './data/servicesData';
 import { buildingsData } from './data/buildingsData';
@@ -17,7 +17,7 @@ export function render(url: string): PrerenderResult {
   const html = renderToString(
     <HeadProvider collector={collector}>
       <StaticRouter location={url}>
-        <AppRoutes />
+        <ServerAppRoutes />
       </StaticRouter>
     </HeadProvider>
   );

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, ArrowRight, MapPin, Building2 } from 'lucide-react';
+import { ChevronRight, ArrowRight, MapPin, Building2, Search } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 import { useLanguage } from '../context/LanguageContext';
 import { buildingsData } from '../data/buildingsData';
@@ -8,14 +8,39 @@ import { buildingsData } from '../data/buildingsData';
 export function BuildingsDirectoryPage() {
   const { language } = useLanguage();
   const isPt = language === 'pt';
+  const [selectedNeighborhood, setSelectedNeighborhood] = useState<string>('ALL');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const neighborhoods = useMemo(() => {
+    const unique = Array.from(new Set(buildingsData.map((b) => b.neighborhood))).sort((a, b) =>
+      a.localeCompare(b, 'pt-BR')
+    );
+    return unique;
+  }, []);
+
+  const filteredBuildings = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    return buildingsData.filter((b) => {
+      const matchesNeighborhood =
+        selectedNeighborhood === 'ALL' || b.neighborhood === selectedNeighborhood;
+      if (!matchesNeighborhood) return false;
+      if (!q) return true;
+      return (
+        b.name.toLowerCase().includes(q) ||
+        b.neighborhood.toLowerCase().includes(q) ||
+        b.address.toLowerCase().includes(q) ||
+        b.regionPt.toLowerCase().includes(q)
+      );
+    });
+  }, [selectedNeighborhood, searchQuery]);
 
   return (
     <div className="pt-20 min-h-screen bg-white text-gray-900">
       <SEOHead
-        titlePt="Edifícios Corporativos para Locação em SP | Octis"
-        titleEn="Corporate Office Buildings for Lease in SP | Octis"
-        descriptionPt="Seleção de edifícios corporativos em São Paulo com conjuntos e lajes para locação, faixas estimadas de valores e Tenant Representation."
-        descriptionEn="Curated corporate office buildings in São Paulo with suites and floorplates for lease, indicative rent ranges, and Tenant Representation."
+        titlePt="Edifícios Corporativos em São Paulo | Octis"
+        titleEn="Corporate Office Buildings in São Paulo | Octis"
+        descriptionPt="Diretório de edifícios corporativos em São Paulo com fichas técnicas, endereço, plantas e consultoria de Tenant Representation da Octis."
+        descriptionEn="Directory of corporate office buildings in São Paulo with technical specifications, locations, floorplates, and Tenant Representation advisory."
         path="/edificios"
       />
 
@@ -37,7 +62,7 @@ export function BuildingsDirectoryPage() {
 
           <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
             <span className="w-1.5 h-1.5 bg-[#c59b27]" />
-            {isPt ? 'Seleção Corporativa' : 'Corporate Selection'}
+            {isPt ? 'Seleção Corporativa' : 'Corporate Directory'}
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 mb-5 leading-tight max-w-4xl font-normal">
@@ -48,87 +73,185 @@ export function BuildingsDirectoryPage() {
 
           <p className="text-base sm:text-lg text-gray-600 font-light max-w-3xl leading-relaxed">
             {isPt
-              ? 'Consulte empreendimentos corporativos em destaque nos principais eixos de São Paulo, com especificações técnicas, faixas indicativas de locação e atendimento via Tenant Representation com test-fit gratuito.'
-              : 'Browse featured corporate towers in São Paulo’s premier business districts, complete with technical specifications, indicative rent ranges, and exclusive Tenant Representation advisory.'}
+              ? 'Consulte fichas técnicas de empreendimentos corporativos nos principais eixos de São Paulo, com especificações prediais, localização e atendimento via Tenant Representation com test-fit gratuito.'
+              : 'Browse technical profiles of corporate towers across São Paulo’s business districts, including building specs, locations, and exclusive Tenant Representation advisory.'}
           </p>
+        </div>
+      </section>
+
+      {/* Filter & Search Toolbar */}
+      <section className="py-6 bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setSelectedNeighborhood('ALL')}
+              className={`px-3.5 py-2 text-xs font-semibold uppercase tracking-wider border transition-colors cursor-pointer ${
+                selectedNeighborhood === 'ALL'
+                  ? 'bg-[#0a1d37] text-white border-[#0a1d37]'
+                  : 'bg-white text-gray-700 border-gray-200 hover:border-[#0a1d37]'
+              }`}
+            >
+              {isPt ? `Todos (${buildingsData.length})` : `All (${buildingsData.length})`}
+            </button>
+            {neighborhoods.map((nb) => (
+              <button
+                key={nb}
+                type="button"
+                onClick={() => setSelectedNeighborhood(nb)}
+                className={`px-3.5 py-2 text-xs font-medium border transition-colors cursor-pointer ${
+                  selectedNeighborhood === nb
+                    ? 'bg-[#0a1d37] text-white border-[#0a1d37]'
+                    : 'bg-white text-gray-700 border-gray-200 hover:border-[#0a1d37]'
+                }`}
+              >
+                {nb}
+              </button>
+            ))}
+          </div>
+
+          <div className="relative w-full lg:w-72 shrink-0">
+            <Search className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <input
+              type="search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder={isPt ? 'Buscar prédio ou endereço...' : 'Search building or street...'}
+              aria-label={isPt ? 'Buscar edifício' : 'Search building'}
+              className="w-full pl-10 pr-4 py-2 text-sm bg-[#f8fafc] border border-gray-300 text-gray-900 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-[#0a1d37]"
+            />
+          </div>
         </div>
       </section>
 
       {/* Buildings Grid */}
       <section className="py-16 md:py-20 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {buildingsData.map((b) => {
-              const cover = b.images[0];
-              return (
-                <article
-                  key={b.slug}
-                  className="bg-white border border-gray-200 hover:border-[#0a1d37] transition-colors flex flex-col justify-between"
-                >
-                  <div>
-                    <Link to={`/edificios/${b.slug}`} className="block aspect-[16/10] bg-slate-100 overflow-hidden">
-                      {cover ? (
-                        <img
-                          src={cover.src}
-                          alt={isPt ? cover.altPt : cover.altEn}
-                          referrerPolicy="no-referrer"
-                          className="w-full h-full object-cover hover:scale-103 transition-transform duration-300"
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center text-[#0a1d37]">
-                          <Building2 className="w-8 h-8" />
+          {filteredBuildings.length === 0 ? (
+            <div className="p-10 bg-[#f8fafc] border border-gray-200 text-center">
+              <p className="text-sm text-gray-600 mb-4">
+                {isPt
+                  ? 'Nenhum edifício encontrado com esse filtro.'
+                  : 'No buildings matched your filter.'}
+              </p>
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedNeighborhood('ALL');
+                  setSearchQuery('');
+                }}
+                className="px-5 py-2.5 bg-[#0a1d37] text-white text-xs font-semibold uppercase tracking-wider cursor-pointer"
+              >
+                {isPt ? 'Limpar Filtros' : 'Reset Filters'}
+              </button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredBuildings.map((b) => {
+                const cover = b.images[0];
+                const isProfileOnly = b.listingMode === 'profile';
+                return (
+                  <article
+                    key={b.slug}
+                    className="bg-white border border-gray-200 hover:border-[#0a1d37] transition-colors flex flex-col justify-between"
+                  >
+                    <div>
+                      <Link
+                        to={`/edificios/${b.slug}`}
+                        className="block aspect-[16/10] bg-slate-100 overflow-hidden"
+                      >
+                        {cover ? (
+                          <img
+                            src={cover.src}
+                            alt={isPt ? cover.altPt : cover.altEn}
+                            referrerPolicy="no-referrer"
+                            loading="lazy"
+                            className="w-full h-full object-cover hover:scale-103 transition-transform duration-300"
+                          />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center text-[#0a1d37]">
+                            <Building2 className="w-8 h-8" />
+                          </div>
+                        )}
+                      </Link>
+
+                      <div className="p-6">
+                        <div className="text-[11px] uppercase tracking-wider text-gray-500 font-medium mb-2">
+                          <span>{isPt ? b.regionPt : b.regionEn}</span>
+                          <span aria-hidden="true" className="mx-1.5">
+                            ·
+                          </span>
+                          <span className="tabular-nums">
+                            {isPt ? b.areaRangeSummaryPt : b.areaRangeSummaryEn}
+                          </span>
                         </div>
-                      )}
-                    </Link>
 
-                    <div className="p-6">
-                      <div className="text-[11px] uppercase tracking-wider text-gray-500 font-medium mb-2">
-                        <span>{isPt ? b.regionPt : b.regionEn}</span>
-                        <span aria-hidden="true" className="mx-1.5">·</span>
-                        <span className="tabular-nums">{isPt ? b.areaRangeSummaryPt : b.areaRangeSummaryEn}</span>
-                      </div>
+                        <h2 className="text-2xl font-serif text-gray-900 mb-2 font-normal">
+                          <Link
+                            to={`/edificios/${b.slug}`}
+                            className="hover:text-[#c59b27] transition-colors"
+                          >
+                            {b.name}
+                          </Link>
+                        </h2>
 
-                      <h2 className="text-2xl font-serif text-gray-900 mb-2 font-normal">
-                        <Link to={`/edificios/${b.slug}`} className="hover:text-[#c59b27] transition-colors">
-                          {b.name}
-                        </Link>
-                      </h2>
+                        <p className="text-xs text-gray-600 font-light flex items-start gap-1.5 mb-4">
+                          <MapPin className="w-3.5 h-3.5 text-[#c59b27] shrink-0 mt-0.5" />
+                          <span>
+                            {b.address} — {b.neighborhood}, {b.city}
+                          </span>
+                        </p>
 
-                      <p className="text-xs text-gray-600 font-light flex items-start gap-1.5 mb-4">
-                        <MapPin className="w-3.5 h-3.5 text-[#c59b27] shrink-0 mt-0.5" />
-                        <span>
-                          {b.address} — {b.neighborhood}, {b.city}
-                        </span>
-                      </p>
+                        <p className="text-xs sm:text-sm text-gray-600 font-light leading-relaxed mb-4">
+                          {isPt ? b.subtitlePt : b.subtitleEn}
+                        </p>
 
-                      <p className="text-xs sm:text-sm text-gray-600 font-light leading-relaxed mb-4">
-                        {isPt ? b.subtitlePt : b.subtitleEn}
-                      </p>
-
-                      <div className="pt-3 border-t border-gray-100 text-xs text-gray-700 tabular-nums">
-                        <span className="text-gray-500 font-light block mb-0.5">
-                          {isPt ? 'Faixa estimada de locação:' : 'Estimated base rent range:'}
-                        </span>
-                        <span className="font-medium text-[#0a1d37]">
-                          {isPt ? b.commercialRanges[0]?.rangePt : b.commercialRanges[0]?.rangeEn}
-                        </span>
+                        {!isProfileOnly && b.commercialRanges[0] ? (
+                          <div className="pt-3 border-t border-gray-100 text-xs text-gray-700 tabular-nums">
+                            <span className="text-gray-500 font-light block mb-0.5">
+                              {isPt ? 'Faixa estimada de locação:' : 'Estimated base rent range:'}
+                            </span>
+                            <span className="font-medium text-[#0a1d37]">
+                              {isPt ? b.commercialRanges[0].rangePt : b.commercialRanges[0].rangeEn}
+                            </span>
+                          </div>
+                        ) : (
+                          <div className="pt-3 border-t border-gray-100 text-xs text-gray-700 tabular-nums">
+                            <span className="text-gray-500 font-light block mb-0.5">
+                              {isPt
+                                ? b.profileMetricLabelPt || 'Porte do Empreendimento:'
+                                : b.profileMetricLabelEn || 'Building Profile:'}
+                            </span>
+                            <span className="font-medium text-[#0a1d37]">
+                              {isPt
+                                ? b.profileMetricValuePt || b.classificationPt
+                                : b.profileMetricValueEn || b.classificationEn}
+                            </span>
+                          </div>
+                        )}
                       </div>
                     </div>
-                  </div>
 
-                  <div className="px-6 py-4 bg-[#f8fafc] border-t border-gray-200 flex items-center justify-between">
-                    <Link
-                      to={`/edificios/${b.slug}`}
-                      className="text-xs font-semibold uppercase tracking-wider text-[#0a1d37] hover:text-[#c59b27] transition-colors inline-flex items-center gap-1.5"
-                    >
-                      {isPt ? 'Ver Conjuntos e Valores' : 'View Suites & Rates'}
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
+                    <div className="px-6 py-4 bg-[#f8fafc] border-t border-gray-200 flex items-center justify-between">
+                      <Link
+                        to={`/edificios/${b.slug}`}
+                        className="text-xs font-semibold uppercase tracking-wider text-[#0a1d37] hover:text-[#c59b27] transition-colors inline-flex items-center gap-1.5"
+                      >
+                        {isProfileOnly
+                          ? isPt
+                            ? 'Ver Ficha Técnica'
+                            : 'View Building Profile'
+                          : isPt
+                            ? 'Ver Conjuntos e Valores'
+                            : 'View Suites & Rates'}
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          )}
         </div>
       </section>
 

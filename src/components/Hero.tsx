@@ -13,10 +13,17 @@ export function Hero() {
       {/* Background: Elegant Blurred Architectural Imagery + Clean Luminous Overlay */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+          src="/images/hero-skyline.webp"
+          srcSet="/images/hero-skyline-mobile.webp 720w, /images/hero-skyline.webp 1280w"
+          sizes="100vw"
+          width={1280}
+          height={853}
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-cover object-center scale-105 filter blur-[4px] md:blur-[6px] opacity-40"
+          className="w-full h-full object-cover object-center scale-105 filter blur-[2px] md:blur-[3px] opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/75 to-white/55" />
         <div className="absolute inset-0 bg-cbre-grid opacity-60" />

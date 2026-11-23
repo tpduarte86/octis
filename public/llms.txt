@@ -52,6 +52,23 @@ A Tenant Representation consultancy (representação exclusiva de ocupantes ou i
 - [Edifício River South — Butantã, São Paulo](https://octis.com.br/edificios/river-south-1492): Rua Agostinho Cantu, 190 — Perkins & Will mixed-use design 650 m from Butantã Metro and 2 km from Faria Lima, 741 sqm to 20,609 sqm (~1,594 sqm BOMA floorplates), stretcher-ready elevators (2.70 m cab height), and indicative leasing ranges.
 - [Viva Torre Corporativa — Santo Amaro / Campo Belo, São Paulo](https://octis.com.br/edificios/viva-torre-corporativa): Av. Vereador José Diniz, 3465 — Triple-A LEED Platinum tower 3.8 km from Congonhas Airport, 1,200 sqm to 1,308 sqm BOMA floorplates (24,000 sqm total), 3.00 m clear ceiling, 100% 24h+ backup generators, 497 parking spaces, and indicative leasing ranges.
 
+### Corporate Building Technical Profiles (São Paulo)
+- [JK Square — Itaim Bibi](https://octis.com.br/edificios/jk-square): Rua Tenente Negrão, 100 — 19 floors (1,000 to 2,169 sqm), 31,305 sqm mixed-use complex, LEED Gold pre-certified.
+- [O Parque — Torre Orvalho — Jardim das Acácias](https://octis.com.br/edificios/o-parque-torre-orvalho): Av. Roque Petroni Júnior, 630 — Triple-A, 18 floors (1,114 to 1,148 sqm), 20,345 sqm, LEED Gold Core & Shell.
+- [RM Square — Vila Cordeiro](https://octis.com.br/edificios/rm-square): Rua Pascoal Pais, 525 — Triple-A, 1,307 sqm floorplates, 724 parking stalls, LEED, 200 m from Vila Cordeiro Station.
+- [Vitrini Itaim Office — Itaim Bibi](https://octis.com.br/edificios/vitrini-itaim-office): Rua Itacema, 134 & 142 — Boutique 11-floor corporate building (213 to 294 sqm per floor, 2,960 sqm total).
+- [Niw Rebouças — Pinheiros](https://octis.com.br/edificios/niw-reboucas): Av. Rebouças, 2808 — Boutique corporate tower, 11 floors (566 to 693 sqm, 5,655 sqm total) with integrated landscaping.
+- [Arquipeo — Vila Leopoldina](https://octis.com.br/edificios/arquipeo): Av. Mofarrej, 971 — 5-floor horizontal corporate campus (55,328 sqm, 8,067 to 13,965 sqm modular floors), LEED Gold & Fitwel, 255-seat auditorium.
+- [Edifício CYK — Bela Vista / Avenida Paulista](https://octis.com.br/edificios/edificio-cyk): Av. Paulista, 901 — Triple-A, 19 floors (1,052 to 1,372 sqm, 25,000 sqm total), 11 elevators with facial recognition, helipad, 100% generator.
+- [Eucaliptos Office — Indianópolis / Moema](https://octis.com.br/edificios/eucaliptos-office): Al. dos Arapanés, 1335 — 7 floors (~7,000 sqm BOMA, 395 to 823 sqm), raised floor, VRF HVAC, valet, next to Eucaliptos Metro.
+- [Dynamic Vila Olímpia — Vila Olímpia](https://octis.com.br/edificios/dynamic-vila-olimpia): Rua Quatá, 1055 — 7 floors of 1,303 sqm on a 3,471 sqm site featuring a versatile rooftop terrace.
+- [Inspira Pinheiros — Pinheiros](https://octis.com.br/edificios/inspira-pinheiros): Rua dos Pinheiros, 1226 — 16-floor boutique corner tower (647 to 1,129 sqm, 12,562 sqm total) with stepped floorplates.
+- [JR 589 — Itaim Bibi](https://octis.com.br/edificios/jr-589): Rua Min. Jesuíno Cardoso, 589 — Perkins & Will architecture, 6 floors (790 to 916 sqm), dual street access, central plaza, VRF, LEED Gold registered.
+- [Inspira Itaim — Jardim Paulista / Itaim](https://octis.com.br/edificios/inspira-itaim): Av. Brig. Luís Antônio, 5040 — Triple-A, 5,611 sqm (430 to 1,079 sqm floors), living green facade and integrated terraces.
+- [Gabriel 1825 — Jardim Europa](https://octis.com.br/edificios/gabriel-1825): Al. Gabriel Monteiro da Silva, 1825 — ~4,500 sqm BOMA (856 to 3,140 sqm floors), woodland, central plaza, EV chargers, 100% backup power.
+- [Inspira Pamplona — Jardim Paulista](https://octis.com.br/edificios/inspira-pamplona): Rua Pamplona, 783 — Triptyque Triple-A tower (10,210 sqm, 456 to 742 sqm floors), central VRF, 100% full-load generator.
+- [Alameda Santos 2477 — Jardim Paulista](https://octis.com.br/edificios/alameda-santos-2477): Al. Santos, 2477 — 6,468 sqm contemporary corporate building (561 to 617 sqm floors) one block off Avenida Paulista.
+
 ## Contact
 - Website: https://octis.com.br/contato
 - Email: contato@octis.com.br

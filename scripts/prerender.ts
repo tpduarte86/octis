@@ -107,6 +107,13 @@ function applyHeadAndBody(
     }
   }
 
+  // Inject high-priority LCP hero image preload strictly on the homepage
+  if (routePath === '/') {
+    const heroPreloadTag =
+      '<link rel="preload" as="image" href="/images/hero-skyline.webp" imagesrcset="/images/hero-skyline-mobile.webp 720w, /images/hero-skyline.webp 1280w" imagesizes="100vw" fetchpriority="high" type="image/webp" />';
+    html = html.replace('</head>', `    ${heroPreloadTag}\n  </head>`);
+  }
+
   // Per Google Search Central Site Names guidelines, keep WebSite structured data strictly on the homepage
   if (routePath !== '/') {
     html = html.replace(
@@ -124,6 +131,19 @@ function applyHeadAndBody(
   return html;
 }
 
+function inlineBuiltStylesheets(template: string, distDir: string): string {
+  const stylesheetLinkRegex = /<link\s+rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/gi;
+  return template.replace(stylesheetLinkRegex, (fullMatch, hrefPath: string) => {
+    const cssFullPath = path.join(distDir, hrefPath.replace(/^\/+/, ''));
+    if (!fs.existsSync(cssFullPath)) {
+      return fullMatch;
+    }
+    const cssContent = fs.readFileSync(cssFullPath, 'utf-8').replace(/<\/style>/gi, '<\\/style>');
+    console.log(`Inlined critical CSS: ${hrefPath} (${cssContent.length} bytes)`);
+    return `<style id="octis-inline-css">${cssContent}</style>`;
+  });
+}
+
 async function runPrerender() {
   const rootDir = process.cwd();
   const distDir = path.resolve(rootDir, 'dist');
@@ -137,7 +157,8 @@ async function runPrerender() {
     throw new Error(`SSR bundle not found at ${ssrEntryPath}`);
   }
 
-  const template = fs.readFileSync(templatePath, 'utf-8');
+  const rawTemplate = fs.readFileSync(templatePath, 'utf-8');
+  const template = inlineBuiltStylesheets(rawTemplate, distDir);
   const mod = (await import(pathToFileURL(ssrEntryPath).href)) as RenderModule;
 
   const routes = mod.getStaticRoutes();

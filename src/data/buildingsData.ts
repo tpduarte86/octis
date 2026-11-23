@@ -1,3 +1,5 @@
+import { importedBuildingsData } from './importedBuildingsData';
+
 export interface BuildingImage {
   src: string;
   altPt: string;
@@ -44,6 +46,11 @@ export interface BuildingFaq {
 export interface BuildingDetail {
   slug: string;
   name: string;
+  listingMode?: 'commercial' | 'profile';
+  profileMetricLabelPt?: string;
+  profileMetricLabelEn?: string;
+  profileMetricValuePt?: string;
+  profileMetricValueEn?: string;
   subtitlePt: string;
   subtitleEn: string;
   regionPt: string;
@@ -1457,6 +1464,7 @@ export const buildingsData: BuildingDetail[] = [
     schemaPriceLow: 120,
     schemaPriceHigh: 142,
   },
+  ...importedBuildingsData,
 ];
 
 export function getBuildingBySlug(slug: string): BuildingDetail | undefined {

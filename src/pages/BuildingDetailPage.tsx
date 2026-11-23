@@ -40,6 +40,8 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
     return <Navigate to="/edificios" replace />;
   }
 
+  const isProfileOnly = building.listingMode === 'profile';
+
   const visibleImages =
     mediaTab === 'all'
       ? building.images
@@ -76,15 +78,23 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
     setSubmitted(true);
 
     const subject = encodeURIComponent(
-      isPt
-        ? `[Locação ${building.name}] Interesse em Conjuntos — ${company || name}`
-        : `[Leasing ${building.name}] Suite Inquiry — ${company || name}`
+      isProfileOnly
+        ? isPt
+          ? `[Informações ${building.name}] Consulta Corporativa — ${company || name}`
+          : `[Building Info ${building.name}] Corporate Inquiry — ${company || name}`
+        : isPt
+          ? `[Locação ${building.name}] Interesse em Conjuntos — ${company || name}`
+          : `[Leasing ${building.name}] Suite Inquiry — ${company || name}`
     );
 
     const body = encodeURIComponent(
-      isPt
-        ? `Edifício de Interesse: ${building.name} (${building.address})\nNome: ${name}\nEmpresa: ${company || '-'}\nE-mail: ${email}\nTelefone/WhatsApp: ${phone}\nMetragem Pretendida: ${suiteSize}\nPreferência de Entrega: ${fitout}\n\nObservações:\n${message || 'Gostaria de receber disponibilidade atualizada, plantas e agendar visita com estudo de test-fit.'}\n\n(Enviado pela página do edifício na Octis Real Estate)`
-        : `Building: ${building.name} (${building.address})\nName: ${name}\nCompany: ${company || '-'}\nEmail: ${email}\nPhone/WhatsApp: ${phone}\nTarget Area: ${suiteSize}\nDelivery Preference: ${fitout}\n\nNotes:\n${message || 'Please send updated suite availability, floorplans, and schedule a site tour.'}\n\n(Sent via Octis Real Estate building page)`
+      isProfileOnly
+        ? isPt
+          ? `Edifício de Interesse: ${building.name} (${building.address})\nNome: ${name}\nEmpresa: ${company || '-'}\nE-mail: ${email}\nTelefone/WhatsApp: ${phone}\nMetragem de Interesse: ${suiteSize}\nPerfil de Espaço: ${fitout}\n\nObservações:\n${message || 'Gostaria de receber a ficha técnica completa, plantas e agendar uma visita ao empreendimento.'}\n\n(Enviado pela página do edifício na Octis Real Estate)`
+          : `Building: ${building.name} (${building.address})\nName: ${name}\nCompany: ${company || '-'}\nEmail: ${email}\nPhone/WhatsApp: ${phone}\nTarget Area: ${suiteSize}\nWorkspace Profile: ${fitout}\n\nNotes:\n${message || 'Please send the full technical dossier, floorplans, and schedule a site visit.'}\n\n(Sent via Octis Real Estate building page)`
+        : isPt
+          ? `Edifício de Interesse: ${building.name} (${building.address})\nNome: ${name}\nEmpresa: ${company || '-'}\nE-mail: ${email}\nTelefone/WhatsApp: ${phone}\nMetragem Pretendida: ${suiteSize}\nPreferência de Entrega: ${fitout}\n\nObservações:\n${message || 'Gostaria de receber disponibilidade atualizada, plantas e agendar visita com estudo de test-fit.'}\n\n(Enviado pela página do edifício na Octis Real Estate)`
+          : `Building: ${building.name} (${building.address})\nName: ${name}\nCompany: ${company || '-'}\nEmail: ${email}\nPhone/WhatsApp: ${phone}\nTarget Area: ${suiteSize}\nDelivery Preference: ${fitout}\n\nNotes:\n${message || 'Please send updated suite availability, floorplans, and schedule a site tour.'}\n\n(Sent via Octis Real Estate building page)`
     );
 
     window.location.href = `mailto:contato@octis.com.br?subject=${subject}&body=${body}`;
@@ -99,81 +109,140 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
 
   const otherBuildings = buildingsData.filter((b) => b.slug !== building.slug);
 
-  const schemaJson = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'RealEstateListing',
-        '@id': `https://octis.com.br/edificios/${building.slug}#listing`,
-        name: `${building.name} — Conjuntos Corporativos para Locação`,
-        description: isPt ? building.seoDescriptionPt : building.seoDescriptionEn,
-        url: `https://octis.com.br/edificios/${building.slug}`,
-        image: building.images
-          .filter((img) => img.category === 'photo')
-          .map((img) => `https://octis.com.br${img.src}`),
-        offers: {
-          '@type': 'AggregateOffer',
-          priceCurrency: 'BRL',
-          lowPrice: building.schemaPriceLow,
-          highPrice: building.schemaPriceHigh,
-          availability: 'https://schema.org/InStock',
-          offeredBy: {
-            '@type': 'RealEstateAgent',
-            '@id': 'https://octis.com.br/#organization',
-            name: 'Octis Real Estate',
-            url: 'https://octis.com.br',
-          },
-        },
-        about: {
-          '@type': 'OfficeBuilding',
-          name: building.name,
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: building.address,
-            addressLocality: building.city,
-            addressRegion: building.state,
-            postalCode: building.postalCode,
-            addressCountry: 'BR',
-          },
-        },
-      },
-      {
-        '@type': 'FAQPage',
-        '@id': `https://octis.com.br/edificios/${building.slug}#faq`,
-        mainEntity: building.faqs.map((faq) => ({
-          '@type': 'Question',
-          name: isPt ? faq.questionPt : faq.questionEn,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: isPt ? faq.answerPt : faq.answerEn,
-          },
-        })),
-      },
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
+  const schemaJson = isProfileOnly
+    ? {
+        '@context': 'https://schema.org',
+        '@graph': [
           {
-            '@type': 'ListItem',
-            position: 1,
-            name: isPt ? 'Início' : 'Home',
-            item: 'https://octis.com.br/',
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: isPt ? 'Edifícios Corporativos' : 'Corporate Buildings',
-            item: 'https://octis.com.br/edificios',
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
+            '@type': 'OfficeBuilding',
+            '@id': `https://octis.com.br/edificios/${building.slug}#building`,
             name: building.name,
-            item: `https://octis.com.br/edificios/${building.slug}`,
+            description: isPt ? building.seoDescriptionPt : building.seoDescriptionEn,
+            url: `https://octis.com.br/edificios/${building.slug}`,
+            image: building.images
+              .filter((img) => img.category === 'photo')
+              .map((img) => `https://octis.com.br${img.src}`),
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: building.address,
+              addressLocality: building.city,
+              addressRegion: building.state,
+              postalCode: building.postalCode,
+              addressCountry: 'BR',
+            },
+          },
+          {
+            '@type': 'FAQPage',
+            '@id': `https://octis.com.br/edificios/${building.slug}#faq`,
+            mainEntity: building.faqs.map((faq) => ({
+              '@type': 'Question',
+              name: isPt ? faq.questionPt : faq.questionEn,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: isPt ? faq.answerPt : faq.answerEn,
+              },
+            })),
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: isPt ? 'Início' : 'Home',
+                item: 'https://octis.com.br/',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: isPt ? 'Edifícios Corporativos' : 'Corporate Buildings',
+                item: 'https://octis.com.br/edificios',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: building.name,
+                item: `https://octis.com.br/edificios/${building.slug}`,
+              },
+            ],
           },
         ],
-      },
-    ],
-  };
+      }
+    : {
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'RealEstateListing',
+            '@id': `https://octis.com.br/edificios/${building.slug}#listing`,
+            name: `${building.name} — Conjuntos Corporativos para Locação`,
+            description: isPt ? building.seoDescriptionPt : building.seoDescriptionEn,
+            url: `https://octis.com.br/edificios/${building.slug}`,
+            image: building.images
+              .filter((img) => img.category === 'photo')
+              .map((img) => `https://octis.com.br${img.src}`),
+            offers: {
+              '@type': 'AggregateOffer',
+              priceCurrency: 'BRL',
+              lowPrice: building.schemaPriceLow,
+              highPrice: building.schemaPriceHigh,
+              availability: 'https://schema.org/InStock',
+              offeredBy: {
+                '@type': 'RealEstateAgent',
+                '@id': 'https://octis.com.br/#organization',
+                name: 'Octis Real Estate',
+                url: 'https://octis.com.br',
+              },
+            },
+            about: {
+              '@type': 'OfficeBuilding',
+              name: building.name,
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: building.address,
+                addressLocality: building.city,
+                addressRegion: building.state,
+                postalCode: building.postalCode,
+                addressCountry: 'BR',
+              },
+            },
+          },
+          {
+            '@type': 'FAQPage',
+            '@id': `https://octis.com.br/edificios/${building.slug}#faq`,
+            mainEntity: building.faqs.map((faq) => ({
+              '@type': 'Question',
+              name: isPt ? faq.questionPt : faq.questionEn,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: isPt ? faq.answerPt : faq.answerEn,
+              },
+            })),
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: isPt ? 'Início' : 'Home',
+                item: 'https://octis.com.br/',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: isPt ? 'Edifícios Corporativos' : 'Corporate Buildings',
+                item: 'https://octis.com.br/edificios',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: building.name,
+                item: `https://octis.com.br/edificios/${building.slug}`,
+              },
+            ],
+          },
+        ],
+      };
 
   return (
     <div className="pt-20 min-h-screen bg-white text-gray-900">
@@ -238,7 +307,13 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-7">
                   <div className="p-4 bg-white border border-gray-200">
                     <span className="text-[11px] uppercase tracking-wider text-gray-500 font-semibold block mb-1">
-                      {isPt ? 'Metragem Disponível' : 'Available Suites'}
+                      {isProfileOnly
+                        ? isPt
+                          ? 'Laje Tipo / Metragem'
+                          : 'Typical Floorplate'
+                        : isPt
+                          ? 'Metragem Disponível'
+                          : 'Available Suites'}
                     </span>
                     <span className="text-lg font-serif text-[#0a1d37] tabular-nums">
                       {isPt ? building.areaRangeSummaryPt : building.areaRangeSummaryEn}
@@ -246,10 +321,22 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
                   </div>
                   <div className="p-4 bg-white border border-gray-200">
                     <span className="text-[11px] uppercase tracking-wider text-gray-500 font-semibold block mb-1">
-                      {isPt ? 'Pacote Estimado (Faixa)' : 'Estimated Monthly Package'}
+                      {isProfileOnly
+                        ? isPt
+                          ? building.profileMetricLabelPt || 'Porte do Empreendimento'
+                          : building.profileMetricLabelEn || 'Building Scale'
+                        : isPt
+                          ? 'Pacote Estimado (Faixa)'
+                          : 'Estimated Monthly Package'}
                     </span>
                     <span className="text-base font-serif text-[#0a1d37] tabular-nums">
-                      {isPt ? building.packageRangeSummaryPt : building.packageRangeSummaryEn}
+                      {isProfileOnly
+                        ? isPt
+                          ? building.profileMetricValuePt || building.packageRangeSummaryPt
+                          : building.profileMetricValueEn || building.packageRangeSummaryEn
+                        : isPt
+                          ? building.packageRangeSummaryPt
+                          : building.packageRangeSummaryEn}
                     </span>
                   </div>
                 </div>
@@ -262,7 +349,13 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
                   style={{ color: '#ffffff', WebkitTextFillColor: '#ffffff' }}
                   className="px-7 py-3.5 bg-[#0a1d37] hover:bg-[#122b4f] !text-white text-white font-semibold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors whitespace-nowrap shrink-0"
                 >
-                  {isPt ? 'Consultar Unidades & Valores' : 'Request Availability & Pricing'}
+                  {isProfileOnly
+                    ? isPt
+                      ? 'Solicitar Ficha Técnica'
+                      : 'Request Technical Profile'
+                    : isPt
+                      ? 'Consultar Unidades & Valores'
+                      : 'Request Availability & Pricing'}
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <Link
@@ -337,6 +430,9 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
                     <img
                       src={activeImg.src}
                       alt={isPt ? activeImg.altPt : activeImg.altEn}
+                      loading="eager"
+                      decoding="async"
+                      fetchPriority="high"
                       referrerPolicy="no-referrer"
                       onError={() =>
                         setImgErrorMap((prev) => ({ ...prev, [activeImg.src]: true }))
@@ -385,9 +481,11 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
               {/* Thumbnails Strip */}
               <div
                 className={`grid gap-1.5 mt-3 pt-2.5 border-t border-gray-100 ${
-                  visibleImages.length === 10
-                    ? 'grid-cols-5'
-                    : 'grid-cols-4 sm:grid-cols-8'
+                  visibleImages.length === 3
+                    ? 'grid-cols-3'
+                    : visibleImages.length === 10
+                      ? 'grid-cols-5'
+                      : 'grid-cols-4 sm:grid-cols-8'
                 }`}
               >
                 {visibleImages.map((img, idx) => (
@@ -405,6 +503,8 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
                     <img
                       src={img.src}
                       alt={isPt ? img.altPt : img.altEn}
+                      loading="lazy"
+                      decoding="async"
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover"
                     />
@@ -445,9 +545,13 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
                 {isPt ? 'Visão Geral do Edifício' : 'Building Overview'}
               </div>
               <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-5 font-normal">
-                {isPt
-                  ? `Por que instalar sua empresa no ${building.name}?`
-                  : `Why Locate Your Enterprise at ${building.name}?`}
+                {isProfileOnly
+                  ? isPt
+                    ? `Características do ${building.name}`
+                    : `Profile of ${building.name}`
+                  : isPt
+                    ? `Por que instalar sua empresa no ${building.name}?`
+                    : `Why Locate Your Enterprise at ${building.name}?`}
               </h2>
               <div className="space-y-4 text-sm sm:text-base text-gray-700 font-light leading-relaxed">
                 {overview.map((paragraph, i) => (
@@ -487,13 +591,19 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
             </div>
           </div>
 
-          {/* Right: Suite Configurations & Indicative Commercial Ranges */}
+          {/* Right: Suite Configurations & Commercial Ranges (or Technical Advisory for Profile-Only) */}
           <div className="lg:col-span-5 space-y-6">
             {/* Suite Types */}
             <div className="p-6 md:p-7 bg-[#f8fafc] border border-gray-200">
               <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
                 <span className="w-1.5 h-1.5 bg-[#c59b27]" />
-                {isPt ? 'Tipologias de Locação' : 'Available Suite Configurations'}
+                {isProfileOnly
+                  ? isPt
+                    ? 'Tipologias de Planta'
+                    : 'Floorplate Typologies'
+                  : isPt
+                    ? 'Tipologias de Locação'
+                    : 'Available Suite Configurations'}
               </div>
               <h3 className="text-xl font-serif text-gray-900 mb-4 font-normal">
                 {isPt ? 'Configurações de Conjuntos e Lajes' : 'Suite & Floorplate Options'}
@@ -516,64 +626,95 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
                       </div>
                     </div>
                     <p className="text-xs text-gray-600 font-light">
-                      {isPt ? suite.fitoutPt : suite.fitoutEn} ·{' '}
-                      <span className="text-[#0a1d37] font-medium">
-                        {isPt ? suite.availabilityPt : suite.availabilityEn}
-                      </span>
+                      {isPt ? suite.fitoutPt : suite.fitoutEn}
+                      {(isPt ? suite.availabilityPt : suite.availabilityEn) && (
+                        <>
+                          {' · '}
+                          <span className="text-[#0a1d37] font-medium">
+                            {isPt ? suite.availabilityPt : suite.availabilityEn}
+                          </span>
+                        </>
+                      )}
                     </p>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Indicative Commercial Conditions (Ranges) */}
-            <div className="p-6 md:p-7 bg-white border border-gray-200">
-              <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
-                <span className="w-1.5 h-1.5 bg-[#c59b27]" />
-                {isPt ? 'Condições Comerciais Estimadas' : 'Estimated Commercial Benchmarks'}
-              </div>
-              <h3 className="text-xl font-serif text-gray-900 mb-4 font-normal">
-                {isPt ? 'Faixa de Valores para Locação' : 'Indicative Lease Rate Ranges'}
-              </h3>
+            {/* Indicative Commercial Conditions (ONLY for commercial mode buildings) */}
+            {!isProfileOnly && building.commercialRanges.length > 0 ? (
+              <div className="p-6 md:p-7 bg-white border border-gray-200">
+                <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
+                  <span className="w-1.5 h-1.5 bg-[#c59b27]" />
+                  {isPt ? 'Condições Comerciais Estimadas' : 'Estimated Commercial Benchmarks'}
+                </div>
+                <h3 className="text-xl font-serif text-gray-900 mb-4 font-normal">
+                  {isPt ? 'Faixa de Valores para Locação' : 'Indicative Lease Rate Ranges'}
+                </h3>
 
-              <div className="divide-y divide-gray-200">
-                {building.commercialRanges.map((item, idx) => (
-                  <div key={idx} className="py-3.5 first:pt-0 last:pb-0">
-                    <div className="flex items-baseline justify-between gap-4 mb-1">
-                      <span className="text-xs font-medium text-gray-700">
-                        {isPt ? item.labelPt : item.labelEn}
-                      </span>
-                      <span className="text-sm sm:text-base font-serif text-[#0a1d37] font-medium tabular-nums shrink-0">
-                        {isPt ? item.rangePt : item.rangeEn}
-                      </span>
+                <div className="divide-y divide-gray-200">
+                  {building.commercialRanges.map((item, idx) => (
+                    <div key={idx} className="py-3.5 first:pt-0 last:pb-0">
+                      <div className="flex items-baseline justify-between gap-4 mb-1">
+                        <span className="text-xs font-medium text-gray-700">
+                          {isPt ? item.labelPt : item.labelEn}
+                        </span>
+                        <span className="text-sm sm:text-base font-serif text-[#0a1d37] font-medium tabular-nums shrink-0">
+                          {isPt ? item.rangePt : item.rangeEn}
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-gray-500 font-light leading-relaxed">
+                        {isPt ? item.notePt : item.noteEn}
+                      </p>
                     </div>
-                    <p className="text-[11px] text-gray-500 font-light leading-relaxed">
-                      {isPt ? item.notePt : item.noteEn}
+                  ))}
+                </div>
+
+                <div className="mt-5 pt-4 border-t border-gray-200">
+                  <div className="p-3.5 bg-[#f8fafc] border border-gray-200 mb-4">
+                    <span className="text-[10px] uppercase tracking-wider text-[#0a1d37] font-semibold block mb-1">
+                      {isPt ? 'Aviso Comercial' : 'Commercial Disclaimer'}
+                    </span>
+                    <p className="text-[11px] text-gray-600 font-light leading-relaxed">
+                      {isPt ? building.commercialDisclaimerPt : building.commercialDisclaimerEn}
                     </p>
                   </div>
-                ))}
-              </div>
-
-              <div className="mt-5 pt-4 border-t border-gray-200">
-                <div className="p-3.5 bg-[#f8fafc] border border-gray-200 mb-4">
-                  <span className="text-[10px] uppercase tracking-wider text-[#0a1d37] font-semibold block mb-1">
-                    {isPt ? 'Aviso Comercial' : 'Commercial Disclaimer'}
-                  </span>
-                  <p className="text-[11px] text-gray-600 font-light leading-relaxed">
-                    {isPt ? building.commercialDisclaimerPt : building.commercialDisclaimerEn}
-                  </p>
+                  <a
+                    href="#solicitar-disponibilidade"
+                    data-button-navy="true"
+                    style={{ color: '#ffffff', WebkitTextFillColor: '#ffffff' }}
+                    className="w-full py-3 bg-[#0a1d37] hover:bg-[#122b4f] !text-white text-white font-semibold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors"
+                  >
+                    {isPt ? 'Receber Tabela & Condições Atualizadas' : 'Request Updated Availability & Terms'}
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
                 </div>
+              </div>
+            ) : (
+              <div className="p-6 md:p-7 bg-white border border-gray-200">
+                <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
+                  <span className="w-1.5 h-1.5 bg-[#c59b27]" />
+                  {isPt ? 'Assessoria Técnica Octis' : 'Octis Technical Advisory'}
+                </div>
+                <h3 className="text-xl font-serif text-gray-900 mb-3 font-normal">
+                  {isPt ? 'Estudo de Ocupação e Plantas' : 'Occupancy Study & Floorplans'}
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-600 font-light leading-relaxed mb-5">
+                  {isPt
+                    ? `Nossa equipe prepara comparativos técnicos de edifícios em ${building.neighborhood}, verifica a aderência operacional do prédio ao perfil da sua empresa e produz estudo de layout (test-fit) gratuito.`
+                    : `Our team prepares technical building comparisons in ${building.neighborhood}, verifies operational fit for your company, and delivers a complimentary architectural test-fit study.`}
+                </p>
                 <a
                   href="#solicitar-disponibilidade"
                   data-button-navy="true"
                   style={{ color: '#ffffff', WebkitTextFillColor: '#ffffff' }}
                   className="w-full py-3 bg-[#0a1d37] hover:bg-[#122b4f] !text-white text-white font-semibold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors"
                 >
-                  {isPt ? 'Receber Tabela & Condições Atualizadas' : 'Request Updated Availability & Terms'}
+                  {isPt ? 'Solicitar Dossiê Técnico e Plantas' : 'Request Technical Dossier & Plans'}
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </section>
@@ -585,42 +726,68 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
           <div className="lg:col-span-5">
             <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-3">
               <span className="w-1.5 h-1.5 bg-[#c59b27]" />
-              {isPt ? 'Atendimento Especializado' : 'Dedicated Leasing Desk'}
+              {isProfileOnly
+                ? isPt
+                  ? 'Informações do Empreendimento'
+                  : 'Building Information Desk'
+                : isPt
+                  ? 'Atendimento Especializado'
+                  : 'Dedicated Leasing Desk'}
             </div>
             <h2 className="text-3xl sm:text-4xl font-serif text-gray-900 mb-4 font-normal leading-tight">
-              {isPt
-                ? `Interessado em locar no ${building.name}?`
-                : `Interested in Leasing at ${building.name}?`}
+              {isProfileOnly
+                ? isPt
+                  ? `Quer saber mais sobre o ${building.name}?`
+                  : `Want more details on ${building.name}?`
+                : isPt
+                  ? `Interessado em locar no ${building.name}?`
+                  : `Interested in Leasing at ${building.name}?`}
             </h2>
             <p className="text-sm sm:text-base text-gray-600 font-light leading-relaxed mb-6">
-              {isPt
-                ? 'Fale com a equipe de Tenant Representation da Octis Real Estate para receber a relação atualizada de andares vagos, agendar visita técnica e conduzir sua proposta com inteligência de dados comparativos.'
-                : 'Connect with Octis Real Estate’s Tenant Representation team to obtain the latest unit availability schedule, tour the building, and benchmark your LOI against comparable transactions.'}
+              {isProfileOnly
+                ? isPt
+                  ? 'Converse com os especialistas da Octis Real Estate para receber a ficha técnica completa, plantas dos pavimentos e agendar uma visita técnica ao empreendimento.'
+                  : 'Connect with Octis Real Estate specialists to receive the complete technical dossier, floorplate drawings, and schedule a guided visit.'
+                : isPt
+                  ? 'Fale com a equipe de Tenant Representation da Octis Real Estate para receber a relação atualizada de andares vagos, agendar visita técnica e conduzir sua proposta com inteligência de dados comparativos.'
+                  : 'Connect with Octis Real Estate’s Tenant Representation team to obtain the latest unit availability schedule, tour the building, and benchmark your LOI against comparable transactions.'}
             </p>
 
             <div className="space-y-3 mb-8 text-xs sm:text-sm text-gray-700 font-light">
               <div className="p-4 bg-white border border-gray-200 flex items-start gap-3">
                 <Check className="w-4 h-4 text-[#c59b27] shrink-0 mt-0.5" />
                 <span>
-                  {isPt
-                    ? 'Test-fit gratuito na planta do conjunto antes de assinar proposta'
-                    : 'Free architectural test-fit study on candidate floorplates prior to signing'}
+                  {isProfileOnly
+                    ? isPt
+                      ? 'Estudo de layout (test-fit) gratuito na planta do pavimento para validar sua operação'
+                      : 'Complimentary architectural test-fit study on the floorplate to validate your layout'
+                    : isPt
+                      ? 'Test-fit gratuito na planta do conjunto antes de assinar proposta'
+                      : 'Free architectural test-fit study on candidate floorplates prior to signing'}
                 </span>
               </div>
               <div className="p-4 bg-white border border-gray-200 flex items-start gap-3">
                 <Check className="w-4 h-4 text-[#c59b27] shrink-0 mt-0.5" />
                 <span>
-                  {isPt
-                    ? `Negociação de carência de obra, prazo contratual e comparativos em ${building.neighborhood}`
-                    : `Data-backed negotiation of rent-free periods, fit-out terms, and ${building.neighborhood} comps`}
+                  {isProfileOnly
+                    ? isPt
+                      ? `Comparativo técnico entre edifícios corporativos em ${building.neighborhood} e arredores`
+                      : `Side-by-side technical comparison across corporate buildings in ${building.neighborhood}`
+                    : isPt
+                      ? `Negociação de carência de obra, prazo contratual e comparativos em ${building.neighborhood}`
+                      : `Data-backed negotiation of rent-free periods, fit-out terms, and ${building.neighborhood} comps`}
                 </span>
               </div>
               <div className="p-4 bg-white border border-gray-200 flex items-start gap-3">
                 <Check className="w-4 h-4 text-[#c59b27] shrink-0 mt-0.5" />
                 <span>
-                  {isPt
-                    ? 'Acesso atualizado aos conjuntos disponíveis, plantas e confirmação formal das condições'
-                    : 'Direct access to current suite availability, floorplans, and formal term confirmation'}
+                  {isProfileOnly
+                    ? isPt
+                      ? 'Visita técnica guiada com validação de infraestrutura predial, acessos e entorno'
+                      : 'Guided technical tour verifying building systems, transit access, and surroundings'
+                    : isPt
+                      ? 'Acesso atualizado aos conjuntos disponíveis, plantas e confirmação formal das condições'
+                      : 'Direct access to current suite availability, floorplans, and formal term confirmation'}
                 </span>
               </div>
             </div>
@@ -639,14 +806,22 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
           {/* Right Form */}
           <div className="lg:col-span-7 bg-white border border-gray-200 p-8 md:p-10">
             <h3 className="text-2xl font-serif text-gray-900 mb-2 font-normal">
-              {isPt
-                ? `Solicitar Disponibilidade — ${building.name}`
-                : `Request Units & Floorplans — ${building.name}`}
+              {isProfileOnly
+                ? isPt
+                  ? `Solicitar Informações — ${building.name}`
+                  : `Request Information — ${building.name}`
+                : isPt
+                  ? `Solicitar Disponibilidade — ${building.name}`
+                  : `Request Units & Floorplans — ${building.name}`}
             </h3>
             <p className="text-xs sm:text-sm text-gray-600 font-light mb-6">
-              {isPt
-                ? 'Preencha seus dados corporativos abaixo. Retornamos com as opções aderentes ao perfil da sua empresa.'
-                : 'Submit your corporate inquiry below. Our advisors respond promptly with matching suites.'}
+              {isProfileOnly
+                ? isPt
+                  ? 'Preencha seus dados corporativos abaixo. Nossa equipe retorna com a ficha técnica e informações completas sobre o prédio.'
+                  : 'Submit your corporate details below. Our advisors respond promptly with the full building profile and floorplans.'
+                : isPt
+                  ? 'Preencha seus dados corporativos abaixo. Retornamos com as opções aderentes ao perfil da sua empresa.'
+                  : 'Submit your corporate inquiry below. Our advisors respond promptly with matching suites.'}
             </p>
 
             {submitted && (
@@ -770,7 +945,13 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
                     htmlFor="building-lead-fitout"
                     className="block text-xs uppercase tracking-wider text-gray-700 mb-1 font-semibold"
                   >
-                    {isPt ? 'Preferência de Entrega' : 'Delivery Preference'}
+                    {isProfileOnly
+                      ? isPt
+                        ? 'Perfil de Layout'
+                        : 'Workspace Profile'
+                      : isPt
+                        ? 'Preferência de Entrega'
+                        : 'Delivery Preference'}
                   </label>
                   <select
                     id="building-lead-fitout"
@@ -816,9 +997,13 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
                 style={{ color: '#ffffff', WebkitTextFillColor: '#ffffff' }}
                 className="w-full py-3.5 bg-[#0a1d37] hover:bg-[#122b4f] !text-white text-white font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
               >
-                {isPt
-                  ? `Solicitar Disponibilidade no ${building.name}`
-                  : `Request Availability at ${building.name}`}
+                {isProfileOnly
+                  ? isPt
+                    ? `Solicitar Informações sobre o ${building.name}`
+                    : `Request Information on ${building.name}`
+                  : isPt
+                    ? `Solicitar Disponibilidade no ${building.name}`
+                    : `Request Availability at ${building.name}`}
               </button>
             </form>
           </div>
@@ -880,8 +1065,8 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
             <p className="text-sm text-gray-700 font-light">
               {otherBuildings.length > 0
                 ? isPt
-                  ? 'Explore outros edifícios corporativos com conjuntos disponíveis em São Paulo.'
-                  : 'Explore other corporate office buildings available in São Paulo.'
+                  ? 'Explore outros edifícios corporativos mapeados pela Octis em São Paulo.'
+                  : 'Explore other corporate office buildings profiled by Octis in São Paulo.'
                 : isPt
                   ? 'Buscando outras lajes corporativas na Faria Lima, Itaim, Paulista ou Berrini?'
                   : 'Looking for additional floorplates in Faria Lima, Itaim, Paulista, or Berrini?'}
