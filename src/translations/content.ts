@@ -602,7 +602,6 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           date: '15 de Março de 2026',
           summary: 'Entenda como os CRIs captam recursos via securitizadoras para financiar obras e como proprietários de imóveis prontos alugados geram caixa antecipando recebíveis futuros.',
           takeaways: [
-            'A Octis não emite CRI diretamente: conectamos proprietários e incorporadoras às melhores securitizadoras do mercado.',
             'O CRI serve tanto para financiar a construção de obras quanto para proprietários de imóveis prontos com contratos de aluguel em andamento.',
             'A principal proposta para proprietários é gerar caixa imediato antecipando o fluxo de aluguéis futuros sem precisar vender o imóvel.',
             'Incorporadoras financiam canteiros de obras e loteamentos com cronogramas aderentes à velocidade do projeto.',
@@ -615,7 +614,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
                 paragraphs: [
                   'Em obras e loteamentos, a incorporadora tem parcelas a receber das unidades vendidas a prazo. Em vez de esperar anos pelos pagamentos enquanto precisa arcar com a construção, a securitizadora antecipa esse fluxo emitindo CRIs lastreados nas vendas futuras.',
                   'Para proprietários de imóveis prontos (como galpões logísticos e prédios comerciais já alugados), o CRI funciona para fazer caixa rápido: antecipam-se os recebíveis dos contratos de locação ativos e o dinheiro entra à vista, mantendo o imóvel no patrimônio do dono.',
-                  'Vale deixar claro que a Octis Real Estate não é uma securitizadora emissora: atuamos na originação e estruturação, conectando incorporadoras e proprietários diretamente a securitizadoras e fundos com apetite para a operação.',
+                  'A Octis Real Estate não é uma securitizadora emissora: atuamos na originação e estruturação, conectando incorporadoras e proprietários diretamente a securitizadoras e fundos com apetite para a operação.',
                 ],
               },
               {
@@ -985,7 +984,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
               'A Octis Real Estate atua com todas as classes de ativos do mercado imobiliário brasileiro, sem restrição de tipologia. Negociamos desde galpões urbanos menores, salas comerciais e condomínios residenciais econômicos até torres corporativas de alto padrão.',
               'Acreditamos que a economia real é movida por todas as categorias de imóveis e aplicamos a mesma dedicação comercial em todas as operações.',
             ],
-            whyOctis: 'Seja para venda, compra, Sale & Leaseback ou captação de recursos via CRI, a Octis Real Estate tem a resposta ágil e a equipe qualificada para conduzir seu negócio com eficácia em qualquer estado do país.',
+            whyOctis: 'Seja para venda, compra, Sale & Leaseback ou captação de recursos via CRI, a Octis Real Estate tem a resposta ágil e a equipe qualificada para conduzir seu negócio com eficácia.',
           },
         },
       ],
@@ -1020,12 +1019,12 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
         {
           category: 'Classes de Imóveis',
           question: 'A Octis só trabalha com imóveis de alto padrão ou luxo?',
-          answer: 'Não. Atendemos todas as classes de ativos, dos mais simples ao padrão AAA. No segmento residencial, cobrimos desde habitação econômica e popular até empreendimentos de médio e alto padrão, além de loteamentos populares e condomínios fechados.',
+          answer: 'Não. Atendemos todas as classes de ativos, dos mais simples ao padrão AAA. No segmento residencial, atendemos incorporadoras para desenvolvimento desde habitação econômica e popular até empreendimentos de médio e alto padrão, além de loteamentos populares e condomínios fechados.',
         },
         {
           category: 'Tipos de Ativos',
           question: 'Quais tipos de imóveis vocês atendem?',
-          answer: 'Atendemos todos os segmentos: residenciais (casas, prédios e vilas), galpões de bairro e centros logísticos, prédios comerciais inteiros, lajes de escritório, lojas e terrenos para desenvolvimento imobiliário.',
+          answer: 'Atendemos todos os segmentos: incorporadoras residenciais (casas, prédios e vilas), galpões de bairro e centros logísticos, prédios comerciais inteiros, lajes de escritório, lojas e terrenos para desenvolvimento imobiliário.',
         },
         {
           category: 'Sale & Leaseback',
@@ -1134,7 +1133,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       point1Title: 'Construction Funding (CRI)',
       point1Desc: 'Capital for builders, urban subdivisions, and new projects.',
       point2Title: 'All Property Classes',
-      point2Desc: 'From affordable housing to prime AAA towers.',
+      point2Desc: 'From affordable housing development to prime AAA towers.',
       point3Title: 'Direct Buyers & Funds',
       point3Desc: 'Immediate connection to investors and institutional funds.',
       point4Title: 'Transaction Focus',
@@ -1223,7 +1222,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
     development: {
       badge: 'Property Coverage',
       title: 'We cover all real estate asset classes, from entry-level to Class AAA.',
-      subtitle: 'Whether an operational warehouse, a master-planned land parcel, an affordable housing community, or a high-spec corporate tower, we deliver the right execution.',
+      subtitle: 'Whether an operational warehouse, a master-planned land parcel, the development of an affordable housing community, or a high-spec corporate tower, we deliver the right execution.',
       examplesLabel: 'Asset types covered:',
       residentialPortalPrefix: 'Looking for apartments? Visit ',
       residentialPortalDomain: 'prontoapto.com.br',
@@ -1298,7 +1297,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
           date: 'November 14, 2026',
           summary: 'Complete guide to exclusive occupier and tenant representation in Brazil: zero conflict of interest, what a Tenant Representative does, the 4 process phases (from strategy to LOI), and coverage in São Paulo and major hubs.',
           takeaways: [
-            'Definition: Tenant Representation is exclusive advisory advocating solely for the company leasing or buying commercial/logistics space—never the landlord.',
+            'Definition: Tenant Representation is exclusive advisory advocating solely for the company leasing or buying commercial/logistics space. Never the landlord in the same transaction.',
             'Zero conflict of interest: Eliminates divided loyalty and aligns every negotiation around Total Cost of Occupancy (TCO) reduction.',
             'The 4 core phases: 1. Strategy & Planning; 2. Technical Tours & TCO Comparisons; 3. Letter of Intent (LOI); and 4. Lease Execution & Closing.',
             'End-to-end support: Free architectural test-fit studies, real closed transaction comps, and Brazilian Tenancy Law (Law 8,245/91) compliance.',
@@ -1328,7 +1327,7 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
                 ],
               },
             ],
-            conclusion: 'Octis Real Estate delivers exclusive Tenant Representation across São Paulo and Brazil’s key hubs, combining free test-fit studies, proprietary data intelligence, and conflict-free commercial negotiation.',
+            conclusion: 'Octis Real Estate delivers Tenant Representation across São Paulo and Brazil’s key hubs, combining free test-fit studies, proprietary data intelligence, and conflict-free commercial negotiation.',
           },
         },
         {
