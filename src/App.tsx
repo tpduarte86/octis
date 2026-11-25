@@ -79,6 +79,12 @@ const BuildingsDirectoryPage = lazyWithPreload(() =>
 const BuildingDetailPage = lazyWithPreload(() =>
   import('./pages/BuildingDetailPage').then((m) => ({ default: m.BuildingDetailPage }))
 );
+const OfficeLeasingPage = lazyWithPreload(() =>
+  import('./pages/OfficeLeasingPage').then((m) => ({ default: m.OfficeLeasingPage }))
+);
+const WarehouseLeasingPage = lazyWithPreload(() =>
+  import('./pages/WarehouseLeasingPage').then((m) => ({ default: m.WarehouseLeasingPage }))
+);
 const NotFoundPage = lazyWithPreload(() =>
   import('./pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage }))
 );
@@ -111,6 +117,18 @@ export async function preloadRoute(pathname: string): Promise<void> {
     await ServiceDetailPage.preload();
   } else if (normalized === '/imoveis') {
     await PropertiesPage.preload();
+  } else if (
+    normalized === '/alugar-escritorio-sao-paulo' ||
+    normalized === '/alugar-escritorio' ||
+    normalized === '/imovel-corporativo-sao-paulo'
+  ) {
+    await OfficeLeasingPage.preload();
+  } else if (
+    normalized === '/alugar-galpao-logistico' ||
+    normalized === '/alugar-galpao' ||
+    normalized === '/galpao-logistico'
+  ) {
+    await WarehouseLeasingPage.preload();
   } else if (normalized === '/edificios') {
     await BuildingsDirectoryPage.preload();
   } else if (normalized.startsWith('/edificios/')) {
@@ -183,6 +201,12 @@ export function AppRoutes() {
               <Route path="/servicos/:slug" element={<ServiceDetailPage />} />
 
               <Route path="/imoveis" element={<PropertiesPage />} />
+              <Route path="/alugar-escritorio-sao-paulo" element={<OfficeLeasingPage />} />
+              <Route path="/alugar-escritorio" element={<Navigate to="/alugar-escritorio-sao-paulo" replace />} />
+              <Route path="/imovel-corporativo-sao-paulo" element={<Navigate to="/alugar-escritorio-sao-paulo" replace />} />
+              <Route path="/alugar-galpao-logistico" element={<WarehouseLeasingPage />} />
+              <Route path="/alugar-galpao" element={<Navigate to="/alugar-galpao-logistico" replace />} />
+              <Route path="/galpao-logistico" element={<Navigate to="/alugar-galpao-logistico" replace />} />
               <Route path="/edificios" element={<BuildingsDirectoryPage />} />
               <Route path="/edificios/:slug" element={<BuildingDetailPage />} />
 

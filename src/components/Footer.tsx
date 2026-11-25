@@ -95,6 +95,16 @@ export function Footer() {
             </p>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
+                <Link to="/alugar-escritorio-sao-paulo" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
+                  {language === 'en' ? 'Rent Office in São Paulo' : 'Alugar Escritório em São Paulo'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/alugar-galpao-logistico" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
+                  {language === 'en' ? 'Rent Logistics Warehouse' : 'Alugar Galpão Logístico'}
+                </Link>
+              </li>
+              <li>
                 <Link to="/servicos/tenant-representation" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
                   Tenant Representation
                 </Link>

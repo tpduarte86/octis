@@ -48,11 +48,28 @@ export function PropertiesPage() {
             )}
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 font-light max-w-3xl leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 font-light max-w-3xl leading-relaxed mb-8">
             {language === 'en'
               ? 'We connect buyers, tenants, and institutional capital across every property sector: residential developments, corporate offices, logistics parks, and master-planned land.'
-              : 'Conectamos compradores, inquilinos e investidores para todas as categorias de imóveis: moradia econômica, lajes corporativas, galpões logísticos e loteamentos em todo o Brasil.'}
+              : 'Conectamos compradores, inquilinos e investidores para todas as categorias de imóveis: moradia econômica, imóveis corporativos em São Paulo, galpões logísticos e loteamentos em todo o Brasil.'}
           </p>
+
+          <div className="flex flex-wrap gap-3">
+            <Link
+              to="/alugar-escritorio-sao-paulo"
+              className="px-6 py-3 bg-[#0a1d37] text-white hover:bg-[#122b4f] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors"
+            >
+              {language === 'en' ? 'Rent Office in São Paulo' : 'Alugar Escritório em São Paulo'}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              to="/alugar-galpao-logistico"
+              className="px-6 py-3 bg-white border border-gray-300 text-gray-800 hover:border-[#0a1d37] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors"
+            >
+              {language === 'en' ? 'Rent Logistics Warehouse' : 'Alugar Galpão Logístico'}
+              <ArrowRight className="w-4 h-4 text-[#c59b27]" />
+            </Link>
+          </div>
 
         </div>
       </section>

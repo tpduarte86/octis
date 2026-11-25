@@ -255,6 +255,117 @@ export function BuildingsDirectoryPage() {
         </div>
       </section>
 
+      {/* Compact Guide: Imóvel Corporativo em São Paulo */}
+      <section className="py-16 bg-[#f8fafc] border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="max-w-2xl mb-10">
+            <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-3 font-normal">
+              {isPt
+                ? 'Como escolher um imóvel corporativo em São Paulo'
+                : 'How to evaluate a corporate building in São Paulo'}
+            </h2>
+            <p className="text-sm text-gray-600 font-light">
+              {isPt
+                ? 'Antes de fechar a mudança, compare o pacote mensal completo e a operação do prédio.'
+                : 'Compare total monthly occupancy cost and building operations before committing to a lease.'}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 bg-white border border-gray-200">
+              <h3 className="text-lg font-serif text-gray-900 mb-2 font-normal">
+                {isPt ? 'Alugar escritório por região' : 'Renting offices by district'}
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+                {isPt ? (
+                  <>
+                    Faria Lima, Itaim, Vila Olímpia, Paulista e Zona Sul têm preços e vacâncias bem diferentes. Veja nosso resumo prático para{' '}
+                    <Link to="/alugar-escritorio-sao-paulo" className="text-[#0a1d37] font-medium underline underline-offset-4 hover:text-[#c59b27]">
+                      alugar escritório em São Paulo
+                    </Link>{' '}
+                    ou solicite uma busca dedicada em{' '}
+                    <Link to="/servicos/tenant-representation" className="text-[#0a1d37] font-medium underline underline-offset-4 hover:text-[#c59b27]">
+                      Tenant Representation
+                    </Link>
+                    .
+                  </>
+                ) : (
+                  <>
+                    Faria Lima, Itaim, Vila Olímpia, Paulista, and Southern SP vary widely in rent and vacancy. Review our guide to{' '}
+                    <Link to="/alugar-escritorio-sao-paulo" className="text-[#0a1d37] font-medium underline underline-offset-4 hover:text-[#c59b27]">
+                      renting office space in São Paulo
+                    </Link>{' '}
+                    or request{' '}
+                    <Link to="/servicos/tenant-representation" className="text-[#0a1d37] font-medium underline underline-offset-4 hover:text-[#c59b27]">
+                      Tenant Representation
+                    </Link>
+                    .
+                  </>
+                )}
+              </p>
+            </div>
+
+            <div className="p-6 bg-white border border-gray-200">
+              <h3 className="text-lg font-serif text-gray-900 mb-2 font-normal">
+                {isPt ? 'Ficar ou mudar na renovação' : 'Stay vs. relocate at renewal'}
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+                {isPt ? (
+                  <>
+                    Se o proprietário pediu aumento acima do mercado, usar outros prédios desta lista ajuda a sustentar a{' '}
+                    <Link to="/servicos/renegociacao-de-contratos-de-aluguel" className="text-[#0a1d37] font-medium underline underline-offset-4 hover:text-[#c59b27]">
+                      renegociação do aluguel
+                    </Link>{' '}
+                    e evitar custos de reforma sem necessidade.
+                  </>
+                ) : (
+                  <>
+                    If your landlord is asking above-market renewal terms, benchmarking towers from this list supports{' '}
+                    <Link to="/servicos/renegociacao-de-contratos-de-aluguel" className="text-[#0a1d37] font-medium underline underline-offset-4 hover:text-[#c59b27]">
+                      lease renegotiation
+                    </Link>{' '}
+                    without unnecessary fit-out spending.
+                  </>
+                )}
+              </p>
+            </div>
+
+            <div className="p-6 bg-white border border-gray-200">
+              <h3 className="text-lg font-serif text-gray-900 mb-2 font-normal">
+                {isPt ? 'Compra de laje ou galpão logístico' : 'Buying space or logistics warehouses'}
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+                {isPt ? (
+                  <>
+                    Também assessoramos{' '}
+                    <Link to="/servicos/compra-e-venda-de-imoveis" className="text-[#0a1d37] font-medium underline underline-offset-4 hover:text-[#c59b27]">
+                      compra e venda de imóveis corporativos
+                    </Link>{' '}
+                    e empresas que buscam{' '}
+                    <Link to="/alugar-galpao-logistico" className="text-[#0a1d37] font-medium underline underline-offset-4 hover:text-[#c59b27]">
+                      alugar galpão logístico
+                    </Link>{' '}
+                    na Grande São Paulo e em outros estados.
+                  </>
+                ) : (
+                  <>
+                    We also advise on{' '}
+                    <Link to="/servicos/compra-e-venda-de-imoveis" className="text-[#0a1d37] font-medium underline underline-offset-4 hover:text-[#c59b27]">
+                      corporate property acquisitions
+                    </Link>{' '}
+                    and occupiers looking to{' '}
+                    <Link to="/alugar-galpao-logistico" className="text-[#0a1d37] font-medium underline underline-offset-4 hover:text-[#c59b27]">
+                      rent a logistics warehouse
+                    </Link>{' '}
+                    across Greater São Paulo and Brazil.
+                  </>
+                )}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Tenant Rep Cross-Link */}
       <section className="py-16 bg-[#0a1d37] text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">

@@ -24,6 +24,8 @@ import { RedditQuestionsPage } from './pages/RedditQuestionsPage';
 import { ContactPage } from './pages/ContactPage';
 import { BuildingsDirectoryPage } from './pages/BuildingsDirectoryPage';
 import { BuildingDetailPage } from './pages/BuildingDetailPage';
+import { OfficeLeasingPage } from './pages/OfficeLeasingPage';
+import { WarehouseLeasingPage } from './pages/WarehouseLeasingPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export function ServerAppRoutes() {
@@ -75,6 +77,12 @@ export function ServerAppRoutes() {
               <Route path="/servicos/:slug" element={<ServiceDetailPage />} />
 
               <Route path="/imoveis" element={<PropertiesPage />} />
+              <Route path="/alugar-escritorio-sao-paulo" element={<OfficeLeasingPage />} />
+              <Route path="/alugar-escritorio" element={<Navigate to="/alugar-escritorio-sao-paulo" replace />} />
+              <Route path="/imovel-corporativo-sao-paulo" element={<Navigate to="/alugar-escritorio-sao-paulo" replace />} />
+              <Route path="/alugar-galpao-logistico" element={<WarehouseLeasingPage />} />
+              <Route path="/alugar-galpao" element={<Navigate to="/alugar-galpao-logistico" replace />} />
+              <Route path="/galpao-logistico" element={<Navigate to="/alugar-galpao-logistico" replace />} />
               <Route path="/edificios" element={<BuildingsDirectoryPage />} />
               <Route path="/edificios/:slug" element={<BuildingDetailPage />} />
 

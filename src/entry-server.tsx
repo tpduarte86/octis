@@ -34,6 +34,8 @@ export function getStaticRoutes(): string[] {
     '/quem-somos',
     '/servicos',
     '/imoveis',
+    '/alugar-escritorio-sao-paulo',
+    '/alugar-galpao-logistico',
     '/edificios',
     '/experiencia',
     '/reddit',

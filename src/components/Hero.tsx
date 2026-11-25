@@ -58,8 +58,8 @@ export function Hero() {
           <div className="lg:col-span-4">
             <p className="text-gray-600 text-sm md:text-base font-light leading-relaxed mb-6">
               {language === 'en'
-                ? 'Connecting property owners, corporations, and developers directly to qualified buyers, tenants, and institutional capital across Brazil.'
-                : 'Conectamos proprietários, empresas e incorporadoras diretamente a compradores, locatários e investidores em todo o Brasil.'}
+                ? 'Corporate offices in São Paulo, logistics warehouses, lease renegotiation, acquisitions, and CRI funding across Brazil.'
+                : 'Imóvel corporativo em São Paulo, locação de escritórios e galpões logísticos, renegociação de aluguel, compra, venda e CRI em todo o Brasil.'}
             </p>
             <div className="flex items-center gap-3">
               <a
@@ -79,6 +79,28 @@ export function Hero() {
                 className="btn-outline-navy px-6 py-3 border border-[#0a1d37] bg-white text-[#0a1d37] hover:bg-[#0a1d37] hover:!text-white text-xs font-semibold uppercase tracking-wider transition-colors inline-block"
               >
                 {language === 'en' ? 'Contact Us' : 'Falar com a Equipe'}
+              </Link>
+            </div>
+            <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-gray-600">
+              <Link
+                to="/alugar-escritorio-sao-paulo"
+                className="font-medium text-[#0a1d37] underline decoration-gray-300 hover:decoration-[#c59b27] underline-offset-4 transition-colors"
+              >
+                {language === 'en' ? 'Rent Office in SP' : 'Alugar Escritório SP'}
+              </Link>
+              <span className="text-gray-300" aria-hidden="true">·</span>
+              <Link
+                to="/alugar-galpao-logistico"
+                className="font-medium text-[#0a1d37] underline decoration-gray-300 hover:decoration-[#c59b27] underline-offset-4 transition-colors"
+              >
+                {language === 'en' ? 'Rent Logistics Warehouse' : 'Alugar Galpão Logístico'}
+              </Link>
+              <span className="text-gray-300" aria-hidden="true">·</span>
+              <Link
+                to="/edificios"
+                className="font-medium text-[#0a1d37] underline decoration-gray-300 hover:decoration-[#c59b27] underline-offset-4 transition-colors"
+              >
+                {language === 'en' ? '20 SP Buildings' : 'Edifícios em SP'}
               </Link>
             </div>
           </div>

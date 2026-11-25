@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Home, Briefcase, Warehouse, Map, Check, ArrowUpRight } from 'lucide-react';
+import { Home, Briefcase, Warehouse, Map, Check, ArrowUpRight, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/content';
 
@@ -101,6 +102,48 @@ export function Development({
                         </span>
                         <ArrowUpRight className="w-3 h-3 text-gray-400 group-hover:text-[#c59b27] shrink-0 transition-colors" />
                       </a>
+                    </div>
+                  )}
+
+                  {idx === 1 && (
+                    <div className="mt-4 pt-3 border-t border-gray-100">
+                      <Link
+                        to="/alugar-galpao-logistico"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#0a1d37] hover:text-[#c59b27] transition-colors"
+                      >
+                        {language === 'en' ? 'Rent Logistics Warehouse' : 'Alugar Galpão Logístico'}
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  )}
+
+                  {idx === 2 && (
+                    <div className="mt-4 pt-3 border-t border-gray-100 flex flex-col gap-1.5">
+                      <Link
+                        to="/alugar-escritorio-sao-paulo"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#0a1d37] hover:text-[#c59b27] transition-colors"
+                      >
+                        {language === 'en' ? 'Rent Office in SP' : 'Alugar Escritório SP'}
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                      <Link
+                        to="/edificios"
+                        className="inline-flex items-center gap-1 text-[11px] text-gray-500 hover:text-[#0a1d37] transition-colors"
+                      >
+                        {language === 'en' ? 'Browse 20 SP corporate buildings' : 'Ver 20 edifícios corporativos em SP'}
+                      </Link>
+                    </div>
+                  )}
+
+                  {idx === 3 && (
+                    <div className="mt-4 pt-3 border-t border-gray-100">
+                      <Link
+                        to="/servicos/socios-investidores-e-parcerias"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#0a1d37] hover:text-[#c59b27] transition-colors"
+                      >
+                        {language === 'en' ? 'Land Swaps & Partners' : 'Sócios e Permutas'}
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
                     </div>
                   )}
                 </div>

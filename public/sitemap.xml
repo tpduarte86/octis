@@ -65,9 +65,21 @@
   <!-- Imóveis & Classes de Ativos -->
   <url>
     <loc>https://octis.com.br/imoveis</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://octis.com.br/alugar-escritorio-sao-paulo</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.96</priority>
+  </url>
+  <url>
+    <loc>https://octis.com.br/alugar-galpao-logistico</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.96</priority>
   </url>
 
   <!-- Edifícios Corporativos Selecionados -->
@@ -256,6 +268,24 @@
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://octis.com.br/reddit/venda-de-imoveis-comerciais-e-galpoes</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://octis.com.br/reddit/cri-versus-financiamento-bancario-tradicional</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://octis.com.br/reddit/classes-de-imoveis-do-simples-ao-aaa</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
   </url>
 
   <!-- Dúvidas da Comunidade Reddit (FAQ) -->
