@@ -85,6 +85,9 @@ const OfficeLeasingPage = lazyWithPreload(() =>
 const WarehouseLeasingPage = lazyWithPreload(() =>
   import('./pages/WarehouseLeasingPage').then((m) => ({ default: m.WarehouseLeasingPage }))
 );
+const OfficeSimulatorPage = lazyWithPreload(() =>
+  import('./pages/OfficeSimulatorPage').then((m) => ({ default: m.OfficeSimulatorPage }))
+);
 const NotFoundPage = lazyWithPreload(() =>
   import('./pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage }))
 );
@@ -129,6 +132,12 @@ export async function preloadRoute(pathname: string): Promise<void> {
     normalized === '/galpao-logistico'
   ) {
     await WarehouseLeasingPage.preload();
+  } else if (
+    normalized === '/simulador-escritorio' ||
+    normalized === '/simulador' ||
+    normalized === '/calculadora-escritorio'
+  ) {
+    await OfficeSimulatorPage.preload();
   } else if (normalized === '/edificios') {
     await BuildingsDirectoryPage.preload();
   } else if (normalized.startsWith('/edificios/')) {
@@ -207,6 +216,9 @@ export function AppRoutes() {
               <Route path="/alugar-galpao-logistico" element={<WarehouseLeasingPage />} />
               <Route path="/alugar-galpao" element={<Navigate to="/alugar-galpao-logistico" replace />} />
               <Route path="/galpao-logistico" element={<Navigate to="/alugar-galpao-logistico" replace />} />
+              <Route path="/simulador-escritorio" element={<OfficeSimulatorPage />} />
+              <Route path="/simulador" element={<Navigate to="/simulador-escritorio" replace />} />
+              <Route path="/calculadora-escritorio" element={<Navigate to="/simulador-escritorio" replace />} />
               <Route path="/edificios" element={<BuildingsDirectoryPage />} />
               <Route path="/edificios/:slug" element={<BuildingDetailPage />} />
 

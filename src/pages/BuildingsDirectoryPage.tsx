@@ -379,13 +379,22 @@ export function BuildingsDirectoryPage() {
               ? 'Nossa equipe de Tenant Representation realiza pesquisa comparativa, test-fit gratuito e negociação via Carta de Intenção (LOI).'
               : 'Our Tenant Representation advisors conduct comparative market research, free test-fits, and LOI negotiations.'}
           </p>
-          <Link
-            to="/servicos/tenant-representation"
-            className="px-8 py-3.5 bg-white text-[#0a1d37] hover:bg-gray-100 font-semibold text-xs uppercase tracking-wider inline-flex items-center gap-2 transition-colors"
-          >
-            {isPt ? 'Conhecer Tenant Representation' : 'Explore Tenant Representation'}
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              to="/servicos/tenant-representation"
+              className="px-8 py-3.5 bg-white text-[#0a1d37] hover:bg-gray-100 font-semibold text-xs uppercase tracking-wider inline-flex items-center gap-2 transition-colors"
+            >
+              {isPt ? 'Conhecer Tenant Representation' : 'Explore Tenant Representation'}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              to="/simulador-escritorio"
+              className="px-7 py-3.5 bg-transparent border border-white/40 text-white hover:bg-white/10 font-semibold text-xs uppercase tracking-wider inline-flex items-center gap-2 transition-colors"
+            >
+              {isPt ? 'Simulador de Custos de Escritório' : 'Office Cost Simulator'}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
     </div>

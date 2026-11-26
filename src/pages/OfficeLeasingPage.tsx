@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   Building2,
+  Calculator,
   ChevronDown,
   ChevronRight,
   MapPin,
@@ -183,6 +184,13 @@ export function OfficeLeasingPage() {
             >
               <Building2 className="w-4 h-4 text-[#c59b27]" />
               {isPt ? 'Ver Edifícios em SP' : 'Browse SP Buildings'}
+            </Link>
+            <Link
+              to="/simulador-escritorio"
+              className="px-6 py-3 bg-white border border-gray-300 text-gray-800 hover:border-[#0a1d37] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors"
+            >
+              <Calculator className="w-4 h-4 text-[#c59b27]" />
+              {isPt ? 'Simular Custos do Escritório' : 'Simulate Office Costs'}
             </Link>
           </div>
         </div>

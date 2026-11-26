@@ -81,6 +81,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.96</priority>
   </url>
+  <url>
+    <loc>https://octis.com.br/simulador-escritorio</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.94</priority>
+  </url>
 
   <!-- Edifícios Corporativos Selecionados -->
   <url>

@@ -14,6 +14,7 @@ import {
   MapPin,
   ChevronDown,
   BookOpen,
+  Calculator,
   PhoneCall,
 } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
@@ -596,6 +597,33 @@ export function TenantRepresentationPage() {
               </div>
             ))}
           </div>
+
+          <div className="mt-8 bg-white border border-gray-200 p-6 md:p-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+            <div className="flex items-start gap-3.5 max-w-2xl">
+              <div className="w-10 h-10 bg-[#f8fafc] border border-gray-200 flex items-center justify-center text-[#0a1d37] shrink-0 mt-0.5">
+                <Calculator className="w-5 h-5 stroke-[1.8]" />
+              </div>
+              <div>
+                <h3 className="text-base sm:text-lg font-serif text-gray-900 font-normal mb-1">
+                  {isPt
+                    ? 'Está planilhando quanto custa montar um escritório em São Paulo?'
+                    : 'Budgeting a new corporate office in São Paulo?'}
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+                  {isPt
+                    ? 'Use nossa calculadora gratuita para comparar o valor do m² de laje corporativa (Faria Lima, Paulista, Berrini / Chucri Zaidan e mais), custo de reforma por m² e TCO em 5 anos.'
+                    : 'Use our free calculator to benchmark BOMA rent per sqm across São Paulo submarkets, turnkey fit-out CapEx, and 5-year TCO before touring buildings.'}
+                </p>
+              </div>
+            </div>
+            <Link
+              to="/simulador-escritorio"
+              className="px-6 py-3 bg-[#0a1d37] text-white hover:bg-[#122b4f] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors whitespace-nowrap shrink-0"
+            >
+              {isPt ? 'Calculadora de Custo de Escritório' : 'Office Cost Calculator'}{' '}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -795,6 +823,10 @@ export function TenantRepresentationPage() {
             <span aria-hidden="true">·</span>
             <Link to="/reddit/o-que-e-tenant-representation-guia-completo" className="hover:text-[#c59b27] transition-colors">
               {isPt ? 'Artigo Pilar: O que é Tenant Representation' : 'Pillar Guide: What is Tenant Representation'}
+            </Link>
+            <span aria-hidden="true">·</span>
+            <Link to="/simulador-escritorio" className="hover:text-[#c59b27] transition-colors">
+              {isPt ? 'Calculadora de Custo de Escritório SP' : 'São Paulo Office Cost Calculator'}
             </Link>
             <span aria-hidden="true">·</span>
             <Link to="/servicos/sale-and-leaseback" className="hover:text-[#c59b27] transition-colors">

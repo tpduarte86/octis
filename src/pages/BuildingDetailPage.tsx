@@ -1074,6 +1074,12 @@ export function BuildingDetailPage({ slug: propSlug }: BuildingDetailPageProps) 
           </div>
           <div className="flex flex-wrap gap-3">
             <Link
+              to="/simulador-escritorio"
+              className="px-5 py-2.5 bg-white border border-gray-300 text-gray-800 hover:border-[#0a1d37] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-1.5 transition-colors"
+            >
+              {isPt ? 'Calculadora de Custo e Reforma' : 'Office Cost Calculator'}
+            </Link>
+            <Link
               to="/edificios"
               className="px-5 py-2.5 bg-white border border-gray-300 text-gray-800 hover:border-[#0a1d37] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-1.5 transition-colors"
             >

@@ -26,6 +26,7 @@ import { BuildingsDirectoryPage } from './pages/BuildingsDirectoryPage';
 import { BuildingDetailPage } from './pages/BuildingDetailPage';
 import { OfficeLeasingPage } from './pages/OfficeLeasingPage';
 import { WarehouseLeasingPage } from './pages/WarehouseLeasingPage';
+import { OfficeSimulatorPage } from './pages/OfficeSimulatorPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export function ServerAppRoutes() {
@@ -83,6 +84,9 @@ export function ServerAppRoutes() {
               <Route path="/alugar-galpao-logistico" element={<WarehouseLeasingPage />} />
               <Route path="/alugar-galpao" element={<Navigate to="/alugar-galpao-logistico" replace />} />
               <Route path="/galpao-logistico" element={<Navigate to="/alugar-galpao-logistico" replace />} />
+              <Route path="/simulador-escritorio" element={<OfficeSimulatorPage />} />
+              <Route path="/simulador" element={<Navigate to="/simulador-escritorio" replace />} />
+              <Route path="/calculadora-escritorio" element={<Navigate to="/simulador-escritorio" replace />} />
               <Route path="/edificios" element={<BuildingsDirectoryPage />} />
               <Route path="/edificios/:slug" element={<BuildingDetailPage />} />
 

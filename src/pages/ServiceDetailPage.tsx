@@ -230,6 +230,12 @@ export function ServiceDetailPage({ slug: propSlug }: ServiceDetailPageProps) {
                 Tenant Representation <ArrowRight className="w-3.5 h-3.5" />
               </Link>
               <Link
+                to="/simulador-escritorio"
+                className="px-4 py-2.5 bg-white border border-gray-300 text-gray-800 hover:border-[#0a1d37] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-1.5 transition-colors"
+              >
+                {isPt ? 'Simular Custo de Mudança e Obra' : 'Simulate Relocation & Fit-Out'}
+              </Link>
+              <Link
                 to="/reddit/o-que-e-tenant-representation-guia-completo"
                 className="px-4 py-2.5 bg-white border border-gray-300 text-gray-800 hover:border-[#0a1d37] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-1.5 transition-colors"
               >

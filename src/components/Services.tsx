@@ -9,7 +9,8 @@ import {
   HandCoins, 
   Users, 
   Check, 
-  ArrowRight
+  ArrowRight,
+  Calculator
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/content';
@@ -103,6 +104,37 @@ export function Services() {
               </motion.div>
             );
           })}
+        </div>
+
+        {/* Executive Tool Highlight: Office Cost Simulator */}
+        <div className="mt-10 p-6 md:p-8 bg-[#f8fafc] border border-gray-200 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <div className="flex items-start gap-4 max-w-3xl">
+            <div className="w-11 h-11 bg-white border border-gray-200 flex items-center justify-center text-[#0a1d37] shrink-0">
+              <Calculator className="w-5 h-5 stroke-[1.8]" />
+            </div>
+            <div>
+              <span className="text-[11px] uppercase tracking-widest text-[#c59b27] font-semibold block mb-1">
+                {language === 'en' ? 'Interactive Tool • São Paulo' : 'Ferramenta Gratuita • São Paulo'}
+              </span>
+              <h3 className="text-xl font-serif text-gray-900 font-normal mb-1">
+                {language === 'en'
+                  ? 'Corporate Office Cost Calculator (Rent per sqm & Fit-Out)'
+                  : 'Calculadora de Custo de Escritório Corporativo em São Paulo'}
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+                {language === 'en'
+                  ? 'Estimate BOMA and carpet area, monthly rent in Faria Lima, Paulista, and Chucri Zaidan, turnkey fit-out CapEx per sqm, and 5-year TCO.'
+                  : 'Simule quanto custa montar um escritório: valor do m² de laje corporativa (Faria Lima, Paulista, Chucri Zaidan e mais), custo de reforma por m² e TCO em 5 anos.'}
+              </p>
+            </div>
+          </div>
+          <Link
+            to="/simulador-escritorio"
+            className="px-6 py-3.5 bg-[#0a1d37] text-white hover:bg-[#122b4f] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors whitespace-nowrap shrink-0"
+          >
+            {language === 'en' ? 'Open Cost Simulator' : 'Simular Custos Agora'}{' '}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
       </div>

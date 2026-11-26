@@ -49,6 +49,13 @@ const servicesNavList = [
     descEn: 'Matching landowners, private equity & developers',
     path: '/servicos/socios-investidores-e-parcerias',
   },
+  {
+    namePt: 'Simulador de Custos de Escritório',
+    nameEn: 'Office Cost Simulator (SP)',
+    descPt: 'Calcule metragem BOMA, aluguel, fit-out e TCO de 5 anos',
+    descEn: 'Estimate BOMA area, rent, fit-out CapEx & 5-year TCO',
+    path: '/simulador-escritorio',
+  },
 ];
 
 export function Header() {
@@ -74,11 +81,12 @@ export function Header() {
     setServicesDropdownOpen(false);
   }, [location.pathname]);
 
-  const isServicesActive = location.pathname.startsWith('/servicos');
+  const isServicesActive =
+    location.pathname.startsWith('/servicos') || location.pathname === '/simulador-escritorio';
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 bg-white ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 bg-white print:hidden ${
         isScrolled
           ? 'py-3.5 shadow-sm border-b border-gray-200/90'
           : 'py-4 md:py-5 border-b border-gray-200'

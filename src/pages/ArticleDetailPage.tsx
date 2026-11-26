@@ -247,12 +247,20 @@ export function ArticleDetailPage() {
             <p className="text-sm font-light text-gray-300 max-w-xl mx-auto mb-6 leading-relaxed">
               {article.content.conclusion}
             </p>
-            <Link
-              to="/contato"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0a1d37] hover:bg-gray-100 font-semibold text-xs uppercase tracking-wider transition-colors"
-            >
-              {t.ctaBoxBtn} <ArrowRight className="w-4 h-4" />
-            </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link
+                to="/contato"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0a1d37] hover:bg-gray-100 font-semibold text-xs uppercase tracking-wider transition-colors"
+              >
+                {t.ctaBoxBtn} <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/simulador-escritorio"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border border-white/40 text-white hover:bg-white/10 font-semibold text-xs uppercase tracking-wider transition-colors"
+              >
+                {language === 'en' ? 'Office Cost Calculator (SP)' : 'Calculadora de Custo de Escritório SP'}
+              </Link>
+            </div>
           </div>
 
           {/* Related Articles Strip */}

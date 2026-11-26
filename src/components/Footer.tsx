@@ -23,7 +23,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-[#061224] border-t border-slate-800 text-gray-300 py-16">
+    <footer className="bg-[#061224] border-t border-slate-800 text-gray-300 py-16 print:hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-14">
           
@@ -97,6 +97,11 @@ export function Footer() {
               <li>
                 <Link to="/alugar-escritorio-sao-paulo" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
                   {language === 'en' ? 'Rent Office in São Paulo' : 'Alugar Escritório em São Paulo'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/simulador-escritorio" className="text-gray-300 hover:text-[#c59b27] transition-colors font-light">
+                  {language === 'en' ? 'Office Cost Simulator (SP)' : 'Simulador de Custos de Escritório'}
                 </Link>
               </li>
               <li>
