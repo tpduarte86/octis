@@ -640,10 +640,10 @@ export const servicesData: ServiceDetail[] = [
     titleEn: 'Corporate Sale & Leaseback (Sell and Stay)',
     shortTitlePt: 'Sale & Leaseback',
     shortTitleEn: 'Sale & Leaseback',
-    seoTitlePt: 'Sale & Leaseback Corporativo | Octis Real Estate',
-    seoTitleEn: 'Corporate Sale & Leaseback | Octis Real Estate',
-    seoDescriptionPt: 'Transforme prédios e galpões próprios em milhões para o caixa da empresa com contratos de 5 a 20 anos e opção de recompra do ativo.',
-    seoDescriptionEn: 'Monetize owned corporate real estate through 5 to 20-year leases with pre-determined buyback repurchase options, unlocking capital for business growth.',
+    seoTitlePt: 'Sale & Leaseback no Brasil | Octis Real Estate',
+    seoTitleEn: 'Corporate Sale & Leaseback in Brazil | Octis Real Estate',
+    seoDescriptionPt: 'Venda seu escritório, fábrica ou galpão próprio e siga operando via Sale & Leaseback. Valuation, contrato atípico de 5 a 20 anos, opção de recompra e FIIs.',
+    seoDescriptionEn: 'Unlock capital from owned offices, plants, and warehouses via Sale & Leaseback in Brazil. Market valuation, 5 to 20-year atypical leases, and buyback options.',
     heroLeadPt:
       'Sua empresa vende o imóvel próprio onde já funciona (sede corporativa, fábrica ou centro logístico) para um investidor ou fundo imobiliário e continua no mesmo local pagando aluguel através de um contrato de longo prazo de 5 a 20 anos, mantendo 100% de continuidade operacional. A operação libera milhões de reais antes imobilizados em tijolos diretamente para o caixa da companhia, com a possibilidade de incluir no contrato uma opção de recompra do ativo (buyback) ao término do período por um preço pré-determinado.',
     heroLeadEn:

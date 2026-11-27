@@ -403,6 +403,84 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       ctaBoxBtn: 'Falar com Especialistas',
       articles: [
         {
+          id: 'quanto-custa-implantar-escritorio-corporativo-2027',
+          title: 'Quanto custa implantar um escritório corporativo em 2027?',
+          category: 'Tenant Representation',
+          readTime: '6 min',
+          date: '27 de Novembro de 2026',
+          summary:
+            'Do custo de reforma por m² ao valor da laje corporativa em São Paulo: os números reais para montar o orçamento de 2027 sem surpresas de CapEx nem OpEx.',
+          takeaways: [
+            'Área de Carpete x Área BOMA: o fit-out incide sobre a área útil (carpete), enquanto aluguel, condomínio e IPTU incidem sobre a área BOMA — com eficiência média de ~70%.',
+            'Custo de reforma por m² de carpete em 2027: R$ 4.000/m² (Simples), R$ 5.500/m² (Médio) e a partir de R$ 7.000/m² (Alto Padrão).',
+            'Na prática (80 pessoas, 80% híbrido, 823 m² BOMA em prédio Padrão A), a diferença entre Faria Lima (~R$ 3.306/pessoa/mês) e Berrini / Chucri Zaidan (~R$ 2.226/pessoa/mês) chega a R$ 1.080 por colaborador todos os meses.',
+            'Negociar com 9 a 12 meses de antecedência usando LOIs simultâneas, test-fit prévio e comparativo ficar vs. mudar reduz drasticamente o TCO em 5 anos.',
+          ],
+          content: {
+            intro:
+              'Planejar a implantação de um novo escritório corporativo para 2027 exige ir além do preço pedido de aluguel por metro quadrado. Na prática, o erro mais caro que empresas cometem ao planilhar uma mudança é olhar o aluguel isoladamente, subestimando os custos de obra e os custos mensais do novo escritório, a diferença entre área de carpete e área BOMA e o impacto real de condomínio, IPTU e carência ao longo de um contrato típico de 5 anos. Neste guia, reunimos as referências preliminares de mercado para calcular quanto custa montar um escritório corporativo em 2027 em São Paulo e nos principais eixos empresariais, com uma simulação real de Custo Total de Ocupação em 60 meses.',
+            sections: [
+              {
+                heading: '1. O primeiro erro do orçamento: Área de Carpete x Área BOMA',
+                paragraphs: [
+                  'Antes de estimar o valor da obra ou do aluguel, é fundamental separar duas metragens que quase sempre geram distorção na planilha:',
+                  '• Área de Carpete (útil): é o espaço que sua equipe realmente ocupa — estações de trabalho, salas de reunião, recepção, copa, circulação interna e banheiros privativos. A obra (fit-out), mobiliário e demais investimentos incidem sobre a área de carpete.',
+                  '• Área BOMA (locável): inclui uma fração das áreas comuns do andar e do edifício (halls de elevadores, banheiros coletivos, shafts técnicos). O aluguel, o condomínio e o IPTU incidem sobre a área BOMA.',
+                  'Em torres corporativas modernas de São Paulo, a eficiência média da área BOMA fica em torno de 70%, dependendo da quantidade de área comum que o condomínio oferece. Na prática, isso significa que uma operação que precisa de 700 m² de área de carpete precisará alugar cerca de 1.000 m² de área BOMA (700 ÷ 0,70). Ignorar essa conversão derruba o orçamento em quase 30% logo na largada.',
+                ],
+              },
+              {
+                heading: '2. Como dimensionar o tamanho do escritório para 2027 (trabalho híbrido)',
+                paragraphs: [
+                  'Com o modelo híbrido consolidado, poucas empresas ainda dimensionam estações para 100% do quadro de colaboradores ao mesmo tempo. O cálculo parte de dois parâmetros:',
+                  '• Fator de trabalho híbrido: percentual do time presente no dia de pico (em geral entre 60% e 80%).',
+                  '• Densidade por posição de trabalho — Layout Básico (7 m²/posição): open space enxuto, estações lineares e salas de apoio essenciais; Layout Intermediário (9 m²/posição): equilíbrio entre estações confortáveis, salas de reunião, phone booths, cafeteria e copa; Layout Intermediário/Alto Padrão (a partir de 11 m²/posição): maior circulação, salas de diretoria, boardroom, recepção ampla e áreas de convivência.',
+                  'Exemplo prático: uma empresa com 80 colaboradores, pico presencial de 80% (64 posições simultâneas) e padrão Intermediário (9 m²/posição) precisa de 576 m² de carpete — o equivalente a 823 m² BOMA (a 70% de eficiência).',
+                ],
+              },
+              {
+                heading: '3. Custo de reforma de escritório por m² em 2027 (CapEx de fit-out)',
+                paragraphs: [
+                  'O investimento inicial de implantação (fit-out) costuma responder por 20% a 35% do custo total de um contrato de 5 anos, dependendo da região escolhida. Em projetos partindo de core and shell ou com reforma abrangente (obra civil, ar-condicionado interno, elétrica, adequações de forro, piso, iluminação, infraestrutura de TI e mobiliário), os patamares referenciais por m² de área de carpete são:',
+                  '• Padrão Simples — R$ 4.000/m²: obra funcional, mobiliário corporativo de entrada e infraestrutura básica de TI.',
+                  '• Padrão Médio — R$ 5.500/m²: acústica reforçada, divisórias de vidro, mobiliário ergonômico e infraestrutura completa de TI.',
+                  '• Alto Padrão — a partir de R$ 7.000/m²: marcenaria sob medida, acabamentos diferenciados e mobiliário nacional de padrão mais elevado.',
+                  'Atenção: imóveis já prontos (plug-and-play) ou com aproveitamento de piso, forro, ar-condicionado e divisórias podem reduzir significativamente esse desembolso inicial — um ponto estratégico na etapa de busca de imóveis.',
+                ],
+              },
+              {
+                heading: '4. Aluguel de laje corporativa em São Paulo: referência por região (Padrão A e AAA)',
+                paragraphs: [
+                  'Para comparar regiões com precisão, olhe sempre para o pacote mensal completo por m² BOMA (aluguel + condomínio + IPTU). Atualmente, em torres Padrão AAA, o aluguel na Faria Lima pode alcançar mais de R$ 400/m², enquanto na Berrini / Chucri Zaidan um AAA gira em torno de R$ 140/m².',
+                  'Para detalhes de cada submercado, vale consultar o time da Octis Real Estate para avaliar as opções, valores reais de contratos fechados e preços disponíveis em cada eixo corporativo.',
+                ],
+              },
+              {
+                heading: '5. Quanto custa na prática?',
+                paragraphs: [
+                  'Vamos colocar os números lado a lado para a mesma empresa (80 pessoas, 80% híbrido, 576 m² de carpete, 823 m² BOMA, obra padrão Médio de R$ 5.500/m² e 3 meses de carência de aluguel) em dois eixos distintos, ambos em edifícios Padrão A. Na Faria Lima, o custo total efetivo pode passar dos R$ 3.306 por pessoa/mês, enquanto na Berrini / Chucri Zaidan o custo em um prédio padrão alto-médio (A) ficaria na casa dos R$ 2.226 por pessoa/mês.',
+                  'Conclusão: com exatamente a mesma metragem e o mesmo padrão de acabamento, a escolha do eixo corporativo gera uma diferença de R$ 1.080 por colaborador todos os meses.',
+                  '(Os valores acima são estimativas preliminares de referência para planejamento; o orçamento final depende do edifício, estado de entrega da laje, projeto executivo e negociação contratual.)',
+                ],
+              },
+              {
+                heading: '6. Cinco alavancas para reduzir o custo do escritório em 2027 sem perder padrão',
+                paragraphs: [
+                  'Empresas que negociam um novo escritório com antecedência (idealmente de 9 a 12 meses antes do vencimento do contrato atual) conseguem capturar economias relevantes nas cinco frentes abaixo:',
+                  '• Competição real via Cartas de Intenção (LOI) simultâneas: negociar apenas um prédio de cada vez entrega o poder de barganha ao locador. Colocar 2 ou 3 edifícios qualificados em concorrência direta melhora preço de aluguel, carência e flexibilidade de devolução.',
+                  '• Test-fit arquitetônico antes de assinar: validar o layout na planta real do prédio evita alugar 15% a 20% de área excedente por causa de pilares, formato irregular da laje ou baixa eficiência BOMA.',
+                  '• Aproveitamento de benfeitorias e verba de TI (Tenant Improvement): em mercados com oferta disponível, é possível negociar meses extras de carência para o período de obra ou desconto inicial que amortiza parte do fit-out.',
+                  '• Cláusulas de proteção contratual: atenção ao indexador anual (IPCA vs. IGP-M), teto de multa rescisória proporcional, critérios de devolução do imóvel e proteção ao direito de renovação.',
+                  '• Comparar “ficar e renegociar” vs. “mudar”: antes de gastar milhões em uma nova obra, vale simular se uma renegociação do contrato atual — apoiada por propostas reais de outros edifícios — não entrega um VPL (Valor Presente Líquido) melhor.',
+                  'Esse trabalho técnico e comercial, conduzido exclusivamente do lado do inquilino e sem conflito de interesses com proprietários, é conhecido no mercado corporativo como Tenant Representation.',
+                ],
+              },
+            ],
+            conclusion:
+              'Quer calcular rapidamente com as suas premissas, como headcount, padrão de acabamento e bairro da sua empresa? Simule o cenário da sua empresa em 1 minuto na Calculadora de Custo de Escritório Corporativo da Octis Real Estate ou fale com nosso time de Tenant Representation.',
+          },
+        },
+        {
           id: 'o-que-e-tenant-representation-guia-completo',
           title: 'O que é Tenant Representation? Fases, Benefícios e Como Funciona no Brasil',
           category: 'Tenant Representation',
@@ -1289,6 +1367,84 @@ export const translations: Record<'pt' | 'en', TranslationData> = {
       ctaBoxDesc: 'Octis Real Estate advises developers, land owners, and corporations nationwide.',
       ctaBoxBtn: 'Speak With Our Team',
       articles: [
+        {
+          id: 'quanto-custa-implantar-escritorio-corporativo-2027',
+          title: 'How Much Does It Cost to Set Up a Corporate Office in São Paulo in 2027?',
+          category: 'Tenant Representation',
+          readTime: '6 min',
+          date: 'November 27, 2026',
+          summary:
+            'From fit-out costs per sqm to São Paulo corporate floorplate rents: realistic 2027 budgeting benchmarks to avoid CapEx and OpEx surprises.',
+          takeaways: [
+            'Carpet Area vs. BOMA Area: fit-out applies to usable carpet area, while rent, condo fees, and property tax (IPTU) apply to BOMA area—typically averaging ~70% efficiency.',
+            '2027 fit-out CapEx benchmarks per carpet sqm: R$ 4,000/sqm (Simple), R$ 5,500/sqm (Mid-Range), and from R$ 7,000/sqm (High-End).',
+            'In practice (80 people, 80% hybrid, 823 sqm BOMA in Class A towers), effective monthly cost shifts from ~R$ 3,306/person in Faria Lima to ~R$ 2,226/person in Berrini / Chucri Zaidan—a R$ 1,080 difference per employee every month.',
+            'Starting 9 to 12 months ahead with concurrent LOIs, pre-lease test-fits, and stay-vs-move analysis materially lowers 5-year TCO.',
+          ],
+          content: {
+            intro:
+              'Budgeting a new corporate office for 2027 requires looking well beyond asking rent per square meter. In practice, the costliest mistake companies make when planning a relocation is evaluating base rent in isolation—underestimating turnkey fit-out CapEx, ongoing OpEx, the gap between usable carpet area and rentable BOMA area, and the real 5-year impact of condo fees, property tax (IPTU), and rent-free periods. This guide outlines preliminary São Paulo market benchmarks to estimate 60-month Total Cost of Occupancy (TCO).',
+            sections: [
+              {
+                heading: '1. The First Budgeting Mistake: Carpet Area vs. BOMA Area',
+                paragraphs: [
+                  'Before estimating construction or leasing costs, separate two area metrics that frequently distort spreadsheets:',
+                  '• Usable Carpet Area: the interior space your team actually uses—workstations, meeting rooms, reception, pantry, internal circulation, and private restrooms. Fit-out construction, furniture, and IT CapEx apply to carpet area.',
+                  '• Rentable BOMA Area: includes a proportional share of building common areas (elevator lobbies, shared restrooms, technical shafts). Monthly rent, condo fees, and IPTU apply to BOMA area.',
+                  'In modern São Paulo office towers, average BOMA efficiency hovers around 70% depending on building common amenities. An operation needing 700 sqm of carpet space therefore leases roughly 1,000 sqm BOMA (700 ÷ 0.70)—ignoring this ratio skews budgets by nearly 30% from day one.',
+                ],
+              },
+              {
+                heading: '2. Right-Sizing Your 2027 Office Under Hybrid Work',
+                paragraphs: [
+                  'With hybrid work firmly established, few companies provision one desk for 100% of headcount simultaneously. Sizing rests on two inputs:',
+                  '• Hybrid occupancy factor: peak share of staff on site on the busiest day (typically 60% to 80%).',
+                  '• Density per workstation — Compact Layout (7 sqm/seat): efficient open space and core support rooms; Standard Layout (9 sqm/seat): balanced workstations, meeting rooms, phone booths, and pantry; Executive / High-Standard Layout (11+ sqm/seat): generous circulation, executive suites, boardroom, and hospitality areas.',
+                  'Example: an 80-person company at 80% peak attendance (64 simultaneous seats) under a Standard layout (9 sqm/seat) needs 576 sqm of carpet area—roughly 823 sqm BOMA at 70% efficiency.',
+                ],
+              },
+              {
+                heading: '3. Corporate Office Fit-Out Cost per Sqm in 2027 (CapEx)',
+                paragraphs: [
+                  'Initial build-out CapEx typically accounts for 20% to 35% of 5-year Total Cost of Occupancy depending on submarket. For core-and-shell or full refurbishment projects (civil works, HVAC distribution, electrical, ceiling, flooring, lighting, IT infrastructure, and furniture), preliminary benchmarks per carpet sqm are:',
+                  '• Simple Standard — R$ 4,000/sqm: functional build-out, entry-level corporate furniture, and core IT cabling.',
+                  '• Mid-Range Standard — R$ 5,500/sqm: upgraded acoustics, glass partitions, ergonomic furniture, and full IT infrastructure.',
+                  '• High-End Standard — from R$ 7,000/sqm: bespoke millwork, upgraded finishes, and higher-grade domestic furniture.',
+                  'Tip: plug-and-play spaces or floors with reusable flooring, HVAC, ceilings, and partitions can substantially cut upfront CapEx.',
+                ],
+              },
+              {
+                heading: '4. São Paulo Corporate Rent Benchmarks by Submarket',
+                paragraphs: [
+                  'Always compare submarkets on total monthly occupancy cost per BOMA sqm (rent + condo + IPTU). Today, Class AAA rents in Faria Lima can exceed R$ 400/sqm, while Class AAA towers in Berrini / Chucri Zaidan trade around R$ 140/sqm.',
+                  'Reach out to the Octis Real Estate team for live building availability and verified closed-deal benchmarks across each São Paulo district.',
+                ],
+              },
+              {
+                heading: '5. Real-World 5-Year Comparison',
+                paragraphs: [
+                  'Comparing the same company (80 employees, 80% hybrid, 576 sqm carpet, 823 sqm BOMA, Mid-Range fit-out at R$ 5,500/sqm, and 3 rent-free months) in Class A buildings across two submarkets: Faria Lima can exceed R$ 3,306 per employee/month in effective TCO, while Berrini / Chucri Zaidan sits around R$ 2,226 per employee/month.',
+                  'Bottom line: with identical space and finish quality, submarket selection alone creates a R$ 1,080 monthly difference per employee.',
+                  '(All figures above are preliminary planning estimates; final budgets depend on building specs, floor delivery condition, executive design, and lease negotiations.)',
+                ],
+              },
+              {
+                heading: '6. Five Levers to Lower 2027 Office Costs Without Compromising Quality',
+                paragraphs: [
+                  'Companies that start 9 to 12 months ahead of lease expiration consistently capture savings across five fronts:',
+                  '• Real competition via concurrent Letters of Intent (LOIs): negotiating with 2 or 3 shortlisted landlords in parallel improves rent, rent-free months, and exit flexibility.',
+                  '• Architectural test-fit prior to signing: validating layout on real floorplates avoids leasing 15% to 20% excess space caused by columns or low BOMA efficiency.',
+                  '• Leveraging existing improvements and Tenant Improvement (TI) grace periods to offset upfront fit-out spend.',
+                  '• Protective lease clauses covering inflation indexation (IPCA vs. IGP-M), proportional break penalties, handover standards, and renewal rights.',
+                  '• Benchmarking “stay and renegotiate” vs. “relocate” on a Net Present Value (NPV) basis before committing millions to a new build-out.',
+                  'This exclusive occupier-side technical and commercial advocacy—free of landlord conflicts of interest—is known in corporate real estate as Tenant Representation.',
+                ],
+              },
+            ],
+            conclusion:
+              'Want to model your exact headcount, layout standard, and target São Paulo district in 1 minute? Run your scenario in the Octis Real Estate Office Cost Simulator or speak directly with our Tenant Representation team.',
+          },
+        },
         {
           id: 'o-que-e-tenant-representation-guia-completo',
           title: 'What is Tenant Representation? Phases, Benefits & How It Works in Brazil',

@@ -9,6 +9,14 @@ const articleSeoMeta: Record<
   string,
   { titlePt: string; titleEn: string; descPt: string; descEn: string }
 > = {
+  'quanto-custa-implantar-escritorio-corporativo-2027': {
+    titlePt: 'Quanto Custa um Escritório em 2027? | Octis Real Estate',
+    titleEn: 'Corporate Office Cost in Brazil (2027) | Octis Real Estate',
+    descPt:
+      'Do custo de reforma por m² ao aluguel da laje corporativa em São Paulo: entenda área BOMA, fit-out, TCO em 5 anos e simule o orçamento de 2027.',
+    descEn:
+      'From fit-out costs per sqm to São Paulo corporate rent: understand BOMA efficiency, hybrid sizing, 5-year TCO, and simulate your 2027 office budget.',
+  },
   'o-que-e-tenant-representation-guia-completo': {
     titlePt: 'O que é Tenant Representation? Guia | Octis Real Estate',
     titleEn: 'What Is Tenant Representation? | Octis Real Estate',
@@ -105,8 +113,14 @@ export function ArticleDetailPage() {
     headline: article.title,
     description: seoMeta ? (language === 'en' ? seoMeta.descEn : seoMeta.descPt) : fallbackDesc,
     url: `https://octis.com.br/reddit/${article.id}`,
-    datePublished: '2026-03-25',
-    dateModified: '2026-10-07',
+    datePublished:
+      article.id === 'quanto-custa-implantar-escritorio-corporativo-2027'
+        ? '2026-11-27'
+        : '2026-03-25',
+    dateModified:
+      article.id === 'quanto-custa-implantar-escritorio-corporativo-2027'
+        ? '2026-11-27'
+        : '2026-10-07',
     inLanguage: language === 'pt' ? 'pt-BR' : 'en-US',
     author: {
       '@type': 'Organization',
@@ -239,6 +253,115 @@ export function ArticleDetailPage() {
             ))}
           </div>
 
+          {/* Contextual Simulator & Tenant Representation Banner for 2027 Office Cost Article */}
+          {article.id === 'quanto-custa-implantar-escritorio-corporativo-2027' && (
+            <div className="bg-[#f8fafc] border border-gray-200 border-l-4 border-l-[#0a1d37] p-6 md:p-7 my-10 flex flex-col gap-5">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+                <div className="max-w-2xl">
+                  <span className="text-[11px] uppercase tracking-widest font-semibold text-[#c59b27] block mb-1.5">
+                    {language === 'en'
+                      ? 'Interactive Tool • São Paulo'
+                      : 'Ferramenta Gratuita • Simulação em 1 Minuto'}
+                  </span>
+                  <h3 className="text-lg font-serif text-gray-900 font-normal mb-1.5">
+                    {language === 'en'
+                      ? 'Run Your 2027 Office Budget in Our Cost Calculator'
+                      : 'Simule o Cenário da Sua Empresa na Calculadora de Custo de Escritório'}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+                    {language === 'en'
+                      ? 'Adjust headcount, hybrid ratio, BOMA efficiency, building class, submarket, fit-out standard, and rent-free months to estimate your 5-year TCO.'
+                      : 'Ajuste headcount, fator híbrido, eficiência BOMA, padrão do prédio, bairro de São Paulo, padrão de obra e meses de carência para estimar CapEx, OpEx e TCO em 5 anos.'}
+                  </p>
+                </div>
+                <Link
+                  to="/simulador-escritorio"
+                  className="px-5 py-3 bg-[#0a1d37] text-white hover:bg-[#122b4f] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors whitespace-nowrap shrink-0"
+                >
+                  {language === 'en'
+                    ? 'Open Office Cost Simulator'
+                    : 'Abrir Simulador de Escritório'}{' '}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              <div className="pt-4 border-t border-gray-200 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-gray-600 font-light">
+                <Link
+                  to="/servicos/tenant-representation"
+                  className="text-[#0a1d37] font-medium hover:text-[#c59b27] transition-colors"
+                >
+                  {language === 'en'
+                    ? 'Tenant Representation (Exclusive Occupier Advisory)'
+                    : 'Consultoria de Tenant Representation'}
+                </Link>
+                <span aria-hidden="true">·</span>
+                <Link
+                  to="/alugar-escritorio-sao-paulo"
+                  className="text-[#0a1d37] font-medium hover:text-[#c59b27] transition-colors"
+                >
+                  {language === 'en'
+                    ? 'Rent Corporate Office in São Paulo'
+                    : 'Alugar Escritório em São Paulo'}
+                </Link>
+                <span aria-hidden="true">·</span>
+                <Link
+                  to="/servicos/renegociacao-de-contratos-de-aluguel"
+                  className="text-[#0a1d37] font-medium hover:text-[#c59b27] transition-colors"
+                >
+                  {language === 'en'
+                    ? 'Commercial Lease Renegotiation'
+                    : 'Renegociação de Contrato de Aluguel'}
+                </Link>
+              </div>
+            </div>
+          )}
+
+          {/* Contextual Service Link Banner */}
+          {(article.id === 'como-funciona-sale-and-leaseback' ||
+            article.id === 'venda-de-imoveis-comerciais-e-galpoes' ||
+            article.id === 'cri-para-incorporadoras-e-loteamentos' ||
+            article.id === 'cri-versus-financiamento-bancario-tradicional') && (
+            <div className="bg-[#f8fafc] border border-gray-200 border-l-4 border-l-[#0a1d37] p-6 md:p-7 my-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+              <div className="max-w-2xl">
+                <span className="text-[11px] uppercase tracking-widest font-semibold text-[#c59b27] block mb-1.5">
+                  {article.id === 'como-funciona-sale-and-leaseback'
+                    ? language === 'en'
+                      ? 'Dedicated Advisory Service'
+                      : 'Serviço Especializado Octis'
+                    : language === 'en'
+                    ? 'Alternative Capital Release Path'
+                    : 'Alternativa de Liberação de Caixa'}
+                </span>
+                <h3 className="text-lg font-serif text-gray-900 font-normal mb-1.5">
+                  {article.id === 'como-funciona-sale-and-leaseback'
+                    ? language === 'en'
+                      ? 'Evaluate a Sale & Leaseback for Your Owned Facility'
+                      : 'Avalie o Sale & Leaseback para o Imóvel Próprio da Sua Empresa'
+                    : language === 'en'
+                    ? 'Own an Occupied Office, Plant, or Logistics Warehouse?'
+                    : 'Sua empresa ocupa um escritório, fábrica ou galpão próprio?'}
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+                  {article.id === 'como-funciona-sale-and-leaseback'
+                    ? language === 'en'
+                      ? 'Review eligible asset profiles, valuation and cap rate mechanics, atypical lease terms (5 to 20 years), risks, and our qualification checklist.'
+                      : 'Veja quais ativos se enquadram, como valuation e contrato atípico de 5 a 20 anos são estruturados, principais riscos e nosso checklist de qualificação.'
+                    : language === 'en'
+                    ? 'In addition to CRI funding or outright divestment, a corporate Sale & Leaseback unlocks up to 100% of property value in cash while keeping operations in place.'
+                    : 'Além da venda tradicional ou emissão de CRI, o Sale & Leaseback corporativo libera até 100% do valor do imóvel no caixa mantendo a operação no mesmo endereço.'}
+                </p>
+              </div>
+              <Link
+                to="/servicos/sale-and-leaseback"
+                className="px-5 py-3 bg-[#0a1d37] text-white hover:bg-[#122b4f] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors whitespace-nowrap shrink-0"
+              >
+                {language === 'en'
+                  ? 'Corporate Sale & Leaseback Advisory'
+                  : 'Sale & Leaseback Corporativo'}{' '}
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          )}
+
           {/* Conclusion & CTA */}
           <div className="bg-[#0a1d37] text-white p-8 md:p-10 text-center my-12">
             <h3 className="text-2xl font-serif font-normal mb-3 text-white">
@@ -250,16 +373,33 @@ export function ArticleDetailPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
                 to="/contato"
+                state={
+                  article.id === 'como-funciona-sale-and-leaseback'
+                    ? { servico: 'sale-and-leaseback' }
+                    : undefined
+                }
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0a1d37] hover:bg-gray-100 font-semibold text-xs uppercase tracking-wider transition-colors"
               >
                 {t.ctaBoxBtn} <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link
-                to="/simulador-escritorio"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border border-white/40 text-white hover:bg-white/10 font-semibold text-xs uppercase tracking-wider transition-colors"
-              >
-                {language === 'en' ? 'Office Cost Calculator (SP)' : 'Calculadora de Custo de Escritório SP'}
-              </Link>
+              {article.id === 'como-funciona-sale-and-leaseback' ||
+              article.id === 'venda-de-imoveis-comerciais-e-galpoes' ? (
+                <Link
+                  to="/servicos/sale-and-leaseback"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border border-white/40 text-white hover:bg-white/10 font-semibold text-xs uppercase tracking-wider transition-colors"
+                >
+                  {language === 'en'
+                    ? 'Sale & Leaseback Checklist & Terms'
+                    : 'Ver Requisitos de Sale & Leaseback'}
+                </Link>
+              ) : (
+                <Link
+                  to="/simulador-escritorio"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border border-white/40 text-white hover:bg-white/10 font-semibold text-xs uppercase tracking-wider transition-colors"
+                >
+                  {language === 'en' ? 'Office Cost Calculator (SP)' : 'Calculadora de Custo de Escritório SP'}
+                </Link>
+              )}
             </div>
           </div>
 

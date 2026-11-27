@@ -16,6 +16,7 @@ import { AboutPage } from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { ServiceDetailPage } from './pages/ServiceDetailPage';
 import { TenantRepresentationPage } from './pages/TenantRepresentationPage';
+import { SaleAndLeasebackPage } from './pages/SaleAndLeasebackPage';
 import { PropertiesPage } from './pages/PropertiesPage';
 import { TrackRecordPage } from './pages/TrackRecordPage';
 import { RedditArticlesPage } from './pages/RedditArticlesPage';
@@ -52,7 +53,7 @@ export function ServerAppRoutes() {
               <Route path="/servicos/funding-imobiliario-antecipacao-recebiveis-cri" element={<ServiceDetailPage slug="funding-imobiliario-antecipacao-recebiveis-cri" />} />
               <Route path="/servicos/renegociacao-de-contratos-de-aluguel" element={<ServiceDetailPage slug="renegociacao-de-contratos-de-aluguel" />} />
               <Route path="/servicos/compra-e-venda-de-imoveis" element={<ServiceDetailPage slug="compra-e-venda-de-imoveis" />} />
-              <Route path="/servicos/sale-and-leaseback" element={<ServiceDetailPage slug="sale-and-leaseback" />} />
+              <Route path="/servicos/sale-and-leaseback" element={<SaleAndLeasebackPage />} />
               <Route path="/servicos/socios-investidores-e-parcerias" element={<ServiceDetailPage slug="socios-investidores-e-parcerias" />} />
 
               {/* SEO Aliases & Short Redirects for Services */}

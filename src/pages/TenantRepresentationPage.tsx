@@ -830,7 +830,7 @@ export function TenantRepresentationPage() {
             </Link>
             <span aria-hidden="true">·</span>
             <Link to="/servicos/sale-and-leaseback" className="hover:text-[#c59b27] transition-colors">
-              Sale &amp; Leaseback
+              {isPt ? 'Sale & Leaseback Corporativo (Imóvel Próprio)' : 'Corporate Sale & Leaseback'}
             </Link>
           </div>
         </div>

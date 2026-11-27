@@ -51,9 +51,9 @@
   </url>
   <url>
     <loc>https://octis.com.br/servicos/sale-and-leaseback</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.96</priority>
   </url>
   <url>
     <loc>https://octis.com.br/servicos/socios-investidores-e-parcerias</loc>
@@ -227,12 +227,18 @@
   <!-- Reddit Knowledge Hub & Artigos -->
   <url>
     <loc>https://octis.com.br/reddit</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
 
   <!-- Artigos Individuais Dedicados -->
+  <url>
+    <loc>https://octis.com.br/reddit/quanto-custa-implantar-escritorio-corporativo-2027</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.94</priority>
+  </url>
   <url>
     <loc>https://octis.com.br/reddit/o-que-e-tenant-representation-guia-completo</loc>
     <lastmod>2026-11-14</lastmod>

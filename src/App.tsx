@@ -55,6 +55,9 @@ const ServiceDetailPage = lazyWithPreload(() =>
 const TenantRepresentationPage = lazyWithPreload(() =>
   import('./pages/TenantRepresentationPage').then((m) => ({ default: m.TenantRepresentationPage }))
 );
+const SaleAndLeasebackPage = lazyWithPreload(() =>
+  import('./pages/SaleAndLeasebackPage').then((m) => ({ default: m.SaleAndLeasebackPage }))
+);
 const PropertiesPage = lazyWithPreload(() =>
   import('./pages/PropertiesPage').then((m) => ({ default: m.PropertiesPage }))
 );
@@ -102,6 +105,13 @@ const TENANT_REP_PATHS = new Set([
   '/servicos/locacao-comercial',
 ]);
 
+const SALE_LEASEBACK_PATHS = new Set([
+  '/servicos/sale-and-leaseback',
+  '/servicos/sale-leaseback',
+  '/servicos/slb',
+  '/servicos/vender-e-alugar',
+]);
+
 /**
  * Preloads the matching lazy route chunk prior to React hydration so direct
  * landings on prerendered subpages hydrate synchronously without a Suspense flash.
@@ -116,6 +126,8 @@ export async function preloadRoute(pathname: string): Promise<void> {
     await ServicesPage.preload();
   } else if (TENANT_REP_PATHS.has(normalized)) {
     await TenantRepresentationPage.preload();
+  } else if (SALE_LEASEBACK_PATHS.has(normalized)) {
+    await SaleAndLeasebackPage.preload();
   } else if (normalized.startsWith('/servicos/')) {
     await ServiceDetailPage.preload();
   } else if (normalized === '/imoveis') {
@@ -184,7 +196,7 @@ export function AppRoutes() {
               <Route path="/servicos/funding-imobiliario-antecipacao-recebiveis-cri" element={<ServiceDetailPage slug="funding-imobiliario-antecipacao-recebiveis-cri" />} />
               <Route path="/servicos/renegociacao-de-contratos-de-aluguel" element={<ServiceDetailPage slug="renegociacao-de-contratos-de-aluguel" />} />
               <Route path="/servicos/compra-e-venda-de-imoveis" element={<ServiceDetailPage slug="compra-e-venda-de-imoveis" />} />
-              <Route path="/servicos/sale-and-leaseback" element={<ServiceDetailPage slug="sale-and-leaseback" />} />
+              <Route path="/servicos/sale-and-leaseback" element={<SaleAndLeasebackPage />} />
               <Route path="/servicos/socios-investidores-e-parcerias" element={<ServiceDetailPage slug="socios-investidores-e-parcerias" />} />
 
               {/* SEO Aliases & Short Redirects for Services */}

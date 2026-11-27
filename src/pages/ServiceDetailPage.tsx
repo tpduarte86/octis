@@ -246,6 +246,44 @@ export function ServiceDetailPage({ slug: propSlug }: ServiceDetailPageProps) {
         </section>
       )}
 
+      {/* Contextual Sale & Leaseback Cross-Link on CRI Funding & Property Sales */}
+      {(service.slug === 'funding-imobiliario-antecipacao-recebiveis-cri' ||
+        service.slug === 'compra-e-venda-de-imoveis') && (
+        <section className="py-8 bg-[#f8fafc] border-b border-gray-200">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div>
+              <span className="text-[11px] uppercase tracking-wider font-semibold text-[#0a1d37] block mb-1">
+                {isPt ? 'Imóvel Próprio em Operação?' : 'Own an Operating Property?'}
+              </span>
+              <p className="text-sm text-gray-700 font-light">
+                {service.slug === 'funding-imobiliario-antecipacao-recebiveis-cri'
+                  ? isPt
+                    ? 'Se a sua empresa ocupa um escritório, fábrica ou galpão próprio e quer liberar até 100% do valor do ativo sem aumentar o endividamento, compare também o Sale & Leaseback corporativo.'
+                    : 'If your company occupies an owned office, plant, or warehouse and wants to unlock up to 100% of its market value without adding bank debt, evaluate corporate Sale & Leaseback.'
+                  : isPt
+                    ? 'Deseja vender um prédio corporativo, galpão logístico ou fábrica mantendo a empresa operando no mesmo endereço por 5 a 20 anos? Conheça nossa estruturação de Sale & Leaseback.'
+                    : 'Looking to divest an owned office, warehouse, or industrial plant while keeping operations on site for 5 to 20 years? Explore our corporate Sale & Leaseback practice.'}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 shrink-0">
+              <Link
+                to="/servicos/sale-and-leaseback"
+                className="px-5 py-2.5 bg-[#0a1d37] text-white hover:bg-[#122b4f] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-1.5 transition-colors"
+              >
+                {isPt ? 'Sale & Leaseback Corporativo' : 'Corporate Sale & Leaseback'}{' '}
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+              <Link
+                to="/reddit/como-funciona-sale-and-leaseback"
+                className="px-4 py-2.5 bg-white border border-gray-300 text-gray-800 hover:border-[#0a1d37] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-1.5 transition-colors"
+              >
+                {isPt ? 'Como Funciona o SLB' : 'How SLB Works'}
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Scope & Methodology Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">

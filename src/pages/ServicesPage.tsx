@@ -99,6 +99,30 @@ export function ServicesPage() {
               </Link>
             </div>
           </div>
+
+          <div className="mt-5 bg-white border border-gray-200 px-8 py-6 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5">
+            <div className="max-w-3xl">
+              <span className="text-[11px] uppercase tracking-widest text-[#c59b27] font-semibold block mb-1">
+                {language === 'en'
+                  ? 'Corporate Real Estate Monetization'
+                  : 'Desmobilização de Ativos Próprios'}
+              </span>
+              <p className="text-sm text-gray-700 font-light leading-relaxed">
+                {language === 'en'
+                  ? 'Own an occupied corporate office, manufacturing plant, or logistics warehouse? Unlock up to 100% of market value in cash with a 5 to 20-year atypical lease.'
+                  : 'Possui sede corporativa, fábrica ou galpão logístico próprio em operação? Transforme até 100% do valor do imóvel em caixa mantendo a empresa no mesmo endereço por 5 a 20 anos.'}
+              </p>
+            </div>
+            <Link
+              to="/servicos/sale-and-leaseback"
+              className="px-5 py-3 bg-[#0a1d37] text-white hover:bg-[#122b4f] text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors whitespace-nowrap shrink-0"
+            >
+              {language === 'en'
+                ? 'Explore Sale & Leaseback'
+                : 'Sale & Leaseback Corporativo'}{' '}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
@@ -10,6 +10,7 @@ import {
   Lock,
   Mail,
   MapPin,
+  Octagon,
   PhoneCall,
   Printer,
   RotateCcw,
@@ -53,45 +54,12 @@ import {
   type SimulationResult,
 } from '../data/officeSimulatorData';
 
-const LEAD_STORAGE_KEY = 'octis_office_simulator_lead_v3';
-const FORMSUBMIT_AJAX_ENDPOINT = 'https://formsubmit.co/ajax/contato@octis.com.br';
-const FORMSUBMIT_FORM_ENDPOINT = 'https://formsubmit.co/contato@octis.com.br';
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+const DEFAULT_WEB3FORMS_PUBLIC_KEY = 'ba233828-7eb6-4308-89d2-daaa5f56ab08';
+const SERVER_LEAD_ENDPOINT = '/api/simulator-lead';
 const PEOPLE_PRESETS = [30, 80, 150, 300, 500];
 const HYBRID_PRESETS = [60, 70, 80, 100];
 const BOMA_EFFICIENCY_PRESETS = [65, 70, 75, 80, 100];
-
-function submitViaHiddenIframe(fields: Record<string, string>) {
-  if (typeof document === 'undefined') return;
-  const iframeName = 'octis-formsubmit-frame';
-  let iframe = document.querySelector<HTMLIFrameElement>(`iframe[name="${iframeName}"]`);
-  if (!iframe) {
-    iframe = document.createElement('iframe');
-    iframe.name = iframeName;
-    iframe.title = 'Form submission target';
-    iframe.style.display = 'none';
-    document.body.appendChild(iframe);
-  }
-
-  const form = document.createElement('form');
-  form.method = 'POST';
-  form.action = FORMSUBMIT_FORM_ENDPOINT;
-  form.target = iframeName;
-  form.style.display = 'none';
-
-  Object.entries(fields).forEach(([key, value]) => {
-    const input = document.createElement('input');
-    input.type = 'hidden';
-    input.name = key;
-    input.value = value;
-    form.appendChild(input);
-  });
-
-  document.body.appendChild(form);
-  form.submit();
-  window.setTimeout(() => {
-    form.remove();
-  }, 5000);
-}
 
 function buildSummaryText(params: {
   isPt: boolean;
@@ -218,32 +186,6 @@ export function OfficeSimulatorPage() {
 
   // FAQ state
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-
-  // Restore unlocked lead session on client hydration
-  useEffect(() => {
-    try {
-      const saved = window.sessionStorage.getItem(LEAD_STORAGE_KEY);
-      if (saved) {
-        const parsed = JSON.parse(saved) as LeadInfo;
-        if (
-          parsed?.name &&
-          parsed?.company &&
-          parsed?.email &&
-          parsed?.phone &&
-          isCorporateEmail(parsed.email) &&
-          isValidMobilePhone(parsed.phone)
-        ) {
-          setLead(parsed);
-          setLeadName(parsed.name);
-          setLeadCompany(parsed.company);
-          setLeadEmail(parsed.email);
-          setLeadPhone(parsed.phone);
-        }
-      }
-    } catch {
-      // Ignore storage access errors in restricted browsing contexts
-    }
-  }, []);
 
   const regionA = useMemo(() => getRegionById(regionId), [regionId]);
   const regionB = useMemo(() => getRegionById(regionBId), [regionBId]);
@@ -394,17 +336,12 @@ export function OfficeSimulatorPage() {
       unlockedAt: new Date().toISOString(),
     };
 
+    const emailSubject = `[Simulador Escritório SP] ${trimmedCompany} — ${formatNumber(resultA.bomaArea, 'pt')} m² BOMA (${regionA.namePt})`;
     const emailFields: Record<string, string> = {
-      _subject: `[Simulador Escritório SP] ${trimmedCompany} — ${formatNumber(resultA.bomaArea, 'pt')} m² BOMA (${regionA.namePt})`,
-      _replyto: trimmedEmail,
-      _template: 'table',
-      _captcha: 'false',
-      _url: typeof window !== 'undefined' ? window.location.href : 'https://octis.com.br/simulador-escritorio',
-      _honey: '',
-      name: trimmedName,
-      company: trimmedCompany,
-      email: trimmedEmail,
-      phone: trimmedPhone,
+      Nome: trimmedName,
+      Empresa: trimmedCompany,
+      'E-mail Corporativo': trimmedEmail,
+      'Celular / WhatsApp': trimmedPhone,
       'Equipe Total': `${formatNumber(resultA.people, 'pt')} pessoas`,
       'Regime Híbrido': `${resultA.hybridOccupancyPct}% simultâneo (${formatNumber(resultA.simultaneousSeats, 'pt')} posições)`,
       'Padrão do Escritório': `${officeOption.labelPt} (${resultA.densityM2} m² carpete/posição)`,
@@ -429,74 +366,132 @@ export function OfficeSimulatorPage() {
       emailFields['Custo Mensal Efetivo / Pessoa (B)'] = `${formatBRL(resultB.monthlyCostPerPerson, 'pt')}/mês`;
     }
 
-    // Use FormData (no Content-Type header) so it is a CORS simple request with zero OPTIONS preflight
-    // and never abort it prematurely so slow SMTP responses from FormSubmit always complete.
-    const formData = new FormData();
-    Object.entries(emailFields).forEach(([key, value]) => {
-      formData.append(key, value);
-    });
+    const envVars =
+      (import.meta as unknown as { env?: Record<string, string | undefined> }).env ?? {};
+    const web3FormsKey = envVars.VITE_WEB3FORMS_ACCESS_KEY?.trim() || DEFAULT_WEB3FORMS_PUBLIC_KEY;
+    const webhookUrl = envVars.VITE_LEAD_WEBHOOK_URL?.trim();
 
-    const sendPromise = fetch(FORMSUBMIT_AJAX_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-      },
-      body: formData,
-    })
-      .then(async (res) => {
-        if (!res.ok) {
-          submitViaHiddenIframe(emailFields);
+    const deliveryTasks: Promise<void>[] = [];
+
+    // 1. Primary direct delivery via Web3Forms (public client-side access key, FormData = zero CORS preflight)
+    if (web3FormsKey) {
+      const formData = new FormData();
+      formData.append('access_key', web3FormsKey);
+      formData.append('subject', emailSubject);
+      formData.append('from_name', `${trimmedName} (${trimmedCompany})`);
+      formData.append('name', trimmedName);
+      formData.append('email', trimmedEmail);
+      formData.append('replyto', trimmedEmail);
+      Object.entries(emailFields).forEach(([key, value]) => {
+        if (key !== 'Nome' && key !== 'E-mail Corporativo') {
+          formData.append(key, value);
         }
-      })
-      .catch(() => {
-        // Fallback to native hidden HTML form POST if AJAX fetch is blocked
-        submitViaHiddenIframe(emailFields);
       });
 
-    // Optional extra webhook capture when VITE_LEAD_WEBHOOK_URL is configured
-    const webhookUrl = (
-      import.meta as unknown as { env?: Record<string, string | undefined> }
-    ).env?.VITE_LEAD_WEBHOOK_URL;
+      deliveryTasks.push(
+        fetch(WEB3FORMS_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+          },
+          body: formData,
+        })
+          .then(async (res) => {
+            if (!res.ok) {
+              throw new Error(`Web3Forms HTTP ${res.status}`);
+            }
+          })
+          .catch(() => {
+            // Secondary fallback to Cloudflare Pages Function if configured
+            return fetch(SERVER_LEAD_ENDPOINT, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+              },
+              body: JSON.stringify({
+                subject: emailSubject,
+                replyTo: trimmedEmail,
+                lead: {
+                  name: trimmedName,
+                  company: trimmedCompany,
+                  email: trimmedEmail,
+                  phone: trimmedPhone,
+                },
+                fields: emailFields,
+              }),
+            })
+              .then(() => undefined)
+              .catch(() => undefined);
+          })
+      );
+    } else {
+      // 2. Server-side Cloudflare Pages Function (/api/simulator-lead) using Resend, Web3Forms, or webhook
+      deliveryTasks.push(
+        fetch(SERVER_LEAD_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            subject: emailSubject,
+            replyTo: trimmedEmail,
+            lead: {
+              name: trimmedName,
+              company: trimmedCompany,
+              email: trimmedEmail,
+              phone: trimmedPhone,
+            },
+            fields: emailFields,
+          }),
+        })
+          .then(() => undefined)
+          .catch(() => undefined)
+      );
+    }
+
+    // 3. Optional extra webhook capture (Formspree, Make, Zapier, n8n, Google Apps Script)
     if (webhookUrl && webhookUrl.startsWith('https://')) {
-      const payload = {
-        source: 'octis-office-cost-simulator',
-        lead: unlockedLead,
-        scenarioA: {
-          region: regionA.namePt,
-          buildingStandard,
-          officeStandard,
-          fitoutStandard,
-          ...resultA,
-        },
-        scenarioB:
-          compareEnabled && resultB
-            ? {
-                region: regionB.namePt,
-                buildingStandard: buildingBStandard,
-                ...resultB,
-              }
-            : null,
-      };
-      fetch(webhookUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      }).catch(() => {
-        // Silent fallback so UX is never interrupted
-      });
+      deliveryTasks.push(
+        fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            source: 'octis-office-cost-simulator',
+            subject: emailSubject,
+            email: trimmedEmail,
+            lead: unlockedLead,
+            fields: emailFields,
+            scenarioA: {
+              region: regionA.namePt,
+              buildingStandard,
+              officeStandard,
+              fitoutStandard,
+              ...resultA,
+            },
+            scenarioB:
+              compareEnabled && resultB
+                ? {
+                    region: regionB.namePt,
+                    buildingStandard: buildingBStandard,
+                    ...resultB,
+                  }
+                : null,
+          }),
+        })
+          .then(() => undefined)
+          .catch(() => undefined)
+      );
     }
 
-    // Wait briefly for instant response without aborting sendPromise if FormSubmit takes longer
     await Promise.race([
-      sendPromise,
-      new Promise<void>((resolve) => window.setTimeout(resolve, 1200)),
+      Promise.allSettled(deliveryTasks),
+      new Promise<void>((resolve) => window.setTimeout(resolve, 2500)),
     ]);
-
-    try {
-      window.sessionStorage.setItem(LEAD_STORAGE_KEY, JSON.stringify(unlockedLead));
-    } catch {
-      // Non-fatal
-    }
 
     setLead(unlockedLead);
     setIsSubmitting(false);
@@ -754,7 +749,7 @@ export function OfficeSimulatorPage() {
   };
 
   return (
-    <div className="pt-20 min-h-screen bg-white text-gray-900">
+    <div className="pt-20 min-h-screen bg-white text-gray-900 print:pt-0 print:min-h-0">
       <SEOHead
         titlePt="Calculadora de Custo de Escritório SP (m² e Obra) | Octis"
         titleEn="São Paulo Office Cost Calculator (Rent & Fit-Out) | Octis"
@@ -765,8 +760,34 @@ export function OfficeSimulatorPage() {
       />
 
       {/* Compact Institutional Header */}
-      <section className="py-10 md:py-14 bg-[#f8fafc] border-b border-gray-200 print:py-4 print:bg-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <section className="py-10 md:py-14 bg-[#f8fafc] border-b border-gray-200 print:py-0 print:pb-3 print:bg-white print:border-b print:border-gray-200">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 print:px-0">
+          {/* Print-only Octis Brand Top Bar */}
+          <div className="hidden print:flex items-center justify-between gap-4 pb-3 mb-3 border-b-2 border-[#0a1d37]">
+            <div className="flex items-center gap-2.5">
+              <Octagon className="w-7 h-7 text-[#0a1d37] shrink-0 stroke-[2.2]" />
+              <div className="flex flex-col">
+                <span className="font-serif text-2xl font-bold tracking-tight text-[#0a1d37] leading-none">
+                  OCTIS<span className="text-[#c59b27]">.</span>
+                </span>
+                <span className="text-[8px] uppercase tracking-[0.25em] text-gray-500 font-sans font-semibold mt-0.5">
+                  Real Estate
+                </span>
+              </div>
+            </div>
+            <div className="text-right text-[10px] text-gray-600 leading-snug">
+              <div className="font-semibold text-[#0a1d37]">octis.com.br</div>
+              <div>contato@octis.com.br · +55 (11) 99541-8189</div>
+              {lead && (
+                <div className="text-[#0a1d37] font-medium mt-0.5">
+                  {isPt
+                    ? `Preparado para ${lead.name} — ${lead.company}`
+                    : `Prepared for ${lead.name} — ${lead.company}`}
+                </div>
+              )}
+            </div>
+          </div>
+
           <nav
             aria-label="Breadcrumb"
             className="flex items-center gap-2 text-xs text-gray-500 mb-5 uppercase tracking-wider flex-wrap print:hidden"
@@ -787,15 +808,15 @@ export function OfficeSimulatorPage() {
             </span>
           </nav>
 
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 print:gap-1">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-2.5">
+              <div className="inline-flex items-center gap-2 text-[#0a1d37] uppercase tracking-widest text-xs font-semibold mb-2.5 print:text-[10px] print:mb-1">
                 <span className="w-1.5 h-1.5 bg-[#c59b27]" />
                 {isPt
                   ? 'Ferramenta Executiva • São Paulo'
                   : 'Executive Tool • São Paulo'}
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-[42px] font-serif text-gray-900 leading-tight font-normal mb-3">
+              <h1 className="text-3xl sm:text-4xl md:text-[42px] font-serif text-gray-900 leading-tight font-normal mb-3 print:text-2xl print:mb-1">
                 {isPt ? (
                   <>
                     Simulador de Custos para{' '}
@@ -808,10 +829,10 @@ export function OfficeSimulatorPage() {
                   </>
                 )}
               </h1>
-              <p className="text-sm md:text-base text-gray-600 font-light leading-relaxed">
+              <p className="text-sm md:text-base text-gray-600 font-light leading-relaxed print:text-xs print:leading-snug">
                 {isPt
-                  ? `Dimensione área de carpete e área BOMA (${resultA.bomaEfficiencyPct}%), estime o pacote mensal de ocupação, o CapEx turnkey de implantação (obra, mobiliário e TI) e o TCO em 5 anos comparando regiões de São Paulo.`
-                  : `Size carpet and BOMA floorplates (${resultA.bomaEfficiencyPct}% efficiency), estimate monthly occupancy, turnkey fit-out CapEx (civil, furniture & IT), and 5-year TCO across São Paulo submarkets.`}
+                  ? 'Simule os custos do seu novo escritório a partir dos seus inputs, como headcount, padrão de acabamento, padrão do prédio desejado e bairro. Após simular, nossa equipe ajuda você a encontrar e realizar seu projeto de mudança de escritório.'
+                  : 'Simulate the costs of your new office based on your inputs, such as headcount, fit-out standard, desired building class, and neighborhood. After simulating, our team helps you find and execute your office relocation project.'}
               </p>
             </div>
 
@@ -841,9 +862,9 @@ export function OfficeSimulatorPage() {
       </section>
 
       {/* Main Simulator Workspace */}
-      <section className="py-10 md:py-14 bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+      <section className="py-10 md:py-14 bg-white border-b border-gray-200 print:py-3 print:border-b-0">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 print:px-0">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start print:block">
             {/* LEFT COLUMN: Configuration Controls */}
             <div className="lg:col-span-7 space-y-10 print:hidden">
               {/* STEP 1: Team Size & Hybrid Model */}
@@ -1473,15 +1494,15 @@ export function OfficeSimulatorPage() {
             </div>
 
             {/* RIGHT COLUMN: Sticky Live Sizing + Lead Gate / Full Financial Summary */}
-            <aside className="lg:col-span-5 lg:sticky lg:top-24 space-y-5 print:col-span-12 print:static">
+            <aside className="lg:col-span-5 lg:sticky lg:top-24 space-y-5 print:col-span-12 print:static print:space-y-2.5">
               {/* Block 1: Live Space Sizing (Always Visible) */}
-              <div className="bg-[#f8fafc] border border-gray-200 p-6">
-                <div className="flex items-center justify-between gap-2 pb-4 mb-4 border-b border-gray-200">
+              <div className="bg-[#f8fafc] border border-gray-200 p-6 print:p-3.5 print:break-inside-avoid">
+                <div className="flex items-center justify-between gap-2 pb-4 mb-4 border-b border-gray-200 print:pb-2 print:mb-2">
                   <div>
                     <span className="text-[10px] uppercase tracking-widest text-[#c59b27] font-semibold block">
                       {isPt ? 'Dimensionamento ao Vivo' : 'Live Space Sizing'}
                     </span>
-                    <div className="text-sm font-semibold text-[#0a1d37] mt-0.5">
+                    <div className="text-sm font-semibold text-[#0a1d37] mt-0.5 print:text-xs">
                       {isPt ? regionA.namePt : regionA.nameEn} ·{' '}
                       {isPt ? `Padrão ${buildingStandard}` : `Class ${buildingStandard}`}
                     </div>
@@ -1491,37 +1512,37 @@ export function OfficeSimulatorPage() {
 
                 <div className="grid grid-cols-3 gap-3 text-left">
                   <div>
-                    <span className="block text-[11px] text-gray-500 mb-1">
+                    <span className="block text-[11px] text-gray-500 mb-1 print:text-[10px] print:mb-0.5">
                       {isPt ? 'Posições' : 'Seats'}
                     </span>
-                    <span className="text-xl sm:text-2xl font-serif text-gray-900 font-semibold tabular-nums block">
+                    <span className="text-xl sm:text-2xl font-serif text-gray-900 font-semibold tabular-nums block print:text-lg">
                       {formatNumber(resultA.simultaneousSeats, lang)}
                     </span>
-                    <span className="text-[11px] text-gray-500 tabular-nums">
+                    <span className="text-[11px] text-gray-500 tabular-nums print:text-[10px]">
                       {hybridPct}% {isPt ? `de ${resultA.people}` : `of ${resultA.people}`}
                     </span>
                   </div>
 
                   <div className="border-l border-gray-200 pl-3">
-                    <span className="block text-[11px] text-gray-500 mb-1">
+                    <span className="block text-[11px] text-gray-500 mb-1 print:text-[10px] print:mb-0.5">
                       {isPt ? 'Área Carpete' : 'Carpet Area'}
                     </span>
-                    <span className="text-xl sm:text-2xl font-serif text-gray-900 font-semibold tabular-nums block">
+                    <span className="text-xl sm:text-2xl font-serif text-gray-900 font-semibold tabular-nums block print:text-lg">
                       {formatNumber(resultA.carpetArea, lang)} m²
                     </span>
-                    <span className="text-[11px] text-gray-500 tabular-nums">
+                    <span className="text-[11px] text-gray-500 tabular-nums print:text-[10px]">
                       {resultA.densityM2} m²/{isPt ? 'pos.' : 'seat'}
                     </span>
                   </div>
 
                   <div className="border-l border-gray-200 pl-3">
-                    <span className="block text-[11px] text-gray-500 mb-1">
+                    <span className="block text-[11px] text-gray-500 mb-1 print:text-[10px] print:mb-0.5">
                       {isPt ? 'Área BOMA' : 'BOMA Area'}
                     </span>
-                    <span className="text-xl sm:text-2xl font-serif text-[#0a1d37] font-semibold tabular-nums block">
+                    <span className="text-xl sm:text-2xl font-serif text-[#0a1d37] font-semibold tabular-nums block print:text-lg">
                       {formatNumber(resultA.bomaArea, lang)} m²
                     </span>
-                    <span className="text-[11px] text-gray-500 tabular-nums">
+                    <span className="text-[11px] text-gray-500 tabular-nums print:text-[10px]">
                       {resultA.bomaEfficiencyPct}% {isPt ? 'eficiência' : 'ratio'}
                     </span>
                   </div>
@@ -1717,25 +1738,25 @@ export function OfficeSimulatorPage() {
                   </form>
                 </div>
               ) : (
-                <div className="bg-white border border-gray-200 overflow-hidden">
+                <div className="bg-white border border-gray-200 overflow-hidden print:break-inside-avoid">
                   {/* Monthly Occupancy Breakdown */}
-                  <div className="p-6 border-b border-gray-200">
-                    <div className="flex items-center justify-between gap-2 mb-4">
-                      <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500">
+                  <div className="p-6 border-b border-gray-200 print:p-3.5">
+                    <div className="flex items-center justify-between gap-2 mb-4 print:mb-2">
+                      <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 print:text-[10px]">
                         {isPt
                           ? 'Ocupação Mensal (sobre Área BOMA)'
                           : 'Monthly Occupancy (over BOMA Area)'}
                       </h3>
-                      <span className="text-xs text-gray-500 tabular-nums">
+                      <span className="text-xs text-gray-500 tabular-nums print:text-[11px]">
                         {formatBRL(resultA.monthlyPackagePerBomaM2, lang)}/m²
                       </span>
                     </div>
 
-                    <dl className="space-y-2.5 text-sm">
+                    <dl className="space-y-2.5 text-sm print:space-y-1 print:text-xs">
                       <div className="flex items-center justify-between gap-4">
                         <dt className="text-gray-600 font-light">
                           {isPt ? 'Aluguel' : 'Base Rent'}{' '}
-                          <span className="text-xs text-gray-400 tabular-nums">
+                          <span className="text-xs text-gray-400 tabular-nums print:text-[11px]">
                             ({formatBRL(resultA.rates.rent, lang)}/m²)
                           </span>
                         </dt>
@@ -1746,7 +1767,7 @@ export function OfficeSimulatorPage() {
                       <div className="flex items-center justify-between gap-4">
                         <dt className="text-gray-600 font-light">
                           {isPt ? 'Condomínio' : 'Condo Fee'}{' '}
-                          <span className="text-xs text-gray-400 tabular-nums">
+                          <span className="text-xs text-gray-400 tabular-nums print:text-[11px]">
                             ({formatBRL(resultA.rates.condo, lang)}/m²)
                           </span>
                         </dt>
@@ -1757,7 +1778,7 @@ export function OfficeSimulatorPage() {
                       <div className="flex items-center justify-between gap-4">
                         <dt className="text-gray-600 font-light">
                           IPTU{' '}
-                          <span className="text-xs text-gray-400 tabular-nums">
+                          <span className="text-xs text-gray-400 tabular-nums print:text-[11px]">
                             ({formatBRL(resultA.rates.iptu, lang)}/m²)
                           </span>
                         </dt>
@@ -1765,11 +1786,11 @@ export function OfficeSimulatorPage() {
                           {formatBRL(resultA.monthlyIptu, lang)}
                         </dd>
                       </div>
-                      <div className="flex items-center justify-between gap-4 pt-3 border-t border-gray-200">
+                      <div className="flex items-center justify-between gap-4 pt-3 border-t border-gray-200 print:pt-2">
                         <dt className="font-semibold text-gray-900">
                           {isPt ? 'Pacote Mensal Total' : 'Total Monthly Package'}
                         </dt>
-                        <dd className="text-base font-bold text-[#0a1d37] tabular-nums">
+                        <dd className="text-base font-bold text-[#0a1d37] tabular-nums print:text-sm">
                           {formatBRL(resultA.monthlyPackage, lang)}
                           <span className="text-xs font-normal text-gray-500">
                             /{isPt ? 'mês' : 'mo'}
@@ -1780,13 +1801,13 @@ export function OfficeSimulatorPage() {
                   </div>
 
                   {/* Turnkey Fit-out CapEx & Rent-Free */}
-                  <div className="p-6 bg-[#f8fafc] border-b border-gray-200">
-                    <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 mb-3.5">
+                  <div className="p-6 bg-[#f8fafc] border-b border-gray-200 print:p-3.5">
+                    <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 mb-3.5 print:text-[10px] print:mb-1.5">
                       {isPt
                         ? 'Investimento Inicial & Carência'
                         : 'Upfront Investment & Rent-Free'}
                     </h3>
-                    <dl className="space-y-2.5 text-sm">
+                    <dl className="space-y-2.5 text-sm print:space-y-1.5 print:text-xs">
                       <div className="flex items-start justify-between gap-4">
                         <dt className="text-gray-700">
                           <span className="font-medium block">
@@ -1794,7 +1815,7 @@ export function OfficeSimulatorPage() {
                               ? `CapEx Fit-out Turnkey (${fitoutOption.labelPt})`
                               : `Turnkey Fit-out CapEx (${fitoutOption.labelEn})`}
                           </span>
-                          <span className="text-[11px] text-gray-500 font-light block">
+                          <span className="text-[11px] text-gray-500 font-light block print:text-[10px]">
                             {isPt
                               ? `${formatNumber(resultA.carpetArea, lang)} m² carpete × ${formatBRL(resultA.fitoutRatePerCarpetM2, lang)}/m² (obra, mobiliário e TI)`
                               : `${formatNumber(resultA.carpetArea, lang)} sqm carpet × ${formatBRL(resultA.fitoutRatePerCarpetM2, lang)}/sqm (civil, furniture & IT)`}
@@ -1805,7 +1826,7 @@ export function OfficeSimulatorPage() {
                         </dd>
                       </div>
 
-                      <div className="flex items-center justify-between gap-4 pt-2 border-t border-gray-200/80">
+                      <div className="flex items-center justify-between gap-4 pt-2 border-t border-gray-200/80 print:pt-1.5">
                         <dt className="text-gray-600 font-light">
                           {isPt
                             ? `Economia de carência (${resultA.rentFreeMonths} ${resultA.rentFreeMonths === 1 ? 'mês' : 'meses'} de aluguel)`
@@ -1821,21 +1842,21 @@ export function OfficeSimulatorPage() {
                   </div>
 
                   {/* Consolidated 5-Year TCO Block */}
-                  <div className="p-6 bg-[#0a1d37] text-white">
+                  <div className="p-6 bg-[#0a1d37] text-white print:p-4 print:break-inside-avoid">
                     <div className="flex items-center justify-between gap-2 mb-1">
-                      <span className="text-[11px] uppercase tracking-widest text-[#c59b27] font-semibold">
+                      <span className="text-[11px] uppercase tracking-widest text-[#c59b27] font-semibold print:text-[10px]">
                         {isPt
                           ? `TCO Consolidado (${TCO_MONTHS} meses / 5 anos)`
                           : `Consolidated 5-Year TCO (${TCO_MONTHS} months)`}
                       </span>
                     </div>
-                    <div className="text-3xl sm:text-4xl font-serif text-white font-normal tabular-nums mb-4">
+                    <div className="text-3xl sm:text-4xl font-serif text-white font-normal tabular-nums mb-4 print:text-2xl print:mb-2">
                       {formatBRL(resultA.tco60m, lang)}
                     </div>
 
                     {/* Visual Share Bar */}
-                    <div className="mb-5">
-                      <div className="h-2 w-full bg-white/15 flex overflow-hidden">
+                    <div className="mb-5 print:mb-2.5">
+                      <div className="h-2 w-full bg-white/15 flex overflow-hidden print:h-1.5">
                         <div
                           style={{ width: `${resultA.occupancySharePct.toFixed(1)}%` }}
                           className="bg-white h-full"
@@ -1845,7 +1866,7 @@ export function OfficeSimulatorPage() {
                           className="bg-[#c59b27] h-full"
                         />
                       </div>
-                      <div className="flex items-center justify-between text-[11px] text-gray-300 mt-1.5 tabular-nums">
+                      <div className="flex items-center justify-between text-[11px] text-gray-300 mt-1.5 tabular-nums print:text-[10px] print:mt-1">
                         <span>
                           {isPt ? 'Ocupação 5 anos:' : '5y Occupancy:'}{' '}
                           {resultA.occupancySharePct.toFixed(0)}% ({formatBRL(resultA.occupancy60m, lang)})
@@ -1857,12 +1878,12 @@ export function OfficeSimulatorPage() {
                     </div>
 
                     {/* Key Per-Month & Per-Person KPIs */}
-                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/15">
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/15 print:pt-2.5">
                       <div>
-                        <span className="block text-[11px] text-gray-300 mb-0.5">
+                        <span className="block text-[11px] text-gray-300 mb-0.5 print:text-[10px]">
                           {isPt ? 'Custo Mensal Efetivo (TCO/60)' : 'Effective Monthly (TCO/60)'}
                         </span>
-                        <span className="text-lg font-semibold text-white tabular-nums">
+                        <span className="text-lg font-semibold text-white tabular-nums print:text-base">
                           {formatBRL(resultA.effectiveMonthlyTco, lang)}
                           <span className="text-xs font-normal text-gray-300">
                             /{isPt ? 'mês' : 'mo'}
@@ -1870,10 +1891,10 @@ export function OfficeSimulatorPage() {
                         </span>
                       </div>
                       <div>
-                        <span className="block text-[11px] text-gray-300 mb-0.5">
+                        <span className="block text-[11px] text-gray-300 mb-0.5 print:text-[10px]">
                           {isPt ? 'Custo Mensal / Pessoa' : 'Monthly Cost / Person'}
                         </span>
-                        <span className="text-lg font-semibold text-[#c59b27] tabular-nums">
+                        <span className="text-lg font-semibold text-[#c59b27] tabular-nums print:text-base">
                           {formatBRL(resultA.monthlyCostPerPerson, lang)}
                           <span className="text-xs font-normal text-gray-300">
                             /{isPt ? 'mês' : 'mo'}
@@ -1888,7 +1909,41 @@ export function OfficeSimulatorPage() {
                     </div>
                   </div>
 
-                  {/* Export & Advisory Actions */}
+                  {/* Print-Only Clickable Contact CTA (WhatsApp + contato@octis.com.br) */}
+                  <div className="hidden print:flex items-center justify-between gap-4 px-4 py-3 bg-[#f8fafc] border-t border-gray-200 print:break-inside-avoid">
+                    <div>
+                      <div className="text-[11px] font-semibold text-[#0a1d37]">
+                        {isPt
+                          ? 'Fale com a Octis Real Estate para validar esta simulação'
+                          : 'Contact Octis Real Estate to validate this simulation'}
+                      </div>
+                      <div className="text-[10px] text-gray-600 mt-0.5">
+                        {isPt
+                          ? 'Pesquisa real de fechamento, test-fit gratuito e negociação sem conflito de interesses.'
+                          : 'Closed-deal market comps, free architectural test-fit, and conflict-free representation.'}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2 shrink-0">
+                      <a
+                        href={whatsappUrl}
+                        data-button-navy="true"
+                        style={{ color: '#ffffff', WebkitTextFillColor: '#ffffff' }}
+                        className="px-3.5 py-2 bg-[#0a1d37] text-white text-[10px] font-semibold uppercase tracking-wider inline-flex items-center gap-1.5"
+                      >
+                        <PhoneCall className="w-3 h-3" />
+                        {isPt ? 'WhatsApp Octis' : 'WhatsApp Octis'}
+                      </a>
+                      <a
+                        href="mailto:contato@octis.com.br"
+                        className="px-3 py-2 bg-white border border-[#0a1d37] text-[#0a1d37] text-[10px] font-semibold inline-flex items-center gap-1.5"
+                      >
+                        <Mail className="w-3 h-3 text-[#c59b27]" />
+                        contato@octis.com.br
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Export & Advisory Actions (Screen) */}
                   <div className="p-5 bg-white border-t border-gray-200 space-y-2.5 print:hidden">
                     <a
                       href={whatsappUrl}
@@ -1921,12 +1976,22 @@ export function OfficeSimulatorPage() {
                     </div>
                     <p className="text-[11px] text-gray-500 font-light pt-1">
                       {isPt
-                        ? `Simulação liberada para ${lead.name} (${lead.company}). Valores estimados com base em médias de mercado em São Paulo.`
-                        : `Unlocked for ${lead.name} (${lead.company}). Estimates reflect São Paulo market averages.`}
+                        ? `Simulação liberada para ${lead.name} (${lead.company}).`
+                        : `Unlocked for ${lead.name} (${lead.company}).`}
                     </p>
                   </div>
                 </div>
               )}
+
+              {/* Preliminary Cost Disclaimer (Visible on Page AND in Printed PDF) */}
+              <div className="p-3.5 bg-[#f8fafc] border border-gray-200 text-[11px] text-gray-500 font-light leading-relaxed print:p-2.5 print:text-[9.5px] print:leading-snug print:break-inside-avoid">
+                <strong className="font-semibold text-gray-700">
+                  {isPt ? 'Aviso preliminar: ' : 'Preliminary disclaimer: '}
+                </strong>
+                {isPt
+                  ? 'Todos os custos e metragens apresentados nesta simulação são estimativas preliminares baseadas em médias de mercado em São Paulo para planejamento orçamentário inicial. Os valores finais variam conforme o edifício escolhido, eficiência real da planta (test-fit), escopo de reforma/fit-out e negociação contratual.'
+                  : 'All costs and floorplate figures shown in this simulation are preliminary estimates based on São Paulo market averages for initial budgeting only. Final values depend on the chosen building, architectural test-fit efficiency, fit-out scope, and negotiated lease terms.'}
+              </div>
             </aside>
           </div>
         </div>
@@ -2531,7 +2596,14 @@ export function OfficeSimulatorPage() {
                     >
                       renegociação do contrato de aluguel
                     </Link>{' '}
-                    com alternativas concretas na mesa.
+                    ou leia nossa análise completa sobre{' '}
+                    <Link
+                      to="/reddit/quanto-custa-implantar-escritorio-corporativo-2027"
+                      className="text-[#0a1d37] font-medium underline underline-offset-4 hover:text-[#c59b27]"
+                    >
+                      quanto custa implantar um escritório corporativo em 2027
+                    </Link>
+                    .
                   </>
                 ) : (
                   <>
@@ -2542,7 +2614,14 @@ export function OfficeSimulatorPage() {
                     >
                       lease renegotiation
                     </Link>{' '}
-                    backed by real competing towers.
+                    or read our full breakdown of{' '}
+                    <Link
+                      to="/reddit/quanto-custa-implantar-escritorio-corporativo-2027"
+                      className="text-[#0a1d37] font-medium underline underline-offset-4 hover:text-[#c59b27]"
+                    >
+                      2027 corporate office setup costs in São Paulo
+                    </Link>
+                    .
                   </>
                 )}
               </p>

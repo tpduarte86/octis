@@ -534,6 +534,22 @@ export function WarehouseLeasingPage() {
               {isPt ? 'WhatsApp Direto' : 'Direct WhatsApp'}
             </a>
           </div>
+          <div className="mt-8 pt-6 border-t border-white/15 flex flex-wrap items-center justify-center gap-4 text-xs text-gray-300 font-light">
+            <span>
+              {isPt
+                ? 'Sua empresa já possui galpão logístico ou planta industrial própria?'
+                : 'Does your company already own an industrial or logistics warehouse?'}
+            </span>
+            <Link
+              to="/servicos/sale-and-leaseback"
+              className="text-[#c59b27] hover:text-white font-medium inline-flex items-center gap-1 transition-colors"
+            >
+              {isPt
+                ? 'Avaliar Sale & Leaseback de Galpões e Indústrias'
+                : 'Explore Warehouse & Industrial Sale & Leaseback'}
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
       </section>
     </div>
